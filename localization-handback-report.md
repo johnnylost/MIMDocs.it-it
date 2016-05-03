@@ -1,39 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md) | InSyncHandedBackSuccess | [Details](#6b58093744656b9bfa62c1cfcab340ea88e6e1686)
- [MIMDocs\DeployUse\working-with-identity-manager-hybrid-reporting.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-identity-manager-hybrid-reporting.md) | InSyncHandedBackSuccess | [Details](#e2d0bd6120628d4fd2a14718fc205cde976c778572)
 
 ## Item Details
-##### <a name='6b58093744656b9bfa62c1cfcab340ea88e6e1686'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/cc1c53658ff91c96b3be9bcc4b3f44ae2e5a02da/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md)
-* Handoff File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/88999810ae4f0df8b3d801b5cd16aa6136982cf8/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.it-it.xlf)
-* Handoff Datetime: 2016-04-11 22:06:18
-* Handoff Reason: Include
-* Archive File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/308475bd09d7d4983f49d938e84568f8a2a7d99d/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/archive/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.it-it.xlf)
-* Archive Datetime: 2016-04-16 01:17:28
-* Handback File: [certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/725a98a7dec17152ff38de8e092632e80593a144/ol-handback/Microsoft/MIMDocs-pr.it-it/master/certificate-manager-for-software-certificates.e916e294593565422260dde1e4f131163490451c.it-it.xlf)
-* Handback Datetime: 2016-05-03 20:19:07
-* [Back to Top](#report-top)
-
-##### <a name='e2d0bd6120628d4fd2a14718fc205cde976c778572'></a> Source: [MIMDocs\DeployUse\working-with-identity-manager-hybrid-reporting.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-identity-manager-hybrid-reporting.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [MIMDocs\DeployUse\working-with-identity-manager-hybrid-reporting.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/cc1c53658ff91c96b3be9bcc4b3f44ae2e5a02da/MIMDocs/DeployUse/working-with-identity-manager-hybrid-reporting.md)
-* Handoff File: [working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/88999810ae4f0df8b3d801b5cd16aa6136982cf8/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.it-it.xlf)
-* Handoff Datetime: 2016-04-11 22:06:18
-* Handoff Reason: Include
-* Archive File: [working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/308475bd09d7d4983f49d938e84568f8a2a7d99d/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/archive/working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.it-it.xlf)
-* Archive Datetime: 2016-04-16 01:17:28
-* Handback File: [working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/725a98a7dec17152ff38de8e092632e80593a144/ol-handback/Microsoft/MIMDocs-pr.it-it/master/working-with-identity-manager-hybrid-reporting.5a9babf73d10bd3782be289eab3b82b139127433.it-it.xlf)
-* Handback Datetime: 2016-05-03 20:19:07
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
