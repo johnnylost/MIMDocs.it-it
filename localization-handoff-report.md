@@ -1,11 +1,29 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/b2578d50f855486183ae182330bacb688011c273/MIMDocs/DeployUse/preparing-domain.md) | OutofSyncHandedBackSuccess | [Details](#b84a6c7c7b53a122eefc3846ba93b92b34edb6ce71)
 
 ## Item Details
+##### <a name='b84a6c7c7b53a122eefc3846ba93b92b34edb6ce71'></a> Source: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/b2578d50f855486183ae182330bacb688011c273/MIMDocs/DeployUse/preparing-domain.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/397c8d66b6239a48f284b569fc20945550d21f8f/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.it-it.xlf)
+* Handoff Datetime: 2016-05-19 17:03:32
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/8a4e94c55edd74e5de592c32f9293c3ac4dcf95c/MIMDocs/DeployUse/preparing-domain.md)
+* Current Handback File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e30fa45fe651a81716fca0f11fcd4958840ff03d/ol-handback/Microsoft/MIMDocs-pr.it-it/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.it-it.xlf)
+* Current Handback Datetime: 2016-05-03 18:06:16
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
