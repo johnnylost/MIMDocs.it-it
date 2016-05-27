@@ -2,7 +2,7 @@
 # required metadata
 
 title: Registrare smart card per utenti non amministratori | Microsoft Identity Manager
-description: Informazioni su come registrare le smart card usando Gestione certificati per gli utenti che non hanno diritti di accesso con privilegi di amministratore ai propri computer.
+description: Informazioni su come registrare le smart card per gli utenti che non dispongono dei diritti di accesso con privilegi di amministratore ai propri computer per l'uso del Gestore di certificati.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -25,10 +25,10 @@ ms.suite: ems
 
 ---
 
-# Registrare smart card per gli utenti non amministratori
+# Registrare smart card per utenti non amministratori
 Se un utente non è un amministratore locale del proprio computer, non sarà in grado di registrare una smart card nei propri computer per impostazione predefinita. La procedura seguente consente di ovviare a questa limitazione.
 
-## Abilitazione del rinnovo della smart card per utenti non amministratori in MIM 2016 Certificate Manager
+## Abilitazione del rinnovo della smart card per utenti non amministratori in Gestore di certificati di MIM 2016
 
 1.  **Decomprimere il file appx**
 
@@ -80,7 +80,7 @@ Se un utente non è un amministratore locale del proprio computer, non sarà in 
 
     3.  Digitare il nome del modello di profilo, aggiungere “nonAdmin” e fare clic su **OK**.
 
-    4.  Quando vengono visualizzate le impostazioni generali del modello di profilo, scorrere verso il basso fino in fondo e in **Configurazione smart card**fare clic su **Modifica impostazioni**.
+    4.  Quando vengono visualizzate le impostazioni generali del modello di profilo, scorrere verso il basso fino in fondo e in **Configurazione smart card** fare clic su **Modifica impostazioni**.
 
     5.  In **Valore iniziale chiave amministratore (esadecimale):** immettere la chiave di amministrazione predefinita: "010203040506070801020304050607080102030405060708"
 
@@ -90,17 +90,17 @@ Se un utente non è un amministratore locale del proprio computer, non sarà in 
 
     Gli utenti non amministratori non possono creare la smart card virtuale sul TPM. Pertanto dovranno essere gli amministratori a crearla.
 
-6.  **Creare una smart card virtuale mediante TpmVscMgr**
+6.  **Creare una smart card virtuale tramite TpmVscMgr**
 
-    Effettuare le operazioni seguenti (sempre come amministratore) per creare una smart card virtuale in un computer. Tale operazione può essere eseguita tramite Intune, SCCM o criteri di gruppo.
+    Eseguire le operazioni seguenti (sempre come amministratore) per creare una smart card virtuale in un computer. Tale operazione può essere eseguita tramite Intune, SCCM o criteri di gruppo.
 
     `TpmVscMgr create /name MyVSC /pin default /adminkey default /generate`
 
 7.  **Installare l'applicazione CM nell'account utente non amministratore**
 
-8.  **Avvio dell'applicazione CM e registrazione di una smart card virtuale**
+8.  **Avviare l'applicazione CM e la registrazione di una smart card virtuale**
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 

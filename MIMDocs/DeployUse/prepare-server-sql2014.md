@@ -28,29 +28,29 @@ ms.suite: ems
 # Configurare un server di gestione delle identità: SQL Server 2014
 
 >[!div class="step-by-step"]
-[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
-[SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
-> In tutti gli esempi riportati di seguito **mimservername** rappresenta il nome del controller di dominio, **contoso** rappresenta il nome di dominio e **Pass@word1** rappresenta una password di esempio.
+> « Windows Server 2012 R2 SharePoint » Questa procedura dettagliata usa nomi e valori di esempio della società Contoso.
+> - Sostituirli con i propri nomi e valori.
+> - Ad esempio:
+> - Nome del controller di dominio: **mimservername**
 
-## Installare **SQL Server 2014 Standard Edition**
+## Nome del dominio: **contoso**
 
-1. Avviare **PowerShell** come amministratore di dominio.
+1. Password: **Pass@word1**
 
-2. Passare alla directory in cui si trova il programma di installazione di SQL Server.
+2. Installare **SQL Server 2014 Standard Edition**
 
-3. Digitare i comandi seguenti.
+3. Avviare **PowerShell** come amministratore di dominio.
 
     ```
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="contoso\SqlServer" /SQLSVCPASSWORD="Pass@word1"   /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="contoso\Administrator"
     ```
 
->[!div class="step-by-step"]  
-[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
-[SharePoint »](prepare-server-sharepoint.md)
+>Passare alla directory in cui si trova il programma di installazione di SQL Server.  
+Digitare i comandi seguenti.
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=Apr16_HO3-->
 
 
