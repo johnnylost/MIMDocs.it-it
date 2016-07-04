@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 18
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 11
-[ In Sync Handback Files ](#insync-handback-success-list)| 18
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 10
+[ In Sync Handback Files ](#insync-handback-success-list)| 19
 [ Ignored Files ](#ignored-list)| 110
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -201,7 +201,6 @@
  [MIMDocs\DeployUse\working-with-identity-manager-hybrid-reporting.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-identity-manager-hybrid-reporting.md) | OutofSyncHandedBackSuccess | [Details](#e2d0bd6120628d4fd2a14718fc205cde976c778573)
  [MIMDocs\DeployUse\working-with-mim-certificate-manager.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-mim-certificate-manager.md) | OutofSyncHandedBackSuccess | [Details](#3e0e6cea0b268836bb6347e81694deec93320ce374)
  [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-self-service-password-reset.md) | OutofSyncHandedBackSuccess | [Details](#3a4350e54383dc1098c778090bb29b435082045f75)
- [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/0bbdacbfc5b912221257a9425db13804d6dd6a25/MIMDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#f589140e0feac52474256e7ab29b9d3a7a36c5ec81)
  [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/PlanDesign/TOC.md) | OutofSyncHandedBackSuccess | [Details](#fccf9b584e84cdd7c72dadded4a0e1126789d7c2248)
  [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/toc.md) | OutofSyncHandedBackSuccess | [Details](#511bb7e106b832056f9743419fe24c066366090a288)
  [MIMDocs\Understand\microsoft-identity-manager-2016.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/Understand/microsoft-identity-manager-2016.md) | OutofSyncHandedBackSuccess | [Details](#5247cce895344ac6148b735fe550eb16c39103c7300)
@@ -222,6 +221,7 @@
  [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | InSyncHandedBackSuccess | [Details](#cd4ac84af4e5416512cf546a5d23b342ebe13c3970)
  [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/b2578d50f855486183ae182330bacb688011c273/MIMDocs/DeployUse/preparing-domain.md) | InSyncHandedBackSuccess | [Details](#b84a6c7c7b53a122eefc3846ba93b92b34edb6ce71)
  [MIMDocs\GetStarted\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/9c9ada27ad1efe6b4b5154677de163afcbd1c850/MIMDocs/GetStarted/TOC.md) | InSyncHandedBackSuccess | [Details](#260aec3bd3dd61ecfd8abbeb1a01aa9d7126baa880)
+ [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/0bbdacbfc5b912221257a9425db13804d6dd6a25/MIMDocs/index.md) | InSyncHandedBackSuccess | [Details](#f589140e0feac52474256e7ab29b9d3a7a36c5ec81)
  [MIMDocs\microsoft-identity-manager-2016-release-notes.md](https://github.com/Microsoft/MIMDocs-pr/blob/62108908497d1dcf69579ba144545346b6a42266/MIMDocs/microsoft-identity-manager-2016-release-notes.md) | InSyncHandedBackSuccess | [Details](#12f245624e644b12825239e378a26752f7a86846197)
  [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md) | InSyncHandedBackSuccess | [Details](#323a875aba14a238aa7cb3a0e6df192729ce53d6241)
  [MIMDocs\PlanDesign\microsoft-identity-manager-2016-supported-platforms.md](https://github.com/Microsoft/MIMDocs-pr/blob/a59e7471a8aaafc6752c9be34d52fd3509104dec/MIMDocs/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md) | InSyncHandedBackSuccess | [Details](#bb3e3abfdc12d78108676d4a9f029531d9df17fd247)
@@ -1377,15 +1377,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='f589140e0feac52474256e7ab29b9d3a7a36c5ec81'></a> Source: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/0bbdacbfc5b912221257a9425db13804d6dd6a25/MIMDocs/index.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/2f53289a5f2a4e3d4cf1ac4bce9f528d5228789b/MIMDocs/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/57cbc5ccc2947ab1eaa3dc33f23014d64e122513/MIMDocs/index.md)
 * Handoff File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/32dfad94d594d62636a71873df9e4d527950861c/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.it-it.xlf)
 * Handoff Datetime: 2016-06-27 09:06:22
 * Handoff Reason: Include
 * Archive File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/87e40f380b0930b41b7eb46b5793940b8c0cc968/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/archive/index.a54b2324d63a6d513b6900195023b9a8089553b4.it-it.xlf)
 * Archive Datetime: 2016-07-01 23:24:05
-* Handback File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/6866de2af510f6f88953d6f108837ecdb6f9d850/ol-handback/Microsoft/MIMDocs-pr.it-it/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.it-it.xlf)
-* Handback Datetime: 2016-06-24 16:45:50
+* Handback File: [index.a54b2324d63a6d513b6900195023b9a8089553b4.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/4a52286ee879caa9c21963fda4da2a66c1b7feef/ol-handback/Microsoft/MIMDocs-pr.it-it/master/index.a54b2324d63a6d513b6900195023b9a8089553b4.it-it.xlf)
+* Handback Datetime: 2016-07-04 09:38:31
 * [Back to Top](#report-top)
 
 ##### <a name='755db60abb7859af5065e2c5ddfbfc6cfb7aeeda82'></a> Source: [MIMDocs\md.style](https://github.com/Microsoft/MIMDocs-pr/blob/05fd3b508874f87d4407f21f0739974327505e72/MIMDocs/md.style)
