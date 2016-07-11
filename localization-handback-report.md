@@ -1,11 +1,12 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 7
+ Total Files | 8
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
+ [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-self-service-password-reset.md) | InSyncHandedBackSuccess | [Details](#3a4350e54383dc1098c778090bb29b435082045f74)
  [MIMDocs\pam\step-1-prepare-corp-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/step-1-prepare-corp-domain.md) | HandedBackFailed | [Details](#7d6888ad4d694ad0ed746598563de32d7c363936230)
  [MIMDocs\pam\step-2-prepare-priv-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/step-2-prepare-priv-domain-controller.md) | HandedBackFailed | [Details](#62d80222ea85fe5066cfa396b5e5a10bced4d3cd231)
  [MIMDocs\pam\step-3-prepare-pam-server.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/step-3-prepare-pam-server.md) | HandedBackFailed | [Details](#ec65078cea33b73aa9482e831a1870df477c6581232)
@@ -15,6 +16,18 @@
  [MIMDocs\pam\step-7-elevate-user-access.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/step-7-elevate-user-access.md) | HandedBackFailed | [Details](#ee47c69788a98075372ca62943e0c4b101c5354f236)
 
 ## Item Details
+##### <a name='3a4350e54383dc1098c778090bb29b435082045f74'></a> Source: [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-self-service-password-reset.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/133e1897c086d6ebee295b9d1eb89cc35d7e4588/MIMDocs/DeployUse/working-with-self-service-password-reset.md)
+* Handoff File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/32dfad94d594d62636a71873df9e4d527950861c/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.it-it.xlf)
+* Handoff Datetime: 2016-06-27 09:06:22
+* Handoff Reason: Include
+* Archive File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/87e40f380b0930b41b7eb46b5793940b8c0cc968/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/archive/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.it-it.xlf)
+* Archive Datetime: 2016-07-01 23:24:05
+* Handback File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e39c05edec7ea48b5d6f8f5ef6635252cd4139b1/ol-handback/Microsoft/MIMDocs-pr.it-it/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.it-it.xlf)
+* Handback Datetime: 2016-07-11 10:39:48
+* [Back to Top](#report-top)
+
 ##### <a name='7d6888ad4d694ad0ed746598563de32d7c363936230'></a> Source: [MIMDocs\pam\step-1-prepare-corp-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/pam/step-1-prepare-corp-domain.md)
 * Status: HandedBackFailed
 * Target File: 
