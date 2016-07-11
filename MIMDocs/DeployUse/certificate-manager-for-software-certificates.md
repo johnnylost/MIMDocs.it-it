@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Creare certificati software | Microsoft Identity Manager
 description: Informazioni su come usare Gestione certificati per creare e rinnovare certificati software con i modelli di profilo.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 6b58093744656b9bfa62c1cfcab340ea88e6e168
+
 
 ---
 
@@ -82,7 +76,7 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 
 1.  Accedere al portale CM come utente con privilegi amministrativi.
 
-2.  Andare ad **Amministrazione &gt; Gestione dei modelli di profilo** e assicurarsi che la casella accanto a **Modello di profilo accesso smart card** di esempio CM MIM sia selezionata, quindi fare clic su **Copia modello di profilo selezionato**.
+2.  Passare ad **Amministrazione &gt; Gestisci modelli di profilo** e assicurarsi che la casella accanto a **Esempio di modello di profilo di MIM CM per accesso tramite smart card** sia selezionata, quindi fare clic su **Copia modello di profilo selezionato**.
 
 3.  Digitare il nome del modello di profilo e fare clic su **OK**.
 
@@ -103,6 +97,7 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 11. Se si utilizza il CM Smart Card virtuale, è necessario disattivare gli elementi della raccolta dati, poiché non funziona con la raccolta dei dati attiva. Disabilitare la raccolta dei dati per ogni criterio facendo clic sul criterio nel riquadro a sinistra e quindi deselezionando la casella accanto a **Elemento di dati di esempio** . Quindi fare clic su **Eliminare elemento raccolta dati**. Fare quindi clic su **OK**.
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
