@@ -33,6 +33,6 @@ Le unità in cui archiviare le immagini disco di macchina virtuale deve avere al
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
