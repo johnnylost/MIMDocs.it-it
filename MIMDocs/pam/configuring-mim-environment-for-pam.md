@@ -37,10 +37,11 @@ Questi passaggi sono strutturati per iniziare da zero e creare un ambiente di te
 
 7.  Illustrare la richiesta, la ricezione e l'utilizzo di accesso con privilegi elevati a una risorsa protetta.
 
->[!div class="step-by-step"] [Inizia »](step-1-prepare-corp-domain.md)
+>[!div class="step-by-step"]
+[[!div class="step-by-step"] [Inizia »](step-1-prepare-corp-domain.md)](step-1-prepare-corp-domain.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
