@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 1
 [ Handback Failed Files ](#handback-failed-list)| 7
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 4
-[ In Sync Handback Files ](#insync-handback-success-list)| 36
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 3
+[ In Sync Handback Files ](#insync-handback-success-list)| 37
 [ Ignored Files ](#ignored-list)| 109
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -190,7 +190,6 @@
  [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/a63ee7c239fd47bf78f6ff60ca516a612753539d/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | OutofSyncHandedBackSuccess | [Details](#a095f58b7f95000db9fe385e53d09c62fb109dc010)
  [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/6b6e324c2c2400145573c00c964c69d01ecf7e39/MIMDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#e3e755779dfa60f0f5b2af0d4aae25de6b07afa680)
  [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/3b6b7df0a2836f23795c5bc6d5af6c561d361331/MIMDocs/toc.md) | OutofSyncHandedBackSuccess | [Details](#84a2f5e4796c1d7e0a407cfc4a336de1bf65c5f3288)
- [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/Understand/TOC.md) | OutofSyncHandedBackSuccess | [Details](#0a32b3c5b574f121bcd34d97a9430d0dfd553ca8301)
 
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
  Source File | Status | Details 
@@ -231,6 +230,7 @@
  [MIMDocs\Troubleshoot\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/7bde0a52219370e47852ca7551a93544777d957e/MIMDocs/Troubleshoot/TOC.md) | InSyncHandedBackSuccess | [Details](#260aec3bd3dd61ecfd8abbeb1a01aa9d7126baa8292)
  [MIMDocs\Understand\identity-manager-hybrid-reporting-azure.md](https://github.com/Microsoft/MIMDocs-pr/blob/7e61e201b277a2e8ec9fee785e9e34fca3b1cb29/MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md) | InSyncHandedBackSuccess | [Details](#b3f3982ade46932b18fb730fe5c16d52cde188a1294)
  [MIMDocs\Understand\microsoft-identity-manager-2016.md](https://github.com/Microsoft/MIMDocs-pr/blob/9e5f51d5ca731b3564b8262db0f4cddeb850231a/MIMDocs/Understand/microsoft-identity-manager-2016.md) | InSyncHandedBackSuccess | [Details](#5247cce895344ac6148b735fe550eb16c39103c7300)
+ [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/Understand/TOC.md) | InSyncHandedBackSuccess | [Details](#0a32b3c5b574f121bcd34d97a9430d0dfd553ca8301)
 
 ## <a name='ignored-list'></a> Ignored File List
  Source File | Status | Details 
@@ -3972,9 +3972,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/4d438d468d5d721a14194af088711ff96d6b8fef/MIMDocs/toc.md)
-* Current Handback File: [toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/1a18792ff338f517ce6d08ebf1f97e32e8ae666c/ol-handback/Microsoft/MIMDocs-pr.it-it/master/toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.it-it.xlf)
-* Current Handback Datetime: 2016-07-11 09:41:33
+* Current Target File: [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/4bc84898e7713fb17fc344a1d6fdfc0f568fe7ab/MIMDocs/toc.md)
+* Current Handback File: [toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/1de58e8f32680ff3fff7cfe18c44b6a991656c25/ol-handback/Microsoft/MIMDocs-pr.it-it/master/toc.6a59cd1e48b1263518d5152d0f44ced431e431a3.it-it.xlf)
+* Current Handback Datetime: 2016-07-15 01:02:19
 * [Back to Top](#report-top)
 
 ##### <a name='a31c4fee7fa7148519ee78e29ea6bd9c31520315289'></a> Source: [MIMDocs\Troubleshoot\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/7bde0a52219370e47852ca7551a93544777d957e/MIMDocs/Troubleshoot/docfx.json)
@@ -4127,15 +4127,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='0a32b3c5b574f121bcd34d97a9430d0dfd553ca8301'></a> Source: [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/Understand/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/4d438d468d5d721a14194af088711ff96d6b8fef/MIMDocs/Understand/TOC.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr.it-it/blob/4bc84898e7713fb17fc344a1d6fdfc0f568fe7ab/MIMDocs/Understand/TOC.md)
 * Handoff File: [TOC.cf3c9303083fb125b50bea7db798a930a73afc51.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/1020f4096eeff889151d8554fc255d6104f0c9f7/ol-handoff/Microsoft/MIMDocs-pr.it-it/master/TOC.cf3c9303083fb125b50bea7db798a930a73afc51.it-it.xlf)
 * Handoff Datetime: 2016-07-11 20:21:24
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [TOC.cf3c9303083fb125b50bea7db798a930a73afc51.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/1a18792ff338f517ce6d08ebf1f97e32e8ae666c/ol-handback/Microsoft/MIMDocs-pr.it-it/master/TOC.cf3c9303083fb125b50bea7db798a930a73afc51.it-it.xlf)
-* Handback Datetime: 2016-07-11 09:41:33
+* Handback File: [TOC.cf3c9303083fb125b50bea7db798a930a73afc51.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/1de58e8f32680ff3fff7cfe18c44b6a991656c25/ol-handback/Microsoft/MIMDocs-pr.it-it/master/TOC.cf3c9303083fb125b50bea7db798a930a73afc51.it-it.xlf)
+* Handback Datetime: 2016-07-15 01:02:19
 * [Back to Top](#report-top)
 
 ##### <a name='8b38ac1bf813dc8840b1522ce23fddf8de3997c3302'></a> Source: [README.md](https://github.com/Microsoft/MIMDocs-pr/blob/7bde0a52219370e47852ca7551a93544777d957e/README.md)
