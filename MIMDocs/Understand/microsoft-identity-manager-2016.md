@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
-description: Comprendere il funzionamento di MIM 2016 per creare un'esperienza di gestione delle identità più pratica e sicura nel cloud e in locale.
-keywords:
+description: "Comprendere il funzionamento di MIM 2016 per creare un'esperienza di gestione delle identità più pratica e sicura nel cloud e in locale."
+keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
+ms.openlocfilehash: 5247cce895344ac6148b735fe550eb16c39103c7
+
 
 ---
 
@@ -36,21 +30,10 @@ Microsoft Identity Manager 2016 collabora con Azure per offrire all'utente contr
 ## Gestione identità con privilegi
 Gestione identità con privilegi controlla e gestisce l'accesso amministrativo fornendo alle risorse sensibili accesso temporaneo basato sulle attività. In questo modo è possibile concedere agli utenti solo le autorizzazioni necessarie, riducendo le possibilità che un utente malintenzionato ottenga accesso amministrativo completo. Inoltre, Gestione identità con privilegi estrae e isola gli account amministrativi dalle foreste Active Directory esistenti.
 
-## Piattaforme supportate
-
-MIM supporta un elenco aggiornato di prodotti e piattaforme, tra cui le piattaforme Microsoft più recenti e stack di Office/server, sistema operativo Client Windows, sistema operativo Windows Server, SharePoint, SQL e Outlook, in particolare:
-
--   Windows 8.1 con Internet Explorer 8 e versioni successive
-
--   Windows Server 2012 R2
-
--   SQL 2014
-
--   Outlook 2013
-
--   System Center Service Manager 2012 e 2012 R2
+MIM supporta una soluzione di Privileged Identity Management locale per la gestione di Active Directory. Per iniziare, [usare Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 

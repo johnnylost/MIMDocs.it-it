@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Registrare smart card per utenti non amministratori | Microsoft Identity Manager
 description: Informazioni su come registrare le smart card per gli utenti che non dispongono dei diritti di accesso con privilegi di amministratore ai propri computer per l'uso del Gestore di certificati.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
+ms.openlocfilehash: 50c0edd60abfa6550cb5a873d32a842e8c099811
+
 
 ---
 
@@ -76,7 +70,7 @@ Se un utente non è un amministratore locale del proprio computer, non sarà in 
 
     1.  Accedere al portale CM come utente con privilegi amministrativi.
 
-    2.  Andare ad **Amministrazione** &gt; **Gestione modelli di profilo** e assicurarsi che la casella accanto al modello di profilo creato sia selezionata, quindi fare clic su Copia modello di profilo selezionato.
+    2.  Passare ad **Amministrazione** &gt; **Gestione modelli di profilo** e assicurarsi che la casella accanto al modello di profilo creato sia selezionata, quindi fare clic su Copia modello di profilo selezionato.
 
     3.  Digitare il nome del modello di profilo, aggiungere “nonAdmin” e fare clic su **OK**.
 
@@ -101,6 +95,7 @@ Se un utente non è un amministratore locale del proprio computer, non sarà in 
 8.  **Avviare l'applicazione CM e la registrazione di una smart card virtuale**
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

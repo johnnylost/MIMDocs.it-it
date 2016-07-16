@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Uso della reimpostazione della password self-service | Microsoft Identity Manager
-description: Vedere le novità relative alla reimpostazione della password self-service in MIM 2016, tra cui il funzionamento di SSPR con l'autenticazione a più fattori. 
-keywords:
+description: "Vedere le novità relative alla reimpostazione della password self-service in MIM 2016, tra cui il funzionamento di SSPR con l'autenticazione a più fattori."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3a4350e54383dc1098c778090bb29b435082045f
+
 
 ---
 
@@ -211,6 +205,7 @@ Installando Componenti aggiuntivi ed estensioni MIM in un computer aggiunto al d
     ![Immagine di reimpostazione della password di Accesso guidato MIM](media/MIM-SSPR-PR1.JPG)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

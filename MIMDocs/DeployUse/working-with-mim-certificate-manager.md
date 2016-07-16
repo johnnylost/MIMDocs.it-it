@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Uso di Gestione certificati MIM | Microsoft Identity Manager
-description: Informazioni su come distribuire l'app Gestione certificati per consentire agli utenti di gestire i propri diritti di accesso. 
-keywords:
+description: Informazioni su come distribuire l'app Gestione certificati per consentire agli utenti di gestire i propri diritti di accesso.
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3e0e6cea0b268836bb6347e81694deec93320ce3
+
 
 ---
 
@@ -43,7 +37,7 @@ Creare un modello di certificato per l'applicazione CM esattamente come di consu
 
 2.  Aprire la MMC.
 
-3.  Fare clic su **File &gt; Aggiungi/Rimuovi snap-in**.
+3.  Fare clic su**File &gt; Aggiungi/Rimuovi snap-in**.
 
 4.  Nell'elenco di snap-in disponibili, fare clic su **Modelli di certificato**, quindi su **Aggiungi**.
 
@@ -71,7 +65,7 @@ Creare un modello di certificato per l'applicazione CM esattamente come di consu
 
 14. Nel riquadro sinistro di MMC, espandere **Autorità di certificazione (locale)** , quindi espandere l'autorità di certificazione in uso all'interno dell'elenco di autorità di certificazione.
 
-15. Fare clic con il pulsante destro del mouse su **Modelli di certificato**, scegliere **Nuovo &gt; Modello di certificato da rilasciare**.
+15. Fare clic con il pulsante destro del mouse su **Modelli di certificato**, scegliere **Nuovo &gt; Modello di certificato** da rilasciare.
 
 16. Selezionare il nuovo modello creato nell'elenco e fare clic su **OK**.
 
@@ -80,7 +74,7 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
 1.  Accedere al portale CM come utente con privilegi amministrativi.
 
-2.  Andare ad Amministrazione &gt; Gestisci modelli di profilo e assicurarsi che la casella accanto a Esempio di modello di profilo di Gestione certificati MIM per accesso tramite smart card sia selezionata, quindi fare clic su Copia modello di profilo selezionato.
+2.  Passare ad Amministrazione &gt; Gestisci modelli di profilo e assicurarsi che la casella accanto a Esempio di modello di profilo di MIM CM per accesso tramite smart card sia selezionata, quindi fare clic su Copia modello di profilo selezionato.
 
 3.  Digitare il nome del modello di profilo e fare clic su **OK**.
 
@@ -96,7 +90,7 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
 9. In **Criteri PIN utente** selezionare **Forniti dall'utente**.
 
-10. Nel riquadro sinistro, fare clic su **Criterio Rinnovo &gt; Modifica impostazioni generali**. Selezionare **Riutilizza smart card al rinnovo** e fare clic su **OK**.
+10. Nel riquadro sinistro fare clic su **Criterio Rinnovo &gt; Modifica impostazioni generali**. Selezionare **Riutilizza smart card al rinnovo** e fare clic su **OK**.
 
 11. È necessario disabilitare gli elementi di raccolta dei dati per ogni criterio facendo clic sul criterio nel riquadro a sinistra e quindi deselezionando la casella accanto a **Elemento di dati di esempio** . Quindi fare clic su **Elimina elemento raccolta dati**. Fare quindi clic su **OK**.
 
@@ -132,7 +126,7 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
 7.  È necessario ottenere un certificato di firma prima di iniziare questa sezione. Vedere sotto Abilitazione del rinnovo della smart card per utenti non amministratori in MIM 2016 Certificate Manager, passaggio 1.
 
-8.  Nell'elemento &lt;Identity&gt; modificare il valore dell'attributo Publisher in modo che sia identico al soggetto indicato nel certificato di firma, ad esempio "CN=SUBJECT".
+8.  Nell'elemento &lt;Identity&gt; modificare il valore dell'attributo Publisher affinché corrisponda al soggetto del certificato di firma, ad esempio "CN=SUBJECT".
 
 9. Salvare il file e chiudere l’editor.
 
@@ -154,7 +148,7 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
     -   Aprire l'applicazione virtuale Smart Card. Ciò rende più semplice individuare i valori necessari per il passaggio successivo.
 
-    -   Per aggiungere l'applicazione come client nel server AD FS e configurare CM nel server, aprire Windows PowerShell nel server AD FS ed eseguire il comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`.
+    -   Per aggiungere l'applicazione come client nel server AD FS e configurare CM nel server, aprire Windows PowerShell nel server AD FS ed eseguire il comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
 
         Ecco lo script ConfigureMimCMClientAndRelyingParty.ps1:
 
@@ -258,9 +252,10 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
     -   Per assistenza per lo script **ConfigureMIimCMClientAndRelyingParty.ps1** eseguire `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
 ## Distribuire l'app
-Quando si configura l'app CM, nell'Area download scaricare il file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip ed estrarre il relativo contenuto. Il file con estensione AppX è il programma di installazione. È possibile distribuire l'app nello stesso modo in cui vengono normalmente distribuite le applicazioni Windows Store, usando [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)o [Intune](https://technet.microsoft.com/library/dn613839.aspx) per trasferire localmente l'app in modo che gli utenti dovranno accedervi usando il portale aziendale o direttamente nei propri computer.
+Quando si configura l'app CM nell'Area download, scaricare il file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip ed estrarre il relativo contenuto. Il file con estensione AppX è il programma di installazione. È possibile distribuire l'app nello stesso modo in cui vengono normalmente distribuite le applicazioni Windows Store, usando [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)o [Intune](https://technet.microsoft.com/library/dn613839.aspx) per trasferire localmente l'app in modo che gli utenti dovranno accedervi usando il portale aziendale o direttamente nei propri computer.
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
