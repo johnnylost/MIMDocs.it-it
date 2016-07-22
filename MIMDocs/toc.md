@@ -1,10 +1,10 @@
-# [Comprendere ed esplorare](/understand-explore/microsoft-identity-manager-2016.md)
-# [Pianificare e progettare](/plan-design/microsoft-identity-manager-2016-supported-platforms.md)
-# [Distribuire e usare](/deploy-use/microsoft-identity-manager-deploy.md)
-# [Usare Privileged Access Management](/pam/privileged-identity-management-for-active-directory-domain-services.md)
-# [Riferimenti per gli sviluppatori](/reference/microsoft-identity-manager-2016-developer-reference.md)
+# [Comprendere ed esplorare](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [Pianificare e progettare](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+# [Distribuire e usare](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# [Usare Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
+# [Riferimenti per gli sviluppatori](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 
