@@ -1,10 +1,10 @@
 ---
-title: Installare MIM 2016 &
+title: Sincronizzare Active Directory e il servizio MIM | Microsoft Identity Manager
 description: Usare gli agenti di gestione e il servizio Sincronizzazione MIM per sincronizzare i database di Active Directory e MIM.
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a
-ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: f17f256653936ffd06da9fae87dccfbf1c12a553
 
 
 ---
@@ -316,7 +316,7 @@ Per creare la regola di sincronizzazione in entrata per gli utenti di Active Dir
 
     -   Tipo di risorsa metaverse: persona
     -   Sistema esterno: ADMA
-    -   Tipo di risorsa sistema esterno: persona
+    -   Tipo di risorsa sistema esterno: utente
 
 6. Nella scheda **Relazione** specificare le informazioni seguenti e fare clic su **Avanti**:
 
@@ -328,10 +328,10 @@ Per creare la regola di sincronizzazione in entrata per gli utenti di Active Dir
 
     | Regola di flusso | Origine | Destination |
     |-|-|-|
-    |Regola 1|samAccountName|f|
+    |Regola 1|samAccountName|accountName|
     |Regola 2|displayName|displayName|
-    |Regola 3|EmployeeTipo|EmployeeTipo|
-    |Regola 4|givenName|givenName|
+    |Regola 3|EmployeeTipo|employeeTipo|
+    |Regola 4|givenName|firstName|
     |Regola 5|sn|lastName|
     |Regola 6|Manager|manager|
     |Regola 7|objectSID|ObjectSID|
@@ -438,6 +438,6 @@ Seguire questa procedura per eseguire ognuno dei tre profili di esecuzione.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

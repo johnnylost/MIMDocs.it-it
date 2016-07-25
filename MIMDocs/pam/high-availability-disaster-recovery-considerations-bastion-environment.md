@@ -1,10 +1,10 @@
 ---
-title: "Considerazioni su disponibilità elevata e ripristino di emergenza nell'ambiente bastion | Microsoft Identity Manager"
-description: 
+title: Ripristino di emergenza di PAM | Microsoft Identity Manager
+description: "Informazioni su come configurare Privileged Access Management per la disponibilità elevata e il ripristino di emergenza."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 1d9e005bfb3e26f9a2b818667f14acd3e5239523
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 9164e48bf10fa27ff6c87ba3816b586a940dda69
 
 
 ---
@@ -161,7 +161,7 @@ Una tipica distribuzione di produzione per la gestione degli accessi con privile
 
 La procedura per l'aggiunta di un altro controller di dominio è riportata nell'articolo [Installare un Controller di dominio Windows Server 2012 Replica in un dominio esistente (livello 200)](https://technet.microsoft.com/library/jj574134.aspx).  
 
->[!NOTE] 
+>[!NOTE]
 > Se il controller di dominio deve essere ospitato in una piattaforma di virtualizzazione come Hyper-V, vedere le avvertenze riportate nell'articolo [Distribuzione e configurazione di controller di dominio virtualizzati](https://technet.microsoft.com/library/jj574223.aspx).
 
 #### Ripristino
@@ -199,7 +199,7 @@ Per quanto riguarda la disponibilità elevata, vedere i documenti Windows Server
 
 Per la distribuzione della produzione su più server, è possibile usare la funzionalità Bilanciamento carico di rete per distribuire il carico di elaborazione.  È inoltre necessario avere un solo alias, ad esempio record A o CNAME, in modo che all'utente venga esposto un nome comune.
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 > Se si usa una tecnologia di bilanciamento del carico diversa dalla funzionalità Bilanciamento carico di rete di Windows Server 2012 R2, verificare che la soluzione reindirizzi una sessione allo stesso server e non a un server casuale.
 
 In una distribuzione MIM multiserver ciascun servizio MIM dispone di un nome host esterno, un nome di servizio e un nome di partizione del servizio.  Il valore predefinito del nome del servizio è il nome del computer, mentre il valore predefinito del nome host esterno e della partizione del servizio vengono configurati durante l'installazione del servizio MIM, nella schermata in cui viene richiesto l'indirizzo del server del servizio MIM. Questi tre nomi vengono archiviati nel file %Programmi%\Microsoft Forefront Identity Manager\Service\Microsoft.ResourceManagementService.exe.config, come attributi `externalHostName`, `serviceName` e `servicePartitionName` del nodo di configurazione `resourceManagementService`.  
@@ -224,6 +224,6 @@ Se il livello funzionale della foresta dell'ambiente bastion è Windows Server 2
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

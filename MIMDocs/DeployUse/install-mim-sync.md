@@ -1,114 +1,112 @@
 ---
-# required metadata
-
-title: Installare MIM 2016 & #58; Servizio di sincronizzazione MIM | Microsoft Identity Manager
+title: Installare il servizio di sincronizzazione di MIM | Microsoft Identity Manager
 description: Per iniziare a usare i componenti di MIM 2016, installare e configurare il servizio di sincronizzazione.
-keywords:
+keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: 2dfc89d32ef3b615201f1eb57ed3b8f5daed513e
+
 
 ---
 
 # Installare il servizio di sincronizzazione di MIM 2016: servizio di sincronizzazione MIM
 
 >[!div class="step-by-step"]
+[« Exchange Server](prepare-server-exchange.md)
+[Servizio e portale MIM »](install-mim-service-portal.md)
 
 > [!NOTE]
-> « Exchange Server Servizio e portale MIM » Questa procedura dettagliata usa nomi e valori di esempio della società Contoso.
-> - Sostituirli con i propri nomi e valori.
-> - Ad esempio:
+> Questa procedura dettagliata usa nomi e valori di esempio della società Contoso. Sostituirli con i propri nomi e valori. Ad esempio:
 > - Nome del controller di dominio: **mimservername**
+> - Nome del dominio: **contoso**
+> - Password: **Pass@word1**
 
-Nome del dominio: **contoso**
+Per installare Microsoft Identity Manager 2016, configurare innanzitutto il pacchetto di installazione.
 
-1. Password: **Pass@word1**
+1. Accedere come *contoso\Administrator* al server usato per la gestione delle identità.
 
-2. Per installare Microsoft Identity Manager 2016, configurare innanzitutto il pacchetto di installazione.
+2. Decomprimere il pacchetto di installazione MIM o montare il DVD dell'immagine MIM.
 
-## Accedere come *contoso\Administrator* al server usato per la gestione delle identità.
+## Installare il servizio di sincronizzazione di MIM 2016
 
-1. Decomprimere il pacchetto di installazione MIM o montare il DVD dell'immagine MIM.
+1. Nella cartella di installazione di MIM decompressa, passare alla cartella **Servizio di sincronizzazione** .
 
-2. Installare il servizio di sincronizzazione di MIM 2016 Nella cartella di installazione di MIM decompressa, passare alla cartella **Servizio di sincronizzazione** .
+2. Eseguire il **programma di installazione del servizio di sincronizzazione di MIM**. Seguire le istruzioni del programma di installazione e completare l'installazione.
 
-3. Eseguire il **programma di installazione del servizio di sincronizzazione di MIM**.
+3. Nella schermata di benvenuto, fare clic su **Avanti**.
 
-    ![Seguire le istruzioni del programma di installazione e completare l'installazione.](media/MIM-Install1.png)
+    ![Immagine iniziale del programma di installazione guidata di MIM](media/MIM-Install1.png)
 
-4. Nella schermata di benvenuto, fare clic su **Avanti**.
+4. Leggere le condizioni di licenza e fare clic su **Avanti** per accettarle.
 
-5. Immagine iniziale del programma di installazione guidata di MIM
+5. Nella schermata **Installazione personalizzata** fare clic su **Avanti**.
 
-    ![Leggere le condizioni di licenza e fare clic su **Avanti** per accettarle.](media/MIM-Install2.png)
+    ![Immagine dell'installazione personalizzata](media/MIM-Install2.png)
 
-6.  Nella schermata **Installazione personalizzata** fare clic su **Avanti**.
+6.  Nella schermata di configurazione del database di sincronizzazione, selezionare:
 
-    1.  Immagine dell'installazione personalizzata
+    1.  SQL Server si trova in: **Questo computer**.
 
-    2.  Nella schermata di configurazione del database di sincronizzazione, selezionare:
+    2.  L’istanza SQL Server è: **Istanza predefinita**
 
-    ![SQL Server si trova in: **Questo computer**.](media/MIM-Install3.png)
+    ![Immagine della connessione di database](media/MIM-Install3.png)
 
-7.  L’istanza SQL Server è: **Istanza predefinita**
+7.  Configurare l’account del servizio di sincronizzazione in base all'account creato in precedenza:
 
-    1.  Immagine della connessione di database
+    1.  Account del servizio: *MIMSync*
 
-    2.  Configurare l’account del servizio di sincronizzazione in base all'account creato in precedenza:
+    2.  Password: *Pass@word1*
 
-    3.  Account del servizio: *MIMSync*
+    3.  Dominio dell'account del servizio o nome del computer locale: *contoso*
 
-    ![Password: *Pass@word1*](media/MIM-Install4.png)
+    ![Immagine dell'account del servizio](media/MIM-Install4.png)
 
-8.  Dominio dell'account del servizio o nome del computer locale: *contoso*
+8.  Fornire al programma di installazione di MIM i gruppi di sicurezza pertinenti:
 
-    1. Immagine dell'account del servizio
+    1. Amministratore = *contoso\MIMSyncAdmins*
 
-    2. Fornire al programma di installazione di MIM i gruppi di sicurezza pertinenti:
+    2. Operatore = *contoso\MIMSyncOperators*
 
-    3. Amministratore = *contoso\MIMSyncAdmins*
+    3. Partecipante = *contoso\MIMSyncJoiners*
 
-    4. Operatore = *contoso\MIMSyncOperators*
+    4. Navigazione connettore = *contoso\MIMSyncBrowse*
 
-    5. Partecipante = *contoso\MIMSyncJoiners*
+    5. Gestione password WMI = *contoso\MIMSyncPasswordReset*
 
-    ![Navigazione connettore = *contoso\MIMSyncBrowse*](media/MIM-Install5.png)
+    ![Immagine dei gruppi di sicurezza](media/MIM-Install5.png)
 
-9. Gestione password WMI = *contoso\MIMSyncPasswordReset*
+9. Nella schermata delle impostazioni di protezione, selezionare **Abilita regole firewall per le comunicazioni RPC in ingresso** e fare clic su **Avanti**.
 
-10. Immagine dei gruppi di sicurezza
+10. Fare clic su **Installa** per avviare l'installazione di Sincronizzazione MIM.
 
-    1. Nella schermata delle impostazioni di protezione, selezionare **Abilita regole firewall per le comunicazioni RPC in ingresso** e fare clic su **Avanti**.
+    1. Potrebbe apparire un avviso riguardante l'account del servizio di sincronizzazione MIM. Fare clic su **OK**.
 
-    2. Fare clic su **Installa** per avviare l'installazione di Sincronizzazione MIM.
+    2. Sincronizzazione MIM verrà installato.
 
-    3. Potrebbe apparire un avviso riguardante l'account del servizio di sincronizzazione MIM. Fare clic su **OK**.
+    3. Viene visualizzato un avviso relativo alla creazione di un backup della chiave di crittografia. Fare clic su **OK**, quindi selezionare una cartella per archiviare il backup della chiave di crittografia.
 
-        ![Sincronizzazione MIM verrà installato.](media/MIM-Install7.png)
+        ![Immagine di avviso relativa al backup della chiave di crittografia di Sincronizzazione MIM](media/MIM-Install7.png)
 
-    4. Viene visualizzato un avviso relativo alla creazione di un backup della chiave di crittografia. Fare clic su **OK**, quindi selezionare una cartella per archiviare il backup della chiave di crittografia.
+    4. Quando il programma di installazione completata correttamente l'installazione, fare clic su **Fine**.
 
-    5. Immagine di avviso relativa al backup della chiave di crittografia di Sincronizzazione MIM Quando il programma di installazione completata correttamente l'installazione, fare clic su **Fine**.
+    5. È necessario disconnettersi e accedere in modo da rendere effettive le modifiche dell'appartenenza al gruppo. Fare clic su **Sì** per disconnettersi.
 
->È necessario disconnettersi e accedere in modo da rendere effettive le modifiche dell'appartenenza al gruppo.  
-Fare clic su **Sì** per disconnettersi.
+>[!div class="step-by-step"]  
+[« Exchange Server](prepare-server-exchange.md)
+[Servizio e portale MIM »](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: Requisiti hardware e software | Microsoft Identity Manager
-description: 
+title: Requisiti software di PAM | Microsoft Identity Manager
+description: Individuare i requisiti hardware e software per una corretta distribuzione di Privileged Access Management
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,13 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: a6bdf1b947ee3ebc4c9e89e74b2912697ebf1f60
-ms.openlocfilehash: 77e7174e94ea8032c4e57155db489f493ce18177
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 75a748f7035cfb10e833e4fdbfdc208b5245d3ea
 
 
 ---
 
-Non sono richiesti requisiti hardware oltre a quelli delle piattaforme software sottostanti, memoria o spazio su disco sufficiente e connettività di rete. Questo articolo descrive i requisiti minimi per una distribuzione di base. Non è destinato a illustrare le prestazioni, la scalabilità o la disponibilità elevata e non rappresenta una topologia di distribuzione consigliata per grandi imprese o ambienti di produzione.
+# Requisiti hardware e software
+
+Per Privileged Access Management non esistono requisiti hardware oltre a quelli delle piattaforme software sottostanti. Assicurarsi che la memoria e lo spazio su disco siano sufficienti e che la connettività di rete sia attiva.
+
+Questo articolo descrive i requisiti minimi per una distribuzione di base. Non è destinato a illustrare le prestazioni, la scalabilità o la disponibilità elevata e non rappresenta una topologia di distribuzione consigliata per grandi imprese o ambienti di produzione.
 
 ## Installazione da pacchetti software
 
@@ -70,6 +75,6 @@ Per PAMSRV:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

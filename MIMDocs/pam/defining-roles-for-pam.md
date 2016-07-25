@@ -1,10 +1,10 @@
 ---
-title: Definire ruoli per Privileged Access Management | Microsoft Identity Manager
-description: 
+title: Definire i ruoli con privilegi per PAM | Microsoft Identity Manager
+description: Decidere quali ruoli con privilegi devono essere gestiti e definire i criteri di gestione per ognuno.
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,15 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: 7ba6f744f7fb7a1c5052b14669aa3de2cd10ddbb
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 442b596107d9ade0ca466500440a32b2dd26fa14
 
 
 ---
 
 # Definire ruoli per Privileged Access Management
 
-Con Privileged Access Management è possibile assegnare utenti a ruoli con privilegi che questi ultimi possono attivare in base alle esigenze per l'accesso JIT. Questi ruoli sono definiti manualmente e stabiliti nell'ambiente bastion. Questo articolo illustra il processo per definire i ruoli da gestire tramite PAM e quelli con restrizioni e autorizzazioni appropriate.
+Con Privileged Access Management è possibile assegnare utenti a ruoli con privilegi che questi ultimi possono attivare in base alle esigenze per l'accesso JIT. Questi ruoli, definiti manualmente, vengono stabiliti nell'ambiente bastion. Questo articolo illustra il processo per definire i ruoli da gestire tramite PAM e quelli con restrizioni e autorizzazioni appropriate.
 
 Un approccio semplice per la definizione dei ruoli per Privileged Access Management consiste nel compilare tutte le informazioni in un foglio di calcolo. Elencare i ruoli nelle righe e usare le colonne per identificare le autorizzazioni e i requisiti di governance.
 
@@ -202,6 +203,6 @@ I ruoli per la gestione di utenti e computer non amministrativi possono includer
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

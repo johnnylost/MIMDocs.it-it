@@ -1,10 +1,10 @@
 ---
-title: Modello di livello per il partizionamento dei privilegi amministrativi | Microsoft Identity Manager
-description: 
+title: Modello a livelli dell'ambiente PAM | Microsoft Identity Manager
+description: "Informazioni sul modello a livelli che mantiene separate le diverse parti del sistema in base alla vulnerabilità al rischio."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 509c05bbda5f0a0b936518fb023000771c45d4f7
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
 
 
 ---
@@ -44,7 +44,7 @@ Le restrizioni di accesso devono essere applicate per garantire che gli account 
 - Il gruppo Domain admins (livello 0) non possa accedere al server aziendale (livello 1) e alle workstation degli utenti standard (livello 2).
 - Gli amministratori del server (livello 1) non possano accedere alla workstation degli utenti standard (livello 2).
 
->[!NOTE] 
+>[!NOTE]
 > Gli amministratori del server non devono essere nel gruppo di amministratori di dominio. Al personale con la responsabilità di gestire i controller di dominio e i server aziendali è necessario assegnare account distinti.
 
 Le restrizioni di accesso possono essere applicate con:
@@ -62,6 +62,6 @@ L'articolo successivo, [Planning a bastion environment](planning-bastion-environ
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 
