@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
+ms.sourcegitcommit: 9b5b7460e6307ab38b1b9356a638eb0200fd97d1
+ms.openlocfilehash: 009091a65dba31de2066e45930e438442fcd89a0
 
 
 ---
@@ -93,7 +93,7 @@ Attivare richiedendo l'accesso con privilegi elevati tramite il portale di esemp
 8. Nella scheda di sinistra, fare clic su **Attiva**. Selezionare il **ruolo PAM** e quindi fare clic su **Attiva**.
 
 > [!Note]
-> In questo ambiente è possibile anche imparare a sviluppare applicazioni che usano l'API REST PAM, descritta in [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md) (Informazioni di riferimento sull'API REST di Privileged Access Management).
+> In questo ambiente è possibile anche imparare a sviluppare applicazioni che usano l'API REST PAM, descritta in [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference) (Informazioni di riferimento sull'API REST di Privileged Access Management).
 
 ## Riepilogo
 Dopo aver completato i passaggi descritti in questa Guida, sarà stato dimostrato uno scenario di Privileged Access Management, in cui i privilegi dell'utente vengono elevati per un periodo di tempo limitato, consentendo all'utente di accedere alle risorse protette con un account privilegiato separato. Non appena la sessione di elevazione dei privilegi scade, l'account con privilegi non potrà più accedere alla risorsa protetta. La decisione in merito a quali gruppi di sicurezza rappresentano i ruoli con privilegi è coordinata dall'amministratore PAM. Dopo che i diritti di accesso sono stati migrati al sistema Privileged Access Management, l'accesso reso possibile in passato con l'account utente originale ora è invece reso possibile solo mediante l'accesso con un account con privilegi speciali e su richiesta. Di conseguenza, le appartenenze ai gruppi con privilegi elevati sono valide per un periodo di tempo limitato.
@@ -103,6 +103,6 @@ Dopo aver completato i passaggi descritti in questa Guida, sarà stato dimostrat
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
