@@ -4,7 +4,7 @@ description: Trovare i prodotti e le versioni compatibili con ciascuno dei compo
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/18/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: b276b1970796f3769006e2f2ef229cdb616e0675
+ms.sourcegitcommit: b4527c61dcdbef21c46414e190e0f0d0852e3aa3
+ms.openlocfilehash: d3995474ac91f109052c004ec9b84ac66efafbc7
 
 
 ---
@@ -49,7 +49,7 @@ ms.openlocfilehash: b276b1970796f3769006e2f2ef229cdb616e0675
 || Cmdlet richiedente PAM PowerShell (facoltativo) | Windows 8.1<br/>Windows 10 |
 | **Gestione certificati MIM** (integrazione di server e autorità di certificazione) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
 || Autorità di certificazione | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
-|| Database di gestione certificati MIM | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
+|| Database di gestione certificati MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 |
 | **Gestione certificati MIM ** (applicazione) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | **Gestione certificati MIM** (client e client bulk) | Windows | Windows 7 |
 | **MIM BHOLD Suite** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
@@ -59,6 +59,6 @@ ms.openlocfilehash: b276b1970796f3769006e2f2ef229cdb616e0675
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 
