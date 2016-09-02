@@ -4,7 +4,7 @@ description: Procedura di configurazione e installazione del servizio e del port
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: c18ea7b0390ca11c213ed66bfd1476454cf86951
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 
 ---
@@ -93,7 +93,7 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 1.  Impostare il nome dell'account del servizio per la registrazione SSPR su *Contoso\MIMSSPRService* e la relativa password su *Pass@word1*.
 
-2.  Specificare *CORPIDM* come nome host per la registrazione della password MIM e impostare la porta su **8080**. Abilitare l'opzione **Apri porta nel firewall**.
+2.  Specificare *CORPIDM* come nome host per il portale di reimpostazione della password MIM, quindi impostare la porta su **8088**. Abilitare l'opzione **Apri porta nel firewall**.
 
     ![Immagine relativa all'immissione delle informazioni di configurazione usate da IIS](media/MIM-Install15.png)
 
@@ -152,6 +152,6 @@ Al termine dell'installazione, verificare che il portale MIM sia attivo.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 
