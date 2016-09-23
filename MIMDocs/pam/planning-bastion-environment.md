@@ -4,7 +4,7 @@ description:
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: 0ed48d43825e1a876c4d96cafcb6c17cac26610f
+ms.sourcegitcommit: 9eefdf21d0cab3f7c488a66cbb3984d40498f4ef
+ms.openlocfilehash: fc4161f98d4367a2124e6253fe11dd1f2712d614
 
 
 ---
@@ -43,7 +43,7 @@ In base al [modello Tier](tier-model-for-partitioning-administrative-privileges.
 
 La foresta *CORP* di produzione deve stabilire un trust con la foresta *PRIV* di amministrazione, ma non viceversa. Può trattarsi di un trust di dominio o un trust tra foreste. Non è necessario che il dominio della foresta amministrativa consideri attendibili i domini gestiti e le foreste per gestire Active Directory, anche se altre applicazioni possono richiedere una relazione di trust bidirezionale, una convalida di sicurezza e un test.
 
-L'autenticazione selettiva dovrebbe essere usata per garantire che gli account nella foresta amministrativa usino solo gli host di produzione appropriati. Per mantenere i controller di dominio e delegare i diritti in Active Directory, questo in genere richiede la concessione del diritto "Accesso consentito" ai controller di dominio per account amministrativi designati di livello 0 nella foresta amministrativa. Per altre informazioni, vedere [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc755844.aspx) (Configurazione delle impostazioni di autenticazione selettiva).
+L'autenticazione selettiva dovrebbe essere usata per garantire che gli account nella foresta amministrativa usino solo gli host di produzione appropriati. Per mantenere i controller di dominio e delegare i diritti in Active Directory, questo in genere richiede la concessione del diritto "Accesso consentito" ai controller di dominio per account amministrativi designati di livello 0 nella foresta amministrativa. Per altre informazioni, vedere [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx) (Configurazione delle impostazioni di autenticazione selettiva).
 
 ## Mantenere la separazione logica
 
@@ -149,7 +149,7 @@ MIM usa i cmdlet PowerShell per la definizione di relazioni di trust tra i domin
 
 Quando viene modificata la topologia di Active Directory esistente, i cmdlet `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` e `Remove-PAMDomainConfiguration` possono essere utilizzati per aggiornare le relazioni di trust.
 
-### Stabilire relazioni di trust per ogni foresta
+## Stabilire relazioni di trust per ogni foresta
 
 Il cmdlet `New-PAMTrust` deve essere eseguito una volta per ogni foresta esistente. Viene richiamato sul computer del servizio MIM nel dominio amministrativo. I parametri per questo comando sono il nome di dominio del dominio principale della foresta esistente e le credenziali di un amministratore del dominio.
 
@@ -159,11 +159,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 Una volta stabilita la relazione di trust, configurare ogni dominio per abilitare la gestione dall'ambiente bastion, come descritto nella sezione successiva.
 
-### Abilitare la gestione per ogni dominio
+## Abilitare la gestione per ogni dominio
 
 Esistono sette requisiti per l'abilitazione della gestione per un dominio esistente.
 
-#### 1. Un gruppo di sicurezza nel dominio locale
+### 1. Un gruppo di sicurezza nel dominio locale
 
 È necessario un gruppo nel dominio esistente, il cui nome è il nome di dominio NetBIOS seguito da tre simboli del dollaro, ad esempio *CONTOSO$$$*. L'ambito del gruppo deve essere *locale di dominio* e il tipo di gruppo deve essere *Sicurezza*. Questo è necessario per creare i gruppi nella foresta amministrativa dedicata con lo stesso ID di sicurezza dei gruppi nel dominio. Creare questo gruppo tramite il comando di PowerShell seguente, eseguito da un amministratore del dominio esistente in una workstation aggiunta al dominio esistente:
 
@@ -171,7 +171,7 @@ Esistono sette requisiti per l'abilitazione della gestione per un dominio esiste
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-#### 2. Controllo delle operazioni riuscite e non riuscite
+### 2. Controllo delle operazioni riuscite e non riuscite
 
 Le impostazioni di Criteri di gruppo nel controller di dominio per il controllo devono includere degli eventi di controllo con esito positivo e negativo per Controlla gestione degli account e Controlla accesso al servizio directory. Questo può essere eseguito con la console Gestione criteri di gruppo, eseguita da un amministratore del dominio esistente ed eseguito in una workstation aggiunta al dominio esistente:
 
@@ -201,7 +201,7 @@ Le impostazioni di Criteri di gruppo nel controller di dominio per il controllo 
 
 Il messaggio "Aggiornamento dei criteri computer completato." dovrebbe essere visualizzato dopo pochi minuti.
 
-#### 3. Connessioni all'autorità di sicurezza locale
+### 3. Connessioni all'autorità di sicurezza locale
 
 I controller di dominio devono consentire il traffico RPC su connessioni TCP/IP per l'autorità di sicurezza locale dall'ambiente bastion. Nelle versioni precedenti di Windows Server, il supporto per TCP/IP in LSA deve essere abilitato nel Registro di sistema:
 
@@ -209,7 +209,7 @@ I controller di dominio devono consentire il traffico RPC su connessioni TCP/IP 
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-#### 4. Creazione della configurazione del dominio PAM
+### 4. Creazione della configurazione del dominio PAM
 
 Il cmdlet `New-PAMDomainConfiguration` deve essere eseguito sul computer del servizio MIM nel dominio amministrativo. I parametri per questo comando sono il nome di dominio del dominio esistente e le credenziali di un amministratore del dominio.
 
@@ -217,7 +217,7 @@ Il cmdlet `New-PAMDomainConfiguration` deve essere eseguito sul computer del ser
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-#### 5. Concessione di autorizzazioni di lettura agli account
+### 5. Concessione di autorizzazioni di lettura agli account
 
 Gli account nella foresta bastion utilizzati per stabilire i ruoli (amministratori che utilizzano i cmdlet `New-PAMUser` e `New-PAMGroup` ), nonché l'account utilizzato dal servizio di monitoraggio MIM necessitano di autorizzazioni di lettura in tale dominio.
 
@@ -239,11 +239,11 @@ La procedura seguente abilita l'accesso in lettura per l'utente *PRIV\Administra
 
 18. Chiudere Utenti e computer di Active Directory.
 
-#### 6. Un account break glass
+### 6. Un account break glass
 
 Se l'obiettivo di Privileged Access Management consiste nel ridurre il numero di account con privilegi di amministratore di dominio assegnati al dominio in modo permanente, deve essere presente un account *Break glass* nel dominio, nel caso in cui si verifichi un problema con la relazione di trust. Gli account di accesso di emergenza per la foresta di produzione devono essere disponibili in ogni dominio e devono essere in grado di accedere solo ai controller di dominio. Per le organizzazioni con più siti, potrebbero essere necessari altri account per la ridondanza.
 
-#### 7. Aggiornamento delle autorizzazioni nell'ambiente bastion
+### 7. Aggiornamento delle autorizzazioni nell'ambiente bastion
 
 Esaminare le autorizzazioni nell'oggetto *AdminSDHolder* nel contenitore di sistema di tale dominio. L’oggetto *AdminSDHolder* ha un elenco di controllo di accesso (ACL) univoco, che viene utilizzato per controllare le autorizzazioni delle entità di sicurezza che sono membri di gruppi di Active Directory con privilegi predefiniti. Si noti che se state apportate modifiche alle autorizzazioni predefinite influirebbero sugli utenti con privilegi amministrativi nel dominio, poiché tali autorizzazioni non verranno applicate agli utenti con account nell'ambiente bastion.
 
@@ -253,6 +253,6 @@ Il passaggio successivo consiste nel definire i ruoli PAM, associando utenti e g
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 
