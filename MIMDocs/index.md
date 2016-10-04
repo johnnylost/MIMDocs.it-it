@@ -6,7 +6,7 @@ description: "Documentazione tecnica per Microsoft Identity Manager: gestione de
 keywords: documentazione di Identity Manager, Microsoft Identity Manager, MIM
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 09/25/2016
 ms.topic: hubpage
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ms.technology: security
 ms.suite: ems
 ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 translationtype: Human Translation
-ms.sourcegitcommit: 455a24d3008a2ef54e1229100e7150a1090c9b2e
-ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
+ms.sourcegitcommit: 75b316ef30d16eee573f40e2ddcd9390dd5c695f
+ms.openlocfilehash: 1bf743563c2e61463071ac26ccf8bfe92d946a2d
 
 
 ---
@@ -31,20 +31,17 @@ ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
       <ol class="action-list">
         <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Avvia una versione di valutazione gratuita</a></li>
       </ol>
-      <ol class="action-list">
-        <li><a href="http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=61395" target="\_blank" class="button-bordered button-translucent">Anteprima delle funzionalità in arrivo</a></li>
-      </ol>
     </aside>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Contenuti in primo piano</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">Informazioni su Microsoft Identity Manager</a></li>
-          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Riferimento all'API REST di Gestione identità con privilegi</a></li>
+          <li><mark><b>NOVITÀ</b></mark><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">Microsoft Identity Manager 2016 Service Pack 1</a></li>
+          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Distribuire il software MIM in un server aggiornato</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Distribuire il software MIM in un server aggiornato</a></li>
-          <li><a href="/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services">Informazioni su Privileged Access Management</a></li>
+          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Riferimento all'API REST di Gestione identità con privilegi</a></li>
+          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">Panoramica di MIM 2016</a></li>
         </ul>
       </div>
     </section>
@@ -145,6 +142,6 @@ ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
