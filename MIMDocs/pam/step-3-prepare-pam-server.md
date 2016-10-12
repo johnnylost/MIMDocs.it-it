@@ -51,7 +51,7 @@ Aggiungere i ruoli Server Web (IIS) e Server applicazioni, le funzionalità .NET
 
 1.  Accedere come amministratore del dominio PRIV (PRIV\Administrator) e avviare PowerShell.
 
-2.  Digitare i comandi seguenti. Si noti che potrebbe essere necessario specificare un percorso diverso per i file di origine delle funzionalità .NET Framework 3.5. Queste funzionalità in genere non sono presenti quando si installa Windows Server, ma sono disponibili nella cartella affiancata (SxS) della cartella delle origini del disco di installazione del sistema operativo, ad esempio d:\Sources\SxS.\.
+2.  Digitare i comandi seguenti. Si noti che potrebbe essere necessario specificare un percorso diverso per i file di origine delle funzionalità .NET Framework 3.5. Queste funzionalità in genere non sono presenti quando si installa Windows Server, ma sono disponibili nella cartella affiancata (SxS) della cartella delle origini del disco di installazione del sistema operativo, ad esempio, "*d:\Sources\SxS".
 
     ```
     import-module ServerManager
@@ -212,6 +212,6 @@ Nel passaggio 4 sarà possibile iniziare l'installazione dei componenti MIM nel 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
