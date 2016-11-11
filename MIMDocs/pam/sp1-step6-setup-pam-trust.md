@@ -1,25 +1,29 @@
 ---
-title: "Passaggio 6: Installazione dell'attendibilità PAM"
+title: "Passaggio 6: Installazione dell&quot;attendibilità PAM"
 description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager tramite gli script"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 46afda513e849e457f5f3644a46f244161467e50
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 5bcf4f4ef201236746ec1bf75c1c8900841a6c79
 
 
 ---
 
-# Installazione dell'attendibilità PAM
+# <a name="step-6-set-up-the-pam-trust"></a>Passaggio 6: Installare l'attendibilità di PAM
+
+>[!div class="step-by-step"]
+[« Passaggio 5](sp1-step5-configuring-pam.md)
+[Passaggio 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 **Non è obbligatoria per un ambiente PRIVOnly** Accedere a PAMServer con l'account MIMAdmin.
 
@@ -31,8 +35,12 @@ ms.openlocfilehash: 46afda513e849e457f5f3644a46f244161467e50
 
   Quando richiesto, immettere le credenziali dell'account amministratore CORP. Dopo aver specificato le credenziali, verrà stabilita la relazione di trust e la configurazione viene completata.
 
+>[!div class="step-by-step"]
+[« Passaggio 5](sp1-step5-configuring-pam.md)
+[Passaggio 7 »](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Nov16_HO2-->
 
 

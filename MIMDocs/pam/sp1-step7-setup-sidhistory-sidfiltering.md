@@ -3,23 +3,27 @@ title: 'Passaggio 7: Installare la cronologia e il filtraggio SID'
 description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager tramite gli script"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 4c5cfa92f3111a6d298f586ba547a1eca2502853
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: a98d83a22c61ef534fcc02725e4cd500be10cc8a
 
 
 ---
 
-# Installare la cronologia e il filtraggio SID
+# <a name="step-7-set-up-sid-historysid-filtering"></a>Passaggio 7: Installare la cronologia e il filtraggio SID
+
+>[!div class="step-by-step"]
+[« Passaggio 6](sp1-step6-setup-pam-trust.md)
+[Passaggio 8 »](sp1-step8-pam-deployment-verification.md)
 
 **Non è obbligatoria per un ambiente PRIVOnly** Accedere a PAMServer con l'account MIMAdmin.
 
@@ -35,8 +39,12 @@ Per il filtraggio SID: <br/></br>
 Per la cronologia SID: </br></br>
 "Attivazione della cronologia SID per il trust" o "Cronologia SID già attivata per il trust".
 
+>[!div class="step-by-step"]
+[« Passaggio 6](sp1-step6-setup-pam-trust.md)
+[Passaggio 8 »](sp1-step8-pam-deployment-verification.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Nov16_HO2-->
 
 
