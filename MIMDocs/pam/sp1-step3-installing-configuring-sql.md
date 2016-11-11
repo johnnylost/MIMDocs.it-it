@@ -3,22 +3,26 @@ title: 'Passaggio 3: Configurazione di SQL'
 description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager tramite gli script"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: a7d456b1c2baf31ef2d7ca801a567cf42eaef52e
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 375a34e5255c90559fc0ffb3a80fc7c92ebd27a2
 
 
 ---
-# Passaggio 3: Configurazione di SQL
+# <a name="step-3-configuring-sql"></a>Passaggio 3: Configurazione di SQL
+
+>[!div class="step-by-step"]
+[« Passaggio 2](sp1-step2-configuring-corp-domain.md)
+[Passaggio 4 »](sp1-step4-configuring-sharepoint.md)
 
 Prima di proseguire con la procedura riportata di seguito, verificare che si stia usando SQL Server 2012 SP1 o versione successiva o SQL Server 2014. Per i server aggiunti al dominio, accedere tramite l'account MIMAdmin. In caso contrario, accedere come amministratore locale
 1. Eseguire PowerShell come amministratore
@@ -36,8 +40,12 @@ Prima di proseguire con la procedura riportata di seguito, verificare che si sti
 
 Quando richiesto, specificare la password per l'account del servizio MIMAdmin e procedere con l'installazione. Al termine, passare al passaggio 4.
 
+>[!div class="step-by-step"]
+[« Passaggio 2](sp1-step2-configuring-corp-domain.md)
+[Passaggio 4 »](sp1-step4-configuring-sharepoint.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Nov16_HO2-->
 
 

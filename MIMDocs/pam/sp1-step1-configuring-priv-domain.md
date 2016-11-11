@@ -3,22 +3,25 @@ title: 'Passaggio 1: Configurazione del dominio PRIV'
 description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager tramite gli script"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7c5266f3d1c51e933855031f4128cbcb967d6e2
-ms.openlocfilehash: 37ac600701ed9d90790e557d2f282be45eed43b4
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 8c1127b81676dfa40dc9bca515b4c3c6d66a1298
 
 
 ---
-# Passaggio 1: Configurazione del dominio PRIV
+# <a name="step-1-configuring-the-priv-domain"></a>Passaggio 1: Configurazione del dominio PRIV
+
+>[!div class="step-by-step"]
+[Passaggio 2 »](sp1-step2-configuring-corp-domain.md)
 
 1. Accedere a PRIVDC come amministratore
   * Se si tratta di un ambiente PRIVOnly, accedere a CORPDC
@@ -32,13 +35,17 @@ Gli account di servizio necessari per la gestione di SQL/SharePoint e MIM vengon
 Se il dominio PRIV è Windows Server 2016, con il livello di funzionalità impostato su Windows Server 2016 Technical Preview 5, lo script richiederà di abilitare la funzionalità facoltativa 'Privileged Access Management' di Active Directory richiesta da PAM. Scegliere Sì per continuare.
 Per i livelli di funzionalità inferiori a Windows Server 2016, ignorare l'avviso relativo al fatto che non verrà eseguita una configurazione aggiuntiva. È necessario eseguire nuovamente il file PAMDeployment.ps1 e la configurazione della foresta PAM, quando l'amministratore aumenta il livello di funzionalità a Windows Server 2016.
 
->[!Note] I passaggi seguenti non sono necessari per le configurazioni di PRIVOnly
+>[!NOTE]
+>I passaggi seguenti non sono necessari per le configurazioni di PRIVOnly
 
 Copiare il file SIDs.txt che viene generato in $env:SYSTEMDRIVE\PAM nella cartella analoga di CORPDC. Questa operazione è necessaria per CORPDC per configurare le autorizzazioni per gli utenti PRIV al fine di leggere le proprietà utente CORP.
 Al completamento dello script verrà chiesto di riavviare il computer per rendere effettive le modifiche.
 
+>[!div class="step-by-step"]
+[Passaggio 2 »](sp1-step2-configuring-corp-domain.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Nov16_HO2-->
 
 
