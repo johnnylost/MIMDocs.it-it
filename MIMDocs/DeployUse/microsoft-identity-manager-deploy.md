@@ -1,25 +1,25 @@
 ---
-title: Distribuire MIM 2016 | Microsoft Identity Manager
-description: Ottenere l'elenco completo dei passaggi coinvolti nella distribuzione di Microsoft Identity Manager 2016, dalla preparazione dell'ambiente alla configurazione dei portali.
+title: Distribuire MIM 2016 | Documentazione Microsoft
+description: Ottenere l&quot;elenco completo dei passaggi coinvolti nella distribuzione di Microsoft Identity Manager 2016, dalla preparazione dell&quot;ambiente alla configurazione dei portali.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/07/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 40dbec941eb2f0b1a01de0f47d44e01717aaca21
-ms.openlocfilehash: 77dae279f9078c55abf342a8956aaf77c62773d5
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 7fdad09650af245157264778d2732ac4327f25b5
 
 
 ---
 
-# Distribuire MIM 2016
+# <a name="deploy-mim-2016"></a>Distribuire MIM 2016
 Gli articoli di questa sezione forniscono istruzioni dettagliate per la distribuzione di Microsoft Identity Manager (MIM) 2016 per scenari self-service dell'utente finale in un server aggiornato in cui FIM o MIM non sia stato distribuito in precedenza.
 
 > [!NOTE]
@@ -29,18 +29,18 @@ Lo scenario di gestione accesso con privilegi, viene distribuito in modo diverso
 
 Il processo di distribuzione di MIM 2016 è molto simile a quello del suo predecessore, FIM 2010 R2. Per consultare la documentazione di FIM, vedere la [guida alla distribuzione di Forefront Identity Manager 2010 R2](https://technet.microsoft.com/library/jj134310).
 
-## Primo passaggio: preparare un dominio
+## <a name="first-prepare-a-domain"></a>Primo passaggio: preparare un dominio
 MIM funziona con Active Directory (AD), quindi seguire questi passaggi per configurare il controller di dominio di Active Directory.
 - [Configurazione del dominio](preparing-domain.md)
 
-## Passaggio successivo: preparare un server di gestione delle identità
+## <a name="next-prepare-an-identity-management-server"></a>Passaggio successivo: preparare un server di gestione delle identità
 Dopo aver configurato il dominio, preparare il server di gestione delle identità aziendali. Sono incluse le seguenti operazioni:
 - [Windows Server 2012 R2](prepare-server-ws2012r2.md)
 - [SQL Server 2014](prepare-server-sql2014.md)
 - [SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (facoltativo)
 
-## Infine, installare i componenti di Microsoft Identity Manager 2016
+## <a name="finally-install-microsoft-identity-manager-2016-components"></a>Infine, installare i componenti di Microsoft Identity Manager 2016
 Dopo avere configurato il dominio e il server, si è pronti per installare i componenti MIM e configurarli per la sincronizzazione con Active Directory.
 - [Servizio di sincronizzazione MIM](install-mim-sync.md)
 - [Servizio e portale MIM](install-mim-service-portal.md)
@@ -48,6 +48,6 @@ Dopo avere configurato il dominio e il server, si è pronti per installare i com
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

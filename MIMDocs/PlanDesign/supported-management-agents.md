@@ -1,25 +1,25 @@
 ---
-title: Connettori supportati | Microsoft Identity Manager
+title: Connettori supportati | Documentazione Microsoft
 description: Usare i connettori per gestire il trasferimento dei dati tra MIM e le directory.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 309011c81959971e696d70aa4ec5e1610cc8a2f0
-ms.openlocfilehash: f0842781e3730dae5548ce02a3cb247376d12dc8
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5841f549cc7f9369943cc5b31c27005f89afcccb
 
 
 ---
 
-# Connettersi alle directory
+# <a name="connect-to-your-directories"></a>Connettersi alle directory
 
 I connettori collegano le origini dati connesse specificate a Microsoft Identity Manager (MIM). Un connettore sposta i dati da un'origine dati connessa a MIM. Grazie al connettore è anche possibile esportare i dati all'origine dati connessa perché siano sincronizzati con MIM quando vengono modificati in MIM. Esiste in genere almeno un connettore per ogni directory connessa.
 
@@ -27,7 +27,7 @@ In Forefront Identity Manager i connettori erano detti agenti di gestione. Quest
 
 Questo articolo descrive i connettori inclusi in MIM. Il connettore per Extensible Connectivity 2.0 consente comunque di connettersi anche a più origini dati. Alcuni partner hanno creato connettori personalizzati. Nel wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (FIM 2010: Agenti di gestione dei partner) è disponibile un elenco completo.
 
-## Connettori supportati in MIM 2016
+## <a name="supported-connectors-in-mim-2016"></a>Connettori supportati in MIM 2016
 
 | Nome | Versioni supportate dell'origine dati connessa |
 | ---- | ----------------------------------------------- |
@@ -35,7 +35,7 @@ Questo articolo descrive i connettori inclusi in MIM. Il connettore per Extensib
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
 | Elenco Indirizzi Globale (EIG) di Active Directory | Elenco Indirizzi Globale (EIG) di Active Directory – Exchange 2000, 2003, 2007, 2010, 2013 |
 | Extensible Connectivity 2.0 | Qualsiasi origine dati basata su chiamata o file |
-| Servizio MIM | Microsoft Identity Manager 2016 |
+| Servizio MIM | Documentazione Microsoft 2016 |
 | Database IBM DB2 Universal | IBM DB2 versione 9.1, 9.5 o 9.7; IBM DB2 OLEDB v9.5 FP5 o v9.7 FP1 |
 | IBM Directory Server | IBM Tivoli Directory Server 6.x |
 | Novell eDirectory | Novell eDirectory versioni 8.7.3, 8.8.5 e 8.8.6 |
@@ -54,12 +54,12 @@ Questo articolo descrive i connettori inclusi in MIM. Il connettore per Extensib
 | File di testo a larghezza fissa | File di testo a larghezza fissa |
 | Formato interscambio dati LDIF | Formato interscambio dati LDIF |
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 [Agenti di gestione di FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

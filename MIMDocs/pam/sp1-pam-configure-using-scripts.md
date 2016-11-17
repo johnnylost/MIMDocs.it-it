@@ -3,23 +3,23 @@ title: Configurare PAM tramite gli script
 description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager tramite gli script"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/04/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 96c734ade75f5c206858387cf45106761bc0a881
-ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
 
 
 ---
 
-# Configurare PAM tramite gli script
+# <a name="configure-pam-using-scripts"></a>Configurare PAM tramite gli script
 
 Se si sceglie di installare SQL e SharePoint su server separati, devono essere configurati tramite le istruzioni riportate di seguito. Se SQL, SharePoint e i componenti PAM sono installati nello stesso computer, i passaggi seguenti devono essere eseguiti da tale computer.
 
@@ -39,11 +39,11 @@ passaggi:
 5. Copiare il file PAMDeploymentConfig.xml nella cartella %SYSTEMDRIVE%\PAM in tutti i computer, controller di dominio CORP, controller di dominio PRIV, server PAM, server SQL e server SharePoint.
 
 
-## Foglio di lavoro di distribuzione
+## <a name="deployment-worksheet"></a>Foglio di lavoro di distribuzione
 
 Prima di procedere, aggiornare il file PAMDeploymentConfig.xml e inserire la copia aggiornata in tutti i computer.
 
-### Installazione
+### <a name="setup"></a>Installazione
 
 |Computer   | Esecuzione come   |Comandi   |
 |---|---|---|
@@ -55,7 +55,7 @@ Prima di procedere, aggiornare il file PAMDeploymentConfig.xml e inserire la cop
 | PAMServer  | Amministratore locale (amministrazione MIM dopo l'aggiunta a un dominio)  | .\PAMDeployment.ps1 Selezionare l'opzione di menu 5 (installazione di PAM per MIM)   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Selezionare l'opzione di menu 6 (installazione attendibile di PAM) .\PAMDeployment.ps1 Selezionare l'opzione di menu 6 (installazione dell'attendibilità PAM) |
 
-### Convalida
+### <a name="validation"></a>Convalida
 
 |  Computer | Esecuzione come   | Comandi   |
 |---|---|---|
@@ -63,10 +63,14 @@ Prima di procedere, aggiornare il file PAMDeploymentConfig.xml e inserire la cop
 | CORPDC  | Amministratore del dominio CORP   | Import-module .\PAMValidation.psm1 ; Create-PAMValidationCORPDCConfig   |
 | PAMServer   | MIMAdmin  | Import-module .\PAMValidation.psm1 ; Move-PAMValidationUsersToPAM  |
 | CORPClient  | Utente CORP (amministratore locale)   |   Import-module .\PAMValidation.psm1 ; Enable-PAMUsersCORPClientRemote |
-|  CORPClient | <PRIV>Utente \PRIV.pamRequestor in caso di PRIVOnly: <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
+|  CORPClient | <PRIV>Utente \PRIV.pamRequestor e in caso di PRIVOnly: <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
+
+
+>[!div class="step-by-step"]
+[Inizio »](sp1-step1-configuring-priv-domain.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

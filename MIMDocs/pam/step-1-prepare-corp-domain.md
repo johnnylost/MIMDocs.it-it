@@ -1,25 +1,25 @@
 ---
-title: 'Distribuire PAM, passaggio 1: Dominio CORP | Microsoft Identity Manager'
+title: 'Distribuire PAM, passaggio 1: Dominio CORP | Documentazione Microsoft'
 description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 9a2fafa86c5c928339ff8d7ad1593472046ccb98
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 127d368c15cce125ba7f69302cfa329b600d9498
 
 
 ---
 
-# Passaggio 1: preparare l'host e il dominio CORP
+# <a name="step-1-prepare-the-host-and-the-corp-domain"></a>Passaggio 1: preparare l'host e il dominio CORP
 
 >[!div class="step-by-step"]
 [Passaggio 2 »](step-2-prepare-priv-domain-controller.md)
@@ -29,11 +29,11 @@ Questo passaggio descrive le operazioni necessarie per ospitare l'ambiente basti
 
 Se si dispone già di un dominio di Active Directory (AD) esistente con un controller di dominio che esegue Windows Server 2012 R2 o versioni successive, in cui si ha il ruolo di amministratore di dominio, è possibile usare tale dominio.  
 
-## Preparare il controller di dominio CORP
+## <a name="prepare-the-corp-domain-controller"></a>Preparare il controller di dominio CORP
 
 Questa sezione descrive come configurare un controller di dominio per un dominio CORP. Nel dominio CORP, gli utenti amministrativi sono gestiti dall'ambiente bastion. Il nome DNS (Domain Name System) del dominio CORP usato in questo esempio è *contoso.local*.
 
-### Installare Windows Server
+### <a name="install-windows-server"></a>Installare Windows Server
 
 In una macchina virtuale, installare Windows Server 2012 R2 o Windows Server 2016 Technical Preview 4 o versioni successive per creare un computer denominato *CORPDC*.
 
@@ -47,7 +47,7 @@ In una macchina virtuale, installare Windows Server 2012 R2 o Windows Server 201
 
 5. Dopo aver riavviato il server, accedere come amministratore. Passare al Pannello di controllo. Configurare il computer per verificare la necessità di installare eventuali aggiornamenti. Riavviare il server.
 
-### Aggiungere ruoli per stabilire un controller di dominio
+### <a name="add-roles-to-establish-a-domain-controller"></a>Aggiungere ruoli per stabilire un controller di dominio
 
 In questa sezione, si aggiungeranno i ruoli di Servizi di dominio Active Directory (AD DS), Server DNS e File server (parte della sezione Servizi file e archiviazione) e si promuoverà il server a controller di dominio di una nuova foresta contoso.local.
 
@@ -72,7 +72,7 @@ In questa sezione, si aggiungeranno i ruoli di Servizi di dominio Active Directo
 
 4. Dopo il riavvio del server, accedere a CORPDC come amministratore del dominio, ossia utente CONTOSO\\Administrator, con la password creata durante l'installazione di Windows su CORPDC.
 
-### Creare un gruppo
+### <a name="create-a-group"></a>Creare un gruppo
 
 Creare un gruppo a scopo di controllo da Active Directory, se il gruppo non esiste già. Il nome del gruppo deve essere il nome di dominio NetBIOS seguito da tre simboli del dollaro, ad esempio *CONTOSO$$$*.
 
@@ -90,7 +90,7 @@ Per ogni dominio, accedere a un controller di dominio come amministratore di dom
 
 In alcuni casi, è possibile che il gruppo esista già. Si tratta di una situazione normale se il dominio è stato usato anche in scenari di migrazione di AD.
 
-### Creare altri utenti e gruppi a scopo dimostrativo
+### <a name="create-additional-users-and-groups-for-demonstration-purposes"></a>Creare altri utenti e gruppi a scopo dimostrativo
 
 Se è stato creato un nuovo dominio CORP, è necessario creare altri utenti e gruppi per illustrare lo scenario PAM. L'utente e il gruppo a scopo dimostrativo non devono essere amministratori di dominio o controllati dalle impostazioni adminSDHolder in AD.
 
@@ -119,7 +119,7 @@ Si intende creare un gruppo di sicurezza denominato *CorpAdmins* e un utente den
   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
   ```
 
-### Configurare il controllo
+### <a name="configure-auditing"></a>Configurare il controllo
 
 È necessario abilitare il controllo in foreste esistenti per stabilire la configurazione di PAM in tali foreste.  
 
@@ -147,7 +147,7 @@ Per ogni dominio, accedere a un controller di dominio come amministratore di dom
 
 Dopo pochi minuti viene visualizzato il messaggio **Aggiornamento dei criteri computer completato**.
 
-### Configurare le impostazioni del Registro di sistema
+### <a name="configure-registry-settings"></a>Configurare le impostazioni del Registro di sistema
 
 Questa sezione descrive come configurare le impostazioni del Registro di sistema necessarie per la migrazione della cronologia SID, che verrà usata per la creazione del gruppo Privileged Access Management.
 
@@ -163,14 +163,14 @@ Questa sezione descrive come configurare le impostazioni del Registro di sistema
 
 Verrà riavviato il controller di dominio CORPDC. Per altre informazioni sull'impostazione del Registro di sistema, vedere [How to troubleshoot inter-forest sIDHistory migration with ADMTv2](http://support.microsoft.com/kb/322970) (Risoluzione dei problemi di migrazione di sIDHistory tra foreste diverse con ADMTv2).
 
-## Preparare una workstation CORP e le relative risorse
+## <a name="prepare-a-corp-workstation-and-resource"></a>Preparare una workstation CORP e le relative risorse
 
 Se non si ha già una workstation aggiunta al dominio, seguire queste istruzioni per prepararne una.  
 
 > [!NOTE]
 > Se si ha già una workstation aggiunta al dominio, passare a [Creare una risorsa a scopo dimostrativo](#create-a-resource-for-demonstration-purposes).
 
-### Installare Windows 8.1 o Windows 10 Enterprise come macchina virtuale
+### <a name="install-windows-81-or-windows-10-enterprise-as-a-vm"></a>Installare Windows 8.1 o Windows 10 Enterprise come macchina virtuale
 
 In un'altra macchina virtuale nuova in cui non è installato alcun software, installare Windows 8.1 Enterprise o Windows 10 Enterprise per creare un computer *CORPWKSTN*.
 
@@ -182,7 +182,7 @@ In un'altra macchina virtuale nuova in cui non è installato alcun software, ins
 
 4. Tramite il Pannello di controllo, unire il dominio del computer CORPWKSTN al dominio contoso.local. Sarà necessario fornire le credenziali di amministratore del dominio Contoso. Al termine dell'operazione, riavviare il computer CORPWKSTN.
 
-### Creare una risorsa a scopo dimostrativo
+### <a name="create-a-resource-for-demonstration-purposes"></a>Creare una risorsa a scopo dimostrativo
 
 È necessario disporre di una risorsa per dimostrare il controllo di accesso basato su gruppi di sicurezza con PAM.  Se si ha già una risorsa, usare una cartella di file a scopo dimostrativo.  In questo modo, verranno usati gli oggetti "Jen" e "CorpAdmins" di AD creati nel dominio contoso.local.
 
@@ -215,6 +215,6 @@ Nel passaggio successivo si preparerà il controller di dominio PRIV.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

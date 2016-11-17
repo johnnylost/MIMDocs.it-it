@@ -1,27 +1,27 @@
 ---
-title: Servizio di creazione di report ibridi in Azure | Microsoft Identity Manager
+title: Servizio di creazione di report ibridi in Azure | Documentazione Microsoft
 description: Informazioni su come combinare i dati cloud locali in report ibridi in Azure e come gestire e visualizzare questi report.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 0a104a5f79dd48cb2dfc3d739e3ce8dcbd236c0f
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ff0469da204a9bfa861273d66b04f5da51557c99
 
 
 ---
 
-# Utilizzo del servizio di creazione report ibridi di Identity Manager
+# <a name="working-with-identity-manager-hybrid-reporting"></a>Utilizzo del servizio di creazione report ibridi di Identity Manager
 
-## Report ibridi
+## <a name="available-hybrid-reports"></a>Report ibridi
 I primi tre report di Microsoft Identity Manager (MIM) disponibili in Azure AD sono **Attività di reimpostazione password**, **Registrazione di reimpostazione della password** e **Attività dei gruppi self-service**.
 
 -   Con l'attività di reimpostazione della password viene visualizzata ogni istanza in cui un utente ha eseguito una reimpostazione della password tramite l'SSPR di reimpostazione della password e fornisce i gate o **Metodi** utilizzati per l'autenticazione.
@@ -38,7 +38,7 @@ I primi tre report di Microsoft Identity Manager (MIM) disponibili in Azure AD s
 >
 > Se si desidera disinstallare i report ibridi, disinstallare l'agente MIMreportingAgent.msi.
 
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 1.  Installare Microsoft Identity Manager 2016 incluso il servizio MIM.
 
@@ -46,7 +46,7 @@ I primi tre report di Microsoft Identity Manager (MIM) disponibili in Azure AD s
 
 3.  Assicurarsi di disporre della connettività Internet in uscita da Microsoft Identity Manager in Azure.
 
-## Installare Microsoft Identity Manager Reporting in Azure AD
+## <a name="install-microsoft-identity-manager-reporting-in-azure-ad"></a>Installare Microsoft Identity Manager Reporting in Azure AD
 Dopo aver installato l'agente di creazione report, i dati relativi all'attività di Microsoft Identity Manager vengono esportati da MIM nel Registro eventi di Windows. L'agente di creazione report di MIM elabora gli eventi e li carica in Azure. In Azure, gli eventi vengono analizzati, decrittografati e filtrati per i report necessari.
 
 1.  Installare Microsoft Identity Manager 2016.
@@ -75,7 +75,7 @@ Dopo aver installato l'agente di creazione report, i dati relativi all'attività
 
     È possibile creare i dati del report tramite il portale self-service di reimpostazione password di Microsoft Identity Manager per reimpostare la password dell'utente. Assicurarsi che la reimpostazione della password sia stata completata correttamente e quindi verificare che i dati siano visualizzati nel portale di gestione di Azure AD.
 
-## Visualizzare i report ibridi nel portale di Azure classico
+## <a name="view-hybrid-reports-in-the-azure-classic-portal"></a>Visualizzare i report ibridi nel portale di Azure classico
 
 1.  Accedere al [portale di Azure classico](https://manage.windowsazure.com/) con l'account di amministratore globale per il tenant.
 
@@ -90,10 +90,10 @@ Dopo aver installato l'agente di creazione report, i dati relativi all'attività
 > [!WARNING]
 > Può richiedere del tempo prima che i dati di Microsoft Identity Manager vengano visualizzati in Azure AD.
 
-## Interrompere la creazione di report ibridi
+## <a name="stop-creating-hybrid-reports"></a>Interrompere la creazione di report ibridi
 Se si vuole interrompere il caricamento dei dati di creazione di report da Microsoft Identity Manager in Azure Active Directory, disinstallare l'agente per la creazione di report ibridi. Usare lo strumento **Installazione applicazioni** di Windows per disinstallare il servizio di creazione report ibridi di Microsoft Identity Manager.
 
-## Eventi di Windows usati per la creazione di report ibridi
+## <a name="windows-events-used-for-hybrid-reporting"></a>Eventi di Windows usati per la creazione di report ibridi
 Gli eventi generati da Microsoft Identity Manager vengono registrati nel Registro eventi di Windows e sono visibili nel Visualizzatore eventi in: Registri applicazioni e servizi-&gt; **Registro richieste di Identity Manager**. Ogni richiesta di MIM viene esportata come un evento nel Registro eventi di Windows nella struttura JSON. Può inoltre essere esportato nella soluzione SIEM in uso.
 
 |Tipo evento|ID|Dettagli evento|
@@ -103,6 +103,6 @@ Gli eventi generati da Microsoft Identity Manager vengono registrati nel Registr
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
