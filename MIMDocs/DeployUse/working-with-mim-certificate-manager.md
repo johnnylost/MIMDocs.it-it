@@ -1,25 +1,25 @@
 ---
-title: Gestore di certificati MIM | Microsoft Identity Manager
-description: Informazioni su come distribuire l'app Gestione certificati per consentire agli utenti di gestire i propri diritti di accesso.
+title: Gestore di certificati MIM | Documentazione Microsoft
+description: Informazioni su come distribuire l&quot;app Gestione certificati per consentire agli utenti di gestire i propri diritti di accesso.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
 
 
 ---
 
-# Utilizzo con il gestore di certificati MIM
+# <a name="working-with-the-mim-certificate-manager"></a>Utilizzo con il gestore di certificati MIM
 Dopo avere configurato correttamente MIM 2016 e Gestione certificati, è possibile distribuire l'applicazione di gestione certificati MIM di Windows Store in modo che gli utenti possano gestire facilmente le smart card fisiche e virtuali e i certificati software. I passaggi per distribuire app di gestione certificati MIM CM sono i seguenti:
 
 1.  Creare un modello di certificato.
@@ -30,7 +30,7 @@ Dopo avere configurato correttamente MIM 2016 e Gestione certificati, è possibi
 
 4.  Distribuire l'app tramite SCCM o Intune.
 
-## Creare un modello di certificato
+## <a name="create-a-certificate-template"></a>Creare un modello di certificato
 Creare un modello di certificato per l'applicazione CM esattamente come di consueto, ad eccezione del fatto che è necessario assicurarsi che la versione del modello di certificato sia la versione 3 e versioni successive.
 
 1.  Accedere al server su cui è in esecuzione Servizi certificati Active Directory (il server dei certificati).
@@ -69,7 +69,7 @@ Creare un modello di certificato per l'applicazione CM esattamente come di consu
 
 16. Selezionare il nuovo modello creato nell'elenco e fare clic su **OK**.
 
-## Creare un modello del profilo
+## <a name="create-a-profile-template"></a>Creare un modello del profilo
 Assicurarsi che quando si crea un modello di profilo per l'impostazione per creare o eliminare il vSC e rimuovere la raccolta dei dati. L'applicazione CM non può gestire i dati raccolti, pertanto è importante per disabilitarlo, come indicato di seguito.
 
 1.  Accedere al portale CM come utente con privilegi amministrativi.
@@ -94,7 +94,7 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
 11. È necessario disabilitare gli elementi di raccolta dei dati per ogni criterio facendo clic sul criterio nel riquadro a sinistra e quindi deselezionando la casella accanto a **Elemento di dati di esempio** . Quindi fare clic su **Elimina elemento raccolta dati**. Fare quindi clic su **OK**.
 
-## Preparare l'applicazione CM per la distribuzione
+## <a name="prepare-the-cm-app-for-deployment"></a>Preparare l'applicazione CM per la distribuzione
 
 1.  Nel prompt dei comandi, eseguire il comando seguente per decomprimere l'applicazione ed estrarre il contenuto in una nuova sottocartella denominata appx e creare una copia in modo da non modificare il file originale.
 
@@ -148,7 +148,7 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
     -   Aprire l'applicazione virtuale Smart Card. Ciò rende più semplice individuare i valori necessari per il passaggio successivo.
 
-    -   Per aggiungere l'applicazione come client nel server AD FS e configurare CM nel server, aprire Windows PowerShell nel server AD FS ed eseguire il comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
+    -   Per aggiungere l'applicazione come client nel server AD FS e configurare CM nel server, aprire Windows PowerShell nel server AD FS ed eseguire il comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`.
 
         Ecco lo script ConfigureMimCMClientAndRelyingParty.ps1:
 
@@ -251,11 +251,11 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
     -   Per assistenza per lo script **ConfigureMIimCMClientAndRelyingParty.ps1** eseguire `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
-## Distribuire l'app
+## <a name="deploy-the-app"></a>Distribuire l'app
 Quando si configura l'app CM nell'Area download, scaricare il file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip ed estrarre il relativo contenuto. Il file con estensione AppX è il programma di installazione. È possibile distribuire l'app nello stesso modo in cui vengono normalmente distribuite le applicazioni Windows Store, usando [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)o [Intune](https://technet.microsoft.com/library/dn613839.aspx) per trasferire localmente l'app in modo che gli utenti dovranno accedervi usando il portale aziendale o direttamente nei propri computer.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

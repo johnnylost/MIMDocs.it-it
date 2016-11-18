@@ -1,25 +1,25 @@
 ---
-title: 'Distribuire PAM, passaggio 5: Collegamento di foreste | Microsoft Identity Manager'
+title: 'Distribuire PAM, passaggio 5: Collegamento di foreste | Documentazione Microsoft'
 description: Stabilire una relazione di trust tra le foreste PRIV e CORP in modo che gli utenti con privilegi nella foresta PRIV possano accedere alle risorse CORP.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 16208efe08c5a2c0f63ee121c64c45cad5a73909
 
 
 ---
 
-# Passaggio 5: stabilire una relazione di trust tra le foreste PRIV e CORP
+# <a name="step-5-establish-trust-between-priv-and-corp-forests"></a>Passaggio 5: stabilire una relazione di trust tra le foreste PRIV e CORP
 
 >[!div class="step-by-step"]
 [« Passaggio 4](step-4-install-mim-components-on-pam-server.md)
@@ -28,7 +28,7 @@ ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
 
 Per ogni dominio CORP, ad esempio contoso.local, i controller di dominio PRIV e CONTOSO devono essere associati da un trust. In questo modo, gli utenti del dominio PRIV possono accedere alle risorse nel dominio CORP.
 
-## Connettere ogni controller di dominio alla controparte
+## <a name="connect-each-domain-controller-to-its-counterpart"></a>Connettere ogni controller di dominio alla controparte
 
 Prima di stabilire una relazione di trust, ogni controller di dominio deve essere configurato per la risoluzione dei nomi DNS per la controparte, in base all'indirizzo IP dell'altro controller di dominio/server DNS.
 
@@ -46,7 +46,7 @@ Prima di stabilire una relazione di trust, ogni controller di dominio deve esser
 
     ![Struttura del file della chiave priv - Screenshot](./media/PAM_GS_DNS_Manager.png)
 
-## Stabilire una relazione di trust in PAMSRV
+## <a name="establish-trust-on-pamsrv"></a>Stabilire una relazione di trust in PAMSRV
 
 In PAMSRV stabilire una relazione di trust unidirezionale con CORPDC, in modo che i controller di dominio CORP stabiliscano una relazione di trust con la foresta PRIV.
 
@@ -68,7 +68,7 @@ In PAMSRV stabilire una relazione di trust unidirezionale con CORPDC, in modo ch
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## Concedere alle foreste l'accesso in lettura ad Active Directory
+## <a name="give-forests-read-access-to-active-directory"></a>Concedere alle foreste l'accesso in lettura ad Active Directory
 
 Per ogni foresta esistente, abilitare l'accesso in lettura ad Active Directory da parte degli amministratori PRIV e del servizio di monitoraggio.
 
@@ -91,7 +91,7 @@ Per ogni foresta esistente, abilitare l'accesso in lettura ad Active Directory d
 
     L'output dovrebbe inoltre indicare che il **filtro dei SID non è abilitato per il trust**. Per altre informazioni, vedere [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx) (Disabilitare la quarantena per il filtro dei SID).
 
-## Avviare i servizi di monitoraggio e del componente
+## <a name="start-the-monitoring-and-component-services"></a>Avviare i servizi di monitoraggio e del componente
 
 1.  Accedere a PAMSRV come amministratore del dominio PRIV (PRIV\Administrator).
 
@@ -112,6 +112,6 @@ Nel passaggio successivo, un gruppo verrà spostato in PAM.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

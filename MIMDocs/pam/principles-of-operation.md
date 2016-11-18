@@ -1,25 +1,25 @@
 ---
-title: Informazioni sui componenti di PAM | Microsoft Identity Manager
+title: Informazioni sui componenti di PAM | Documentazione Microsoft
 description: Privileged Access Management condivide alcuni componenti con MIM e ha alcuni componenti propri. Informazioni sul funzionamento della combinazione di questi componenti.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: d17feb5d78b864bef8f0b96bfbf92a18c3c91694
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
 
 
 ---
 
-# Informazioni sui componenti di PAM
+# <a name="understand-the-components-of-pam"></a>Informazioni sui componenti di PAM
 
 Privileged Access Management mantiene separati l'accesso amministrativo dall'accesso tramite account utente di uso quotidiano. Questa soluzione si basa su foreste parallele:
 
@@ -43,6 +43,6 @@ L’appartenenza dei membri è temporanea, per cui dopo un certo intervallo di t
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

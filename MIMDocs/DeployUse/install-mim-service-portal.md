@@ -1,25 +1,25 @@
 ---
-title: Installare servizio e portale MIM | Microsoft Identity Manager
+title: Installare servizio e portale MIM | Documentazione Microsoft
 description: Procedura di configurazione e installazione del servizio e del portale MIM per Microsoft Identity Manager 2016
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 4d0f08d84c39c982d43b2a0e0ba2f694aed508da
 
 
 ---
 
-# Installare MIM 2016: servizio e portale MIM
+# <a name="install-mim-2016-mim-service-and-portal"></a>Installare MIM 2016: servizio e portale MIM
 
 >[!div class="step-by-step"]
 [« Servizio di sincronizzazione MIM](install-mim-sync.md)
@@ -35,7 +35,7 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passaggio, tornare indietro e installare i componenti di Microsoft Identity Manager 2016 prima di procedere.
 
 
-## Configurare il servizio e il portale MIM per l'installazione
+## <a name="configure-mim-service-and-portal-for-installation"></a>Configurare il servizio e il portale MIM per l'installazione
 
 1. Eseguire il **programma di installazione del servizio e del portale MIM** dalla sottocartella **Service and Portal** decompressa.
 
@@ -57,7 +57,7 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 8. Specificare che si desidera generare un nuovo certificato autofirmato oppure selezionare il certificato rilevante.
 
-9. Specificare il nome dell'account del servizio da usare, ad esempio, *MIMService*, e la password dell'account del servizio, ad esempio, *Pass@word1*, il dominio account del servizio, ad esempio *contoso*, e l'account di posta elettronica del servizio, ad esempio *contoso*.
+9. Specificare il nome dell'account del servizio da usare, ad esempio *MIMService*, e la password dell'account del servizio, ad esempio *Pass@word1*, il dominio account del servizio, ad esempio *contoso*, e l'account di posta elettronica del servizio, ad esempio *contoso*.
 
     ![Immagine relativa alla configurazione dell'account del servizio MIM](media/MIM-Install12.png)
 
@@ -77,7 +77,7 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 16. Selezionare la casella di controllo per aprire le porte 5725 e 5726 nel firewall e la casella di controllo per concedere l'accesso al portale MIM a tutti gli utenti autenticati.
 
-## Configurare il portale di registrazione della password MIM
+## <a name="configure-mim-password-registration-portal"></a>Configurare il portale di registrazione della password MIM
 
 1.  Impostare il nome dell'account del servizio per la registrazione SSPR su *contoso\MIMSSPR* e la relativa password su *Pass@word1*.
 
@@ -89,7 +89,7 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 4. Nella schermata successiva di configurazione del portale di registrazione della password MIM specificare *http://CorpIDM.contoso.local* come indirizzo del server del servizio MIM per il portale di registrazione della password.
 
-## Configurare il portale di reimpostazione della password MIM
+## <a name="configure-mim-password-reset-portal"></a>Configurare il portale di reimpostazione della password MIM
 
 1.  Impostare il nome dell'account del servizio per la registrazione SSPR su *Contoso\MIMSSPRService* e la relativa password su *Pass@word1*.
 
@@ -101,7 +101,7 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 4. Nella schermata successiva di configurazione del portale di registrazione della password MIM specificare *CorpIDname http://CorpIDname.domain.local* come indirizzo del server del servizio MIM per il portale di reimpostazione della password.
 
-## Installare Portale e Servizio MIM
+## <a name="install-mim-service-and-portal"></a>Installare Portale e Servizio MIM
 
 Quando tutte le definizioni di pre-installazione sono pronte, fare clic su **Installa** per avviare l'installazione dei componenti del **servizio e del portale** selezionati.
 
@@ -152,6 +152,6 @@ Al termine dell'installazione, verificare che il portale MIM sia attivo.
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

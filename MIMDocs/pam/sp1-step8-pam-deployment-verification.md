@@ -3,28 +3,33 @@ title: 'Passaggio 8: Verifica della distribuzione PAM'
 description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager tramite gli script"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 689c2ef0e4e4a681a398ba7e94fb3def525937ea
-ms.openlocfilehash: 743ba586374ccc04e9ddafff759a00574e13f6ac
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 7709b4df5bb196aba6abf056830bc73e024174ef
 
 
 ---
 
-# Passaggio 8: Verifica della distribuzione PAM
+# <a name="step-8-pam-deployment-verification"></a>Passaggio 8: Verifica della distribuzione PAM
+
+>[!div class="step-by-step"]
+[« Passaggio 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Appendice »](sp1-pam-deployment-addendum.md)
 
 Il pacchetto di distribuzione viene fornito con gli script di verifica che possono eseguire uno scenario PAM per convalidare che la distribuzione PAM funzioni come previsto.
 Per uszare la verifica della distribuzione, modificare la sezione denominata PAMDeploymentConfig.xml <PamValidation/>.
 
->[!Note] La convalida richiede un computer client aggiunto al dominio CORP con i componenti lato client di PAM installati. Per gli script su come installare un client, vedere l'appendice.
+>[!NOTE]
+>La convalida richiede un computer client aggiunto al dominio CORP con i componenti lato client di PAM installati. Per gli script su come installare un client, vedere l'appendice.
 
 Il nome del computer client deve essere aggiornato nel tag <PAMValidationClient/> del file PAMDeploymentConfig.xml. Il resto dei dati nel nodo <PAMValidation/> deve essere modificato solo se è in conflitto con gli utenti o i gruppi esistenti, in quanto questa convalida tenterà di crearli.
 Per eseguire la convalida, usare la procedura seguente:
@@ -72,8 +77,12 @@ Nella finestra di PowerShell, digitare:
   Inizialmente l'utente non avrà accesso alla risorsa. Dopo che l'utente viene aggiunto al ruolo JIT, gli viene concesso l'accesso. Allo scadere della richiesta, l'utente non disporrà ancora dell'accesso.
   Lo script usa il valore predefinito (11 minuti) per la scadenza della richiesta.
 
+>[!div class="step-by-step"]
+[« Passaggio 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Appendice »](sp1-pam-deployment-addendum.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Nov16_HO2-->
 
 
