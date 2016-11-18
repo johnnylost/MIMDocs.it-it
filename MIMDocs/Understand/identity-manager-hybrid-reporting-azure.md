@@ -1,28 +1,28 @@
 ---
-title: "Che cos'è il servizio di creazione di report ibridi | Microsoft Identity Manager"
+title: "Che cos&quot;è il servizio di creazione di report ibridi | Documentazione Microsoft"
 description: Il servizio di creazione report ibridi di Azure Active Directory consente di creare report personalizzati che includono gli eventi cloud e locali.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: a074f3361e6d5be497b1a3c25d56aaa7008b128e
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: f21c15fdaa5fba9176cfc60a3c49017fa97fa935
 
 
 ---
 
-# Report ibridi di gestione delle identità in Azure
+# <a name="hybrid-identity-management-reports-in-azure"></a>Report ibridi di gestione delle identità in Azure
 Con Azure Active Directory (AD) è possibile creare un singolo report per monitorare le attività di gestione delle identità in locale o nel cloud. Questa funzionalità consente di gestire tutti i dati di identità e accesso in un'unica posizione, risparmiando tempo e riducendo i costi totali.
 
-## Che cosa sono i report ibridi di Azure AD?
+## <a name="what-is-azure-ad-hybrid-reporting"></a>Che cosa sono i report ibridi di Azure AD?
 I report ibridi consentono ai professionisti IT di risolvere alcuni problemi comuni relativi alla gestione delle identità.
 
 1. **Consente di raccogliere le attività di gestione delle identità da diversi sistemi:** i report ibridi visualizzano le attività di gestione delle identità di Azure AD e Identity Manager.
@@ -31,7 +31,7 @@ I report ibridi consentono ai professionisti IT di risolvere alcuni problemi com
 
 3. **Consente di ridurre i costi dell'infrastruttura del sistema di creazione di report:** i report ibridi nel cloud permettono di eliminare l'infrastruttura datawarehouse locale per la creazione dei report.
 
-## Come funziona BitLocker?
+## <a name="how-does-it-work"></a>Come funziona BitLocker?
 
 Per raccogliere i dati in locale, è innanzitutto necessario installare un agente per la creazione di report sul server Identity Manager. L'agente per la creazione di report può essere scaricato dalla pagina di configurazione della directory nel [portale di Azure classico](https://manage.windowsazure.com/).
 
@@ -42,11 +42,11 @@ Il processo di creazione di report ibridi prevede i passaggi seguenti:
 4. Quando si richiede un report, gli eventi dell'attività vengono analizzati e filtrati per i report richiesti.
 5. Il portale di Azure classico recupera i dati dei report e ne esegue il rendering come report di attività.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - Altre informazioni su [Working with Identity Manager Hybrid Reporting](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting) (Uso del servizio di creazione report ibridi di Identity Manager)
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

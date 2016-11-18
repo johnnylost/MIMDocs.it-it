@@ -1,35 +1,35 @@
 ---
-title: Modello a livelli dell'ambiente PAM | Microsoft Identity Manager
+title: Modello a livelli dell&quot;ambiente PAM | Documentazione Microsoft
 description: "Informazioni sul modello a livelli che mantiene separate le diverse parti del sistema in base alla vulnerabilità al rischio."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 659a9d8ff53372300c0e52432116c7c295d59a4b
 
 
 ---
 
-# Modello di livello per il partizionamento dei privilegi amministrativi
+# <a name="tier-model-for-partitioning-administrative-privileges"></a>Modello di livello per il partizionamento dei privilegi amministrativi
 
 Nell'ambiente a rischio di oggi, il problema non è se un utente malintenzionato riuscirà ad accedere ai sistemi in uso, ma quando. Ciò significa che la sicurezza interna è importante quanto una solida difesa perimetrale. Questo articolo descrive un modello di sicurezza ideato per proteggere dall'elevazione dei privilegi isolando le attività con privilegi elevati dalle aree ad alto rischio. Questo modello garantisce un'esperienza utente soddisfacente rimanendo comunque conforme alle procedure consigliate e ai principi di sicurezza.
 
-## Elevazione dei privilegi nelle foreste di Active Directory
+## <a name="elevation-of-privilege-in-active-directory-forests"></a>Elevazione dei privilegi nelle foreste di Active Directory
 
 Gli account utente, di servizi o di applicazioni ai quali vengono concessi privilegi amministrativi completi permanenti per foreste di Windows Server Active Directory (AD) introducono una quantità significativa di rischio alla missione e alle attività dell'organizzazione. Questi account sono spesso presi di mira da utenti malintenzionati perché se sono compromessi, l'autore dell'attacco dispone del privilegio di connettersi ad altri server o applicazioni nel dominio.
 
 Il modello di livello crea divisioni tra gli amministratori in base alle risorse che gestiscono. Gli amministratori con controllo sulle workstation degli utenti sono separati da quelli che controllano le applicazioni o gestiscono le identità dell'organizzazione. Informazioni su questo modello sono disponibili in [Securing privileged access reference material](http://aka.ms/tiermodel) (Materiale di riferimento sulla sicurezza dell'accesso con privilegi).
 
-## Limitare l'esposizione delle credenziali con le restrizioni di accesso
+## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Limitare l'esposizione delle credenziali con le restrizioni di accesso
 
 Ridurre il rischio di furto delle credenziali per gli account amministrativi, rende necessarie procedure amministrative modificate per limitare l'esposizione agli attacchi. Come primo passaggio, le organizzazioni sono invitate a:
 
@@ -62,6 +62,6 @@ L'articolo successivo, [Planning a bastion environment](planning-bastion-environ
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

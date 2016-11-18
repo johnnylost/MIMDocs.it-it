@@ -1,28 +1,28 @@
 ---
-title: Rinnovo self-service di smart card | Microsoft Identity Manager
-description: Informazioni su come registrare le smart card per gli utenti che non dispongono dei diritti di accesso con privilegi di amministratore ai propri computer per l'uso del Gestore di certificati.
+title: Rinnovo self-service di smart card | Documentazione Microsoft
+description: Informazioni su come registrare le smart card per gli utenti che non dispongono dei diritti di accesso con privilegi di amministratore ai propri computer per l&quot;uso del Gestore di certificati.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2fddede481b5ba677d0d463be4b14cda4b463865
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
 
 
 ---
 
-# Registrare smart card per utenti non amministratori
+# <a name="enroll-smart-cards-for-nonadministrators"></a>Registrare smart card per utenti non amministratori
 Se un utente non è un amministratore locale del proprio computer, non sarà in grado di registrare una smart card nei propri computer per impostazione predefinita. La procedura seguente consente di ovviare a questa limitazione.
 
-## Abilitazione del rinnovo della smart card per utenti non amministratori in Gestore di certificati di MIM 2016
+## <a name="enabling-smart-card-renewal-for-nonadmins-in-mim-2016-certificate-manager"></a>Abilitazione del rinnovo della smart card per utenti non amministratori in Gestore di certificati di MIM 2016
 
 1.  **Decomprimere il file appx**
 
@@ -56,7 +56,7 @@ Se un utente non è un amministratore locale del proprio computer, non sarà in 
 
     6.  Salvare il file e chiudere l’editor.
 
-3.  **Comprimere nuovamente il pacchetto dell’app e firmarlo (file appx)**
+3.  **Comprimere nuovamente il pacchetto dell'app e firmarlo (file appx)**
 
     Eseguire le operazioni seguenti per comprimere e firmare il file appx:
 
@@ -90,12 +90,12 @@ Se un utente non è un amministratore locale del proprio computer, non sarà in 
 
     `TpmVscMgr create /name MyVSC /pin default /adminkey default /generate`
 
-7.  **Installare l'applicazione CM nell'account utente non amministratore**
+7.  **Installare l'app CM nell'account utente non amministratore**
 
-8.  **Avviare l'applicazione CM e la registrazione di una smart card virtuale**
+8.  **Avviare l'app CM e la registrazione di una smart card virtuale**
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

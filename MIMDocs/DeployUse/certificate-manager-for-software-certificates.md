@@ -1,28 +1,28 @@
 ---
-title: Creare certificati software | Microsoft Identity Manager
+title: Creare certificati software | Documentazione Microsoft
 description: Informazioni su come usare Gestione certificati per creare e rinnovare certificati software con i modelli di profilo.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 31385a18c0b93e5ceaf78a2b6b8d5bed5aac224a
 
 
 ---
 
-# Creare certificati software con Gestione certificati
+# <a name="create-software-certificates-with-certificate-manager"></a>Creare certificati software con Gestione certificati
 Per registrare e rinnovare i certificati software non è necessario essere un amministratore e non occorre una smart card virtuale. Vale la pena notare che a un certo punto verrà richiesto di consentire un'operazione di certificato, e questo è normale.
 
-## Creare un modello di profilo dei certificati software in Gestione certificati di MIM 2016
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Creare un modello di profilo dei certificati software in Gestione certificati di MIM 2016
 
 1.  Creare un modello per il certificato che verrà richiesto per la smart card virtuale. Aprire la MMC.
 
@@ -72,7 +72,7 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 
     10. Nell'elenco, selezionare il nuovo modello appena creato (**Modello di certificato archiviato**), quindi fare clic su **OK**.
 
-## Creare il modello di profilo
+## <a name="create-the-profile-template"></a>Creare il modello di profilo
 
 1.  Accedere al portale CM come utente con privilegi amministrativi.
 
@@ -98,6 +98,6 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
