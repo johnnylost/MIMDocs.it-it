@@ -1,11 +1,11 @@
 ---
 title: 'Passaggio 2: Configurazione del dominio CORP'
-description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager tramite gli script"
+description: Questo articolo descrive il secondo passaggio richiesto per configurare il dominio CORP che prevede l&quot;esecuzione di uno script dopo che sids.txt viene copiato in CORPDC.
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: b7acc475c505b29559c510fd3fa350fed1c3157b
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 8480350f85b3543a32d4db3dbc6a388afcb16352
 
 
 ---
@@ -39,6 +39,6 @@ Quando il file SIDs.txt copiato in CORPDC **non è necessario per le distribuzio
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
