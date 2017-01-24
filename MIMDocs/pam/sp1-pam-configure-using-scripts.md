@@ -1,11 +1,11 @@
 ---
 title: Configurare PAM tramite gli script
-description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager tramite gli script"
+description: "Questo articolo fa parte della serie per la configurazione di PAM tramite script. Viene illustrata la modifica del file XML che verrà usato dagli script di distribuzione di PAM."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,15 +13,15 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
 
 
 ---
 
 # <a name="configure-pam-using-scripts"></a>Configurare PAM tramite gli script
 
-Se si sceglie di installare SQL e SharePoint su server separati, devono essere configurati tramite le istruzioni riportate di seguito. Se SQL, SharePoint e i componenti PAM sono installati nello stesso computer, i passaggi seguenti devono essere eseguiti da tale computer.
+Se si sceglie di installare SQL e SharePoint su server separati, è necessario configurarli tramite le istruzioni seguenti. Se SQL, SharePoint e i componenti PAM sono installati nello stesso computer, i passaggi seguenti devono essere eseguiti da tale computer.
 
 La procedura seguente presuppone che sia già configurato un dominio PRIV. Per istruzioni sulla configurazione di un dominio PRIV, visualizzare l'appendice alla fine del documento.
 
@@ -71,6 +71,6 @@ Prima di procedere, aggiornare il file PAMDeploymentConfig.xml e inserire la cop
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

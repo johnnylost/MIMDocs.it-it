@@ -1,11 +1,11 @@
 ---
-title: Microsoft Identity Manager 2016 | Documentazione Microsoft
+title: Microsoft Identity Manager 2016 Service Pack 1 | Documentazione Microsoft
 description: "Comprendere il funzionamento di MIM 2016 per creare un&quot;esperienza di gestione delle identità più pratica e sicura nel cloud e in locale."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ed477de53abbf646f47efb90e617b04184bc29a9
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: 4f293a349916ae1a55d8551ef949758cab851b74
 
 
 ---
@@ -24,7 +24,7 @@ Come parte del ciclo di rilascio regolare per la manutenzione e l'aggiornamento 
 
 Se si verificano problemi durante una distribuzione di produzione di MIM SP1, contattare il supporto tecnico Microsoft.
 
-Il feedback degli utenti è fondamentale. Per lasciare commenti e suggerimenti o sottoporre problemi al team del prodotto, scrivere all'indirizzo [mim2016@microsoft.com.](mailto:mim2016@microsoft.com)
+Il feedback degli utenti è fondamentale. Per lasciare commenti e suggerimenti o sottoporre problemi al team del prodotto, scrivere un messaggio di posta elettronica all'indirizzo [mim2016@microsoft.com.](mailto:mim2016@microsoft.com)
 
 
 
@@ -85,6 +85,6 @@ Prima di aggiornare il servizio e il portale MIM, è necessario aggiornare il mo
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
