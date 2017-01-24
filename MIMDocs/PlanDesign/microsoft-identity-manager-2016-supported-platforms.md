@@ -5,7 +5,7 @@ keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 09/29/2016
+ms.date: 01/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 55b7dc3c76c5e95153b5839ce1eb6bf4a7997889
+ms.sourcegitcommit: 2f2ae09ab8bc28b83b66073985b3574517a220b7
+ms.openlocfilehash: bed26316673d777f3d1934011668686b3e9def1d
 
 
 ---
@@ -27,41 +27,41 @@ La tabella seguente descrive la versione e le piattaforme supportate per ogni co
 | **Componente MIM** | **Piattaforma** | **Versione** |
 |-------------------|--------------|-------------|
 | **Sincronizzazione MIM** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
-|| | Database di sincronizzazione MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-|| | Active Directory per il provisioning degli utenti, PCNS e sincronizzazione GAL (facoltativo)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-|| | Exchange per il provisioning delle cassette postali e sincronizzazione GAL (facoltativo)|Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
-|| | Ambiente di sviluppo (facoltativo) | Visual Studio 2012<br/>Visual Studio 2013 |
-|| | Sistema connesso aggiuntivo (facoltativo) | Servizi di dominio di Active Directory<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 o versioni successive<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Altri prodotti di terze parti |
+| | Database di sincronizzazione MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+| | Active Directory per il provisioning degli utenti, PCNS e sincronizzazione GAL (facoltativo)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| | Exchange per il provisioning delle cassette postali e sincronizzazione GAL (facoltativo)|Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
+| | Ambiente di sviluppo (facoltativo) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015  |
+| | Sistema connesso aggiuntivo (facoltativo) | Servizi di dominio di Active Directory<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 o versioni successive<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Altri prodotti di terze parti |
 | **Servizio MIM** (eccetto scenario PAM) | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-|| | Database del servizio MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-|| | Exchange per l'approvazione servizio MIM e indirizzi di posta elettronica per la gestione del gruppo (facoltativo) | Exchange Server 2007 SP3 (con console di gestione di Exchange installata)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | Database del servizio MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+| | Exchange per l'approvazione servizio MIM e indirizzi di posta elettronica per la gestione del gruppo (facoltativo) | Exchange Server 2007 SP3 (con console di gestione di Exchange installata)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
 | **Servizio e portale MIM** (solo scenario PAM)| Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-|| | Active Directory per la foresta PAM dell’ambiente bastion | Windows Server 2012 R2 <br/> Windows Server 2016 * |
-|| | Active Directory per le foreste esistenti | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
-|| | Database del servizio MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-|| | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-|| | Server di posta elettronica per l'approvazione del servizio MIM e indirizzi di posta elettronica per la gestione del gruppo (facoltativo) | Exchange Server 2007 SP3 (con console di gestione di Exchange installata)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
-|| | Browser | Tutti i principali browser |
+| | Active Directory per la foresta PAM dell’ambiente bastion | Windows Server 2012 R2 <br/> Windows Server 2016 * |
+| | Active Directory per le foreste esistenti | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
+| | Database del servizio MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+| | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
+| | Server di posta elettronica per l'approvazione del servizio MIM e indirizzi di posta elettronica per la gestione del gruppo (facoltativo) | Exchange Server 2007 SP3 (con console di gestione di Exchange installata)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | Browser | Tutti i principali browser |
 | **Servizio MIM Reporting** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
-|| | Data warehouse | System Center 2012 Service Manager SP1 |
-|| | Database data warehouse | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 |
+| | Data warehouse | System Center 2012 Service Manager SP1 |
+| | Database data warehouse | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 |
 | **Reimpostazione della password MIM e portali di registrazione** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-|| | Web browser | Tutti i principali browser |
+| | Web browser | Tutti i principali browser |
 | **Componenti aggiuntivi ed estensioni MIM** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-|| | Integrazione di Outlook (facoltativo) | Outlook 2007 SP2<br/>Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (in Windows 10) * |
-|| | Cmdlet richiedente PAM PowerShell (facoltativo) | Windows 8.1<br/>Windows 10 |
+| | Integrazione di Outlook (facoltativo) | Outlook 2007 SP2<br/>Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (in Windows 10) * |
+| | Cmdlet richiedente PAM PowerShell (facoltativo) | Windows 8.1<br/>Windows 10 |
 | **Gestione certificati MIM** (integrazione di server e autorità di certificazione) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
-|| | Autorità di certificazione | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
-|| | Database di gestione certificati MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 |
+| | Autorità di certificazione | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
+| | Database di gestione certificati MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 |
 | **Gestione certificati MIM ** (applicazione) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | **Gestione certificati MIM** (client e client bulk) | Windows | Windows 7 |
 | **MIM BHOLD Suite** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
-|| | Database BHOLD | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * |
-|| | Server di posta elettronica (facoltativo) | Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
-|| | Web browser | Internet Explorer 7, 8, 9, 10 o 11 con Silverlight |
+| | Database BHOLD | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * |
+| | Server di posta elettronica (facoltativo) | Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
+| | Web browser | Internet Explorer 7, 8, 9, 10 o 11 con Silverlight |
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
