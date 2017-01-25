@@ -1,11 +1,11 @@
 ---
-title: Configurare SharePoint | Documentazione Microsoft
+title: Configurare SharePoint per Microsoft Identity Manager 2016 | Documentazione Microsoft
 description: Installare e configurare SharePoint Foundation in modo che possa ospitare la pagina del portale MIM.
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 12/01/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c26816322bf6d281ae32f7fee69ed9f8e002e7c7
-ms.openlocfilehash: 94c0f931ad9a1e8f8f9196288107e4f75c72a211
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 2af432036033f8914d00228cd3d2d1af84f13054
 
 
 ---
@@ -136,6 +136,6 @@ Seguire i passaggi descritti in **Configurazione guidata Prodotti SharePoint** p
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

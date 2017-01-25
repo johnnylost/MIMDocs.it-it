@@ -1,11 +1,11 @@
 ---
-title: Gestore di certificati MIM | Documentazione Microsoft
+title: Distribuire l&quot;applicazione di Windows Gestione certificati MIM | Documentazione Microsoft
 description: Informazioni su come distribuire l&quot;app Gestione certificati per consentire agli utenti di gestire i propri diritti di accesso.
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
 
 
 ---
@@ -256,6 +256,6 @@ Quando si configura l'app CM nell'Area download, scaricare il file MIMDMModernAp
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
