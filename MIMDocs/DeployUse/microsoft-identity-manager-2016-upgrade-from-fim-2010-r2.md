@@ -2,10 +2,10 @@
 title: Eseguire l&quot;aggiornamento da FIM 2010 R2 a Microsoft Identity Manager 2016 | Documentazione Microsoft
 description: Informazioni su come aggiornare i componenti di FIM 2010 R2 e installare i nuovi componenti di MIM 2016.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: fimguy
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 16966d970365c13a3530020234208e72c0e8823f
+ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
+ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
 
 ---
@@ -200,8 +200,10 @@ Questa guida presuppone che gli elementi seguenti siano già impostati:
 
 Nota: se le estensioni e i componenti aggiuntivi FIM sono attualmente installati nei computer dell'utente per SSPR, non configurare i nuovi controlli telefonici MFA per la reimpostazione della password fino a quando non verrà eseguito l'aggiornamento di tutti i componenti aggiuntivi e di tutte le estensioni FIM a MIM 2016.  Le estensioni e i componenti aggiuntivi di FIM 2010 e FIM 2010 R2 non riconoscono i nuovi controlli, quindi verrà generato un errore e l'utente non riuscirà a completare la reimpostazione della password.
 
+Per istruzioni sull'aggiornamento di Microsoft Identity Manager 2016 SP1, vedere l'articolo [Microsoft Identity Manager 2016 Service Pack 1 update package](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/) (Pacchetto di aggiornamento di Microsoft Identity Manager 2016 Service Pack 1).
 
 
-<!--HONumber=Jan17_HO4-->
+
+<!--HONumber=Feb17_HO2-->
 
 
