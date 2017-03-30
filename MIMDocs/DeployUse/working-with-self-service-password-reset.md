@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 72c773601cd722290b6e7a9d5d13458f0409cfdc
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -181,7 +182,7 @@ Installando Componenti aggiuntivi ed estensioni MIM in un computer aggiunto al d
 
 #### <a name="access-from-the-self-service-portal"></a>Accedere dal portale self-service.
 
-1.  Gli utenti possono aprire un Web browser, passare al ** ** portale per la reimpostazione della password, immettere il proprio nome utente e fare clic su **Avanti**.
+1.  Gli utenti possono aprire un Web browser, passare al **** portale per la reimpostazione della password, immettere il proprio nome utente e fare clic su **Avanti**.
 
     Se è stata configurata l'autenticazione a più fattori, l'utente riceverà una telefonata. In background, l’autenticazione a più fattori di Azure effettua una chiamata al numero fornito dall’utente in fase di iscrizione al servizio.
 
@@ -203,9 +204,4 @@ Installando Componenti aggiuntivi ed estensioni MIM in un computer aggiunto al d
 6.  Se l'utente sceglie di reimpostare la password, dovrà digitare una nuova password due volte e fare clic su **Avanti** per modificare la password corrente.
 
     ![Immagine di reimpostazione della password di Accesso guidato MIM](media/MIM-SSPR-PR1.JPG)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
