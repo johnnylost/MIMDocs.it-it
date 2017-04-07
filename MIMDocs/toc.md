@@ -1,5 +1,5 @@
-# [Comprendere ed esplorare](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-## [Introduzione a Microsoft Identity Manager](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016.md)
+# Comprendere ed esplorare
+## [Introduzione a Microsoft Identity Manager 2016](understand-explore/microsoft-identity-manager-2016.md)
 ## [Pre-installazione e configurazione della topologia](https://technet.microsoft.com/library/ff602886)
 ## Elementi fondamentali
 ### Servizio di sincronizzazione
@@ -13,33 +13,34 @@
 #### [Introduzione alla sincronizzazione in uscita basata sui criteri di sincronizzazione](https://technet.microsoft.com/library/jj150433)
 ### Gestione dei certificati
 ### BHOLD
-### [Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-#### [Informazioni sui componenti di Privileged Access Management](/microsoft-identity-manager/pam/principles-of-operation.md)
+### [Privileged Access Management](pam/privileged-identity-management-for-active-directory-domain-services.md)
+#### [Informazioni sui componenti di Privileged Access Management](pam/principles-of-operation.md)
 ### Reporting
 ### database
-#### [Cronologia di rilascio delle versioni del connettore](/azure/active-directory/connect/active-directory-aadconnectsync-connector-version-history.md)
+#### [Cronologia di rilascio delle versioni del connettore](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-version-history)
 ### [Servizio di notifica della modifica della password](https://technet.microsoft.com/en-us/library/839a9291-a78f-4959-8e6a-3bf68bf62700)
-# [Pianificare e progettare](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
-## [Piattaforme supportate per Microsoft Identity Manager 2016](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md)
-## [Guida per la pianificazione della capacità](/microsoft-identity-manager/PlanDesign/capacity-planning-guide.md)
-## [Considerazioni sulla topologia](/microsoft-identity-manager/PlanDesign/topology-considerations.md)
+# Pianificare e progettare
+## [Piattaforme supportate per Microsoft Identity Manager 2016](plan-design/microsoft-identity-manager-2016-supported-platforms.md)
+## [Guida per la pianificazione della capacità](plan-design/capacity-planning-guide.md)
+## [Considerazioni sulla topologia](plan-design/topology-considerations.md)
 ## Servizio di sincronizzazione
-### [Connettersi alle directory](/microsoft-identity-manager/plan-design/supported-management-agents.md)
+### [Connettersi alle directory](plan-design/supported-management-agents.md)
 ## Servizio e portale
 ### [Procedure consigliate](https://technet.microsoft.com/library/ff608274)
 ### [Guida al backup e al ripristino in FIM 2010](https://technet.microsoft.com/library/fim-2010-backup-and-restore-guide)
-### [Progettazione di regole per i criteri di business]
-##  [Privileged Access Management](/microsoft-identity-manager/pam/environment-overview.md)
-### [Modello di livello](/microsoft-identity-manager/pam/tier-model-for-partitioning-administrative-privileges.md)
-### [Pianificare un ambiente bastion](/microsoft-identity-manager/pam/planning-bastion-environment.md)
-### [Definire i ruoli](/microsoft-identity-manager/pam/defining-roles-for-pam.md)
-### [Disponibilità elevata e ripristino di emergenza](/microsoft-identity-manager/pam/high-availability-disaster-recovery-considerations-bastion-environment.md)
-### [Requisiti hardware e software](/microsoft-identity-manager/pam/hardware-software-requirements.md)
+### Progettazione di regole per i criteri di business
+##  [Privileged Access Management](pam/environment-overview.md)
+### [Modello di livello](pam/tier-model-for-partitioning-administrative-privileges.md)
+### [Pianificare un ambiente bastion](pam/planning-bastion-environment.md)
+### [Definire i ruoli](pam/defining-roles-for-pam.md)
+### [Disponibilità elevata e ripristino di emergenza](pam/high-availability-disaster-recovery-considerations-bastion-environment.md)
+### [Requisiti hardware e software](pam/hardware-software-requirements.md)
 ## [Reimpostazione della password self-service](https://technet.microsoft.com/library/jj134278)
 ## [Creazione di report](https://technet.microsoft.com/library/jj133851)
-# [Distribuire e usare](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# Distribuire e usare
+## [Passaggi necessari per distribuire MIM 2016](deploy-use/microsoft-identity-manager-deploy.md)
 ## Distribuire Identity Manager
-## [Eseguire l'aggiornamento da Forefront Identity Manager 2012 R2](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
+## [Eseguire l'aggiornamento da Forefront Identity Manager 2012 R2](deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
 ## Servizio e portale
 ### [Impostazioni Kerberos di FIM 2010](https://technet.microsoft.com/library/jj134299)
 ### [Configurazione di gruppi e utenti comuni di FIM 2010 R2](https://technet.microsoft.com/library/jj150431)
@@ -52,17 +53,17 @@
 ### [Informazioni sulla configurazione e la personalizzazione del portale FIM](https://technet.microsoft.com/library/ff393653)
 ### [Informazioni sulla gestione delle risorse e degli attributi personalizzati](https://technet.microsoft.com/library/ff519007)
 ### [Informazioni sul rilevamento dello stato previsto](https://technet.microsoft.com/library/ff608269)
-## [Reimpostazione della password self-service](/microsoft-identity-manager/deploy-use/working-with-self-service-password-reset.md)
+## [Reimpostazione della password self-service](deploy-use/working-with-self-service-password-reset.md)
 ### [Informazioni sulla reimpostazione della password](https://technet.microsoft.com/library/gg214071)
 ### [Personalizzazione del portale di registrazione e reimpostazione della password](https://technet.microsoft.com/library/hh877809)
 ### [Distribuzione della reimpostazione della password con Forefront Identity Manager 2010](https://technet.microsoft.com/video/video/password-reset-deployment-with-forefront-identity-manager-fim-2010)
 ### [Reimpostazione delle password Kerberos e self-service](https://technet.microsoft.com/library/jj134304)
 ### [Gestione di Forefront Identity Manager 2010 R2: reimpostazione della password self-service](https://technet.microsoft.com/library/jj134290)
 ## Servizio di notifica di modifica della password
-### [Distribuire il servizio di notifica della modifica della password di MIM in un controller di dominio](/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
+### [Distribuire il servizio di notifica della modifica della password di MIM in un controller di dominio](deploy-use/deploying-mim-password-change-notification-service-on-domain-controller.md)
 ### [Download di notifica della modifica della password](https://www.microsoft.com/download/details.aspx?id=19495)
 ## Reporting
-###[Report ibridi di Identity Manager](/microsoft-identity-manager/deploy-use/working-with-identity-manager-hybrid-reporting.md)
+###[Report ibridi di Identity Manager](deploy-use/working-with-identity-manager-hybrid-reporting.md)
 ###[Integrazione di report di System Center Service Manager](https://technet.microsoft.com/library/jj133845)
 ## Servizio di sincronizzazione
 ### [Procedura dettagliata: guida alle procedure (GalSync, Gestione delle password)](https://technet.microsoft.com/library/cc720550)
@@ -72,12 +73,12 @@
 
 ### Guida alla distribuzione della reimpostazione della password
 ## Gestione certificati
-### [Registrare smart card per utenti non amministratori](/microsoft-identity-manager/deploy-use/certificate-manager-for-non-administrators.md)
-### [Creare certificati software con Gestione certificati](/microsoft-identity-manager/deploy-use/certificate-manager-for-software-certificates.md)
+### [Registrare smart card per utenti non amministratori](deploy-use/certificate-manager-for-non-administrators.md)
+### [Creare certificati software con Gestione certificati](deploy-use/certificate-manager-for-software-certificates.md)
 ## la gestione degli accessi con privilegi)
-### [Configurare l'ambiente MIM per Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
-### [Configurare PAM tramite gli script](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
-### [Uso di Azure MFA per l'attivazione](/microsoft-identity-manager/pam/use-azure-mfa-for-activation.md)
+### [Configurare l'ambiente MIM per Privileged Access Management](pam/configuring-mim-environment-for-pam.md)
+### [Configurare PAM tramite gli script](pam/sp1-pam-configure-using-scripts.md)
+### [Uso di Azure MFA per l'attivazione](pam/use-azure-mfa-for-activation.md)
 # Gestire l'infrastruttura
 ## [Best Practice Analyzer per Identity Manager](https://technet.microsoft.com/library/jj203402)
 ## Servizio di sincronizzazione
@@ -94,13 +95,13 @@
 ## BHOLD
 ## Servizio e portale
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
-### [Registrazione dinamica](/microsoft-identity-manager/infrastructure/mim-service-dynamic-logging.md)
+### [Registrazione dinamica](infrastructure/mim-service-dynamic-logging.md)
 ### [Guida alle prestazioni di esportazione](https://technet.microsoft.com/library/hh322883)
 ## la gestione degli accessi con privilegi)
 ## [Creazione di report](https://technet.microsoft.com/library/jj133848)
 ### [Creazione di report personalizzati ed estendibilità](https://technet.microsoft.com/library/jj133861)
 ## database
-## risoluzione dei problemi
+## Risoluzione dei problemi
 ### Servizio di sincronizzazione
 ### Gestione dei certificati
 ### Servizio e portale
@@ -118,21 +119,21 @@
 ### [Esempio: creazione di un'estensione di regole da più origini](https://msdn.microsoft.com/en-us/library/ms696018)
 ### [Suggerimenti e consigli per la creazione di estensioni di regole](https://technet.microsoft.com/library/cc708673)
 ## Gestione dei certificati
-### [Riferimento all'API REST per la gestione dei certificati](/microsoft-identity-manager/reference/certificate-management-rest-api-reference.md)
+### [Riferimento all'API REST per la gestione dei certificati](reference/certificate-management-rest-api-reference.md)
 ### [Panoramica dell'API di notifica per la gestione dei certificati](https://msdn.microsoft.com/library/bb468066)
 ### [Panoramica dell'API di provisioning per la gestione dei certificati](https://msdn.microsoft.com/library/bb468046)
 ### [Panoramica dell'API SQL per la gestione dei certificati](https://msdn.microsoft.com/library/bb468093)
 ### [Panoramica delle interfacce personalizzabili per la gestione dei certificati](https://msdn.microsoft.com/library/bb468076)
 ## [BHOLD](https://msdn.microsoft.com/library/jj853041)
 ## la gestione degli accessi con privilegi)
-### [Riferimento all'API REST di Privileged Access Management](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md)
+### [Riferimento all'API REST di Privileged Access Management](reference/privileged-access-management-rest-api-reference.md)
 ## Reporting
 ## database
-### [Riferimento tecnico al connettore LDAP generico](/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap.md)
-### [Connettore SQL generico](/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md)
+### [Riferimento tecnico al connettore LDAP generico](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap)
+### [Connettore SQL generico](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql)
 ### [Connettore per servizi Web](https://www.microsoft.com/download/details.aspx?id=29943)
-### [Riferimento tecnico al connettore di Windows PowerShell](/azure/active-directory/connect/active-directory-aadconnectsync-connector-powershell.md)
-### [Riferimento tecnico al connettore di Lotus Domino](/azure/active-directory/connect/active-directory-aadconnectsync-connector-domino.md)
+### [Riferimento tecnico al connettore di Windows PowerShell](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-powershell)
+### [Riferimento tecnico al connettore di Lotus Domino](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-domino)
 ## Servizio
 ## Riferimento tecnico
 ### [Riferimento alle funzioni per FIM 2010](https://technet.microsoft.com/library/ff800820)
