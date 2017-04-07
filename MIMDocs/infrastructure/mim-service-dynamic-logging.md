@@ -11,9 +11,9 @@ ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 90a0f144b7674bbfaf13138dfd926dbfc3c74f28
-ms.openlocfilehash: ddd707210d5cd6b618709a477d40e7771d73cfa1
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
+ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
+ms.lasthandoff: 04/04/2017
 
 
 
@@ -27,7 +27,7 @@ Dopo l'installazione verrà visualizzata la riga seguente nell'oggetto Microsoft
 *    Riga 8:  ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
 *    Riga 266 ``</system.diagnostics> ``
 
-![Le sezioni evidenziate indicano le nuove voci di registrazione dinamica](/media/mim-service-dynamic-logging/screen01.png)
+![Le sezioni evidenziate indicano le nuove voci di registrazione dinamica](media/mim-service-dynamic-logging/screen01.png)
 
 I livelli di registrazione dinamica sono disponibili [qui](https://msdn.microsoft.com/library/ms733025(v=vs.110).aspx#Anchor_3)
 
@@ -36,11 +36,11 @@ I livelli di registrazione dinamica sono disponibili [qui](https://msdn.microsof
 
 La configurazione della registrazione dinamica è alla riga 266: Microsoft.ResourceManagement.Service.exe.config
 
-![Le sezioni evidenziate contengono le righe con le varie aree di registrazione disponibili](/media/mim-service-dynamic-logging/screen02.png)
+![Le sezioni evidenziate contengono le righe con le varie aree di registrazione disponibili](media/mim-service-dynamic-logging/screen02.png)
 
 Per impostazione predefinita il percorso di registrazione sarà **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service**. Per generare il log dinamico, l'account del servizio FIM dovrà essere autorizzato a scrivere in questo percorso.
 
-![Percorso della cartella dei log](/media/mim-service-dynamic-logging/screen03.png)
+![Percorso della cartella dei log](media/mim-service-dynamic-logging/screen03.png)
 
  >[!NOTE]
  In caso di errori imprevisti, ad esempio errori di sintassi nel file di configurazione Microsoft.ResourceManagement.Service.exe.config o di altro tipo, verrà scritto un messaggio di errore corrispondente nel file Microsoft.ResourceManagement.Service.exe_Emergency.log nel seguente percorso %TMP% o %TEMP% o %USERPROFILE% (il primo esistente).  
@@ -50,5 +50,5 @@ Per impostazione predefinita il percorso di registrazione sarà **C:\Program Fil
 
 Per visualizzare la traccia, è possibile usare lo strumento [Service Trace Viewer](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx)
 
- ![Schermata di Service Trace Viewer](/media/mim-service-dynamic-logging/screen04.png)
+ ![Schermata di Service Trace Viewer](media/mim-service-dynamic-logging/screen04.png)
 
