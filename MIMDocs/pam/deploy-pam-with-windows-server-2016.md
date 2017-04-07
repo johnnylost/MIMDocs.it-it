@@ -5,14 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 02/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 18accbf24fc7af1a27e2e88059a9a8371dfd2c4d
-ms.openlocfilehash: 49be7f3bd364e9202b177ead1fbe2607be91a323
+ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
+ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -73,7 +74,7 @@ Eseguire l'installazione come descritto nella [guida introduttiva](/microsoft-id
 
     ```
     $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
-    Enable-ADOptionalFeature \$of -scope ForestOrConfigurationSet -target "priv.contoso.local"
+    Enable-ADOptionalFeature $of -scope ForestOrConfigurationSet -target "priv.contoso.local"
     ```
 
   -   Dopo la configurazione della delega e prima del riavvio del server, autorizzare gli amministratori MIM e l'account del servizio MIM a creare e aggiornare le entità shadow.
@@ -94,7 +95,7 @@ Eseguire l'installazione come descritto nella [guida introduttiva](/microsoft-id
 
  -   Dopo la configurazione della delega e prima del riavvio del server, autorizzare gli amministratori MIM a creare e aggiornare i criteri di autenticazione.
 
-     a.  Avviare una finestra di PowerShell e digitare i comandi seguenti, sostituendo "mimadmin" con il nome dell'account amministratore MIM in ognuna delle quattro righe:
+     a.  Avviare un **prompt dei comandi** con privilegi elevati e digitare i comandi seguenti, sostituendo "mimadmin" con il nome dell'account amministratore MIM in ognuna delle quattro righe:
     ```
        dsacls "CN=AuthN Policies,CN=AuthN Policy
        Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
@@ -149,9 +150,4 @@ Eseguire l'installazione come descritto nella [guida introduttiva](/microsoft-id
 - [Privileged Access Management per Active Directory Domain Services](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
 - [Configurazione dell'ambiente MIM per Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
 - [Configurare PAM tramite gli script](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
