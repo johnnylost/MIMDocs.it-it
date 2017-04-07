@@ -16,11 +16,12 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
 ms.openlocfilehash: 618b834452aa07a9f31582994fe32129a49f4249
+ms.lasthandoff: 11/10/2016
 
 
 ---
 
-# <a name="step-3-prepare-a-pam-server"></a>Passaggio 3: preparare un server PAM
+# <a name="step-3--prepare-a-pam-server"></a>Passaggio 3: preparare un server PAM
 
 >[!div class="step-by-step"]
 [« Passaggio 2](step-2-prepare-priv-domain-controller.md)
@@ -81,7 +82,7 @@ Configurare i criteri di sicurezza del server per consentire agli account appena
 
 13. Aprire il Pannello di controllo e passare a **Account utente**.  
 14. Fare clic su **Concedi ad altri utenti l'accesso al computer**.  
-15. Fare clic su **Aggiungi**, immettere il nome utente *MIMADMIN* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator ** (Aggiungi utente come amministratore).  
+15. Fare clic su **Aggiungi**, immettere il nome utente *MIMADMIN* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator** (Aggiungi utente come amministratore).  
 16. Fare clic su **Aggiungi**, immettere il nome utente *SharePoint* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator** (Aggiungi utente come amministratore).  
 17. Chiudere il Pannello di controllo.  
 
@@ -209,9 +210,4 @@ Nel passaggio 4 sarà possibile iniziare l'installazione dei componenti MIM nel 
 >[!div class="step-by-step"]
 [« Passaggio 2](step-2-prepare-priv-domain-controller.md)
 [Passaggio 4 »](step-4-install-mim-components-on-pam-server.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
