@@ -182,7 +182,7 @@ Installando Componenti aggiuntivi ed estensioni MIM in un computer aggiunto al d
 
 #### <a name="access-from-the-self-service-portal"></a>Accedere dal portale self-service.
 
-1.  Gli utenti possono aprire un Web browser, passare al **** portale per la reimpostazione della password, immettere il proprio nome utente e fare clic su **Avanti**.
+1.  Gli utenti possono aprire un Web browser, passare al **portale per la reimpostazione della password** , immettere il proprio nome utente e fare clic su **Avanti** .
 
     Se è stata configurata l'autenticazione a più fattori, l'utente riceverà una telefonata. In background, l’autenticazione a più fattori di Azure effettua una chiamata al numero fornito dall’utente in fase di iscrizione al servizio.
 
