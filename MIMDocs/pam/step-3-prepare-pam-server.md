@@ -52,7 +52,7 @@ Aggiungere i ruoli Server Web (IIS) e Server applicazioni, le funzionalità .NET
 
 1.  Accedere come amministratore del dominio PRIV (PRIV\Administrator) e avviare PowerShell.
 
-2.  Digitare i comandi seguenti. Si noti che potrebbe essere necessario specificare un percorso diverso per i file di origine delle funzionalità .NET Framework 3.5. Queste funzionalità in genere non sono presenti quando si installa Windows Server, ma sono disponibili nella cartella affiancata (SxS) della cartella delle origini del disco di installazione del sistema operativo, ad esempio, "*d:\Sources\SxS".
+2.  Digitare i comandi seguenti. Si noti che potrebbe essere necessario specificare un percorso diverso per i file di origine delle funzionalità .NET Framework 3.5. Queste funzionalità in genere non sono presenti quando si installa Windows Server, ma sono disponibili nella cartella affiancata (SxS) della cartella delle origini del disco di installazione del sistema operativo, ad esempio, "d:\Sources\SxS\".
 
     ```
     import-module ServerManager
@@ -82,7 +82,7 @@ Configurare i criteri di sicurezza del server per consentire agli account appena
 
 13. Aprire il Pannello di controllo e passare a **Account utente**.  
 14. Fare clic su **Concedi ad altri utenti l'accesso al computer**.  
-15. Fare clic su **Aggiungi**, immettere il nome utente *MIMADMIN* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator** (Aggiungi utente come amministratore).  
+15. Fare clic su **Aggiungi**, immettere il nome utente *MIMADMIN* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator**  (Aggiungi utente come amministratore).  
 16. Fare clic su **Aggiungi**, immettere il nome utente *SharePoint* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator** (Aggiungi utente come amministratore).  
 17. Chiudere il Pannello di controllo.  
 
