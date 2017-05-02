@@ -2,10 +2,10 @@
 title: Utilizzo del portale per la reimpostazione self-service della password | Documentazione Microsoft
 description: "Vedere le novità relative alla reimpostazione della password self-service in MIM 2016, tra cui il funzionamento di SSPR con l&quot;autenticazione a più fattori."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security

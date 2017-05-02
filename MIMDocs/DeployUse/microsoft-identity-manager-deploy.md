@@ -2,10 +2,10 @@
 title: Passaggi necessari per distribuire Microsoft Identity Manager 2016 | Documentazione Microsoft
 description: Ottenere l&quot;elenco completo dei passaggi coinvolti nella distribuzione di Microsoft Identity Manager 2016, dalla preparazione dell&quot;ambiente alla configurazione dei portali.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/27/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 804f957d5cf9f5fb09efa65944983b1d5013fff3
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -45,9 +46,4 @@ Dopo avere configurato il dominio e il server, si è pronti per installare i com
 - [Servizio di sincronizzazione MIM](install-mim-sync.md)
 - [Servizio e portale MIM](install-mim-service-portal.md)
 - [Sincronizzare i database di Active Directory e del servizio MIM](install-mim-sync-ad-service.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
