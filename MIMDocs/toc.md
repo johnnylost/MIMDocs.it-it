@@ -112,3 +112,5 @@
 #### [Ottenere le richieste PAM in sospeso](/microsoft-identity-manager/reference/privileged-access-management-get-pending-requests)
 #### [Approvare o rifiutare una richiesta PAM in sospeso](/microsoft-identity-manager/reference/privileged-access-management-approve-reject-pending-request)
 #### [Ottenere informazioni sulla sessione PAM](/microsoft-identity-manager/reference/privileged-access-management-get-session-info)
+## [Riferimento tecnico]
+### [Riferimento in formato XML a Configurazione visualizzazione controllo risorse](/microsoft-identity-manager/reference/rcd-configuration-xml-reference)
