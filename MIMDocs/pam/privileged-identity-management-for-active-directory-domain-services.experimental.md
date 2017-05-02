@@ -2,10 +2,10 @@
 title: "Che cos&quot;è PAM per Servizi di dominio Active Directory? | Documentazione Microsoft"
 description: Privileged Access Management (PAM) consente alle organizzazioni di limitare l&quot;accesso con privilegi in un ambiente Active Directory esistente.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/10/2017
+ms.date: 03/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -16,6 +16,7 @@ experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
 ms.openlocfilehash: 9a047644d07e3ee3c2d1abfde7753849b5ddc63b
+ms.lasthandoff: 01/11/2017
 
 ---
 
@@ -93,9 +94,4 @@ Supponendo che la richiesta venga approvata, il flusso di lavoro azione comunica
 > Al contrario, un collegamento scaduto viene valutato in tempo reale da Gestione account di sicurezza (SAM). Anche se l'aggiunta di un membro del gruppo deve essere replicata dal controller di dominio che riceve la richiesta di accesso, la rimozione di un membro del gruppo viene valutata immediatamente in ogni controller di dominio.
 
 Questo flusso di lavoro è concepito appositamente per questi account amministrativi. Gli amministratori (o gli script) che necessitano solo occasionalmente dell'accesso per gruppi con privilegi, possono richiedere esattamente questo accesso. MIM registra la richiesta e le modifiche in Active Directory, ed è possibile visualizzarle nel Visualizzatore eventi o inviare i dati alle soluzioni di monitoraggio aziendale, ad esempio System Center 2012, Operations Manager Audit Collection Services (ACS) o altri strumenti di terze parti.
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

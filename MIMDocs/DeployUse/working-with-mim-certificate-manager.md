@@ -2,10 +2,10 @@
 title: Distribuire l&quot;applicazione di Windows Gestione certificati MIM | Documentazione Microsoft
 description: Informazioni su come distribuire l&quot;app Gestione certificati per consentire agli utenti di gestire i propri diritti di accesso.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -253,9 +254,4 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
 ## <a name="deploy-the-app"></a>Distribuire l'app
 Quando si configura l'app CM nell'Area download, scaricare il file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip ed estrarre il relativo contenuto. Il file con estensione AppX è il programma di installazione. È possibile distribuire l'app nello stesso modo in cui vengono normalmente distribuite le applicazioni Windows Store, usando [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)o [Intune](https://technet.microsoft.com/library/dn613839.aspx) per trasferire localmente l'app in modo che gli utenti dovranno accedervi usando il portale aziendale o direttamente nei propri computer.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

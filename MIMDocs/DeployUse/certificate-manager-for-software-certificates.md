@@ -2,10 +2,10 @@
 title: Richiedere i certificati in Gestione certificati usando modelli | Documentazione Microsoft
 description: Informazioni su come usare Gestione certificati per creare e rinnovare certificati software con i modelli di profilo.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 
     1.  Nella scheda **Generale** , digitare **Modello di certificato archiviato**nel campo nome visualizzato.
 
-    2.  b.  Nella scheda **Gestione richiesta**
+    2.  b.    Nella scheda **Gestione richiesta**
 
         1.  Impostare **Scopo** su Firma e crittografia.
 
@@ -95,9 +96,4 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 10. Se si desidera eseguire nuovamente i certificati archiviati, selezionare le caselle alla sinistra di **Riemetti certificati archiviati** e fare clic su **OK**.
 
 11. Se si utilizza il CM Smart Card virtuale, è necessario disattivare gli elementi della raccolta dati, poiché non funziona con la raccolta dei dati attiva. Disabilitare la raccolta dei dati per ogni criterio facendo clic sul criterio nel riquadro a sinistra e quindi deselezionando la casella accanto a **Elemento di dati di esempio** . Quindi fare clic su **Eliminare elemento raccolta dati**. Fare quindi clic su **OK**.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

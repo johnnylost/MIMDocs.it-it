@@ -2,10 +2,10 @@
 title: Distribuire il servizio di notifica di modifica della password | Documentazione Microsoft
 description: Procedura per installare e configurare il servizio di notifica di modifica della password di MIM nel controller di dominio.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -58,9 +59,4 @@ Il servizio di notifica di modifica della password (PCNS) è un servizio che vie
 
 ## <a name="configuring-the-password-change-notification-service"></a>Configurazione del servizio di notifica di modifica della password
 Dopo la riconnessione al server di controller di dominio come amministratore di dominio, passare a *C:\Programmi\Microsoft Password Change Notification*. Eseguire *pcnscfg.exe*.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

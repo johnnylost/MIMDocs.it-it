@@ -2,10 +2,10 @@
 title: Configurare Exchange per MIM per la posta elettronica e per creare cassette postali | Documentazione Microsoft
 description: Come passaggio facoltativo, distribuire Exchange Server per abilitare l&quot;invio della posta elettronica e la creazione di cassette postali in MIM 2016.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 01ccb55d200bfd1615ae62ccd30298117c0d6275
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -41,9 +42,4 @@ Se si desidera configurare MIM per inviare e ricevere posta elettronica o esegui
 >[!div class="step-by-step"]  
 [« SharePoint](prepare-server-sharepoint.md)
 [Servizio di sincronizzazione MIM »](install-mim-sync.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
