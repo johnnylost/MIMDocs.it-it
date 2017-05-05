@@ -2,10 +2,10 @@
 title: Informazioni sui componenti di PAM | Documentazione Microsoft
 description: Privileged Access Management condivide alcuni componenti con MIM e ha alcuni componenti propri. Informazioni sul funzionamento della combinazione di questi componenti.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -40,9 +41,4 @@ Dopo l'installazione e la configurazione, ogni gruppo creato dalla procedura di 
 Di conseguenza, quando un utente richiede l'elevazione dei privilegi utilizzando i cmdlet PowerShell e la richiesta viene approvata, il servizio MIM aggiungerà tale account nella foresta PRIV a un gruppo nella stessa foresta. Quando l'utente accede con l'account con privilegi, il token Kerberos conterrà un identificatore di protezione (SID) identico al SID del gruppo nella foresta CORP. Dato che la foresta CORP è configurata in modo da considerare attendibile la foresta PRIV, per una risorsa che controlla l’appartenenza ai gruppi Kerberos, l’account con privilegi elevati usato per accedere a una risorsa nella foresta CORP risulta appartenente agli stessi gruppi di sicurezza di quella risorsa. Tale controllo viene effettuato dall’autenticazione Kerberos tra foreste diverse.
 
 L’appartenenza dei membri è temporanea, per cui dopo un certo intervallo di tempo, l’account amministrativo dell'utente non appartiene più al gruppo della foresta PRIV. Di conseguenza, tale account non saranno utilizzabile per l'accesso a risorse aggiuntive.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
