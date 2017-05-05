@@ -2,10 +2,10 @@
 title: Guida alla topologia per la distribuzione | Documentazione Microsoft
 description: Comprendere i componenti di MIM 2016 e ottenere suggerimenti su come distribuirli nell&quot;ambiente in uso.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 03/21/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,9 @@ ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 23ef8843201790bc758e9ef6def5d77d175bfcf0
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: f7e4dc737444df70de3a8a78eb518e9e6f26aadc
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.openlocfilehash: 23ef8843201790bc758e9ef6def5d77d175bfcf0
 ## <a name="mim-components"></a>Componenti MIM
 Quando si progetta la topologia di distribuzione, è importante conoscere le funzionalità di ciascun componente e la modalità in cui tutti i componenti interagiscono.
 
-- <a name="mim-portal-an-interface-for-password-resets-group-management-and-administrative-operations"></a>**Portale MIM**: un'interfaccia per la reimpostazione della password, la gestione di gruppo e le operazioni amministrative.
+- <a name="mim-portal---an-interface-for-password-resets-group-management-and-administrative-operations"></a>**Portale MIM**: un'interfaccia per la reimpostazione della password, la gestione di gruppo e le operazioni amministrative.
     -
 - **Servizio MIM**: un servizio Web che implementa la funzionalità di gestione delle identità di MIM 2016.
 - **Servizio di sincronizzazione MIM**: sincronizza i dati con altri sistemi di identità.
@@ -63,9 +64,4 @@ I computer che eseguono SQL Server e che ospitano il servizio di sincronizzazion
 
 ## <a name="see-also"></a>Vedere anche
 - La [Guida alla pianificazione della capacità di Forefront Identity Manager (FIM) 2010](http://go.microsoft.com/fwlink/?LinkId=200180) scaricabile esamina più in dettaglio la compilazione di un test e i risultati dei test delle prestazioni.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
