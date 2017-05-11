@@ -2,24 +2,26 @@
 title: 'Distribuire PAM, passaggio 1: Dominio CORP | Documentazione Microsoft'
 description: "Preparare il dominio CORP con identità nuove o esistenti da gestire con Privileged Identity Manager"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 127d368c15cce125ba7f69302cfa329b600d9498
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
+ms.contentlocale: it-it
+ms.lasthandoff: 05/02/2017
 
 
 ---
 
-# <a name="step-1-prepare-the-host-and-the-corp-domain"></a>Passaggio 1: preparare l'host e il dominio CORP
+# <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Passaggio 1: preparare l'host e il dominio CORP
 
 >[!div class="step-by-step"]
 [Passaggio 2 »](step-2-prepare-priv-domain-controller.md)
@@ -212,9 +214,4 @@ Nel passaggio successivo si preparerà il controller di dominio PRIV.
 
 >[!div class="step-by-step"]
 [Passaggio 2 »](step-2-prepare-priv-domain-controller.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
