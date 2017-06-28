@@ -34,7 +34,7 @@ Il feedback degli utenti è fondamentale. Per lasciare commenti e suggerimenti o
 
 ### <a name="mim"></a>Microsoft Identity Manager (MIM)
 
-- **Compatibilità tra browser del portale MIM per utenti finali self-service:** in questo Service Pack viene introdotto il supporto per la maggior parte dei browser principali. Gli utenti possono ora accedere e interagire con il portale MIM per la gestione self-service di profili e gruppi da Edge, Chrome e Safari.
+- **Compatibilità tra browser del portale MIM per utenti finali self-service:** in questo Service Pack viene introdotto il supporto per la maggior parte dei browser principali. Gli utenti possono ora accedere e interagire con il portale MIM per la gestione self-service di profili e gruppi da Microsoft Edge, Chrome e Safari.
 
 - **Supporto del servizio MIM per Exchange Online:** il servizio MIM ha supportato a lungo l'invio e la ricezione di messaggi di posta elettronica per notifiche e approvazioni. Prima di MIM SP1 il supporto era limitato a Exchange Server o SMTP. Con il Service Pack 1, il servizio MIM può inviare e ricevere richieste e notifiche di posta elettronica usando un account di Office 365 Exchange Online.
 
