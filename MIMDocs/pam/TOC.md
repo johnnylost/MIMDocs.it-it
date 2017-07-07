@@ -32,8 +32,3 @@
 ### [Passaggio 8: Verifica della distribuzione PAM](sp1-step8-pam-deployment-verification.md)
 ### [Appendice](sp1-pam-deployment-addendum.md)
 # [Riferimenti per gli sviluppatori](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
-
-
-<!--HONumber=Feb17_HO3-->
-
-
