@@ -16,12 +16,13 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 1eadf7cff67d65c35f784adad94b5032d2792824
 ms.contentlocale: it-it
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="capacity-planning-guide"></a>Guida per la pianificazione della capacità
+<a id="capacity-planning-guide" class="xliff"></a>
+# Guida per la pianificazione della capacità
 
 Microsoft Identity Manager (MIM) consente di creare, aggiornare e rimuovere gli account utente all'interno dell'organizzazione. MIM offre agli utenti finali anche la possibilità di gestire le funzionalità self-service del proprio account. Anche in un ambiente di piccole dimensioni, tutte queste azioni possono sommarsi rapidamente.
 
@@ -29,7 +30,8 @@ Prima di iniziare a usare MIM, consultare questa guida con i relativi ambienti d
 
 Se non si ha familiarità con MIM 2016 e i relativi componenti, è possibile ottenere altre informazioni su [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md) prima di continuare.
 
-## <a name="overview"></a>Panoramica
+<a id="overview" class="xliff"></a>
+## Panoramica
 Esistono numerose variabili che possono influenzare la capacità e le prestazioni complessive della distribuzione di Microsoft Identity Manager. I modi in cui vengono fisicamente distribuiti i componenti MIM (topologia), nonché l'hardware su cui tali componenti vengono eseguiti, sono fattori importanti per determinare le prestazioni e la capacità che è possibile attendersi dalla distribuzione di MIM. Il numero e la complessità degli oggetti di configurazione dei criteri MIM potrebbero essere meno evidenti, ma sono comunque fattori significativi di cui tenere conto durante la pianificazione della capacità. Infine, il ridimensionamento previsto della distribuzione, nonché il relativo carico, sono generalmente fattori che influiscono in modo più evidente su prestazioni e capacità.
 
 I fattori principali che influiscono sulla capacità e sulle prestazioni che ci si può attendere da una distribuzione di MIM 2016 sono esaminati nella tabella seguente.
@@ -43,7 +45,8 @@ I fattori principali che influiscono sulla capacità e sulle prestazioni che ci 
 | Carica | Frequenza d'uso. Ad esempio, la frequenza in cui si prevede di creare nuovi gruppi o utenti, reimpostare password o visitare il portale in un determinato periodo di tempo. Si noti che il carico può variare nel corso di un'ora, di un giorno, di una settimana o di un anno. A seconda del componente, è possibile eseguire la progettazione per un carico di picco o un carico medio. |
 
 
-## <a name="hosting-microsoft-identity-manager-components"></a>Hosting dei componenti di Microsoft Identity Manager
+<a id="hosting-microsoft-identity-manager-components" class="xliff"></a>
+## Hosting dei componenti di Microsoft Identity Manager
 
 I componenti di Microsoft Identity Manager non sono necessariamente situati sullo stesso computer. Valutare questi componenti e le macchine fisiche o virtuali su cui verranno installati rappresenta una parte importante della pianificazione della capacità.
 
@@ -54,7 +57,8 @@ Durante la configurazione, tenere presenti anche i fattori esterni. Ad esempio:
 - Se si usa una rete SAN come la configurazione del database del servizio MIM 2016, quali altre applicazioni condividono tale rete? Queste applicazioni potrebbero influire sulle prestazioni del database quando si contendono le risorse condivise del disco sulla rete SAN.
 
 
-## <a name="users-and-groups"></a>Utenti e gruppi
+<a id="users-and-groups" class="xliff"></a>
+## Utenti e gruppi
 Il numero di utenti e gruppi nell'ambiente è un aspetto di cui si tiene generalmente conto per il ridimensionamento della distribuzione. Esistono, tuttavia, diverse altre considerazioni correlate da considerare nella pianificazione,
 
 - Gli utenti possono creare gruppi? In questo caso, è consigliabile effettuare una stima dell'influenza che la creazione di nuovi gruppi di utenti avrà sulla crescita dei gruppi nel proprio ambiente.
@@ -62,7 +66,8 @@ Il numero di utenti e gruppi nell'ambiente è un aspetto di cui si tiene general
 - Verranno distribuiti gruppi dinamici? Determinare quanti e quali tipi di gruppi dinamici sono previsti nel proprio ambiente.
 
 
-## <a name="expected-load-levels"></a>Livelli di carico previsto
+<a id="expected-load-levels" class="xliff"></a>
+## Livelli di carico previsto
 È necessario anche considerare il tipo di carico che sarà posizionato sui componenti MIM. Queste informazioni possono essere probabilmente stimate esaminando le applicazioni correnti nell'ambiente in uso. Di seguito sono elencate alcune domande rilevanti da considerare:
 
 - Con quale frequenza si prevede di ricevere una richiesta di aggiunta o rimozione da un gruppo?
@@ -76,7 +81,8 @@ Il numero di utenti e gruppi nell'ambiente è un aspetto di cui si tiene general
 - Si prevedono notevoli variazioni nei livelli di carico, da un carico normale a un carico di picco? Ad esempio, dopo i periodi di festività si registra una quantità elevata di reimpostazioni di password. Assicurarsi di definire le pianificazioni di sincronizzazione e manutenzione del sistema al di fuori dei picchi di utilizzo previsto. Quando si considera la pianificazione della capacità, assicurarsi di tenere conto dei periodi di carico.
 
 
-## <a name="policy-configuration-objects"></a>Oggetti di configurazione dei criteri
+<a id="policy-configuration-objects" class="xliff"></a>
+## Oggetti di configurazione dei criteri
 
 Gli oggetti di configurazione dei criteri di Microsoft Identity Manager includono regole di criteri di gestione, set, flussi di lavoro e regole di sincronizzazione per una particolare distribuzione. Le distribuzioni MIM sono specifiche per ogni cliente poiché la configurazione dei criteri cambia per soddisfare le esigenze di ogni distribuzione. Le considerazioni sulle prestazioni chiave relative agli oggetti di configurazione dei criteri MIM includono quanto segue:
 
@@ -91,7 +97,8 @@ La configurazione dei criteri MIM include anche decisioni sull'esecuzione del pr
 - Verrà usato il provisioning senza codice? Questa operazione, se effettuata, influisce sul numero di voci di regole previste, nonché sulle richieste e sui flussi di lavoro associati nel sistema.
 
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 - [Considerazioni relative alla topologia per la distribuzione di MIM](topology-considerations.md)
 - La [Guida alla pianificazione della capacità di Forefront Identity Manager (FIM) 2010](http://go.microsoft.com/fwlink/?LinkId=200180) scaricabile esamina più in dettaglio la compilazione di un test e i risultati dei test delle prestazioni.
 

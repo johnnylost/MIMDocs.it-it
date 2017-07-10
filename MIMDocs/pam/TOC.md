@@ -1,34 +1,68 @@
+
 # [Comprendere ed esplorare](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+
 # [Pianificare e progettare](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+
 # [Distribuire e usare](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+
 # [Usare Privileged Access Management](privileged-identity-management-for-active-directory-domain-services.md)
+
 ## [Informazioni su PAM](privileged-identity-management-for-active-directory-domain-services.md)
+
 ### [Informazioni sui componenti](principles-of-operation.md)
+
 ## [Pianificare la distribuzione di PAM](environment-overview.md)
+
 ### [Panoramica sull'ambiente](environment-overview.md)
+
 ### [Modello di livello](tier-model-for-partitioning-administrative-privileges.md)
+
 ### [Pianificare un ambiente bastion](planning-bastion-environment.md)
+
 ### [Definire i ruoli](defining-roles-for-pam.md)
+
 ### [Disponibilità elevata e ripristino di emergenza](high-availability-disaster-recovery-considerations-bastion-environment.md)
+
 ### [Requisiti hardware e software](hardware-software-requirements.md)
+
 ## [Configurare MIM per Privileged Access Management](configuring-mim-environment-for-pam.md)
+
 ### [Passaggio 1: Dominio CORP](step-1-prepare-corp-domain.md)
+
 ### [Passaggio 2: Controller di dominio PRIV](step-2-prepare-priv-domain-controller.md)
+
 ### [Passaggio 3: Server PAM](step-3-prepare-pam-server.md)
+
 ### [Passaggio 4: Installare MIM sul server PAM](step-4-install-mim-components-on-pam-server.md)
+
 ### [Passaggio 5: Stabilire una relazione di trust tra PRIV e CORP](step-5-establish-trust-between-priv-corp-forests.md)
+
 ### [Passaggio 6: Creare account con privilegi](step-6-transition-group-to-pam.md)
+
 ### [Passaggio 7: elevare l'accesso dell'utente](step-7-elevate-user-access.md)
+
 ### [Distribuire MIM PAM con Windows Server 2016](deploy-pam-with-windows-server-2016.md)
+
 ### [Configurare Azure MFA](use-azure-mfa-for-activation.md)
+
 ## [Configurare PAM tramite gli script](sp1-pam-configure-using-scripts.md)
+
 ### [Passaggio 1: Configurazione del dominio PRIV](sp1-step1-configuring-priv-domain.md)
+
 ### [Passaggio 2: Configurazione del dominio CORP](sp1-step2-configuring-corp-domain.md)
+
 ### [Passaggio 3: Configurazione di SQL](sp1-step3-installing-configuring-sql.md)
+
 ### [Passaggio 4: Configurazione di SharePoint](sp1-step4-configuring-sharepoint.md)
+
 ### [Passaggio 5: Installazione e configurazione di PAM](sp1-step5-configuring-pam.md)
+
 ### [Passaggio 6: Installazione dell'attendibilità PAM](sp1-step6-setup-pam-trust.md)
+
 ### [Passaggio 7: Installare la cronologia e il filtraggio SID](sp1-step7-setup-sidhistory-sidfiltering.md)
+
 ### [Passaggio 8: Verifica della distribuzione PAM](sp1-step8-pam-deployment-verification.md)
+
 ### [Appendice](sp1-pam-deployment-addendum.md)
+
 # [Riferimenti per gli sviluppatori](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
