@@ -1,116 +1,232 @@
+
 # [Comprendere ed esplorare](microsoft-identity-manager-2016.md)
+
 ## [Che cos'è MIM 2016?](microsoft-identity-manager-2016.md)
+
 ## [Novità del Service Pack 1](Microsoft-identity-manager-2016-sp1-release-notes.md)
+
 ### [Script di distribuzione di MIM 2016 SP1 per PAM](sp1-deployment-scripts.md)
+
 ## [Servizio di creazione di report ibridi in Azure](identity-manager-hybrid-reporting-azure.md)
+
 # [Pianificare e progettare](microsoft-identity-manager-2016-supported-platforms.md)
+
 ## [Piattaforme supportate](microsoft-identity-manager-2016-supported-platforms.md)
+
 ## [Connettersi alle directory](supported-management-agents.md)
+
 ## [Pianificazione della capacità](capacity-planning-guide.md)
+
 ## [Topologia di distribuzione](topology-considerations.md)
+
 # [Distribuire e usare](microsoft-identity-manager-deploy.md)
+
 ## [Prima distribuzione](microsoft-identity-manager-deploy.md)
+
 ### [Configurazione del dominio](preparing-domain.md)
+
 ### [Installazione del server: Windows Server](prepare-server-ws2012r2.md)
+
 ### [Installazione del server: SQL](prepare-server-sql2014.md)
+
 ### [Installazione del server: SharePoint](prepare-server-sharepoint.md)
+
 ### [Installazione del server: Exchange](prepare-server-exchange.md)
+
 ### [Installare MIM: sincronizzazione](install-mim-sync.md)
+
 ### [Installare MIM: servizio e portale](install-mim-service-portal.md)
+
 ### [Installare MIM: database di sincronizzazione](install-mim-sync-ad-service.md)
+
 ## [Eseguire l'aggiornamento da Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
+
 ## [Servizio di notifica della modifica della password](deploying-mim-password-change-notification-service-on-domain-controller.md)
+
 ## [Report ibridi di Identity Manager](working-with-identity-manager-hybrid-reporting.md)
+
 ## [Reimpostazione della password self-service](working-with-self-service-password-reset.md)
+
 ## [Gestione certificati MIM](working-with-mim-certificate-manager.md)
+
 ### [Registrare smart card](certificate-manager-for-non-administrators.md)
+
 ### [Creare certificati software](certificate-manager-for-software-certificates.md)
+
 # [Usare Privileged Access Management](./pam/privileged-identity-management-for-active-directory-domain-services.md)
+
 ## [Informazioni su PAM](./pam/privileged-identity-management-for-active-directory-domain-services.md)
+
 ### [Informazioni sui componenti](./pam/principles-of-operation.md)
+
 ## [Pianificare la distribuzione di PAM](./pam/environment-overview.md)
+
 ### [Panoramica sull'ambiente](./pam/environment-overview.md)
+
 ### [Modello di livello](./pam/tier-model-for-partitioning-administrative-privileges.md)
+
 ### [Pianificare un ambiente bastion](./pam/planning-bastion-environment.md)
+
 ### [Definire i ruoli](./pam/defining-roles-for-pam.md)
+
 ### [Disponibilità elevata e ripristino di emergenza](./pam/high-availability-disaster-recovery-considerations-bastion-environment.md)
+
 ### [Requisiti hardware e software](./pam/hardware-software-requirements.md)
+
 ## [Configurare MIM per Privileged Access Management](./pam/configuring-mim-environment-for-pam.md)
+
 ### [Passaggio 1: Dominio CORP](./pam/step-1-prepare-corp-domain.md)
+
 ### [Passaggio 2: Controller di dominio PRIV](./pam/step-2-prepare-priv-domain-controller.md)
+
 ### [Passaggio 3: Server PAM](./pam/step-3-prepare-pam-server.md)
+
 ### [Passaggio 4: Installare MIM sul server PAM](./pam/step-4-install-mim-components-on-pam-server.md)
+
 ### [Passaggio 5: Stabilire una relazione di trust tra PRIV e CORP](./pam/step-5-establish-trust-between-priv-corp-forests.md)
+
 ### [Passaggio 6: Creare account con privilegi](./pam/step-6-transition-group-to-pam.md)
+
 ### [Passaggio 7: elevare l'accesso dell'utente](./pam/step-7-elevate-user-access.md)
+
 ### [Distribuire MIM PAM con Windows Server 2016](./pam/deploy-pam-with-windows-server-2016.md)
+
 ### [Configurare Azure MFA](./pam/use-azure-mfa-for-activation.md)
+
 ## [Configurare PAM tramite gli script](./pam/sp1-pam-configure-using-scripts.md)
+
 ### [Passaggio 1: Configurazione del dominio PRIV](./pam/sp1-step1-configuring-priv-domain.md)
+
 ### [Passaggio 2: Configurazione del dominio CORP](./pam/sp1-step2-configuring-corp-domain.md)
+
 ### [Passaggio 3: Configurazione di SQL](./pam/sp1-step3-installing-configuring-sql.md)
+
 ### [Passaggio 4: Configurazione di SharePoint](./pam/sp1-step4-configuring-sharepoint.md)
+
 ### [Passaggio 5: Installazione e configurazione di PAM](./pam/sp1-step5-configuring-pam.md)
+
 ### [Passaggio 6: Installazione dell'attendibilità PAM](./pam/sp1-step6-setup-pam-trust.md)
+
 ### [Passaggio 7: Installare la cronologia e il filtraggio SID](./pam/sp1-step7-setup-sidhistory-sidfiltering.md)
+
 ### [Passaggio 8: Verifica della distribuzione PAM](./pam/sp1-step8-pam-deployment-verification.md)
+
 ### [Appendice](./pam/sp1-pam-deployment-addendum.md)
+
 # Gestire l'infrastruttura
+
 ## [Best Practice Analyzer per Identity Manager](https://technet.microsoft.com/library/jj203402)
+
 ## [Servizio di notifica della modifica della password](https://technet.microsoft.com/library/e27c0bc6-c808-4fdb-9e59-58feeb419308)
+
 ## Gestione dei certificati
+
 ### [Strumento da riga di comando CLMUtil](https://technet.microsoft.com/library/cc720647)
+
 ### [Modelli del profilo di configurazione](https://technet.microsoft.com/library/cc708656)
+
 ### [Uso di un sito Web per la gestione dei certificati](https://technet.microsoft.com/library/cc720560)
+
 ### [Gestione di applicazioni smart card](https://technet.microsoft.com/library/cc708681)
+
 ### [Backup e ripristino](https://technet.microsoft.com/library/dd883245)
+
 ## Reimpostazione autonoma della password
+
 ### [Registrazione utente programmatica](https://technet.microsoft.com/library/jj134294)
+
 ### [Personalizzazioni](https://technet.microsoft.com/library/jj134312)
+
 ## Servizio e portale
+
 ### [Kerberos](https://technet.microsoft.com/library/jj134299)
+
 ### [Registrazione dinamica](./infrastructure/mim-service-dynamic-logging.md)
+
 ### [Guida alle prestazioni di esportazione](https://technet.microsoft.com/library/hh322883)
+
 ## Reporting
+
 ### [Creazione di report personalizzati ed estendibilità](https://technet.microsoft.com/library/jj133861)
+
 ## [Microsoft Identity Software: versioni di rilascio pubblico](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
+
 # [Riferimenti per gli sviluppatori](./reference/microsoft-identity-manager-2016-developer-reference.md)
+
 ## [Riferimento per sviluppatori di Microsoft Identity Manager 2016](./reference/microsoft-identity-manager-2016-developer-reference.md)
+
 ### [Riferimento all'API REST per la gestione dei certificati](./reference/certificate-management-rest-api-reference.md)
+
 #### [Dettagli del servizio API REST di gestione certificati](./reference/certificate-management-rest-api-service-details.md)
+
 #### [Procedura di registrazione di esempio](./reference/sample-enrollment-walkthrough.md)
+
 #### [Ottenere modelli di profilo](./reference/get-profile-templates.md)
+
 #### [Operazioni per i criteri](./reference/policy-operations.md)
+
 ##### [Ottenere i criteri del flusso di lavoro](./reference/get-workflow-policy.md)
+
 ##### [Ottenere i criteri per smart card](./reference/get-smartcard-policy.md)
+
 #### [Operazioni per le richieste](./reference/request-operations.md)
+
 ##### [Creare una richiesta](./reference/create-request.md)
+
 ##### [Ottenere una richiesta](./reference/get-request.md)
+
 ##### [Annullare, abbandonare o completare una richiesta](./reference/cancel-abandon-complete-request.md)
+
 #### [Operazioni per le richieste di certificati](./reference/certificate-request-operations.md)
+
 ##### [Ottenere le opzioni di generazione di richiesta di certificato](./reference/get-certificate-request-generation-options.md)
+
 ##### [Ottenere le risposte di certificato](./reference/get-certificate-responses.md)
+
 #### [Operazioni per le smart card](./reference/smartcard-operations.md)
+
 ##### [Assegnare una smart card a una richiesta](./reference/assign-smartcard-to-request.md)
+
 ##### [Ottenere i dati della smart card](./reference/get-smartcard-data.md)
+
 ##### [Ottenere la risposta di autenticazione dalla smart card](./reference/get-smartcard-authentication-response.md)
+
 ##### [Ottenere la chiave di amministrazione diversificata della smart card](./reference/get-smartcard-diversified-admin-key.md)
+
 ##### [Ottenere il PIN proposto della smart card](./reference/get-smartcard-proposed-pin.md)
+
 ##### [Aggiornare lo stato della smart card](./reference/update-smartcard-status.md)
+
 #### [Operazioni per i profili](./reference/profile-operations.md)
+
 ##### [Ottenere i dati del profilo](./reference/get-profile-data.md)
+
 ##### [Ottenere le operazioni per lo stato del profilo](./reference/get-profile-state-operations.md)
+
 #### [Operazioni per i certificati](./reference/certificate-operations.md)
+
 ##### [Ottenere smart card o certificati del profilo](./reference/get-smartcard-profile-certificates.md)
+
 ##### [Ottenere certificati utente](./reference/get-user-certificates.md)
+
 ### [Riferimento all'API REST di Privileged Access Management](./reference/privileged-access-management-rest-api-reference.md)
+
 #### [Dettagli del servizio API REST di PAM](./reference/privileged-access-management-rest-api-service-details.md)
+
 #### [Ottenere ruoli PAM](./reference/privileged-access-management-get-roles.md)
+
 #### [Creare una richiesta PAM](./reference/privileged-access-management-create-request.md)
+
 #### [Ottenere richieste PAM](./reference/privileged-access-management-get-requests.md)
+
 #### [Chiudere una richiesta PAM](./reference/privileged-access-management-close-request.md)
+
 #### [Ottenere le richieste PAM in sospeso](./reference/privileged-access-management-get-pending-requests.md)
+
 #### [Approvare o rifiutare una richiesta PAM in sospeso](./reference/privileged-access-management-approve-reject-pending-request.md)
+
 #### [Ottenere informazioni sulla sessione PAM](./reference/privileged-access-management-get-session-info.md)
+
 ## [Riferimento tecnico]
+
 ### [Riferimento in formato XML a Configurazione visualizzazione controllo risorse](./reference/rcd-configuration-xml-reference.md)
