@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="create-software-certificates-with-certificate-manager"></a>Creare certificati software con Gestione certificati
+# Creare certificati software con Gestione certificati
+<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
 Per registrare e rinnovare i certificati software non è necessario essere un amministratore e non occorre una smart card virtuale. Vale la pena notare che a un certo punto verrà richiesto di consentire un'operazione di certificato, e questo è normale.
 
-## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Creare un modello di profilo dei certificati software in Gestione certificati di MIM 2016
+## Creare un modello di profilo dei certificati software in Gestione certificati di MIM 2016
+<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  Creare un modello per il certificato che verrà richiesto per la smart card virtuale. Aprire la MMC.
 
@@ -39,7 +39,7 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 
     1.  Nella scheda **Generale** , digitare **Modello di certificato archiviato**nel campo nome visualizzato.
 
-    2.  b.    Nella scheda **Gestione richiesta**
+    2.  b.  Nella scheda **Gestione richiesta**
 
         1.  Impostare **Scopo** su Firma e crittografia.
 
@@ -73,7 +73,8 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 
     10. Nell'elenco, selezionare il nuovo modello appena creato (**Modello di certificato archiviato**), quindi fare clic su **OK**.
 
-## <a name="create-the-profile-template"></a>Creare il modello di profilo
+## Creare il modello di profilo
+<a id="create-the-profile-template" class="xliff"></a>
 
 1.  Accedere al portale CM come utente con privilegi amministrativi.
 
@@ -96,4 +97,3 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 10. Se si desidera eseguire nuovamente i certificati archiviati, selezionare le caselle alla sinistra di **Riemetti certificati archiviati** e fare clic su **OK**.
 
 11. Se si utilizza il CM Smart Card virtuale, è necessario disattivare gli elementi della raccolta dati, poiché non funziona con la raccolta dei dati attiva. Disabilitare la raccolta dei dati per ogni criterio facendo clic sul criterio nel riquadro a sinistra e quindi deselezionando la casella accanto a **Elemento di dati di esempio** . Quindi fare clic su **Eliminare elemento raccolta dati**. Fare quindi clic su **OK**.
-

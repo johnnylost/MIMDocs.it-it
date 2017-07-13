@@ -1,5 +1,5 @@
 ---
-title: Eseguire l&quot;aggiornamento da FIM 2010 R2 a Microsoft Identity Manager 2016 | Documentazione Microsoft
+title: Eseguire l'aggiornamento da FIM 2010 R2 a Microsoft Identity Manager 2016 | Documentazione Microsoft
 description: Informazioni su come aggiornare i componenti di FIM 2010 R2 e installare i nuovi componenti di MIM 2016.
 keywords: 
 author: fimguy
@@ -12,14 +12,14 @@ ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
 ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Eseguire l'aggiornamento da Forefront Identity Manager 2010 R2
+# Eseguire l'aggiornamento da Forefront Identity Manager 2010 R2
+<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
 
 Se si dispone di un ambiente Forefront Identity Manager (FIM) 2010 R2 e si desidera provare Microsoft Identity Manager (MIM) 2016, usare questo articolo come guida. L'aggiornamento prevede tre fasi:
 
@@ -36,7 +36,8 @@ Questa guida presuppone che gli elementi seguenti siano già impostati:
 - Prerequisiti locali e ambientali (SQL Server, Exchange Server, SharePoint Services e così via) configurati per FIM 2010 R2.
 
 
-## <a name="preparation"></a>Preparazione
+## Preparazione
+<a id="preparation" class="xliff"></a>
 
 1.  Eseguire il backup del database del servizio FIM, del database di sincronizzazione FIM, dell’applicazione di sincronizzazione FIM e del software e della configurazione del servizio.
 
@@ -44,7 +45,8 @@ Questa guida presuppone che gli elementi seguenti siano già impostati:
 
 3.  Scaricare o decomprimere il software MIM.
 
-## <a name="upgrade-the-synchronization-service"></a>Eseguire l'aggiornamento del servizio di sincronizzazione
+## Eseguire l'aggiornamento del servizio di sincronizzazione
+<a id="upgrade-the-synchronization-service" class="xliff"></a>
 
 1.  Accedere come amministratore a un server in cui viene distribuito il servizio di sincronizzazione FIM 2010 R2 ("Sincronizzazione").
 
@@ -82,7 +84,8 @@ Questa guida presuppone che gli elementi seguenti siano già impostati:
 
 13. Si noti che il **servizio di sincronizzazione** è stato riavviato.
 
-## <a name="upgrade-the-service-and-portal"></a>Eseguire l'aggiornamento del servizio e del portale
+## Eseguire l'aggiornamento del servizio e del portale
+<a id="upgrade-the-service-and-portal" class="xliff"></a>
 
 1.  Accedere come amministratore a un server in cui sono distribuite le funzionalità Servizio e Portale di FIM 2010 R2.
 
@@ -138,7 +141,8 @@ Questa guida presuppone che gli elementi seguenti siano già impostati:
 
 14. Quando si installa il portale MIM, fornire l'URL della raccolta siti di SharePoint in cui è attualmente ospitato il portale FIM. Fare clic su **Avanti**.
 
-## <a name="install-the-mim-password-registration-portal"></a>Installare il portale di registrazione della password MIM
+## Installare il portale di registrazione della password MIM
+<a id="install-the-mim-password-registration-portal" class="xliff"></a>
 
 1. Se si sta installando il portale di registrazione password di MIM, fornire l'URL richiesto per il portale di registrazione password. Fare clic su **Avanti**.
 
@@ -168,7 +172,8 @@ Questa guida presuppone che gli elementi seguenti siano già impostati:
 
     2.  Determinare se a questo portale possono accedere utenti di extranet e intranet o solo gli utenti dell’intranet, come in precedenza è stato configurato per la reimpostazione password FIM.
 
-## <a name="install-the-mim-password-reset-portal"></a>Installare il portale di reimpostazione della password MIM
+## Installare il portale di reimpostazione della password MIM
+<a id="install-the-mim-password-reset-portal" class="xliff"></a>
 
 1. Se si sta installando il portale di reimpostazione password MIM, fornire i dettagli e le credenziali di accesso per la reimpostazione della password MIM.
 
@@ -188,7 +193,8 @@ Questa guida presuppone che gli elementi seguenti siano già impostati:
 
     2.  Specificare se a questo portale possono accedere utenti di extranet e intranet o solo gli utenti dell’intranet.
 
-## <a name="finish-installation-and-upgrade"></a>Terminare l'installazione e l'aggiornamento
+## Terminare l'installazione e l'aggiornamento
+<a id="finish-installation-and-upgrade" class="xliff"></a>
 
 1. Una volta completate correttamente tutte le definizioni di configurazione, verrà visualizzata una pagina di installazione. Fare clic su **Installa** per iniziare l'installazione e l’aggiornamento di Servizio e Portale MIM.
 
@@ -201,9 +207,3 @@ Questa guida presuppone che gli elementi seguenti siano già impostati:
 Nota: se le estensioni e i componenti aggiuntivi FIM sono attualmente installati nei computer dell'utente per SSPR, non configurare i nuovi controlli telefonici MFA per la reimpostazione della password fino a quando non verrà eseguito l'aggiornamento di tutti i componenti aggiuntivi e di tutte le estensioni FIM a MIM 2016.  Le estensioni e i componenti aggiuntivi di FIM 2010 e FIM 2010 R2 non riconoscono i nuovi controlli, quindi verrà generato un errore e l'utente non riuscirà a completare la reimpostazione della password.
 
 Per istruzioni sull'aggiornamento di Microsoft Identity Manager 2016 SP1, vedere l'articolo [Microsoft Identity Manager 2016 Service Pack 1 update package](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/) (Pacchetto di aggiornamento di Microsoft Identity Manager 2016 Service Pack 1).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

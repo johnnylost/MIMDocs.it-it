@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
-ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-2---prepare-the-first-priv-domain-controller" class="xliff"></a>
 # Step 2: preparare il primo controller di dominio PRIV
+<a id="step-2---prepare-the-first-priv-domain-controller" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Passaggio 1](step-1-prepare-corp-domain.md)
@@ -30,13 +27,13 @@ ms.lasthandoff: 07/10/2017
 
 In questo passaggio si creerà un nuovo dominio che fornisce all'ambiente bastion l'autenticazione di amministrazione.  Per questa foresta sarà necessario almeno un controller di dominio e un server membro. Il server membro verrà configurato nel passaggio successivo.
 
-<a id="create-a-new-privileged-access-management-domain-controller" class="xliff"></a>
 ## Creare un nuovo controller di dominio di Privileged Access Management
+<a id="create-a-new-privileged-access-management-domain-controller" class="xliff"></a>
 
 In questa sezione si imposterà una macchina virtuale come controller di dominio per una nuova foresta.
 
-<a id="install-windows-server-2012-r2" class="xliff"></a>
 ### Installare Windows Server 2012 R2
+<a id="install-windows-server-2012-r2" class="xliff"></a>
 In un'altra macchina virtuale nuova in cui non è installato alcun software, installare Windows Server 2012 R2 per creare un computer "PRIVDC".
 
 1. Selezionare questa opzione per eseguire un'installazione personalizzata (non un aggiornamento) di Windows Server. Durante l'installazione, specificare **Windows Server 2012 R2 Standard (server con GUI) x64**; _non selezionare_ **Data Center né Server Core**.
@@ -49,8 +46,8 @@ In un'altra macchina virtuale nuova in cui non è installato alcun software, ins
 
 5. Dopo aver riavviato il server, accedere come amministratore. Utilizzando il Pannello di controllo, configurare il computer per verificare la necessità di installare eventuali aggiornamenti. Potrebbe essere necessario il riavvio del server.
 
-<a id="add-roles" class="xliff"></a>
 ### Aggiungere ruoli
+<a id="add-roles" class="xliff"></a>
 Selezionare i ruoli di Servizi di dominio Active Directory(AD DS) e Server DNS.
 
 1. Avviare PowerShell come amministratore.
@@ -63,8 +60,8 @@ Selezionare i ruoli di Servizi di dominio Active Directory(AD DS) e Server DNS.
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
   ```
 
-<a id="configure-registry-settings-for-sid-history-migration" class="xliff"></a>
 ### Configurare le impostazioni del Registro di sistema per la migrazione alla cronologia SID
+<a id="configure-registry-settings-for-sid-history-migration" class="xliff"></a>
 
 Avviare PowerShell e digitare i comandi seguenti per configurare il dominio di origine per consentire la chiamata RPC (Remote Procedure Call) al database Gestione account di sicurezza (SAM).
 
@@ -72,15 +69,15 @@ Avviare PowerShell e digitare i comandi seguenti per configurare il dominio di o
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
-<a id="create-a-new-privileged-access-management-forest" class="xliff"></a>
 ## Creare una nuova foresta di Privileged Access Management
+<a id="create-a-new-privileged-access-management-forest" class="xliff"></a>
 
 Promuovere, successivamente, il server come controller di dominio di una nuova foresta.
 
 In questo documento, il nome priv.contoso.local viene usato come nome di dominio della nuova foresta.  Il nome della foresta non è critico e non è necessario che sia subordinato a un nome di foresta esistente nell'organizzazione. Tuttavia, sia i nomi NetBIOS sia il dominio della nuova foresta devono essere univoci e diversi da quelli di qualsiasi altro dominio dell'organizzazione.  
 
-<a id="create-a-domain-and-forest" class="xliff"></a>
 ### Creare un dominio e una foresta
+<a id="create-a-domain-and-forest" class="xliff"></a>
 
 1. In una finestra di PowerShell digitare i comandi seguenti per creare un nuovo dominio.  Verrà inoltre creata una delega DNS in un dominio di livello superiore (contoso.local) creato nel passaggio precedente.  Se si prevede di configurare DNS in un secondo momento, omettere i parametri `CreateDNSDelegation -DNSDelegationCredential $ca`.
 
@@ -96,8 +93,8 @@ In questo documento, il nome priv.contoso.local viene usato come nome di dominio
 
 Una volta completata la creazione della foresta, il server verrà riavviato automaticamente.
 
-<a id="create-user-and-service-accounts" class="xliff"></a>
 ### Creare account utente e del servizio
+<a id="create-user-and-service-accounts" class="xliff"></a>
 Creare gli account utente e del servizio per l'installazione del servizio e del portale MIM. Questi account verranno inseriti nel contenitore Users del dominio priv.contoso.local.
 
 1. Dopo aver riavviato il server, accedere a PRIVDC come amministratore di dominio (PRIV\\Administrator).
@@ -168,8 +165,8 @@ Creare gli account utente e del servizio per l'installazione del servizio e del 
   Add-ADGroupMember "Domain Admins" MIMService
   ```
 
-<a id="configure-auditing-and-logon-rights" class="xliff"></a>
 ### Configurare i diritti di accesso e di controllo.
+<a id="configure-auditing-and-logon-rights" class="xliff"></a>
 
 È necessario configurare il controllo per stabilire la configurazione PAM tra foreste.  
 
@@ -218,8 +215,8 @@ Creare gli account utente e del servizio per l'installazione del servizio e del 
   Dopo un minuto, l’operazione verrà completata e verrà visualizzato il messaggio "Aggiornamento dei criteri computer completato."
 
 
-<a id="configure-dns-name-forwarding-on-privdc" class="xliff"></a>
 ### Configurare l'inoltro dei nomi DNS in PRIVDC
+<a id="configure-dns-name-forwarding-on-privdc" class="xliff"></a>
 
 Tramite PowerShell in PRIVDC, configurare l'inoltro del nome DNS affinché il dominio PRIV riconosca altre foreste esistenti.
 
@@ -236,8 +233,8 @@ Tramite PowerShell in PRIVDC, configurare l'inoltro del nome DNS affinché il do
 > [!NOTE]
 > Le altre foreste devono essere in grado di instradare le query DNS per la foresta PRIV al controller di dominio.  Se si hanno più foreste di Active Directory, è necessario aggiungere anche un server d'inoltro condizionale DNS a ognuna di queste foreste.
 
-<a id="configure-kerberos" class="xliff"></a>
 ### Configurare Kerberos
+<a id="configure-kerberos" class="xliff"></a>
 
 1. Tramite PowerShell, aggiungere i nomi dell'entità servizio in modo che SharePoint, l'API REST di PAM e il servizio MIM possano usare l'autenticazione Kerberos.
 
@@ -251,8 +248,8 @@ Tramite PowerShell in PRIVDC, configurare l'inoltro del nome DNS affinché il do
 > [!NOTE]
 > I passaggi successivi di questo documento descrivono come installare i componenti del server MIM 2016 in un computer singolo. Se si prevede di aggiungere un altro server per la disponibilità elevata, sarà necessaria un'altra configurazione di Kerberos come descritto in [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (FIM 2010: installazione dell'autenticazione Kerberos).
 
-<a id="configure-delegation-to-give-mim-service-accounts-access" class="xliff"></a>
 ### Configurare la delega per consentire al servizio MIM l'accesso agli account
+<a id="configure-delegation-to-give-mim-service-accounts-access" class="xliff"></a>
 
 Seguire questa procedura in PRIVDC come amministratore di dominio.
 
@@ -295,13 +292,13 @@ Seguire questa procedura in PRIVDC come amministratore di dominio.
   ```
 20. Riavviare il server PRIVDC in modo che le modifiche avranno effetto.
 
-<a id="prepare-a-priv-workstation" class="xliff"></a>
 ## Preparare una workstation PRIV
+<a id="prepare-a-priv-workstation" class="xliff"></a>
 
 Se non si ha già una workstation che verrà aggiunta al dominio PRIV per la manutenzione delle risorse PRIV, ad esempio MIM, seguire queste istruzioni per preparare una workstation.  
 
-<a id="install-windows-81-or-windows-10-enterprise" class="xliff"></a>
 ### Installare Windows 8.1 o Windows 10 Enterprise
+<a id="install-windows-81-or-windows-10-enterprise" class="xliff"></a>
 
 In un'altra macchina virtuale nuova in cui non è installato alcun software, installare Windows 8.1 Enterprise o Windows 10 Enterprise per creare un computer *PRIVWKSTN*.
 
@@ -320,4 +317,3 @@ Nel passaggio successivo si preparerà un server PAM.
 >[!div class="step-by-step"]
 [« Passaggio 1](step-1-prepare-corp-domain.md)
 [Passaggio 3 »](step-3-prepare-pam-server.md)
-

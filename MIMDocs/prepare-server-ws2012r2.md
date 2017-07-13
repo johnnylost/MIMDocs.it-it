@@ -1,6 +1,6 @@
 ---
 title: Configurare Windows Server 2012 R2 per MIM 2016 | Documentazione Microsoft
-description: Ottenere i passaggi e i requisiti minimi per preparare Windows Server 2012 RS all&quot;uso con MIM 2016.
+description: Ottenere i passaggi e i requisiti minimi per preparare Windows Server 2012 RS all'uso con MIM 2016.
 keywords: 
 author: billmath
 ms.author: billmath
@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 1cb0d6cd310372ecaeff47c9cc4461ebc43b3390
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: a0241964edb21ca4bf938ae84693b9947f6e2efb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Configurare un server di gestione delle identità: Windows Server 2012 R2
+# Configurare un server di gestione delle identità: Windows Server 2012 R2
+<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Preparazione di un dominio](preparing-domain.md)
@@ -32,7 +31,8 @@ ms.lasthandoff: 01/24/2017
 > - Nome del dominio: **contoso**
 > - Password: **Pass@word1**
 
-## <a name="join-windows-server-2012-r2-to-your-domain"></a>Aggiungere Windows Server 2012 R2 al dominio
+## Aggiungere Windows Server 2012 R2 al dominio
+<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
 
 Iniziare con una macchina Windows Server 2012 R2, con un minimo di 8 GB di RAM. Al momento dell’installazione, specificare la versione "Windows Server 2012 R2 Standard (server con un’interfaccia utente grafica) x64".
 
@@ -63,7 +63,8 @@ Iniziare con una macchina Windows Server 2012 R2, con un minimo di 8 GB di RAM. 
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## <a name="configure-the-server-security-policy"></a>Configurare i criteri di sicurezza server
+## Configurare i criteri di sicurezza server
+<a id="configure-the-server-security-policy" class="xliff"></a>
 
 Configurare i criteri di sicurezza del server per consentire l'esecuzione come servizi degli account appena creati.
 
@@ -94,7 +95,8 @@ Configurare i criteri di sicurezza del server per consentire l'esecuzione come s
 12. Chiudere la finestra Criteri di sicurezza locali.
 
 
-## <a name="change-the-iis-windows-authentication-mode"></a>Cambiare la modalità Autenticazione di Windows di IIS
+## Cambiare la modalità Autenticazione di Windows di IIS
+<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
 
 1.  Aprire una finestra di PowerShell.
 
@@ -109,4 +111,3 @@ Configurare i criteri di sicurezza del server per consentire l'esecuzione come s
 >[!div class="step-by-step"]  
 [« Preparazione di un dominio](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
-

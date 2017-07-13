@@ -11,18 +11,14 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
 ms.openlocfilehash: 0a5a3f28af58dd59ab805f2836ffeb88f3508ae0
-ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-
-<a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
 # Gestione delle password di Microsoft Identity Manager 2016
+<a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
 
 La gestione delle password per più account utente è uno degli aspetti complessi della gestione di un ambiente aziendale con più origini dati. Microsoft Identity Manager 2016 (MIM) offre due soluzioni per la gestione delle password:
 
@@ -44,8 +40,8 @@ Grazie alla sincronizzazione password e alla gestione delle modifiche della pass
 
 -   Gestire le password in tempo reale, indipendente dalle operazioni di MIM.
 
-<a id="password-extensions" class="xliff"></a>
 ## Estensioni password
+<a id="password-extensions" class="xliff"></a>
 
 Per impostazione predefinita gli agenti di gestione per i server di directory supportano le operazioni di modifica e di impostazione della password. Per gli agenti di gestione su file, per database e per connettività estendibile che per impostazione predefinita non supportano le operazioni di modifica e di impostazione della password, è possibile creare una libreria di collegamento dinamico (DLL) di estensione password.
 La DLL di estensione password .NET viene chiamata ogni volta in cui, per uno di questi agenti di gestione, viene richiamata la modifica o l'impostazione della password. Per questi agenti di gestione, le impostazioni di estensione password vengono configurate in Synchronization Service Manager. Per altre informazioni sulla configurazione delle estensioni password, vedere i riferimenti per sviluppatori FIM.
@@ -62,8 +58,8 @@ La DLL di estensione password .NET viene chiamata ogni volta in cui, per uno di 
 |                                                                           | Microsoft SQL Server                                                                               |
 |                                                                           | Database Oracle                                                                                    |
 
-<a id="password-synchronization" class="xliff"></a>
 ## Sincronizzazione password
+<a id="password-synchronization" class="xliff"></a>
 
 
 La sincronizzazione password usa il servizio di notifica della modifica della password (PCNS) in un dominio di Active Directory e consente di propagare automaticamente in altre origini dati connesse le modifiche alle password apportate in Active Directory. In questo caso MIM viene eseguito come server RPC che riceve la notifica della modifica della password da un controller di dominio di Active Directory. Dopo aver ricevuto e autenticato la richiesta di modifica della password, MIM la elabora e la propaga agli agenti di gestione appropriati.
@@ -89,8 +85,8 @@ Di seguito sono elencati i componenti coinvolti nel processo di sincronizzazione
 -   **DLL di estensione password**: la DLL di estensione password consente di implementare le operazioni di impostazione o modifica della password usando un'estensione delle regole per qualsiasi agente di gestione su file, per database connettività estendibile.
     È necessario creare un attributo crittografato di sola esportazione denominato "export_password" che non esiste nella directory connessa. È comunque possibile accedere a questo attributo e impostarlo nelle estensioni delle regole di provisioning. Può anche essere usato durante il flusso dell'attributo di esportazione. Per altre informazioni sulla configurazione delle estensioni password, vedere i [riferimenti per sviluppatori FIM](https://msdn.microsoft.com/library/windows/desktop/ee652263(v=vs.100).aspx).
 
-<a id="preparing-for-password-synchronization" class="xliff"></a>
 ## Preparazione per la sincronizzazione password
+<a id="preparing-for-password-synchronization" class="xliff"></a>
 
 Prima di configurare la sincronizzazione password per MIM e Active Directory, è necessario verificare quanto segue:
 
@@ -114,8 +110,8 @@ Per configurare la sincronizzazione password:
 
 Per altre informazioni sulla configurazione della sincronizzazione password, vedere Using Password Synchronization (Uso della sincronizzazione password).
 
-<a id="password-synchronization-process" class="xliff"></a>
 ## Processo di sincronizzazione password
+<a id="password-synchronization-process" class="xliff"></a>
 
 Il diagramma seguente illustra il processo di sincronizzazione di una richiesta di modifica della password da parte di un controller di dominio di Active Directory in altre origini dati connesse:
 
@@ -131,8 +127,8 @@ Il diagramma seguente illustra il processo di sincronizzazione di una richiesta 
 
 6.  Usando le informazioni di una tabella join, MIM determina gli agenti di gestione che ricevono la modifica della password e propaga la modifica della password in tali agenti.
 
-<a id="password-synchronization-security" class="xliff"></a>
 ## Sicurezza della sincronizzazione password
+<a id="password-synchronization-security" class="xliff"></a>
 
 Sono stati risolti i problemi seguenti relativi alla sicurezza della sincronizzazione password:
 
@@ -146,8 +142,8 @@ Sono stati risolti i problemi seguenti relativi alla sicurezza della sincronizza
 
 -   Code password protette: le password archiviate nelle code PCNS sono crittografate finché vengono recapitate.
 
-<a id="password-synchronization-error-recovery-scenarios" class="xliff"></a>
 ## Scenari di ripristino in caso di errore di sincronizzazione password
+<a id="password-synchronization-error-recovery-scenarios" class="xliff"></a>
 
 Idealmente, ogni volta che un utente modifica una password, la modifica viene sincronizzata senza errori. Gli scenari seguenti spiegano come MIM esegue il ripristino in caso di errori di sincronizzazione comuni:
 
@@ -169,8 +165,8 @@ Alcuni errori sono abbastanza gravi che, nonostante tutti i tentativi, l'operazi
 | 6927  | Errore       | L'operazione di impostazione di sincronizzazione password non è riuscita perché la password non soddisfa i criteri password del sistema di destinazione.                                      |
 | 6928  | Errore       | L'operazione di impostazione di sincronizzazione password non è riuscita perché l'estensione password per l'agente di gestione di destinazione non è configurato per supportare le operazioni di impostazione password. |
 
-<a id="user-based-password-change-management" class="xliff"></a>
 ## Gestione della modifica della password basata sugli utenti
+<a id="user-based-password-change-management" class="xliff"></a>
 
 MIM offre due applicazioni Web che usano Strumentazione gestione Windows (WMI) per la reimpostazione delle password. Come per la sincronizzazione password, è necessario attivare la gestione delle password durante la configurazione dell'agente di gestione in Progettazione agente di gestione. Per informazioni sulla gestione delle password e su WMI, vedere i riferimenti per sviluppatori MIM.
 
@@ -179,4 +175,3 @@ MIM crea due gruppi di sicurezza durante l'installazione che nello specifico sup
 -   FIMSyncBrowse: i membri di questo gruppo sono autorizzati a raccogliere informazioni sugli account utente durante le operazioni di ricerca con query WMI.
 
 -   FIMSyncPasswordSet: i membri di questo gruppo sono autorizzati a eseguire la ricerca di account, a eseguire operazioni di impostazione e di modifica password tramite le interfacce di gestione delle password con WMI.
-

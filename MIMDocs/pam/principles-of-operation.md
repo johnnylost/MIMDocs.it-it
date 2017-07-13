@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="understand-the-components-of-pam" class="xliff"></a>
 # Informazioni sui componenti di PAM
+<a id="understand-the-components-of-pam" class="xliff"></a>
 
 Privileged Access Management mantiene separati l'accesso amministrativo dall'accesso tramite account utente di uso quotidiano. Questa soluzione si basa su foreste parallele:
 
@@ -43,4 +40,3 @@ Dopo l'installazione e la configurazione, ogni gruppo creato dalla procedura di 
 Di conseguenza, quando un utente richiede l'elevazione dei privilegi utilizzando i cmdlet PowerShell e la richiesta viene approvata, il servizio MIM aggiungerà tale account nella foresta PRIV a un gruppo nella stessa foresta. Quando l'utente accede con l'account con privilegi, il token Kerberos conterrà un identificatore di protezione (SID) identico al SID del gruppo nella foresta CORP. Dato che la foresta CORP è configurata in modo da considerare attendibile la foresta PRIV, per una risorsa che controlla l’appartenenza ai gruppi Kerberos, l’account con privilegi elevati usato per accedere a una risorsa nella foresta CORP risulta appartenente agli stessi gruppi di sicurezza di quella risorsa. Tale controllo viene effettuato dall’autenticazione Kerberos tra foreste diverse.
 
 L’appartenenza dei membri è temporanea, per cui dopo un certo intervallo di tempo, l’account amministrativo dell'utente non appartiene più al gruppo della foresta PRIV. Di conseguenza, tale account non saranno utilizzabile per l'accesso a risorse aggiuntive.
-

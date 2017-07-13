@@ -12,14 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="configure-pam-using-scripts"></a>Configurare PAM tramite gli script
+# Configurare PAM tramite gli script
+<a id="configure-pam-using-scripts" class="xliff"></a>
 
 Se si sceglie di installare SQL e SharePoint su server separati, è necessario configurarli tramite le istruzioni seguenti. Se SQL, SharePoint e i componenti PAM sono installati nello stesso computer, i passaggi seguenti devono essere eseguiti da tale computer.
 
@@ -39,11 +39,13 @@ passaggi:
 5. Copiare il file PAMDeploymentConfig.xml nella cartella %SYSTEMDRIVE%\PAM in tutti i computer, controller di dominio CORP, controller di dominio PRIV, server PAM, server SQL e server SharePoint.
 
 
-## <a name="deployment-worksheet"></a>Foglio di lavoro di distribuzione
+## Foglio di lavoro di distribuzione
+<a id="deployment-worksheet" class="xliff"></a>
 
 Prima di procedere, aggiornare il file PAMDeploymentConfig.xml e inserire la copia aggiornata in tutti i computer.
 
-### <a name="setup"></a>Installazione
+### Installazione
+<a id="setup" class="xliff"></a>
 
 |Computer   | Esecuzione come   |Comandi   |
 |---|---|---|
@@ -55,7 +57,8 @@ Prima di procedere, aggiornare il file PAMDeploymentConfig.xml e inserire la cop
 | PAMServer  | Amministratore locale (amministrazione MIM dopo l'aggiunta a un dominio)  | .\PAMDeployment.ps1 Selezionare l'opzione di menu 5 (installazione di PAM per MIM)   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Selezionare l'opzione di menu 6 (installazione attendibile di PAM) .\PAMDeployment.ps1 Selezionare l'opzione di menu 6 (installazione dell'attendibilità PAM) |
 
-### <a name="validation"></a>Convalida
+### Convalida
+<a id="validation" class="xliff"></a>
 
 |  Computer | Esecuzione come   | Comandi   |
 |---|---|---|
@@ -68,9 +71,3 @@ Prima di procedere, aggiornare il file PAMDeploymentConfig.xml e inserire la cop
 
 >[!div class="step-by-step"]
 [Inizio »](sp1-step1-configuring-priv-domain.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

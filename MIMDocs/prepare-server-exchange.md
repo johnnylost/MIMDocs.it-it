@@ -1,6 +1,6 @@
 ---
 title: Configurare Exchange per MIM per la posta elettronica e per creare cassette postali | Documentazione Microsoft
-description: Come passaggio facoltativo, distribuire Exchange Server per abilitare l&quot;invio della posta elettronica e la creazione di cassette postali in MIM 2016.
+description: Come passaggio facoltativo, distribuire Exchange Server per abilitare l'invio della posta elettronica e la creazione di cassette postali in MIM 2016.
 keywords: 
 author: billmath
 ms.author: billmath
@@ -12,21 +12,21 @@ ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 01ccb55d200bfd1615ae62ccd30298117c0d6275
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: ac787f2ff76b19aab815d55018d1b6f0de1f4adb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-exchange"></a>Configurare un server di gestione delle identità: Exchange
+# Configurare un server di gestione delle identità: Exchange
+<a id="set-up-an-identity-management-server-exchange" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
 [Servizio di sincronizzazione MIM »](install-mim-sync.md)
 
-## <a name="deploy-microsoft-exchange-server"></a>Distribuire Microsoft Exchange Server
+## Distribuire Microsoft Exchange Server
+<a id="deploy-microsoft-exchange-server" class="xliff"></a>
 Se si desidera configurare MIM per inviare e ricevere posta elettronica o eseguire il provisioning delle cassette postali, è necessario disporre di Exchange presente nell'ambiente. Se Exchange non è stato distribuito, è possibile installare una versione di valutazione per scopi di valutazione:
 
 1. Scaricare e installare Microsoft Office 2010 Filter Pack - versione 2.0 e Microsoft Office 2010 Filter Pack - versione 2.0 SP1
@@ -42,4 +42,3 @@ Se si desidera configurare MIM per inviare e ricevere posta elettronica o esegui
 >[!div class="step-by-step"]  
 [« SharePoint](prepare-server-sharepoint.md)
 [Servizio di sincronizzazione MIM »](install-mim-sync.md)
-
