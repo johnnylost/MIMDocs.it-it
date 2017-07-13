@@ -1,6 +1,6 @@
 ---
 title: Rinnovo self-service di smart card di Microsoft Identity Manager senza accesso come amministratore | Documentazione Microsoft
-description: Informazioni su come registrare le smart card per gli utenti che non dispongono dei diritti di accesso con privilegi di amministratore ai propri computer per l&quot;uso del Gestore di certificati.
+description: Informazioni su come registrare le smart card per gli utenti che non dispongono dei diritti di accesso con privilegi di amministratore ai propri computer per l'uso del Gestore di certificati.
 keywords: 
 author: billmath
 ms.author: billmath
@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
-ms.lasthandoff: 02/07/2017
-
-
+ms.openlocfilehash: f8de75a0027371b7ff88b90d3097adc63c02d933
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="enroll-smart-cards-for-non-administrators"></a>Registrare smart card per utenti non amministratori
+# Registrare smart card per utenti non amministratori
+<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
 Se un utente non è un amministratore locale del proprio computer, non sarà in grado di registrare una smart card nei propri computer per impostazione predefinita. La procedura seguente consente di ovviare a questa limitazione.
 
-## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Abilitazione del rinnovo della smart card per utenti non amministratori in Gestore di certificati di MIM 2016
+## Abilitazione del rinnovo della smart card per utenti non amministratori in Gestore di certificati di MIM 2016
+<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  **Decomprimere il file appx**
 
@@ -94,4 +94,3 @@ Se un utente non è un amministratore locale del proprio computer, non sarà in 
 7.  **Installare l'app CM nell'account utente non amministratore**
 
 8.  **Avviare l'app CM e la registrazione di una smart card virtuale**
-

@@ -1,6 +1,6 @@
 ---
-title: Distribuire l&quot;applicazione di Windows Gestione certificati MIM | Documentazione Microsoft
-description: Informazioni su come distribuire l&quot;app Gestione certificati per consentire agli utenti di gestire i propri diritti di accesso.
+title: Distribuire l'applicazione di Windows Gestione certificati MIM | Documentazione Microsoft
+description: Informazioni su come distribuire l'app Gestione certificati per consentire agli utenti di gestire i propri diritti di accesso.
 keywords: 
 author: billmath
 ms.author: billmath
@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 8a4582695d41ea605f2de4e336c3a780b2b2559f
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="working-with-the-mim-certificate-manager"></a>Utilizzo con il gestore di certificati MIM
+# Utilizzo con il gestore di certificati MIM
+<a id="working-with-the-mim-certificate-manager" class="xliff"></a>
 Dopo avere configurato correttamente MIM 2016 e Gestione certificati, è possibile distribuire l'applicazione di gestione certificati MIM di Windows Store in modo che gli utenti possano gestire facilmente le smart card fisiche e virtuali e i certificati software. I passaggi per distribuire app di gestione certificati MIM CM sono i seguenti:
 
 1.  Creare un modello di certificato.
@@ -31,7 +30,8 @@ Dopo avere configurato correttamente MIM 2016 e Gestione certificati, è possibi
 
 4.  Distribuire l'app tramite SCCM o Intune.
 
-## <a name="create-a-certificate-template"></a>Creare un modello di certificato
+## Creare un modello di certificato
+<a id="create-a-certificate-template" class="xliff"></a>
 Creare un modello di certificato per l'applicazione CM esattamente come di consueto, ad eccezione del fatto che è necessario assicurarsi che la versione del modello di certificato sia la versione 3 e versioni successive.
 
 1.  Accedere al server su cui è in esecuzione Servizi certificati Active Directory (il server dei certificati).
@@ -70,7 +70,8 @@ Creare un modello di certificato per l'applicazione CM esattamente come di consu
 
 16. Selezionare il nuovo modello creato nell'elenco e fare clic su **OK**.
 
-## <a name="create-a-profile-template"></a>Creare un modello del profilo
+## Creare un modello del profilo
+<a id="create-a-profile-template" class="xliff"></a>
 Assicurarsi che quando si crea un modello di profilo per l'impostazione per creare o eliminare il vSC e rimuovere la raccolta dei dati. L'applicazione CM non può gestire i dati raccolti, pertanto è importante per disabilitarlo, come indicato di seguito.
 
 1.  Accedere al portale CM come utente con privilegi amministrativi.
@@ -95,7 +96,8 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
 11. È necessario disabilitare gli elementi di raccolta dei dati per ogni criterio facendo clic sul criterio nel riquadro a sinistra e quindi deselezionando la casella accanto a **Elemento di dati di esempio** . Quindi fare clic su **Elimina elemento raccolta dati**. Fare quindi clic su **OK**.
 
-## <a name="prepare-the-cm-app-for-deployment"></a>Preparare l'applicazione CM per la distribuzione
+## Preparare l'applicazione CM per la distribuzione
+<a id="prepare-the-cm-app-for-deployment" class="xliff"></a>
 
 1.  Nel prompt dei comandi, eseguire il comando seguente per decomprimere l'applicazione ed estrarre il contenuto in una nuova sottocartella denominata appx e creare una copia in modo da non modificare il file originale.
 
@@ -252,6 +254,6 @@ Assicurarsi che quando si crea un modello di profilo per l'impostazione per crea
 
     -   Per assistenza per lo script **ConfigureMIimCMClientAndRelyingParty.ps1** eseguire `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
-## <a name="deploy-the-app"></a>Distribuire l'app
+## Distribuire l'app
+<a id="deploy-the-app" class="xliff"></a>
 Quando si configura l'app CM nell'Area download, scaricare il file MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip ed estrarre il relativo contenuto. Il file con estensione AppX è il programma di installazione. È possibile distribuire l'app nello stesso modo in cui vengono normalmente distribuite le applicazioni Windows Store, usando [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)o [Intune](https://technet.microsoft.com/library/dn613839.aspx) per trasferire localmente l'app in modo che gli utenti dovranno accedervi usando il portale aziendale o direttamente nei propri computer.
-

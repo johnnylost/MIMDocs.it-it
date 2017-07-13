@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="environment-overview" class="xliff"></a>
 # Panoramica sull'ambiente
+<a id="environment-overview" class="xliff"></a>
 
 Privileged Access Management usa quattro macchine virtuali (VM) con unità separate connesse l'una all'altra in una rete condivisa. Queste macchine virtuali possono essere ospitate da Windows 8.1, Windows Server 2012 R2 o altre piattaforme di sistema operativo.
 
@@ -34,4 +31,3 @@ Le unità in cui archiviare le immagini disco di macchina virtuale deve avere al
 
 > [!NOTE]
 > La versione CTP corrente non è compatibile con il contenuto della directory o del database della versione CTP precedente. Se è stato precedentemente valutato MIM per PAM o altri scenari, eseguire il backup e archiviare le macchine virtuali utilizzate per il test e avviare la distribuzione con nuove immagini di macchina virtuale che non siano state precedentemente utilizzate per scenari MIM.
-

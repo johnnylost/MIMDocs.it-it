@@ -1,6 +1,6 @@
 ---
 title: Configurare SQL Server per Microsoft Identity Manager 2016 | Documentazione Microsoft
-description: Installare SQL Server 2014 come operazione preliminare all&quot;installazione di MIM 2016.
+description: Installare SQL Server 2014 come operazione preliminare all'installazione di MIM 2016.
 keywords: 
 author: billmath
 ms.author: billmath
@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 3a40bf3bd5251ef101b25cc29251f33062e44cdc
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 105d2320ed5a0d610e8e6c5f459366680e3f8a77
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-sql-server-2014"></a>Configurare un server di gestione delle identità: SQL Server 2014
+# Configurare un server di gestione delle identità: SQL Server 2014
+<a id="set-up-an-identity-management-server-sql-server-2014" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Windows Server 2012 R2](prepare-server-ws2012r2.md)
@@ -32,7 +31,8 @@ ms.lasthandoff: 01/24/2017
 > - Nome del dominio: **contoso**
 > - Password: **Pass@word1**
 
-## <a name="install-sql-server-2014-standard-edition"></a>Installare **SQL Server 2014 Standard Edition**
+## Installare **SQL Server 2014 Standard Edition**
+<a id="install-sql-server-2014-standard-edition" class="xliff"></a>
 
 1. Avviare **PowerShell** come amministratore di dominio.
 
@@ -47,4 +47,3 @@ ms.lasthandoff: 01/24/2017
 >[!div class="step-by-step"]  
 [« Windows Server 2012 R2](prepare-server-ws2012r2.md)
 [SharePoint »](prepare-server-sharepoint.md)
-

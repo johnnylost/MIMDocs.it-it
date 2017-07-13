@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b459906f0c8d2c631e9b63813e208c9098ea5a4e
-ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="planning-a-bastion-environment" class="xliff"></a>
 # Pianificazione di un ambiente bastion
+<a id="planning-a-bastion-environment" class="xliff"></a>
 
 L'aggiunta di un ambiente bastion con una foresta amministrativa dedicata a un'istanza di Active Directory consente alle organizzazioni di gestire facilmente gli account amministrativi, le workstation e i gruppi in un ambiente che dispone di controlli di sicurezza più avanzati rispetto all'ambiente di produzione esistente.
 
@@ -30,29 +27,29 @@ Questa architettura consente un numero di controlli che non sono possibili o son
 
 Oltre alla foresta amministrativa dedicata, è possibile utilizzare tecniche aggiuntive, tra cui limitare l’esposizione delle credenziali amministrative, limitare i privilegi di ruolo degli utenti in tale foresta e assicurare attività amministrative che non vengono eseguite su host utilizzati per le attività degli utenti standard (ad esempio, posta elettronica e browser web).
 
-<a id="best-practice-considerations" class="xliff"></a>
 ## Considerazioni sulle procedure consigliate
+<a id="best-practice-considerations" class="xliff"></a>
 
 Una foresta amministrativa dedicata è una foresta Active Directory di un singolo dominio standard usata per la gestione di Active Directory. Un vantaggio relativo all'uso di domini e foreste amministrative è che possono avere misure di sicurezza maggiori rispetto alle foreste di produzione per via dei casi d'uso limitati. Poiché questa foresta è separata e non considera attendibili le foreste esistenti dell'organizzazione, una compromissione della sicurezza in un'altra foresta non si estenderà anche alla foresta dedicata.
 
 La progettazione di una foresta amministrativa presenta le seguenti considerazioni:
 
-<a id="limited-scope" class="xliff"></a>
 ### Ambito limitato
+<a id="limited-scope" class="xliff"></a>
 
 Il valore di una foresta amministrativa è l'elevato livello di garanzia della sicurezza e la superficie di attacco ridotta. La foresta può ospitare applicazioni e funzioni di gestione aggiuntive, ma ogni incremento nell'ambito aumenta la superficie di attacco della foresta e delle relative risorse. L'obiettivo consiste nel limitare le funzioni della foresta per ridurre la superficie di attacco.
 
 In base al [modello Tier](tier-model-for-partitioning-administrative-privileges.md) di partizionamento dei privilegi amministrativi, gli account in una foresta amministrativa dedicata devono essere in un singolo livello, in genere il livello 0 o 1. Se una foresta è nel livello 1, è consigliabile limitarla a un particolare ambito di applicazione (ad esempio, app finanziarie) o comunità di utenti (ad esempio, fornitori IT in outsourcing).
 
-<a id="restricted-trust" class="xliff"></a>
 ### Trust con restrizioni
+<a id="restricted-trust" class="xliff"></a>
 
 La foresta *CORP* di produzione deve stabilire un trust con la foresta *PRIV* di amministrazione, ma non viceversa. Può trattarsi di un trust di dominio o un trust tra foreste. Non è necessario che il dominio della foresta amministrativa consideri attendibili i domini gestiti e le foreste per gestire Active Directory, anche se altre applicazioni possono richiedere una relazione di trust bidirezionale, una convalida di sicurezza e un test.
 
 L'autenticazione selettiva dovrebbe essere usata per garantire che gli account nella foresta amministrativa usino solo gli host di produzione appropriati. Per mantenere i controller di dominio e delegare i diritti in Active Directory, questo in genere richiede la concessione del diritto "Accesso consentito" ai controller di dominio per account amministrativi designati di livello 0 nella foresta amministrativa. Per altre informazioni, vedere [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx) (Configurazione delle impostazioni di autenticazione selettiva).
 
-<a id="maintain-logical-separation" class="xliff"></a>
 ## Mantenere la separazione logica
+<a id="maintain-logical-separation" class="xliff"></a>
 
 Per garantire che l'ambiente bastion non venga interessato da eventi di sicurezza esistenti o futuri nell'istanza aziendale di Active Directory, è necessario usare le linee guida seguenti durante la preparazione di sistemi per l'ambiente bastion:
 
@@ -68,8 +65,8 @@ Per garantire che l'ambiente bastion non venga interessato da eventi di sicurezz
 
 - Gli utenti che gestiscono i server dell’ambiente bastion devono accedere dalle workstation che non sono accessibili per gli amministratori dell'ambiente esistente, in modo che le credenziali per l'ambiente bastion non vengano comunicate.
 
-<a id="ensure-availability-of-administration-services" class="xliff"></a>
 ## Verificare la disponibilità dei servizi di amministrazione
+<a id="ensure-availability-of-administration-services" class="xliff"></a>
 
 Poiché l'amministrazione delle applicazioni viene passata all'ambiente bastion, considerare come fornire disponibilità sufficiente per soddisfare i requisiti di tali applicazioni. Le tecniche includono:
 
@@ -81,8 +78,8 @@ Poiché l'amministrazione delle applicazioni viene passata all'ambiente bastion,
 
 - Mantenere una copia di backup di AD e SQL per ogni modifica apportata a utenti o definizioni di ruolo nella foresta amministrativa dedicata.
 
-<a id="configure-appropriate-active-directory-permissions" class="xliff"></a>
 ## Configurare autorizzazioni appropriate di Active Directory
+<a id="configure-appropriate-active-directory-permissions" class="xliff"></a>
 
 La foresta amministrativa deve essere configurata per privilegi minimi, in base ai requisiti per l'amministrazione di Active Directory.
 
@@ -100,8 +97,8 @@ Quando si crea l'ambiente bastion, prima di installare Microsoft Identity Manage
 
 - **Account del servizio** richiesti da Microsoft Identity Manager, SQL Server e altri software.
 
-<a id="harden-the-hosts" class="xliff"></a>
 ## Protezione avanzata degli host
+<a id="harden-the-hosts" class="xliff"></a>
 
 Tutti gli host, inclusi controller di dominio, server e workstation connessi alla foresta amministrativa, devono avere i sistemi operativi più recenti e i service pack installati e aggiornati.
 
@@ -109,8 +106,8 @@ Tutti gli host, inclusi controller di dominio, server e workstation connessi all
 
 - Gli host della foresta amministrativa devono essere aggiornati automaticamente con gli aggiornamenti della sicurezza. Anche se ciò può comportare il rischio di interrompere le operazioni di manutenzione del controller di dominio, fornisce una mitigazione significativa dei rischi di sicurezza delle vulnerabilità senza patch.
 
-<a id="identify-administrative-hosts" class="xliff"></a>
 ### Identificare gli host di amministrazione
+<a id="identify-administrative-hosts" class="xliff"></a>
 
 Il rischio di un sistema o di una workstation deve essere misurato dall'attività di rischio più elevata che viene eseguita su di essa, ad esempio l'esplorazione Internet, l'invio e la ricezione di messaggi di posta elettronica o l'uso di altre applicazioni che elaborano contenuto sconosciuto o non attendibile.
 
@@ -124,8 +121,8 @@ Gli host amministrativi includono i seguenti computer:
 
 - I server che ospitano le applicazioni che devono essere gestiti e non sono accessibili tramite RDP con Restricted Admin Mode o comunicazione remota Windows PowerShell.
 
-<a id="deploy-dedicated-administrative-workstations" class="xliff"></a>
 ### Distribuire workstation amministrative dedicate
+<a id="deploy-dedicated-administrative-workstations" class="xliff"></a>
 
 Anche se risulta poco pratico, possono essere necessarie workstation separate con sicurezza avanzata dedicate agli utenti con credenziali amministrative ad alto impatto. È importante specificare un host con un livello di sicurezza uguale o maggiore a quello dei privilegi affidati alle credenziali. Si consideri l'inclusione delle misure di protezione aggiuntiva seguenti:
 
@@ -155,15 +152,15 @@ Anche se risulta poco pratico, possono essere necessarie workstation separate co
 
 Alcune di queste misure potrebbero sembrare estreme, ma rivelazioni pubbliche negli ultimi anni hanno illustrato le significative capacità che possiedono gli avversari esperti nel compromettere le destinazioni.
 
-<a id="prepare-existing-domains-to-be-managed-by-the-bastion-environment" class="xliff"></a>
 ## Preparare i domini esistenti per la gestione da parte dell'ambiente bastion
+<a id="prepare-existing-domains-to-be-managed-by-the-bastion-environment" class="xliff"></a>
 
 MIM usa i cmdlet PowerShell per la definizione di relazioni di trust tra i domini di AD esistenti e la foresta amministrativa dedicata nell'ambiente bastion. Dopo aver distribuito l'ambiente bastion e prima di convertire utenti o gruppi in JIT, i cmdlet `New-PAMTrust` e `New-PAMDomainConfiguration` aggiornano le relazioni di trust del dominio e creano gli artefatti necessari per AD e MIM.
 
 Quando viene modificata la topologia di Active Directory esistente, i cmdlet `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` e `Remove-PAMDomainConfiguration` possono essere utilizzati per aggiornare le relazioni di trust.
 
-<a id="establish-trust-for-each-forest" class="xliff"></a>
 ## Stabilire relazioni di trust per ogni foresta
+<a id="establish-trust-for-each-forest" class="xliff"></a>
 
 Il cmdlet `New-PAMTrust` deve essere eseguito una volta per ogni foresta esistente. Viene richiamato sul computer del servizio MIM nel dominio amministrativo. I parametri per questo comando sono il nome di dominio del dominio principale della foresta esistente e le credenziali di un amministratore del dominio.
 
@@ -173,13 +170,13 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 Una volta stabilita la relazione di trust, configurare ogni dominio per abilitare la gestione dall'ambiente bastion, come descritto nella sezione successiva.
 
-<a id="enable-management-of-each-domain" class="xliff"></a>
 ## Abilitare la gestione per ogni dominio
+<a id="enable-management-of-each-domain" class="xliff"></a>
 
 Esistono sette requisiti per l'abilitazione della gestione per un dominio esistente.
 
-<a id="1-a-security-group-on-the-local-domain" class="xliff"></a>
 ### 1. Un gruppo di sicurezza nel dominio locale
+<a id="1-a-security-group-on-the-local-domain" class="xliff"></a>
 
 È necessario un gruppo nel dominio esistente, il cui nome è il nome di dominio NetBIOS seguito da tre simboli del dollaro, ad esempio *CONTOSO$$$*. L'ambito del gruppo deve essere *locale di dominio* e il tipo di gruppo deve essere *Sicurezza*. Questo è necessario per creare i gruppi nella foresta amministrativa dedicata con lo stesso ID di sicurezza dei gruppi nel dominio. Creare questo gruppo tramite il comando di PowerShell seguente, eseguito da un amministratore del dominio esistente in una workstation aggiunta al dominio esistente:
 
@@ -187,8 +184,8 @@ Esistono sette requisiti per l'abilitazione della gestione per un dominio esiste
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-<a id="2-success-and-failure-auditing" class="xliff"></a>
 ### 2. Controllo delle operazioni riuscite e non riuscite
+<a id="2-success-and-failure-auditing" class="xliff"></a>
 
 Le impostazioni di Criteri di gruppo nel controller di dominio per il controllo devono includere degli eventi di controllo con esito positivo e negativo per Controlla gestione degli account e Controlla accesso al servizio directory. Questo può essere eseguito con la console Gestione criteri di gruppo, eseguita da un amministratore del dominio esistente ed eseguito in una workstation aggiunta al dominio esistente:
 
@@ -218,8 +215,8 @@ Le impostazioni di Criteri di gruppo nel controller di dominio per il controllo 
 
 Il messaggio "Aggiornamento dei criteri computer completato." dovrebbe essere visualizzato dopo pochi minuti.
 
-<a id="3-allow-connections-to-the-local-security-authority" class="xliff"></a>
 ### 3. Connessioni all'autorità di sicurezza locale
+<a id="3-allow-connections-to-the-local-security-authority" class="xliff"></a>
 
 I controller di dominio devono consentire il traffico RPC su connessioni TCP/IP per l'autorità di sicurezza locale dall'ambiente bastion. Nelle versioni precedenti di Windows Server, il supporto per TCP/IP in LSA deve essere abilitato nel Registro di sistema:
 
@@ -227,8 +224,8 @@ I controller di dominio devono consentire il traffico RPC su connessioni TCP/IP 
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-<a id="4-create-the-pam-domain-configuration" class="xliff"></a>
 ### 4. Creazione della configurazione del dominio PAM
+<a id="4-create-the-pam-domain-configuration" class="xliff"></a>
 
 Il cmdlet `New-PAMDomainConfiguration` deve essere eseguito sul computer del servizio MIM nel dominio amministrativo. I parametri per questo comando sono il nome di dominio del dominio esistente e le credenziali di un amministratore del dominio.
 
@@ -236,8 +233,8 @@ Il cmdlet `New-PAMDomainConfiguration` deve essere eseguito sul computer del ser
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-<a id="5-give-read-permissions-to-accounts" class="xliff"></a>
 ### 5. Concessione di autorizzazioni di lettura agli account
+<a id="5-give-read-permissions-to-accounts" class="xliff"></a>
 
 Gli account nella foresta bastion utilizzati per stabilire i ruoli (amministratori che utilizzano i cmdlet `New-PAMUser` e `New-PAMGroup` ), nonché l'account utilizzato dal servizio di monitoraggio MIM necessitano di autorizzazioni di lettura in tale dominio.
 
@@ -259,18 +256,17 @@ La procedura seguente abilita l'accesso in lettura per l'utente *PRIV\Administra
 
 18. Chiudere Utenti e computer di Active Directory.
 
-<a id="6-a-break-glass-account" class="xliff"></a>
 ### 6. Un account break glass
+<a id="6-a-break-glass-account" class="xliff"></a>
 
 Se l'obiettivo di Privileged Access Management consiste nel ridurre il numero di account con privilegi di amministratore di dominio assegnati al dominio in modo permanente, deve essere presente un account *Break glass* nel dominio, nel caso in cui si verifichi un problema con la relazione di trust. Gli account di accesso di emergenza per la foresta di produzione devono essere disponibili in ogni dominio e devono essere in grado di accedere solo ai controller di dominio. Per le organizzazioni con più siti, potrebbero essere necessari altri account per la ridondanza.
 
-<a id="7-update-permissions-in-the-bastion-environment" class="xliff"></a>
 ### 7. Aggiornamento delle autorizzazioni nell'ambiente bastion
+<a id="7-update-permissions-in-the-bastion-environment" class="xliff"></a>
 
 Esaminare le autorizzazioni nell'oggetto *AdminSDHolder* nel contenitore di sistema di tale dominio. L’oggetto *AdminSDHolder* ha un elenco di controllo di accesso (ACL) univoco, che viene utilizzato per controllare le autorizzazioni delle entità di sicurezza che sono membri di gruppi di Active Directory con privilegi predefiniti. Si noti che se state apportate modifiche alle autorizzazioni predefinite influirebbero sugli utenti con privilegi amministrativi nel dominio, poiché tali autorizzazioni non verranno applicate agli utenti con account nell'ambiente bastion.
 
-<a id="select-users-and-groups-for-inclusion" class="xliff"></a>
 ## Selezionare utenti e gruppi per l'inclusione
+<a id="select-users-and-groups-for-inclusion" class="xliff"></a>
 
 Il passaggio successivo consiste nel definire i ruoli PAM, associando utenti e gruppi a cui essi hanno accesso. Ciò corrisponderà in genere a un sottoinsieme di utenti e gruppi per il livello identificato gestito nell’ambiente bastion. Altre informazioni sono disponibili in [Defining roles for Privileged Access Management](defining-roles-for-pam.md) (Definizione di ruoli per Privileged Access Management).
-

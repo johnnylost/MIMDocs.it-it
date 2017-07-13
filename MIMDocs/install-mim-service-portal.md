@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: eb572bc3f062763265a9f24910a82be0cac77a5e
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 974015bbba3a36e1107da33655eedf94e2938582
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="install-mim-2016-mim-service-and-portal"></a>Installare MIM 2016: servizio e portale MIM
+# Installare MIM 2016: servizio e portale MIM
+<a id="install-mim-2016-mim-service-and-portal" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Servizio di sincronizzazione MIM](install-mim-sync.md)
@@ -36,7 +35,8 @@ ms.lasthandoff: 01/24/2017
 Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passaggio, tornare indietro e installare i componenti di Microsoft Identity Manager 2016 prima di procedere.
 
 
-## <a name="configure-mim-service-and-portal-for-installation"></a>Configurare il servizio e il portale MIM per l'installazione
+## Configurare il servizio e il portale MIM per l'installazione
+<a id="configure-mim-service-and-portal-for-installation" class="xliff"></a>
 
 1. Eseguire il **programma di installazione del servizio e del portale MIM** dalla sottocartella **Service and Portal** decompressa.
 
@@ -78,7 +78,8 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 16. Selezionare la casella di controllo per aprire le porte 5725 e 5726 nel firewall e la casella di controllo per concedere l'accesso al portale MIM a tutti gli utenti autenticati.
 
-## <a name="configure-mim-password-registration-portal"></a>Configurare il portale di registrazione della password MIM
+## Configurare il portale di registrazione della password MIM
+<a id="configure-mim-password-registration-portal" class="xliff"></a>
 
 1.  Impostare il nome dell'account del servizio per la registrazione SSPR su *contoso\MIMSSPR* e la relativa password su *Pass@word1*.
 
@@ -90,7 +91,8 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 4. Nella schermata successiva di configurazione del portale di registrazione della password MIM specificare *http://CorpIDM.contoso.local* come indirizzo del server del servizio MIM per il portale di registrazione della password.
 
-## <a name="configure-mim-password-reset-portal"></a>Configurare il portale di reimpostazione della password MIM
+## Configurare il portale di reimpostazione della password MIM
+<a id="configure-mim-password-reset-portal" class="xliff"></a>
 
 1.  Impostare il nome dell'account del servizio per la registrazione SSPR su *Contoso\MIMSSPRService* e la relativa password su *Pass@word1*.
 
@@ -102,7 +104,8 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 4. Nella schermata successiva di configurazione del portale di registrazione della password MIM specificare *CorpIDname http://CorpIDname.domain.local* come indirizzo del server del servizio MIM per il portale di reimpostazione della password.
 
-## <a name="install-mim-service-and-portal"></a>Installare Portale e Servizio MIM
+## Installare Portale e Servizio MIM
+<a id="install-mim-service-and-portal" class="xliff"></a>
 
 Quando tutte le definizioni di pre-installazione sono pronte, fare clic su **Installa** per avviare l'installazione dei componenti del **servizio e del portale** selezionati.
 
@@ -150,4 +153,3 @@ Al termine dell'installazione, verificare che il portale MIM sia attivo.
 >[!div class="step-by-step"]  
 [« Servizio di sincronizzazione MIM](install-mim-sync.md)
 [Sincronizzare i database »](install-mim-sync-ad-service.md)
-

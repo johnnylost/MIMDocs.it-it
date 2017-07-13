@@ -12,17 +12,17 @@ ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: d7f054d8d82dcc0ac71a94f6e44407b0c41a75af
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
+# Distribuire il servizio di notifica di modifica della password di MIM in un controller di dominio
+<a id="deploy-the-mim-password-change-notification-service-on-a-domain-controller" class="xliff"></a>
 
-# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Distribuire il servizio di notifica di modifica della password di MIM in un controller di dominio
-
-## <a name="install-the-password-change-notification-service"></a>Installare il servizio di notifica di modifica della password
+## Installare il servizio di notifica di modifica della password
+<a id="install-the-password-change-notification-service" class="xliff"></a>
 Il servizio di notifica di modifica della password (PCNS) è un servizio che viene installato nei controller di dominio e che consente la sincronizzazione delle password tra MIM ed altri sistemi, ad esempio un server di directory di un altro fornitore. Per la sincronizzazione delle password, installare PCNS in ogni server del controller di dominio.
 
 1.  Accedere come amministratore di dominio a un server che esegue Windows Server con il ruolo Servizi di dominio Active Directory.
@@ -57,6 +57,6 @@ Il servizio di notifica di modifica della password (PCNS) è un servizio che vie
 
 14. Riavviare il computer per rendere effettive le modifiche della configurazione apportate al servizio di notifica di modifica della password di MIM. A tale scopo, è possibile fare clic su **Sì** nella finestra popup visualizzata oppure è possibile riavviare in seguito.
 
-## <a name="configuring-the-password-change-notification-service"></a>Configurazione del servizio di notifica di modifica della password
+## Configurazione del servizio di notifica di modifica della password
+<a id="configuring-the-password-change-notification-service" class="xliff"></a>
 Dopo la riconnessione al server di controller di dominio come amministratore di dominio, passare a *C:\Programmi\Microsoft Password Change Notification*. Eseguire *pcnscfg.exe*.
-

@@ -10,19 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: fbdebd59249667a0e60d3a248f183bcb6a75085a
-ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-
-
-<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
 # Distribuire MIM PAM con Windows Server 2016
+<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
 
 
 In questo scenario MIM 2016 SP1 può sfruttare le funzionalità di Windows Server 2016 come controller di dominio per la foresta "PRIV".  Dopo la configurazione dello scenario, il ticket Kerberos di un utente verrà limitato al tempo rimanente dell'attivazione del proprio ruolo. 
@@ -30,8 +25,8 @@ In questo scenario MIM 2016 SP1 può sfruttare le funzionalità di Windows Serve
 >[!Note]
 Con questa versione di MIM non è possibile usare Technical Preview di Windows Server 2016 precedenti la 5.
 
-<a id="preparation" class="xliff"></a>
 ## Preparazione
+<a id="preparation" class="xliff"></a>
 
 Per l'ambiente lab sono necessarie almeno due VM:
 
@@ -148,10 +143,9 @@ Eseguire l'installazione come descritto nella [guida introduttiva](privileged-id
 
 -   Il punto 5 (verifica della relazione di trust) **non è necessario quando i domini CORP e PRIV sono al livello di funzionalità di dominio di Windows Server 2016**.
 
-<a id="more-information" class="xliff"></a>
 ## Altre informazioni
+<a id="more-information" class="xliff"></a>
 
 - [Privileged Access Management per Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md)
 - [Configurazione dell'ambiente MIM per Privileged Access Management](configuring-mim-environment-for-pam.md)
 - [Configurare PAM tramite gli script](sp1-pam-configure-using-scripts.md)
-

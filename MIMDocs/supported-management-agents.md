@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b26fe7bc56ab8229054afb1409c3652e81464a3d
-ms.lasthandoff: 05/02/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="connect-to-your-directories"></a>Connettersi alle directory
+# Connettersi alle directory
+<a id="connect-to-your-directories" class="xliff"></a>
 
 I connettori collegano le origini dati connesse specificate a Microsoft Identity Manager (MIM). Un connettore sposta i dati da un'origine dati connessa a MIM. Grazie al connettore è anche possibile esportare i dati all'origine dati connessa perché siano sincronizzati con MIM quando vengono modificati in MIM. Esiste in genere almeno un connettore per ogni directory connessa.
 
@@ -28,7 +27,8 @@ In Forefront Identity Manager i connettori erano detti agenti di gestione. Quest
 
 Questo articolo descrive i connettori inclusi in MIM. Il connettore per Extensible Connectivity 2.0 consente comunque di connettersi anche a più origini dati. Alcuni partner hanno creato connettori personalizzati. Nel wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (FIM 2010: Agenti di gestione dei partner) è disponibile un elenco completo.
 
-## <a name="supported-connectors-in-mim-2016"></a>Connettori supportati in MIM 2016
+## Connettori supportati in MIM 2016
+<a id="supported-connectors-in-mim-2016" class="xliff"></a>
 
 | Nome | Versioni supportate dell'origine dati connessa |
 | ---- | ----------------------------------------------- |
@@ -55,7 +55,7 @@ Questo articolo descrive i connettori inclusi in MIM. Il connettore per Extensib
 | File di testo a larghezza fissa | File di testo a larghezza fissa |
 | Formato interscambio dati LDIF | Formato interscambio dati LDIF |
 
-## <a name="related-topics"></a>Argomenti correlati
+## Argomenti correlati
+<a id="related-topics" class="xliff"></a>
 
 [Agenti di gestione di FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
-

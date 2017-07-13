@@ -12,18 +12,17 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7f16c3a054f0a2c59f118ba33bf64fca10034690
 ms.openlocfilehash: df842309034ad68151dd8cc4151507e7ece6626d
-ms.contentlocale: it-it
-ms.lasthandoff: 05/02/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
+# Utilizzo del servizio di creazione report ibridi di Identity Manager - Anteprima pubblica (Aggiornamento)
+<a id="working-with-identity-manager-hybrid-reporting---public-preview-refresh" class="xliff"></a>
 
-# <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Utilizzo del servizio di creazione report ibridi di Identity Manager - Anteprima pubblica (Aggiornamento)
-
-## <a name="available-hybrid-reports"></a>Report ibridi
+## Report ibridi
+<a id="available-hybrid-reports" class="xliff"></a>
 I primi tre report di Microsoft Identity Manager (MIM) disponibili in Azure AD sono **Attività di reimpostazione password**, **Registrazione di reimpostazione della password** e **Attività dei gruppi self-service**.
 
 -   Con l'attività di reimpostazione della password viene visualizzata ogni istanza in cui un utente ha eseguito una reimpostazione della password tramite l'SSPR di reimpostazione della password e fornisce i gate o **Metodi** utilizzati per l'autenticazione.
@@ -40,7 +39,8 @@ I primi tre report di Microsoft Identity Manager (MIM) disponibili in Azure AD s
 > È necessario disinstallare l'agente ibrido precedente</br>
 > Se si desidera disinstallare i report ibridi, disinstallare l'agente MIMreportingAgent.msi.
 
-## <a name="prerequisites"></a>Prerequisiti
+## Prerequisiti
+<a id="prerequisites" class="xliff"></a>
 
 1.  Installare Microsoft Identity Manager 2016 RTM o SP1, incluso il servizio MIM.
 
@@ -48,7 +48,8 @@ I primi tre report di Microsoft Identity Manager (MIM) disponibili in Azure AD s
 
 3.  Assicurarsi di disporre della connettività Internet in uscita da Microsoft Identity Manager in Azure.
 
-## <a name="requirements"></a>Requisiti
+## Requisiti
+<a id="requirements" class="xliff"></a>
 Nella tabella seguente è riportato un elenco di requisiti per l'uso del servizio di creazione report ibridi di Identity Manager.
 
 | Requisito | Descrizione |
@@ -63,7 +64,8 @@ Nella tabella seguente è riportato un elenco di requisiti per l'uso del servizi
 | Consentire i siti Web seguenti se è abilitata la funzionalità Protezione avanzata di Internet Explorer |Se la funzionalità Protezione avanzata di Internet Explorer è abilitata, i siti Web seguenti devono essere consentiti nel server in cui verrà installato l'agente.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Server federativo per l'organizzazione ritenuto attendibile da Azure Active Directory. Ad esempio: https://sts.contoso.com</li> |
 </BR>
 
-## <a name="install-microsoft-identity-manager-reporting-agent-in-azure-ad"></a>Installare Microsoft Identity Manager Reporting Agent in Azure AD
+## Installare Microsoft Identity Manager Reporting Agent in Azure AD
+<a id="install-microsoft-identity-manager-reporting-agent-in-azure-ad" class="xliff"></a>
 Dopo aver installato l'agente di creazione report, i dati relativi all'attività di Microsoft Identity Manager vengono esportati da MIM nel Registro eventi di Windows. L'agente di creazione report di MIM elabora gli eventi e li carica in Azure. In Azure, gli eventi vengono analizzati, decrittografati e filtrati per i report necessari.
 
 1.  Installare Microsoft Identity Manager 2016.
@@ -90,7 +92,8 @@ Dopo aver installato l'agente di creazione report, i dati relativi all'attività
 
     È possibile creare i dati del report tramite il portale self-service di reimpostazione password di Microsoft Identity Manager per reimpostare la password dell'utente. Assicurarsi che la reimpostazione della password sia stata completata correttamente e quindi verificare che i dati siano visualizzati nel portale di gestione di Azure AD.
 
-## <a name="view-hybrid-reports-in-the-azure-portal"></a>Visualizzare i report ibridi nel portale di Azure
+## Visualizzare i report ibridi nel portale di Azure
+<a id="view-hybrid-reports-in-the-azure-portal" class="xliff"></a>
 
 1.  Accedere al [portale di Azure](https://portal.azure.com/) con l'account di amministratore globale per il tenant.
 
@@ -105,14 +108,15 @@ Dopo aver installato l'agente di creazione report, i dati relativi all'attività
 > [!WARNING]
 > È possibile sia necessario attendere prima che i dati di controllo di Microsoft Identity Manager vengano visualizzati nel portale di Azure.
 
-## <a name="stop-creating-hybrid-reports"></a>Interrompere la creazione di report ibridi
+## Interrompere la creazione di report ibridi
+<a id="stop-creating-hybrid-reports" class="xliff"></a>
 Se si vuole interrompere il caricamento dei dati di controllo di creazione di report da Microsoft Identity Manager in Azure Active Directory, disinstallare l'agente per la creazione di report ibridi. Usare lo strumento **Installazione applicazioni** di Windows per disinstallare il servizio di creazione report ibridi di Microsoft Identity Manager.
 
-## <a name="windows-events-used-for-hybrid-reporting"></a>Eventi di Windows usati per la creazione di report ibridi
+## Eventi di Windows usati per la creazione di report ibridi
+<a id="windows-events-used-for-hybrid-reporting" class="xliff"></a>
 Gli eventi generati da Microsoft Identity Manager vengono registrati nel Registro eventi di Windows e sono visibili nel Visualizzatore eventi in: Registri applicazioni e servizi-&gt; **Registro richieste di Identity Manager**. Ogni richiesta di MIM viene esportata come un evento nel Registro eventi di Windows nella struttura JSON. Può inoltre essere esportato nella soluzione SIEM in uso.
 
 |Tipo evento|ID|Dettagli evento|
 |--------------|------|-----------------|
 |Informazioni|4121|Dati dell'evento MIM che include tutti i dati della richiesta.|
 |Informazioni|4137|Estensione dell'evento 4121 MIM, nel caso vi siano troppi dati per un singolo evento. In questo caso l'intestazione è nel formato seguente: `"Request: <GUID> , message <xxx> out of <xxx>`|
-

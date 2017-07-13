@@ -13,17 +13,14 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
 # Passaggio 4: installare i componenti MIM nel server e nella workstation PAM
+<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Passaggio 3](step-3-prepare-pam-server.md)
@@ -37,8 +34,8 @@ In PAMSRV accedere come PRIV\Administrator per poter installare il servizio e il
 
 Se è stato scaricato MIM, decomprimere l'archivio di installazione MIM in una nuova cartella.
 
-<a id="run-the-service-and-portal-install-program" class="xliff"></a>
-##  Eseguire il programma di installazione del servizio e del portale.  
+##  Eseguire il programma di installazione del servizio e del portale.
+<a id="run-the-service-and-portal-install-program" class="xliff"></a>  
 
 Seguire le istruzioni del programma di installazione e completare l'installazione.
 
@@ -102,8 +99,8 @@ Seguire le istruzioni del programma di installazione e completare l'installazion
 
 Al termine dell'installazione, il server verrà riavviato, quindi verificare che il portale MIM sia attivo e consentire agli utenti di visualizzare la propria risorsa oggetto in MIM.
 
-<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
 ## Impostare le regole dei criteri di gestione del portale MIM
+<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
 
 1. Dopo il riavvio di PAMSRV, accedere come PRIV\Administrator.
 
@@ -119,8 +116,8 @@ Al termine dell'installazione, il server verrà riavviato, quindi verificare che
 
 7. Selezionare questa regola dei criteri di gestione, deselezionare **Criteri disabilitati**, fare clic su **OK** e quindi su **Invia**.
 
-<a id="verify-the-firewall-connections" class="xliff"></a>
 ## Verificare le connessioni firewall
+<a id="verify-the-firewall-connections" class="xliff"></a>
 
 Il firewall deve consentire le connessioni in entrata sulle porte TCP 5725, 5726, 8086 e 8090.
 
@@ -137,8 +134,8 @@ Il firewall deve consentire le connessioni in entrata sulle porte TCP 5725, 5726
 8.  Verificare che sia presente una rete attiva elencata come priv.contoso.local e una rete di dominio.  
 9. Chiudere il **Pannello di controllo**.
 
-<a id="set-up-the-sample-web-application" class="xliff"></a>
 ## Impostare l'applicazione Web di esempio
+<a id="set-up-the-sample-web-application" class="xliff"></a>
 
 In questa sezione viene installata e configurata l'applicazione Web di esempio per l'API REST PAM MIM.
 
@@ -174,8 +171,8 @@ In questa sezione viene installata e configurata l'applicazione Web di esempio p
 
 7.  (Facoltativo) Verificare che l'utente sia in grado di eseguire l'autenticazione all'API REST. Aprire un Web browser come amministratore in PAMSRV.  Passare all'URL del sito Web http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, effettuare l'autenticazione (se necessario) e assicurarsi che si verifichi il download.
 
-<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
 ## Installare i cmdlet richiedente PAM MIM
+<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
 
 Installare i cmdlet richiedente PAM MIM nella workstation configurata al Passaggio 1.
 
@@ -198,4 +195,3 @@ Nel passaggio successivo viene stabilita una relazione di trust tra le foreste P
 >[!div class="step-by-step"]
 [« Passaggio 3](step-3-prepare-pam-server.md)
 [Passaggio 5 »](step-5-establish-trust-between-priv-corp-forests.md)
-
