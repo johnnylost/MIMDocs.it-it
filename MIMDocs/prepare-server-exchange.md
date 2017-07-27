@@ -18,15 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Configurare un server di gestione delle identità: Exchange
-<a id="set-up-an-identity-management-server-exchange" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-exchange"></a>Configurare un server di gestione delle identità: Exchange
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
 [Servizio di sincronizzazione MIM »](install-mim-sync.md)
 
-## Distribuire Microsoft Exchange Server
-<a id="deploy-microsoft-exchange-server" class="xliff"></a>
+## <a name="deploy-microsoft-exchange-server"></a>Distribuire Microsoft Exchange Server
 Se si desidera configurare MIM per inviare e ricevere posta elettronica o eseguire il provisioning delle cassette postali, è necessario disporre di Exchange presente nell'ambiente. Se Exchange non è stato distribuito, è possibile installare una versione di valutazione per scopi di valutazione:
 
 1. Scaricare e installare Microsoft Office 2010 Filter Pack - versione 2.0 e Microsoft Office 2010 Filter Pack - versione 2.0 SP1

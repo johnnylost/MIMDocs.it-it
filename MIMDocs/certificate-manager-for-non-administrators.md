@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Registrare smart card per utenti non amministratori
-<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
+# <a name="enroll-smart-cards-for-non-administrators"></a>Registrare smart card per utenti non amministratori
 Se un utente non è un amministratore locale del proprio computer, non sarà in grado di registrare una smart card nei propri computer per impostazione predefinita. La procedura seguente consente di ovviare a questa limitazione.
 
-## Abilitazione del rinnovo della smart card per utenti non amministratori in Gestore di certificati di MIM 2016
-<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Abilitazione del rinnovo della smart card per utenti non amministratori in Gestore di certificati di MIM 2016
 
 1.  **Decomprimere il file appx**
 

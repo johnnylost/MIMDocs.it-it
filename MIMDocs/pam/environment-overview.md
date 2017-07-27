@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Panoramica sull'ambiente
-<a id="environment-overview" class="xliff"></a>
+# <a name="environment-overview"></a>Panoramica sull'ambiente
 
 Privileged Access Management usa quattro macchine virtuali (VM) con unità separate connesse l'una all'altra in una rete condivisa. Queste macchine virtuali possono essere ospitate da Windows 8.1, Windows Server 2012 R2 o altre piattaforme di sistema operativo.
 

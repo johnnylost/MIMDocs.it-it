@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Uso della reimpostazione della password self-service
-<a id="working-with-self-service-password-reset" class="xliff"></a>
+# <a name="working-with-self-service-password-reset"></a>Uso della reimpostazione della password self-service
 Microsoft Identity Manager 2016 fornisce funzionalità aggiuntive alla funzionalità di reimpostazione della password self service. Questa funzionalità è stata migliorata con alcune importanti funzionalità:
 
 -   Il portale di reimpostazione della password self-service e la schermata di accesso di Windows ora consentono agli utenti di sbloccare i propri account senza modificare le password o richiedere il supporto degli amministratori. Gli account degli utenti vengono bloccati per diversi motivi legittimi, ad esempio perché immettono una vecchia password, usano computer bilingue con la tastiera impostata su una lingua non corretta o provano ad accedere a una workstation condivisa già aperta per l'account di un altro utente.
@@ -28,16 +27,14 @@ Microsoft Identity Manager 2016 fornisce funzionalità aggiuntive alla funzional
 
 -   È stato aggiunto il supporto per il servizio di autenticazione a più fattori di Microsoft Azure. Può essere usato per il controllo password monouso con SMS e per il nuovo controllo del telefono.
 
-## Azure per Multi-Factor Authentication
-<a id="azure-for-multi-factor-authentication" class="xliff"></a>
+## <a name="azure-for-multi-factor-authentication"></a>Azure per Multi-Factor Authentication
 Microsoft Azure Multi-Factor Authentication è un servizio di autenticazione che richiede agli utenti di verificare i tentativi di accesso con un'app per dispositivi mobili, una chiamata telefonica o un SMS. È disponibile per l'uso con Microsoft Azure Active Directory e come servizio per le applicazioni aziendali cloud e locali.
 
 Azure MFA fornisce un meccanismo di autenticazione aggiuntivo che è possibile integrare nei processi di autenticazione esistenti per rafforzarli, ad esempio in quello effettuato da MIM per l'assistenza per l'accesso self-service.
 
 Quando si usa Azure MFA, gli utenti vengono autenticati nel sistema per verificarne l'identità quando provano a riottenere l'accesso al proprio account e alle risorse. È possibile eseguire l'autenticazione tramite SMS o chiamata telefonica.   Più forte è l'autenticazione, maggiore sarà la sicurezza che la persona che sta provando ad accedere sia realmente l'utente titolare dell'identità. Una volta autenticato, l'utente può scegliere una nuova password per sostituire quella precedente.
 
-## Prerequisiti per configurare lo sblocco degli account self-service e la reimpostazione della password usando MFA
-<a id="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa" class="xliff"></a>
+## <a name="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa"></a>Prerequisiti per configurare lo sblocco degli account self-service e la reimpostazione della password usando MFA
 In questa sezione si presuppone di aver scaricato e completato la distribuzione di Microsoft Identity Manager 2016, inclusi i seguenti componenti e servizi:
 
 -   Un computer in cui è installato Windows Server 2008 R2 o versioni successive è stato configurato come server Active Directory che include Servizi di dominio Active Directory e un controller di dominio con un dominio designato (un dominio "aziendale")
@@ -58,14 +55,12 @@ In questa sezione si presuppone di aver scaricato e completato la distribuzione 
 
 -   I componenti aggiuntivi e le estensioni di MIM 2016, incluso il client integrato di accesso SSPR Windows, possono quindi essere distribuiti nel server o in un computer client separato.
 
-## Preparare MIM all'uso dell'autenticazione a più fattori
-<a id="prepare-mim-to-work-with-multi-factor-authentication" class="xliff"></a>
+## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Preparare MIM all'uso dell'autenticazione a più fattori
 Configurare la sincronizzazione MIM per supportare la funzionalità di reimpostazione della password e sblocco dell’account. Per altre informazioni, vedere [Installazione dei componenti aggiuntivi e delle estensioni di FIM](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [installazione di FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [Controlli di autenticazione SSPR](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) e [Guida al lab di test SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
 Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure Active Directory. Come parte di questa operazione, verrà generato un file che include il materiale di autenticazione richiesto da MFA per contattare Azure MFA.  Per continuare, è necessaria una sottoscrizione di Azure.
 
-### Registrare il provider di autenticazione a più fattori in Azure
-<a id="register-your-multi-factor-authentication-provider-in-azure" class="xliff"></a>
+### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registrare il provider di autenticazione a più fattori in Azure
 
 1.  Andare al [portale di Azure classico](http://manage.windowsazure.com) e accedere come amministratore della sottoscrizione di Azure.
 
@@ -97,8 +92,7 @@ Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure 
 
 11. Copiare il file ZIP risultante in ogni sistema in cui è installato il servizio MIM.  Tenere presente che il file ZIP contiene il materiale per le chiavi usato per l'autenticazione nel servizio Azure MFA.
 
-### Aggiornare il file di configurazione
-<a id="update-the-configuration-file" class="xliff"></a>
+### <a name="update-the-configuration-file"></a>Aggiornare il file di configurazione
 
 1. Accedere al computer in cui è installato il servizio MIM, con l'account utente usato per installare MIM.
 
@@ -124,8 +118,7 @@ Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure 
 
 11. Salvare il file MfaSettings.xml con lo stesso nome, nello stesso percorso.
 
-#### Configurare il controllo del telefono o il controllo della password monouso tramite SMS
-<a id="configure-the-phone-gate-or-the-one-time-password-sms-gate" class="xliff"></a>
+#### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Configurare il controllo del telefono o il controllo della password monouso tramite SMS
 
 1.  Avviare Internet Explorer, accedere al portale MIM eseguendo l'autenticazione come amministratore MIM e quindi fare clic su  **Flussi di lavoro** nella barra di spostamento a sinistra.
 
@@ -141,8 +134,7 @@ Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure 
 
 Gli utenti dell'organizzazione possono ora registrarsi per la reimpostazione della password.  Durante questo processo, dovranno immettere il proprio numero di telefono dell'ufficio o di cellulare, in modo che il sistema abbia le informazioni necessarie per chiamarli o inviare loro SMS.
 
-#### Registrare gli utenti per la reimpostazione della password
-<a id="register-users-for-password-reset" class="xliff"></a>
+#### <a name="register-users-for-password-reset"></a>Registrare gli utenti per la reimpostazione della password
 
 1.  Un utente avvierà un Web browser per passare al portale di registrazione per la reimpostazione della password MIM.  In genere, questo portale è configurato con l'autenticazione di Windows.  All'interno del portale gli utenti forniranno di nuovo nome utente e password per confermare la propria identità.
 
@@ -154,16 +146,14 @@ Gli utenti dell'organizzazione possono ora registrarsi per la reimpostazione del
 
     ![Immagine della verifica del telefono cellulare di MIM](media/MIM-SSPR-mobilephoneverification.JPG)
 
-## Come funziona per gli utenti?
-<a id="how-does-it-work-for-your-users" class="xliff"></a>
+## <a name="how-does-it-work-for-your-users"></a>Come funziona per gli utenti?
 Ora che tutto è configurato e in esecuzione, è possibile sapere cosa dovranno fare gli utenti se dimenticano le proprie password.
 
 È possibile usare la funzionalità di reimpostazione della password e sblocco dell'account in due modi: dalla schermata di accesso di Windows oppure dal portale self-service.
 
 Installando Componenti aggiuntivi ed estensioni MIM in un computer aggiunto al dominio connesso tramite la rete aziendale al servizio MIM, gli utenti possono recuperare una password dimenticata al momento dell'accesso al desktop.  I passaggi seguenti descrivono il processo in modo dettagliato.
 
-#### Reimpostazione della password integrata all'accesso al desktop di Windows
-<a id="windows-desktop-login-integrated-password-reset" class="xliff"></a>
+#### <a name="windows-desktop-login-integrated-password-reset"></a>Reimpostazione della password integrata all'accesso al desktop di Windows
 
 1.  Se l'utente immette la password errata più volte, nella schermata di accesso ha la possibilità di fare clic su **Problemi di accesso?** .
 
@@ -188,8 +178,7 @@ Installando Componenti aggiuntivi ed estensioni MIM in un computer aggiunto al d
 
 6.  L’utente deve quindi immettere due volte una nuova password e la password sarà reimpostata.
 
-#### Accedere dal portale self-service.
-<a id="access-from-the-self-service-portal" class="xliff"></a>
+#### <a name="access-from-the-self-service-portal"></a>Accedere dal portale self-service.
 
 1.  Gli utenti possono aprire un Web browser, passare al **portale per la reimpostazione della password** , immettere il proprio nome utente e fare clic su **Avanti** .
 

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Passaggio 7: Installare la cronologia e il filtraggio SID
-<a id="step-7-set-up-sid-historysid-filtering" class="xliff"></a>
+# <a name="step-7-set-up-sid-historysid-filtering"></a>Passaggio 7: Installare la cronologia e il filtraggio SID
 
 >[!div class="step-by-step"]
 [« Passaggio 6](sp1-step6-setup-pam-trust.md)

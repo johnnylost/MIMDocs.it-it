@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Distribuire MIM PAM con Windows Server 2016
-<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
+# <a name="deploy-mim-pam-with-windows-server-2016"></a>Distribuire MIM PAM con Windows Server 2016
 
 
 In questo scenario MIM 2016 SP1 può sfruttare le funzionalità di Windows Server 2016 come controller di dominio per la foresta "PRIV".  Dopo la configurazione dello scenario, il ticket Kerberos di un utente verrà limitato al tempo rimanente dell'attivazione del proprio ruolo. 
@@ -25,8 +24,7 @@ In questo scenario MIM 2016 SP1 può sfruttare le funzionalità di Windows Serve
 >[!Note]
 Con questa versione di MIM non è possibile usare Technical Preview di Windows Server 2016 precedenti la 5.
 
-## Preparazione
-<a id="preparation" class="xliff"></a>
+## <a name="preparation"></a>Preparazione
 
 Per l'ambiente lab sono necessarie almeno due VM:
 
@@ -143,8 +141,7 @@ Eseguire l'installazione come descritto nella [guida introduttiva](privileged-id
 
 -   Il punto 5 (verifica della relazione di trust) **non è necessario quando i domini CORP e PRIV sono al livello di funzionalità di dominio di Windows Server 2016**.
 
-## Altre informazioni
-<a id="more-information" class="xliff"></a>
+## <a name="more-information"></a>Altre informazioni
 
 - [Privileged Access Management per Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md)
 - [Configurazione dell'ambiente MIM per Privileged Access Management](configuring-mim-environment-for-pam.md)

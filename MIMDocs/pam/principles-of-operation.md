@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Informazioni sui componenti di PAM
-<a id="understand-the-components-of-pam" class="xliff"></a>
+# <a name="understand-the-components-of-pam"></a>Informazioni sui componenti di PAM
 
 Privileged Access Management mantiene separati l'accesso amministrativo dall'accesso tramite account utente di uso quotidiano. Questa soluzione si basa su foreste parallele:
 

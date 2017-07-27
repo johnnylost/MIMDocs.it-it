@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Configurare un server di gestione delle identità: Windows Server 2012 R2
-<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Configurare un server di gestione delle identità: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
 [« Preparazione di un dominio](preparing-domain.md)
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/13/2017
 > - Nome del dominio: **contoso**
 > - Password: **Pass@word1**
 
-## Aggiungere Windows Server 2012 R2 al dominio
-<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Aggiungere Windows Server 2012 R2 al dominio
 
 Iniziare con una macchina Windows Server 2012 R2, con un minimo di 8 GB di RAM. Al momento dell’installazione, specificare la versione "Windows Server 2012 R2 Standard (server con un’interfaccia utente grafica) x64".
 
@@ -63,8 +61,7 @@ Iniziare con una macchina Windows Server 2012 R2, con un minimo di 8 GB di RAM. 
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## Configurare i criteri di sicurezza server
-<a id="configure-the-server-security-policy" class="xliff"></a>
+## <a name="configure-the-server-security-policy"></a>Configurare i criteri di sicurezza server
 
 Configurare i criteri di sicurezza del server per consentire l'esecuzione come servizi degli account appena creati.
 
@@ -95,8 +92,7 @@ Configurare i criteri di sicurezza del server per consentire l'esecuzione come s
 12. Chiudere la finestra Criteri di sicurezza locali.
 
 
-## Cambiare la modalità Autenticazione di Windows di IIS
-<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
+## <a name="change-the-iis-windows-authentication-mode"></a>Cambiare la modalità Autenticazione di Windows di IIS
 
 1.  Aprire una finestra di PowerShell.
 

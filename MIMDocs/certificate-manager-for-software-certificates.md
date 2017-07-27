@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Creare certificati software con Gestione certificati
-<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
+# <a name="create-software-certificates-with-certificate-manager"></a>Creare certificati software con Gestione certificati
 Per registrare e rinnovare i certificati software non è necessario essere un amministratore e non occorre una smart card virtuale. Vale la pena notare che a un certo punto verrà richiesto di consentire un'operazione di certificato, e questo è normale.
 
-## Creare un modello di profilo dei certificati software in Gestione certificati di MIM 2016
-<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Creare un modello di profilo dei certificati software in Gestione certificati di MIM 2016
 
 1.  Creare un modello per il certificato che verrà richiesto per la smart card virtuale. Aprire la MMC.
 
@@ -73,8 +71,7 @@ Per registrare e rinnovare i certificati software non è necessario essere un am
 
     10. Nell'elenco, selezionare il nuovo modello appena creato (**Modello di certificato archiviato**), quindi fare clic su **OK**.
 
-## Creare il modello di profilo
-<a id="create-the-profile-template" class="xliff"></a>
+## <a name="create-the-profile-template"></a>Creare il modello di profilo
 
 1.  Accedere al portale CM come utente con privilegi amministrativi.
 

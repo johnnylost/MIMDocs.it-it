@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Passaggio 5: stabilire una relazione di trust tra le foreste PRIV e CORP
-<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
+# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Passaggio 5: stabilire una relazione di trust tra le foreste PRIV e CORP
 
 >[!div class="step-by-step"]
 [« Passaggio 4](step-4-install-mim-components-on-pam-server.md)
@@ -28,8 +27,7 @@ ms.lasthandoff: 07/13/2017
 
 Per ogni dominio CORP, ad esempio contoso.local, i controller di dominio PRIV e CONTOSO devono essere associati da un trust. In questo modo, gli utenti del dominio PRIV possono accedere alle risorse nel dominio CORP.
 
-## Connettere ogni controller di dominio alla controparte
-<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
+## <a name="connect-each-domain-controller-to-its-counterpart"></a>Connettere ogni controller di dominio alla controparte
 
 Prima di stabilire una relazione di trust, ogni controller di dominio deve essere configurato per la risoluzione dei nomi DNS per la controparte, in base all'indirizzo IP dell'altro controller di dominio/server DNS.
 
@@ -47,8 +45,7 @@ Prima di stabilire una relazione di trust, ogni controller di dominio deve esser
 
     ![Struttura del file della chiave priv - Screenshot](./media/PAM_GS_DNS_Manager.png)
 
-## Stabilire una relazione di trust in PAMSRV
-<a id="establish-trust-on-pamsrv" class="xliff"></a>
+## <a name="establish-trust-on-pamsrv"></a>Stabilire una relazione di trust in PAMSRV
 
 In PAMSRV stabilire una relazione di trust unidirezionale con CORPDC, in modo che i controller di dominio CORP stabiliscano una relazione di trust con la foresta PRIV.
 
@@ -70,8 +67,7 @@ In PAMSRV stabilire una relazione di trust unidirezionale con CORPDC, in modo ch
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## Concedere alle foreste l'accesso in lettura ad Active Directory
-<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
+## <a name="give-forests-read-access-to-active-directory"></a>Concedere alle foreste l'accesso in lettura ad Active Directory
 
 Per ogni foresta esistente, abilitare l'accesso in lettura ad Active Directory da parte degli amministratori PRIV e del servizio di monitoraggio.
 
@@ -94,8 +90,7 @@ Per ogni foresta esistente, abilitare l'accesso in lettura ad Active Directory d
 
     L'output dovrebbe inoltre indicare che il **filtro dei SID non è abilitato per il trust**. Per altre informazioni, vedere [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx) (Disabilitare la quarantena per il filtro dei SID).
 
-## Avviare i servizi di monitoraggio e del componente
-<a id="start-the-monitoring-and-component-services" class="xliff"></a>
+## <a name="start-the-monitoring-and-component-services"></a>Avviare i servizi di monitoraggio e del componente
 
 1.  Accedere a PAMSRV come amministratore del dominio PRIV (PRIV\Administrator).
 

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Definire ruoli per Privileged Access Management
-<a id="define-roles-for-privileged-access-management" class="xliff"></a>
+# <a name="define-roles-for-privileged-access-management"></a>Definire ruoli per Privileged Access Management
 
 Con Privileged Access Management è possibile assegnare utenti a ruoli con privilegi che questi ultimi possono attivare in base alle esigenze per l'accesso JIT. Questi ruoli, definiti manualmente, vengono stabiliti nell'ambiente bastion. Questo articolo illustra il processo per definire i ruoli da gestire tramite PAM e quelli con restrizioni e autorizzazioni appropriate.
 
@@ -33,8 +32,7 @@ Le autorizzazioni del ruolo variano in base alle applicazioni gestite. Questo ar
 
 - Quelle necessarie per gestire i dati contenuti in Active Directory (ad esempio, creare utenti e gruppi)
 
-## Identificare i ruoli
-<a id="identify-roles" class="xliff"></a>
+## <a name="identify-roles"></a>Identificare i ruoli
 
 Iniziare identificando tutti i ruoli da gestire con PAM. Nel foglio di calcolo, ogni ruolo potenziale disporrà di una riga.
 
@@ -58,8 +56,7 @@ Altre informazioni sulla definizione dell'ambito delle autorizzazioni in cui inc
 
 - È possibile separare l'amministrazione e il controllo, in modo che un utente in un ruolo amministrativo non possa cancellare i record di controllo delle proprie azioni?
 
-## Stabilire i requisiti della governance del ruolo
-<a id="establish-role-governance-requirements" class="xliff"></a>
+## <a name="establish-role-governance-requirements"></a>Stabilire i requisiti della governance del ruolo
 
 Non appena si identificano i ruoli del candidato, iniziare a compilare il foglio di calcolo. Creare colonne per i requisiti rilevanti per l'organizzazione. Alcuni requisiti da considerare sono:
 
@@ -81,8 +78,7 @@ Non appena si identificano i ruoli del candidato, iniziare a compilare il foglio
 
 - Quali autorizzazioni dell'applicazione (vedere di seguito l'elenco di esempio per AD) sono associate a questo ruolo?
 
-## Selezionare un metodo di accesso
-<a id="select-an-access-method" class="xliff"></a>
+## <a name="select-an-access-method"></a>Selezionare un metodo di accesso
 
 Potrebbero essere presenti più ruoli in un sistema di gestione accesso con privilegi con le stesse autorizzazioni assegnate, se diverse comunità di utenti hanno requisiti di governance di accesso distinti. Ad esempio, un'organizzazione può applicare criteri diversi per i propri dipendenti a tempo pieno rispetto ai dipendenti IT in outsourcing di un'altra organizzazione.
 
@@ -98,8 +94,7 @@ In alcuni casi, un utente può essere assegnato a un ruolo in modo permanente e 
 
 Per le organizzazioni che vogliono evitare il rischio di furto di credenziali o dell'uso improprio, la guida [Using Azure MFA for activation](use-azure-mfa-for-activation.md) (Uso di Azure MFA per l'attivazione) include istruzioni su come configurare MIM per richiedere un'ulteriore verifica fuori banda al momento dell'attivazione del ruolo.
 
-## Delegare le autorizzazioni di Active Directory
-<a id="delegate-active-directory-permissions" class="xliff"></a>
+## <a name="delegate-active-directory-permissions"></a>Delegare le autorizzazioni di Active Directory
 
 Quando vengono creati nuovi domini, Windows Server crea automaticamente gruppi predefiniti, ad esempio "Domain Admins". Questi gruppi semplificano le attività iniziali e possono essere appropriati per le organizzazioni più piccole. Tuttavia, le organizzazioni di dimensioni più grandi, o quelle che richiedono maggiore livello di isolamento dei privilegi amministrativi, devono svuotare i gruppi come Domain Admins e sostituirli con i gruppi che forniscono autorizzazioni specifiche.
 
@@ -110,8 +105,7 @@ Un limite del gruppo Domain Admins è che non è possibile avere membri da un do
 
 Al posto dei gruppi predefiniti, ad esempio Domani Admins, creare nuovi gruppi di sicurezza che forniscono solo le autorizzazioni necessarie e usare MIM per fornire in modo dinamico agli account degli amministratori tali appartenenze di gruppo.
 
-### Autorizzazioni di gestione del servizio
-<a id="service-management-permissions" class="xliff"></a>
+### <a name="service-management-permissions"></a>Autorizzazioni di gestione del servizio
 
 Nella tabella seguente vengono forniti alcuni esempi di autorizzazioni che sarebbe rilevante includere nei ruoli per la gestione di AD.
 
@@ -127,8 +121,7 @@ Nella tabella seguente vengono forniti alcuni esempi di autorizzazioni che sareb
 | Gestire le zone | Creare, eliminare e modificare oggetti e zone DNS in Active Directory. |
 | Modificare le OU di livello 0 | Modificare le OU di livello 0 e gli oggetti contenuti in Active Directory |
 
-### Autorizzazioni di gestione dei dati
-<a id="data-management-permissions" class="xliff"></a>
+### <a name="data-management-permissions"></a>Autorizzazioni di gestione dei dati
 
 Nella tabella seguente vengono forniti alcuni esempi di autorizzazioni che sarebbe rilevante includere nei ruoli per la gestione o l’utilizzo dei dati contenuti in AD.
 
@@ -144,15 +137,13 @@ Nella tabella seguente vengono forniti alcuni esempi di autorizzazioni che sareb
 | Aggiungi PC/Amministratore locale                    | Diritti amministrativi locali per tutte le workstation                               |
 | Aggiungi Srv/Amministratore locale                   | Diritti amministrativi locali per tutti i server                                    |
 
-## Definizioni di ruolo di esempio
-<a id="example-role-definitions" class="xliff"></a>
+## <a name="example-role-definitions"></a>Definizioni di ruolo di esempio
 
 La scelta delle definizioni di ruolo variano a seconda del livello di server gestiti da account con privilegi. Inoltre dipende anche dalla scelta delle applicazioni gestite, poiché le applicazioni come prodotti enterprise di Exchange o di terze parti, ad esempio SAP porteranno le proprie definizioni di ruolo aggiuntive per l'amministrazione delegata.
 
 Nelle sezioni seguenti vengono illustrati esempi di scenari tipici aziendali.
 
-### Livello 0 - foresta amministrativa
-<a id="tier-0---administrative-forest" class="xliff"></a>
+### <a name="tier-0---administrative-forest"></a>Livello 0 - foresta amministrativa
 
 I ruoli appropriati per gli account nell'ambiente bastion possono includere:
 
@@ -161,8 +152,7 @@ I ruoli appropriati per gli account nell'ambiente bastion possono includere:
 - Utenti amministratori della foresta di produzione
 - Utenti a cui sono stati delegati diritti amministrativi limitati per le applicazioni nella foresta di produzione
 
-### Livello 0 - foresta di produzione aziendale
-<a id="tier-0---enterprise-production-forest" class="xliff"></a>
+### <a name="tier-0---enterprise-production-forest"></a>Livello 0 - foresta di produzione aziendale
 
 I ruoli appropriati per la gestione degli account della foresta di produzione di livello 0 e delle risorse possono includere:
 
@@ -179,8 +169,7 @@ I ruoli appropriati per la gestione degli account della foresta di produzione di
 - Amministratori di backup di livello 0
 - Utenti di controller di gestione fuori banda e baseboard (per la gestione di KVM o Lights-Out) connessi agli host di livello 0
 
-### Livello 1
-<a id="tier-1" class="xliff"></a>
+### <a name="tier-1"></a>Livello 1
 
 I ruoli per la gestione e il backup dei server di livello 1 possono includere:
 
@@ -202,8 +191,7 @@ Inoltre, i ruoli per la gestione di applicazioni aziendali nel livello 1 possono
 - Amministratori di un servizio cloud, ad esempio, un sito Web aziendale o DNS pubblico
 - Amministratori di sistemi HCM, finanziari o legali
 
-### Livello 2
-<a id="tier-2" class="xliff"></a>
+### <a name="tier-2"></a>Livello 2
 
 I ruoli per la gestione di utenti e computer non amministrativi possono includere:
 

@@ -18,20 +18,17 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Modello di livello per il partizionamento dei privilegi amministrativi
-<a id="tier-model-for-partitioning-administrative-privileges" class="xliff"></a>
+# <a name="tier-model-for-partitioning-administrative-privileges"></a>Modello di livello per il partizionamento dei privilegi amministrativi
 
 Nell'ambiente a rischio di oggi, il problema non è se un utente malintenzionato riuscirà ad accedere ai sistemi in uso, ma quando. Ciò significa che la sicurezza interna è importante quanto una solida difesa perimetrale. Questo articolo descrive un modello di sicurezza ideato per proteggere dall'elevazione dei privilegi isolando le attività con privilegi elevati dalle aree ad alto rischio. Questo modello garantisce un'esperienza utente soddisfacente rimanendo comunque conforme alle procedure consigliate e ai principi di sicurezza.
 
-## Elevazione dei privilegi nelle foreste di Active Directory
-<a id="elevation-of-privilege-in-active-directory-forests" class="xliff"></a>
+## <a name="elevation-of-privilege-in-active-directory-forests"></a>Elevazione dei privilegi nelle foreste di Active Directory
 
 Gli account utente, di servizi o di applicazioni ai quali vengono concessi privilegi amministrativi completi permanenti per foreste di Windows Server Active Directory (AD) introducono una quantità significativa di rischio alla missione e alle attività dell'organizzazione. Questi account sono spesso presi di mira da utenti malintenzionati perché se sono compromessi, l'autore dell'attacco dispone del privilegio di connettersi ad altri server o applicazioni nel dominio.
 
 Il modello di livello crea divisioni tra gli amministratori in base alle risorse che gestiscono. Gli amministratori con controllo sulle workstation degli utenti sono separati da quelli che controllano le applicazioni o gestiscono le identità dell'organizzazione. Informazioni su questo modello sono disponibili in [Securing privileged access reference material](http://aka.ms/tiermodel) (Materiale di riferimento sulla sicurezza dell'accesso con privilegi).
 
-## Limitare l'esposizione delle credenziali con le restrizioni di accesso
-<a id="restricting-credential-exposure-with-logon-restrictions" class="xliff"></a>
+## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Limitare l'esposizione delle credenziali con le restrizioni di accesso
 
 Ridurre il rischio di furto delle credenziali per gli account amministrativi, rende necessarie procedure amministrative modificate per limitare l'esposizione agli attacchi. Come primo passaggio, le organizzazioni sono invitate a:
 

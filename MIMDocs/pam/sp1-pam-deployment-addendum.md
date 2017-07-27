@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Appendice agli script di distribuzione di PAM:
-<a id="pam-deployment-scripts-addendum" class="xliff"></a>
+# <a name="pam-deployment-scripts-addendum"></a>Appendice agli script di distribuzione di PAM:
 
-## Appendice 1 - Configurazione del dominio PRIV
-<a id="addendum-1-setting-up-the-priv-domain" class="xliff"></a>
+## <a name="addendum-1-setting-up-the-priv-domain"></a>Appendice 1 - Configurazione del dominio PRIV
 
 Dopo aver decompresso il file compresso nella cartella $env:SYSTEMDRIVE\PAM, modificare il file PAMDeploymentConfig.xml per specificare i dettagli della foresta PRIV. Aggiornare i parametri DNSName e NetbiosName, il nome del controller di dominio, il database, il percorso del log e il percorso Sysvol. Aggiornare inoltre DomainMode e ForestMode. Se si sta testando Windows Server Technical Preview 5, impostare DomainMode e ForestMode su WinThreshold.
 
@@ -40,8 +38,7 @@ Il controller di dominio verrà riavviato automaticamente dopo il completamento.
   * La password contiene almeno un carattere MAIUSCOLO
   * La password contiene almeno una cifra o un carattere speciale
 
-## Appendice 2 - Configurazione del dominio CORP
-<a id="addendum-2-setting-up-the-corp-domain" class="xliff"></a>
+## <a name="addendum-2-setting-up-the-corp-domain"></a>Appendice 2 - Configurazione del dominio CORP
 
 Se si è appena iniziato a usare PAM e si vuole configurare un ambiente di test, lo script consente inoltre la configurazione di un dominio CORP. Dopo aver decompresso il file compresso nella cartella $env:SYSTEMDRIVE\PAM, modificare il file PAMDeploymentConfig.xml aggiungendo i dettagli della foresta CORP. Aggiornare i parametri DNSName e NetbiosName, il nome del controller di dominio il database, il percorso del log e il percorso Sysvol. Il livello di funzionalità deve essere almeno Windows Server 2012 R2.
 
@@ -53,8 +50,7 @@ Se si è appena iniziato a usare PAM e si vuole configurare un ambiente di test,
 
 Il controller di dominio verrà riavviato automaticamente dopo il completamento
 
-## Appendice 3 - Configurazione di un client CORP per eseguire la convalida
-<a id="addendum-3-setting-up-a-corp-client-to-do-the-validation" class="xliff"></a>
+## <a name="addendum-3-setting-up-a-corp-client-to-do-the-validation"></a>Appendice 3 - Configurazione di un client CORP per eseguire la convalida
 
 ClientBinaryLocation nel file di configurazione deve puntare al percorso in cui si trova setup.exe.
 Accedere al client come amministratore locale ed eseguire i comandi seguenti in una finestra di PowerShell con privilegi elevati:
@@ -72,7 +68,6 @@ Se il computer non è aggiunto a un dominio, verranno richieste le credenziali d
 
 Procedere con il passaggio 8 riportato sopra.
 
-## Appendice 4 - Se qualcosa non funziona
-<a id="addendum-4-if-something-goes-wrong" class="xliff"></a>
+## <a name="addendum-4-if-something-goes-wrong"></a>Appendice 4 - Se qualcosa non funziona
 
 Tutti i log degli script vengono salvati in %AppData%\MIMPAMInstall. Comprimere la cartella in un file con estensione zip e inviarla tramite posta elettronica all'indirizzo [mim2016@microsoft.com](mailto:mim2016@microsoft.com) con i dettagli dell'operazione e l'errore.

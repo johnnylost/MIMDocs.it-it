@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Passaggio 6: Installare l'attendibilità di PAM
-<a id="step-6-set-up-the-pam-trust" class="xliff"></a>
+# <a name="step-6-set-up-the-pam-trust"></a>Passaggio 6: Installare l'attendibilità di PAM
 
 >[!div class="step-by-step"]
 [« Passaggio 5](sp1-step5-configuring-pam.md)

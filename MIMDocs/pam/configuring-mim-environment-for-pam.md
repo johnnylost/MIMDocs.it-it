@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Configurazione dell'ambiente MIM per Privileged Access Management
-<a id="configure-the-mim-environment-for-privileged-access-management" class="xliff"></a>
+# <a name="configure-the-mim-environment-for-privileged-access-management"></a>Configurazione dell'ambiente MIM per Privileged Access Management
 Per la configurazione dell'ambiente per l'accesso tra foreste, l'installazione e la configurazione di Active Directory e Microsoft Identity Manager e la dimostrazione di una richiesta di accesso JIT è necessario completare sette passaggi.
 
 Questi passaggi sono strutturati per iniziare da zero e creare un ambiente di test. Se si applica PAM a un ambiente esistente, è possibile usare i controller di dominio o gli account utente personali anziché crearne di nuovi affinché corrispondano agli esempi.
