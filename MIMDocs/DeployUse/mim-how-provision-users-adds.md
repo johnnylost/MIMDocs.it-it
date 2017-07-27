@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Come si esegue il provisioning di utenti in Servizi di dominio Active Directory
-<a id="how-do-i-provision-users-to-ad-ds" class="xliff"></a>
+# <a name="how-do-i-provision-users-to-ad-ds"></a>Come si esegue il provisioning di utenti in Servizi di dominio Active Directory
 
 Si applica a: Microsoft Identity Manager 2016 SP1 (MIM)
 
@@ -25,20 +24,17 @@ Uno dei requisiti di base di un sistema di gestione delle identità è la capaci
 
 In questa guida vengono illustrati i blocchi predefiniti principali che sono coinvolti nel processo di provisioning degli utenti da Microsoft® Identity Manager (MIM) 2016 in Servizi di dominio Active Directory® (AD DS), viene spiegato come verificare se lo scenario funziona come previsto, vengono offerti suggerimenti per la gestione di utenti di Active Directory mediante MIM 2016 e vengono elencate altre fonti di informazione.
 
-## Operazioni preliminari
-<a id="before-you-begin" class="xliff"></a>
+## <a name="before-you-begin"></a>Operazioni preliminari
 
 
 Questa sezione contiene informazioni sull'ambito del documento. Questa sezione è destinata a lettori che hanno già un'esperienza di base nella sincronizzazione di oggetti con MIM, come illustrato nelle [guide introduttive](http://go.microsoft.com/FWLink/p/?LinkId=190486) relative.
 
-### Destinatari
-<a id="audience" class="xliff"></a>
+### <a name="audience"></a>Destinatari
 
 
 Questa guida è destinata a professionisti dell'IT che hanno già una conoscenza di base del funzionamento del processo di sincronizzazione MIM e che sono interessati a fare un'esperienza pratica e a ottenere maggiori informazioni su scenari specifici.
 
-### Competenze necessarie
-<a id="prerequisite-knowledge" class="xliff"></a>
+### <a name="prerequisite-knowledge"></a>Competenze necessarie
 
 
 Questo documento presuppone l'accesso a un'istanza in esecuzione di MIM e che l'utente abbia esperienza nella configurazione di scenari di sincronizzazione semplici, come descritto nei documenti seguenti:
@@ -49,37 +45,32 @@ Questo documento presuppone l'accesso a un'istanza in esecuzione di MIM e che l'
 
 Il contenuto di questo documento è da intendersi come estensione dei documenti introduttivi.
 
-### Ambito
-<a id="scope" class="xliff"></a>
+### <a name="scope"></a>Ambito
 
 
 Lo scenario descritto in questo documento è stato semplificato per soddisfare i requisiti di un ambiente lab di base. Lo scopo del documento è offrire una panoramica dei concetti e delle tecnologie illustrate.
 
 Questo documento consente di sviluppare una soluzione che prevede la gestione dei gruppi in Servizi di dominio Active Directory tramite MIM.
 
-### Requisiti di tempo
-<a id="time-requirements" class="xliff"></a>
+### <a name="time-requirements"></a>Requisiti di tempo
 
 
 Le procedure descritte in questo documento richiedono da 90 a 120 minuti per essere completate.
 
 Queste stime orarie presuppongono che l'ambiente di testing sia già configurato e non includono il tempo necessario per configurare l'ambiente di test.
 
-### Richiesta di assistenza
-<a id="getting-support" class="xliff"></a>
+### <a name="getting-support"></a>Richiesta di assistenza
 
 
 In caso di domande riguardanti il contenuto di questo documento o se l'utente ha commenti e suggerimenti da sottoporre, è possibile inviare un messaggio sul [forum di Forefront Identity Manager 2010](http://go.microsoft.com/FWLink/p/?LinkId=189654).
 
-## Descrizione dello scenario
-<a id="scenario-description" class="xliff"></a>
+## <a name="scenario-description"></a>Descrizione dello scenario
 
 
 Fabrikam, una società fittizia, prevede di usare MIM per gestire gli account utente in Servizi di dominio Active Directory aziendale. Come parte di questo processo, Fabrikam deve eseguire il provisioning degli utenti in Servizi di dominio Active Directory. Per avviare il test iniziale, Fabrikam ha installato un ambiente lab di base che è costituito da MIM e da Servizi di dominio Active Directory.
 In questo ambiente lab Fabrikam sta testando uno scenario costituito da un utente che è stato creato manualmente nel portale MIM. L'obiettivo di questo scenario è eseguire il provisioning dell'utente come un utente abilitato con una password predefinita per Servizi di dominio Active Directory.
 
-## Progettazione dello scenario
-<a id="scenario-design" class="xliff"></a>
+## <a name="scenario-design"></a>Progettazione dello scenario
 
 
 Per usare questa guida, sono necessari tre componenti dell'architettura:
@@ -99,8 +90,7 @@ Nella figura seguente viene descritto l'ambiente obbligatorio.
 >[!NOTE]
 Per altre informazioni sulla configurazione di MIM, vedere [Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845) (Guida all'installazione).
 
-## Elenco dei componenti dello scenario
-<a id="scenario-components-list" class="xliff"></a>
+## <a name="scenario-components-list"></a>Elenco dei componenti dello scenario
 
 
 Nella tabella seguente sono elencati i componenti che fanno parte dello scenario della guida.
@@ -118,8 +108,7 @@ Nella tabella seguente sono elencati i componenti che fanno parte dello scenario
 
 
 
-## Passaggi dello scenario
-<a id="scenario-steps" class="xliff"></a>
+## <a name="scenario-steps"></a>Passaggi dello scenario
 
 
 Lo scenario descritto in questa guida include i blocchi predefiniti illustrati nella figura seguente.
@@ -127,22 +116,19 @@ Lo scenario descritto in questa guida include i blocchi predefiniti illustrati n
 ![Passaggi dello scenario](media/how-provision-users-adds/image013.png)
 
 
-## Configurazione dei sistemi esterni
-<a id="configuring-the-external-systems" class="xliff"></a>
+## <a name="configuring-the-external-systems"></a>Configurazione dei sistemi esterni
 
 
 In questa sezione vengono messe a disposizione le istruzioni per le risorse che è necessario creare e che sono fuori dall'ambiente MIM.
 
-### Passaggio 1: Creare la OU
-<a id="step-1-create-the-ou" class="xliff"></a>
+### <a name="step-1-create-the-ou"></a>Passaggio 1: Creare la OU
 
 
 L'unità organizzativa funge da contenitore per l'utente di esempio con provisioning. Per altre informazioni sulla creazione delle OU, vedere [Creare una nuova unità organizzativa](http://go.microsoft.com/FWLink/p/?LinkId=189655).
 
 Creare una OU denominata MIMObjects in Servizi di dominio Active Directory.
 
-### Passaggio 2: Creare gli account utente di Active Directory
-<a id="step-2-create-the-active-directory-user-accounts" class="xliff"></a>
+### <a name="step-2-create-the-active-directory-user-accounts"></a>Passaggio 2: Creare gli account utente di Active Directory
 
 Per lo scenario della guida, sono necessari due account utente di Active Directory:
 
@@ -153,14 +139,12 @@ Per lo scenario della guida, sono necessari due account utente di Active Directo
 In entrambi i casi basta creare gli account utente normali. Più avanti nel documento vengono illustrati i requisiti specifici di entrambi gli account. Per altre informazioni sulla creazione di utenti, vedere [Creare un nuovo account utente](http://go.microsoft.com/FWLink/p/?LinkId=189656).
 
 
-## Configurazione del servizio di sincronizzazione FIM
-<a id="configuring-the-fim-synchronization-service" class="xliff"></a>
+## <a name="configuring-the-fim-synchronization-service"></a>Configurazione del servizio di sincronizzazione FIM
 
 
 Per i passaggi di configurazione in questa sezione, è necessario avviare FIM Synchronization Service Manager.
 
-### Creazione di agenti di gestione
-<a id="creating-the-management-agents" class="xliff"></a>
+### <a name="creating-the-management-agents"></a>Creazione di agenti di gestione
 
 Per lo scenario in questa guida, è necessario creare due agenti di gestione:
 
@@ -168,8 +152,7 @@ Per lo scenario in questa guida, è necessario creare due agenti di gestione:
 
 -   **Fabrikam FIMMA**: agente di gestione per l'agente di gestione del servizio FIM.
 
-### Passaggio 3: Creare l'agente di gestione Fabrikam ADMA
-<a id="step-3-create-the-fabrikam-adma-management-agent" class="xliff"></a>
+### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>Passaggio 3: Creare l'agente di gestione Fabrikam ADMA
 
 Quando si configura un agente di gestione per Servizi di dominio Active Directory, è necessario specificare un account che viene usato dall'agente di gestione nello scambio di dati con Servizi di dominio Active Directory. È consigliabile usare un account utente normale. Tuttavia, per importare dati da Servizi di dominio Active Directory, l'account deve avere i diritti per eseguire il polling delle modifiche dal controllo DirSync. Se si vuole che l'agente di gestione esporti dati in Servizi di dominio Active Directory, è necessario concedere all'account i diritti sufficienti per le OU di destinazione. Per altre informazioni su questo argomento, vedere [Configuring the ADMA Account](http://go.microsoft.com/FWLink/p/?LinkId=189657) (Configurazione dell'account ADMA).
 
@@ -200,8 +183,7 @@ Per altre informazioni, vedere gli argomenti seguenti nella Guida:
 >[!Note]
 Assicurarsi di avere una regola del flusso di attributi di importazione configurata per l'attributo ExpectedRulesList.
 
-### Passaggio 4: Creare l'agente di gestione Fabrikam FIMMA
-<a id="step-4-create-the-fabrikam-fimma-management-agent" class="xliff"></a>
+### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Passaggio 4: Creare l'agente di gestione Fabrikam FIMMA
 
 Quando si configura un agente di gestione per il servizio FIM, è necessario specificare un account che viene usato dall'agente di gestione nello scambio di dati con il servizio FIM.
 
@@ -232,8 +214,7 @@ Per altre informazioni, vedere gli argomenti seguenti nella Guida:
 >[!NOTE]
  Assicurarsi di avere una regola del flusso di attributi di importazione configurata per l'attributo ExpectedRulesList.
 
-### Passaggio 5: Creare profili di esecuzione
-<a id="step-5-create-the-run-profiles" class="xliff"></a>
+### <a name="step-5-create-the-run-profiles"></a>Passaggio 5: Creare profili di esecuzione
 
 Nella tabella seguente vengono elencati i profili di esecuzione che è necessario creare per lo scenario della guida.
 
@@ -253,8 +234,7 @@ Per altre informazioni, vedere la creazione del profilo di esecuzione dell'agent
  Verificare che il provisioning sia abilitato nell'ambiente in uso. È possibile fare ciò eseguendo lo script contenuto in Using Windows PowerShell to Enable Provisioning (Uso di Windows PowerShell per abilitare il provisioning) all'indirizzo http://go.microsoft.com/FWLink/p/?LinkId=189660.
 
 
-## Configurazione del servizio FIM
-<a id="configuring-the-fim-service" class="xliff"></a>
+## <a name="configuring-the-fim-service"></a>Configurazione del servizio FIM
 
 
 Per lo scenario in questa guida, è necessario configurare un criterio di provisioning, come illustrato nella figura seguente.
@@ -265,8 +245,7 @@ L'obiettivo di questo criterio di provisioning consiste nel portare i gruppi nel
 
 Per configurare il servizio FIM, passare a http://localhost/identitymanagement in Internet Explorer®. Nella pagina del portale MIM per creare i criteri di provisioning, accedere alle pagine relative nella sezione dell'amministrazione. Per verificare la configurazione, è necessario eseguire lo script contenuto in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Uso di Windows PowerShell per documentare la configurazione dei criteri di provisioning).
 
-### Passaggio 6: Creare la regola di sincronizzazione
-<a id="step-6-create-the-synchronization-rule" class="xliff"></a>
+### <a name="step-6-create-the-synchronization-rule"></a>Passaggio 6: Creare la regola di sincronizzazione
 
 Le tabelle seguenti illustrano la configurazione della regola di sincronizzazione del provisioning Fabrikam obbligatoria. Creare la regola di sincronizzazione in base ai dati nelle tabelle seguenti.
 
@@ -317,8 +296,7 @@ Le tabelle seguenti illustrano la configurazione della regola di sincronizzazion
  >[!NOTE]
  Importante. Verificare di aver selezionato il flusso iniziale solo per il flusso di attributi che ha DN come destinazione.                                                                          
 
-### Passaggio 7: Creare il flusso di lavoro
-<a id="step-7-create-the-workflow" class="xliff"></a>
+### <a name="step-7-create-the-workflow"></a>Passaggio 7: Creare il flusso di lavoro
 
 L'obiettivo del flusso di lavoro del provisioning di Active Directory consiste nell'aggiungere la regola di sincronizzazione del provisioning Fabrikam a una risorsa. Le tabelle seguenti illustrano la configurazione.  Creare un flusso di lavoro in base ai dati nelle tabelle seguenti.
 
@@ -337,8 +315,7 @@ L'obiettivo del flusso di lavoro del provisioning di Active Directory consiste n
 
 
 
-### Passaggio 8: Creare la Regola di criteri di gestione
-<a id="step-8-create-the-mpr" class="xliff"></a>
+### <a name="step-8-create-the-mpr"></a>Passaggio 8: Creare la Regola di criteri di gestione
 
 La Regola di criteri di gestione richiesta è di tipo Transizione del set e si attiva quando una risorsa diventa un membro del set Tutti i terzisti. Le tabelle seguenti illustrano la configurazione.  Creare una Regola di criteri di gestione richiesta in base ai dati nelle tabelle seguenti.
 
@@ -363,8 +340,7 @@ La Regola di criteri di gestione richiesta è di tipo Transizione del set e si a
 
 
 
-## Inizializzazione dell'ambiente
-<a id="initializing-your-environment" class="xliff"></a>
+## <a name="initializing-your-environment"></a>Inizializzazione dell'ambiente
 
 
 Gli obiettivi della fase di inizializzazione sono i seguenti:
@@ -373,8 +349,7 @@ Gli obiettivi della fase di inizializzazione sono i seguenti:
 
 -   Portare la struttura di Active Directory nello spazio connettore di Active Directory.
 
-### Passaggio 9: Eseguire i profili di esecuzione
-<a id="step-9-run-the-run-profiles" class="xliff"></a>
+### <a name="step-9-run-the-run-profiles"></a>Passaggio 9: Eseguire i profili di esecuzione
 
 Nella tabella seguente vengono elencati i profili di esecuzione che fanno parte della fase di inizializzazione.  Eseguire i profili di esecuzione in base alla tabella riportata di seguito.
 
@@ -393,8 +368,7 @@ Nella tabella seguente vengono elencati i profili di esecuzione che fanno parte 
 >[!NOTE]
 È necessario verificare che la regola di sincronizzazione in uscita sia stata proiettata nel metaverse.
 
-## Test della configurazione
-<a id="testing-the-configuration" class="xliff"></a>
+## <a name="testing-the-configuration"></a>Test della configurazione
 
 
 L'obiettivo di questa sezione consiste nel testare la configurazione effettiva. Per testare la configurazione:
@@ -407,8 +381,7 @@ L'obiettivo di questa sezione consiste nel testare la configurazione effettiva. 
 
 4.  Verificare che l'utente esista in Servizi di dominio Active Directory.
 
-### Passaggio 10: Creare un utente di esempio in MIM
-<a id="step-10-create-a-sample-user-in-mim" class="xliff"></a>
+### <a name="step-10-create-a-sample-user-in-mim"></a>Passaggio 10: Creare un utente di esempio in MIM
 
 
 La tabella seguente elenca le proprietà dell'utente di esempio. Creare un utente di esempio in base ai dati nella tabella seguente.
@@ -424,8 +397,7 @@ La tabella seguente elenca le proprietà dell'utente di esempio. Creare un utent
 
 
 
-### Verificare i requisiti di provisioning dell'utente di esempio
-<a id="verify-the-provisioning-requisites-of-the-sample-user" class="xliff"></a>
+### <a name="verify-the-provisioning-requisites-of-the-sample-user"></a>Verificare i requisiti di provisioning dell'utente di esempio
 
 
 Per eseguire il provisioning dell'utente di esempio in Servizi di dominio Active Directory, devono essere soddisfatti due prerequisiti:
@@ -434,16 +406,14 @@ Per eseguire il provisioning dell'utente di esempio in Servizi di dominio Active
 
 2.  L'utente del set deve essere nell'ambito della regola di sincronizzazione in uscita.
 
-### Passaggio 11: Verificare che l'utente sia un membro di Tutti i terzisti
-<a id="step-11-verify-the-user-is-a-member-of-all-contractors" class="xliff"></a>
+### <a name="step-11-verify-the-user-is-a-member-of-all-contractors"></a>Passaggio 11: Verificare che l'utente sia un membro di Tutti i terzisti
 
 Per verificare se l'utente è un membro del set Tutti i terzisti, aprire il set e fare clic su Visualizza membri.
 
 ![Verificare che l'utente sia membro di Tutti i terzisti](media/how-provision-users-adds/image022.jpg)
 
 
-### Passaggio 12: Verificare che l'utente faccia parte dell'ambito della regola di sincronizzazione in uscita
-<a id="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule" class="xliff"></a>
+### <a name="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule"></a>Passaggio 12: Verificare che l'utente faccia parte dell'ambito della regola di sincronizzazione in uscita
 
 Per verificare se l'utente è nell'ambito della regola di sincronizzazione, aprire la pagina delle proprietà dell'utente e verificare l'attributo Elenco di regole previste nella scheda Provisioning. L'attributo Elenco di regole previste dovrebbe elencare l'utente di Active Directory
 
@@ -455,8 +425,7 @@ A questo punto del processo, lo stato della regola di sincronizzazione è In sos
 
 
 
-### Passaggio 13: Sincronizzare il gruppo di esempio
-<a id="step-13-synchronize-the-sample-group" class="xliff"></a>
+### <a name="step-13-synchronize-the-sample-group"></a>Passaggio 13: Sincronizzare il gruppo di esempio
 
 
 Prima di iniziare il primo ciclo di sincronizzazione per un oggetto di test, è necessario rilevare lo stato previsto dell'oggetto dopo ogni profilo di esecuzione che viene eseguito in un piano di test. Il piano di test deve includere accanto allo stato generale dell'oggetto (Creato, Aggiornato o Eliminato) anche i valori dell'attributo previsti.
@@ -528,15 +497,13 @@ Eseguire i profili di esecuzione seguendo le istruzioni contenute in questa sezi
 >[!IMPORTANT]
 Ogni esecuzione del profilo di esecuzione deve essere completata senza errori.
 
-### Passaggio 14: Verificare l'utente con provisioning in Servizi di dominio Active Directory
-<a id="step-14-verify-the-provisioned-user-in-ad-ds" class="xliff"></a>
+### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Passaggio 14: Verificare l'utente con provisioning in Servizi di dominio Active Directory
 
 Per verificare che sia stato eseguito il provisioning dell'utente di esempio in Servizi di dominio Active Directory, aprire l'unità organizzativa FIMObjects. Britta Simon dovrebbe trovarsi nella OU FIMObjects.
 
 ![verifica della presenza dell'utente nella OU FIMObjects](media/how-provision-users-adds/image033.jpg)
 
-Riepilogo
-<a id="summary" class="xliff"></a>
+<a name="summary"></a>Riepilogo
 =======
 
 L'obiettivo di questo documento è presentare i blocchi predefiniti principali per la sincronizzazione di un utente in MIM con Servizi di dominio Active Directory. Nel testing iniziale è consigliabile iniziare con il valore minimo di attributi necessari per completare un'attività e aggiungere altri attributi allo scenario quando i passaggi generali funzionano come previsto. Minimizzare la complessità semplifica il processo di risoluzione dei problemi.
@@ -549,12 +516,10 @@ Per una descrizione di come rimuovere tali oggetti dall'ambiente di test, vedere
 In uno scenario di sincronizzazione tipico che include Servizi di dominio Active Directory come destinazione della sincronizzazione, MIM non è autorevole per tutti gli attributi di un oggetto. Ad esempio, quando si gestiscono oggetti utente in Servizi di dominio Active Directory mediante FIM, il dominio e gli attributi objectSID dovranno essere specificati dall'agente di gestione di Servizi di dominio Active Directory.
 Il nome dell'account, il dominio e gli attributi objectSID sono obbligatori se si vuole abilitare l'accesso utente al portale di FIM. Per popolare questi attributi da Servizi di dominio Active Directory, è necessaria una regola di sincronizzazione in entrata aggiuntiva per lo spazio connettore di Servizi di dominio Active Directory. Quando si gestiscono oggetti con valori di attributo con più origini, è necessario assicurarsi di configurare correttamente la precedenza del flusso di attributi. Se la precedenza del flusso di attributi non è configurata correttamente, il motore di sincronizzazione blocca il popolamento dei valori di attributo. È possibile trovare altre informazioni sulla precedenza del flusso di attributi nell'articolo [About Attribute Flow Precedence](http://go.microsoft.com/FWLink/p/?LinkId=189675) (Informazioni sulla precedenza del flusso di attributi).
 
-Vedere anche
-<a id="see-also" class="xliff"></a>
+<a name="see-also"></a>Vedere anche
 =========
 
-Risorse aggiuntive
-<a id="other-resources" class="xliff"></a>
+<a name="other-resources"></a>Risorse aggiuntive
 ---------------
 
 [Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189670) (Uso di FIM per abilitare o disabilitare account in Active Directory)

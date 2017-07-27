@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Passaggio 2: Configurazione del dominio CORP
-<a id="step-2-configuring-the-corp-domain" class="xliff"></a>
+# <a name="step-2-configuring-the-corp-domain"></a>Passaggio 2: Configurazione del dominio CORP
 
 >[!div class="step-by-step"]
 [«Passaggio 1](sp1-step1-configuring-priv-domain.md)

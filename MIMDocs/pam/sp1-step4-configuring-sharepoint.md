@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Passaggio 4: Configurazione di SharePoint
-<a id="step-4-configuring-sharepoint" class="xliff"></a>
+# <a name="step-4-configuring-sharepoint"></a>Passaggio 4: Configurazione di SharePoint
 
 >[!div class="step-by-step"]
 [ «Passaggio 3](sp1-step3-installing-configuring-sql.md)

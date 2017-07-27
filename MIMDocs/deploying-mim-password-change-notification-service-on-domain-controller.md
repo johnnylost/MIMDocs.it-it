@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Distribuire il servizio di notifica di modifica della password di MIM in un controller di dominio
-<a id="deploy-the-mim-password-change-notification-service-on-a-domain-controller" class="xliff"></a>
+# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Distribuire il servizio di notifica di modifica della password di MIM in un controller di dominio
 
-## Installare il servizio di notifica di modifica della password
-<a id="install-the-password-change-notification-service" class="xliff"></a>
+## <a name="install-the-password-change-notification-service"></a>Installare il servizio di notifica di modifica della password
 Il servizio di notifica di modifica della password (PCNS) è un servizio che viene installato nei controller di dominio e che consente la sincronizzazione delle password tra MIM ed altri sistemi, ad esempio un server di directory di un altro fornitore. Per la sincronizzazione delle password, installare PCNS in ogni server del controller di dominio.
 
 1.  Accedere come amministratore di dominio a un server che esegue Windows Server con il ruolo Servizi di dominio Active Directory.
@@ -57,6 +55,5 @@ Il servizio di notifica di modifica della password (PCNS) è un servizio che vie
 
 14. Riavviare il computer per rendere effettive le modifiche della configurazione apportate al servizio di notifica di modifica della password di MIM. A tale scopo, è possibile fare clic su **Sì** nella finestra popup visualizzata oppure è possibile riavviare in seguito.
 
-## Configurazione del servizio di notifica di modifica della password
-<a id="configuring-the-password-change-notification-service" class="xliff"></a>
+## <a name="configuring-the-password-change-notification-service"></a>Configurazione del servizio di notifica di modifica della password
 Dopo la riconnessione al server di controller di dominio come amministratore di dominio, passare a *C:\Programmi\Microsoft Password Change Notification*. Eseguire *pcnscfg.exe*.

@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Registrazione dinamica del servizio MIM SP1 (4.4.1436.0)
-<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
+# <a name="mim-sp1-4414360--service-dynamic-logging"></a>Registrazione dinamica del servizio MIM SP1 (4.4.1436.0)
 In 4.4.1436.0 è stata introdotta una nuova funzionalità di registrazione. Ciò consente all'amministratore e ai tecnici di supporto di attivare la registrazione senza dover riavviare il servizio di gestione.
 
 Dopo l'installazione verrà visualizzata la riga seguente nell'oggetto Microsoft.ResourceManagement.Service.exe.config chiamato

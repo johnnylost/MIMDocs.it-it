@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Connettersi alle directory
-<a id="connect-to-your-directories" class="xliff"></a>
+# <a name="connect-to-your-directories"></a>Connettersi alle directory
 
 I connettori collegano le origini dati connesse specificate a Microsoft Identity Manager (MIM). Un connettore sposta i dati da un'origine dati connessa a MIM. Grazie al connettore è anche possibile esportare i dati all'origine dati connessa perché siano sincronizzati con MIM quando vengono modificati in MIM. Esiste in genere almeno un connettore per ogni directory connessa.
 
@@ -27,8 +26,7 @@ In Forefront Identity Manager i connettori erano detti agenti di gestione. Quest
 
 Questo articolo descrive i connettori inclusi in MIM. Il connettore per Extensible Connectivity 2.0 consente comunque di connettersi anche a più origini dati. Alcuni partner hanno creato connettori personalizzati. Nel wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx) (FIM 2010: Agenti di gestione dei partner) è disponibile un elenco completo.
 
-## Connettori supportati in MIM 2016
-<a id="supported-connectors-in-mim-2016" class="xliff"></a>
+## <a name="supported-connectors-in-mim-2016"></a>Connettori supportati in MIM 2016
 
 | Nome | Versioni supportate dell'origine dati connessa |
 | ---- | ----------------------------------------------- |
@@ -55,7 +53,6 @@ Questo articolo descrive i connettori inclusi in MIM. Il connettore per Extensib
 | File di testo a larghezza fissa | File di testo a larghezza fissa |
 | Formato interscambio dati LDIF | Formato interscambio dati LDIF |
 
-## Argomenti correlati
-<a id="related-topics" class="xliff"></a>
+## <a name="related-topics"></a>Argomenti correlati
 
 [Agenti di gestione di FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)

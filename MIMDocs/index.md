@@ -8,8 +8,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Documentazione di Microsoft Identity Manager
-<a id="microsoft-identity-manager-documentation" class="xliff"></a>
+# <a name="microsoft-identity-manager-documentation"></a>Documentazione di Microsoft Identity Manager
 
 Microsoft Identity Manager 2016 è un sistema integrato di soluzioni Microsoft per la gestione di identità e accessi che consente l'interazione di più archivi di autenticazione locali, come Active Directory, LDAP, Oracle e altre applicazioni, con Azure Active Directory, offrendo così esperienze coerenti per soluzioni SaaS e applicazioni line-of-business locali.
 

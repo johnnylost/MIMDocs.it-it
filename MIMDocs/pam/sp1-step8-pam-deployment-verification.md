@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Passaggio 8: Verifica della distribuzione PAM
-<a id="step-8-pam-deployment-verification" class="xliff"></a>
+# <a name="step-8-pam-deployment-verification"></a>Passaggio 8: Verifica della distribuzione PAM
 
 >[!div class="step-by-step"]
 [« Passaggio 7](sp1-step7-setup-sidhistory-sidfiltering.md)

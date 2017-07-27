@@ -18,15 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Requisiti hardware e software
-<a id="hardware-and-software-requirements" class="xliff"></a>
+# <a name="hardware-and-software-requirements"></a>Requisiti hardware e software
 
 Per Privileged Access Management non esistono requisiti hardware oltre a quelli delle piattaforme software sottostanti. Assicurarsi che la memoria e lo spazio su disco siano sufficienti e che la connettività di rete sia attiva.
 
 Questo articolo descrive i requisiti minimi per una distribuzione di base. Non è destinato a illustrare le prestazioni, la scalabilità o la disponibilità elevata e non rappresenta una topologia di distribuzione consigliata per grandi imprese o ambienti di produzione.
 
-## Installazione da pacchetti software
-<a id="installing-from-software-packages" class="xliff"></a>
+## <a name="installing-from-software-packages"></a>Installazione da pacchetti software
 
 Il software seguente può essere scaricato da TechNet Evaluation Center o MSDN:  
 - Microsoft Identity Manager 2016
@@ -36,33 +34,28 @@ Il software seguente può essere scaricato da TechNet Evaluation Center o MSDN:
 Il software seguente può essere scaricato da GitHub:  
 - PAMSamplePortal: contiene l'applicazione Web di esempio per l'API REST
 
-## Software richiesto
-<a id="required-software" class="xliff"></a>
+## <a name="required-software"></a>Software richiesto
 
 - Windows Server 2012 R2  
 - Windows 8.1 Enterprise o Windows 10 Enterprise  
 - SQL Server 2012 Service Pack 1 o SQL Server 2014  
 
-## Software di valutazione
-<a id="evaluation-software" class="xliff"></a>
+## <a name="evaluation-software"></a>Software di valutazione
 
 Se non si dispone di licenze per Windows, SQL Server o Windows Server è possibile scaricare le versioni di valutazione.
 
-### TechNet Evaluation Center
-<a id="technet-evaluation-center" class="xliff"></a>
+### <a name="technet-evaluation-center"></a>TechNet Evaluation Center
 
 - [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)  
 - [Windows 8.1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)  
 - [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)  
 
-### Area download Microsoft
-<a id="microsoft-download-center" class="xliff"></a>
+### <a name="microsoft-download-center"></a>Area download Microsoft
 
 - [SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
 - [SharePoint Foundation 2013 SP1 e relativi prerequisiti](https://www.microsoft.com/download/details.aspx?id=42039)
 
-## Requisiti hardware
-<a id="hardware-requirements" class="xliff"></a>
+## <a name="hardware-requirements"></a>Requisiti hardware
 
 Per ogni componente di PAM, consultare i requisiti di sistema dei prodotti software.
 

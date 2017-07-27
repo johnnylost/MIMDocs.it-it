@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/13/2017
 ---
-# Configurare un server di gestione delle identità: SharePoint
-<a id="set-up-an-identity-management-server-sharepoint" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Configurare un server di gestione delle identità: SharePoint
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -32,8 +31,7 @@ ms.lasthandoff: 07/13/2017
 > - Password: **Pass@word1**
 
 
-## Installare **SharePoint Foundation 2013 con SP1**
-<a id="install-sharepoint-foundation-2013-with-sp1" class="xliff"></a>
+## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Installare **SharePoint Foundation 2013 con SP1**
 
 > [!NOTE]
 > Il programma di installazione richiede una connessione Internet per scaricare i relativi prerequisiti. Se il computer è in una rete virtuale che non fornisce la connettività Internet, aggiungere un'altra interfaccia di rete al computer che fornisce una connessione a Internet. L'interfaccia può essere disabilitata al termine dell'installazione.
@@ -60,8 +58,7 @@ Seguire questa procedura per installare SharePoint Foundation 2013 SP1. Al termi
 
 4.  Al termine dell'installazione, eseguire la procedura guidata.
 
-## Eseguire la procedura guidata per configurare SharePoint
-<a id="run-the-wizard-to-configure-sharepoint" class="xliff"></a>
+## <a name="run-the-wizard-to-configure-sharepoint"></a>Eseguire la procedura guidata per configurare SharePoint
 
 Seguire i passaggi descritti in **Configurazione guidata Prodotti SharePoint** per configurare SharePoint per l'uso con MIM.
 
@@ -81,8 +78,7 @@ Seguire i passaggi descritti in **Configurazione guidata Prodotti SharePoint** p
 
 8. Nella finestra **Creazione di una raccolta di siti** , fare clic su **Ignora**.  Quindi fare clic su **Fine**.
 
-## Preparare SharePoint per ospitare il portale MIM
-<a id="prepare-sharepoint-to-host-the-mim-portal" class="xliff"></a>
+## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Preparare SharePoint per ospitare il portale MIM
 
 > [!NOTE]
 > Inizialmente, SSL non verrà configurato. Assicurarsi di configurare SSL o equivalente prima di abilitare l'accesso a questo portale.
