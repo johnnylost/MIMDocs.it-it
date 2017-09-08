@@ -12,11 +12,11 @@ ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b459906f0c8d2c631e9b63813e208c9098ea5a4e
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
+ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/02/2017
 ---
 # <a name="planning-a-bastion-environment"></a>Pianificazione di un ambiente bastion
 
@@ -195,7 +195,7 @@ Le impostazioni di Criteri di gruppo nel controller di dominio per il controllo 
 7. Chiudere la finestra Editor Gestione Criteri di gruppo e la finestra Gestione Criteri di gruppo. Applicare le impostazioni di controllo avviando una finestra di PowerShell e digitando:
 
     ```
-    gpupdate /force /target:computere
+    gpupdate /force /target:computer
     ```
 
 Il messaggio "Aggiornamento dei criteri computer completato." dovrebbe essere visualizzato dopo pochi minuti.
