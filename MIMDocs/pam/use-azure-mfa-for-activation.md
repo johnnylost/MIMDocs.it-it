@@ -2,31 +2,32 @@
 title: Usare Azure MFA per l'attivazione di PAM | Documentazione Microsoft
 description: Configurare Azure MFA come secondo livello di sicurezza quando gli utenti attivano ruoli in Privileged Access Management.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b937b30da2dff9bbfeabf7dceb43fcaca99a1b63
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: dd77c0135bee40a90f3ea9fd5c1b2771cbc21793
+ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="using-azure-mfa-for-activation"></a>Uso di Azure MFA per l'attivazione
+
 Quando si configura un ruolo PAM, è possibile scegliere di autorizzare gli utenti che richiedono l'attivazione del ruolo. Le opzioni implementate dall'attività di autorizzazione PAM sono:
 
 - Approvazione del proprietario del ruolo
-- Azure Multi-Factor Authentication (MFA)
+- [Azure Multi-Factor Authentication (MFA)](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 
 Se nessuna delle due opzioni è abilitata, gli utenti candidati vengono attivati automaticamente per il proprio ruolo.
 
-Microsoft Azure Multi-Factor Authentication (MFA) è un servizio di autenticazione che richiede agli utenti di verificare i tentativi di accesso mediante un'app per dispositivi mobili, una telefonata o un SMS. È disponibile per l'uso con Microsoft Azure Active Directory e come servizio per le applicazioni aziendali cloud e locali. Per lo scenario PAM, Azure MFA fornisce un meccanismo di autenticazione aggiuntivo che può essere usato al momento dell'autorizzazione, indipendentemente dalla modalità con cui un utente candidato si è precedentemente autenticato al dominio PRIV di Windows.
+Microsoft Azure Multi-Factor Authentication (MFA) è un servizio di autenticazione che richiede agli utenti di verificare i tentativi di accesso mediante un'app per dispositivi mobili, una telefonata o un SMS. È disponibile per l'uso con Microsoft Azure Active Directory e come servizio per le applicazioni aziendali cloud e locali. Per lo scenario PAM, Microsoft Azure Multi-Factor Authentication fornisce un meccanismo di autenticazione aggiuntivo. Microsoft Azure Multi-Factor Authentication può essere usato per l'autorizzazione, indipendentemente dalla modalità di autenticazione dell'utente al dominio PRIV di Windows.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -39,7 +40,7 @@ Per usare Azure MFA con MIM, è necessario:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Creazione di un provider di Azure MFA
 
-In questa sezione si imposterà il provider Azure MFA in Microsoft Azure Active Directory.  Se si usa già un provider Azure MFA autonomo o configurato con Azure Active Directory Premium, passare alla sezione successiva.
+In questa sezione viene impostato il provider Azure MFA in Microsoft Azure Active Directory.  Se si usa già un provider Azure MFA autonomo o configurato con Azure Active Directory Premium, passare alla sezione successiva.
 
 1.  Aprire un Web browser e connettersi al [portale di Azure classico](https://manage.windowsazure.com) come amministratore della sottoscrizione di Azure.
 
@@ -76,27 +77,27 @@ Successivamente, verrà generato un file che include il materiale di autenticazi
 
 1.  Nel computer in cui è installato il servizio MIM, accedere come amministratore o con l'account utente usato per installare MIM.
 
-2.  Creare una nuova cartella nella directory in cui il servizio MIM è stato installato, ad esempio `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service\\MfaCerts`.
+2.  Creare una nuova cartella nella directory in cui il servizio MIM è stato installato, ad esempio ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts```.
 
-3.  Usando Esplora risorse, passare alla cartella **pf\\certs** del file con estensione zip scaricato nella sezione precedente e copiare il file **cert\_key.p12** nella nuova directory.
+3.  Usando Esplora risorse, passare alla cartella ```pf\certs``` del file con estensione zip scaricato nella sezione precedente. Copiare il file ```cert\_key.p12``` nella nuova directory.
 
-4.  Usando Esplora risorse, passare alla cartella **pf** del file con estensione zip e aprire il file **pf\_auth.cs** in un editor di testo, ad esempio Wordpad.
+4.  Usando Esplora risorse, passare alla cartella ```pf``` del file con estensione zip e aprire il file ```pf\_auth.cs``` in un editor di testo, ad esempio Wordpad.
 
-5.  Trovare questi tre parametri: **LICENSE\_KEY**, **GROUP\_KEY** e **CERT\_PASSWORD**.
+5. Trovare i tre parametri seguenti: ```LICENSE\_KEY```, ```GROUP\_KEY``` e ```CERT\_PASSWORD```.
 
 ![Copia dei valori dal file pf\_auth.cs - Screenshot](media/PAM-Azure-MFA-Activation-Image-2.png)
 
-6.  Tramite il Blocco note, aprire **MfaSettings.xml** in `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service`.
+6. Tramite il Blocco note, aprire **MfaSettings.xml** in ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service```.
 
-7.  Copiare i valori dei parametri LICENSE\_KEY, GROUP\_KEY e CERT\_PASSWORD nel file pf\_auth.cs nei rispettivi elementi xml nel file MfaSettings.xml.
+7. Copiare i valori dei parametri LICENSE\_KEY, GROUP\_KEY e CERT\_PASSWORD nel file pf\_auth.cs nei rispettivi elementi xml nel file MfaSettings.xml.
 
-8.  Nell'elemento XML **<CertFilePath>** specificare il nome del percorso completo del file cert\_key.p12 estratto in precedenza.
+8. Nell'elemento XML **<CertFilePath>** specificare il nome del percorso completo del file cert\_key.p12 estratto in precedenza.
 
-9.  Nell'elemento **<username>** immettere un nome utente qualsiasi.
+9. Nell'elemento **<username>** immettere un nome utente qualsiasi.
 
-10.  Nell'elemento **<DefaultCountryCode>** immettere il codice paese per la connessione degli utenti, ad esempio 1 per Stati Uniti e Canada. Questo valore viene usato in caso di utenti registrati con numeri di telefono senza codice paese. Se il numero di telefono di un utente dispone di un codice paese internazionale diverso da quello configurato per l'organizzazione, il codice paese deve essere incluso nel numero di telefono che verrà registrato.
+10. Nell'elemento **<DefaultCountryCode>** immettere il codice paese per la connessione degli utenti, ad esempio 1 per Stati Uniti e Canada. Questo valore viene usato in caso di utenti registrati con numeri di telefono senza codice paese. Se il numero di telefono di un utente dispone di un codice paese internazionale diverso da quello configurato per l'organizzazione, il codice paese deve essere incluso nel numero di telefono che verrà registrato.
 
-11.  Salvare e sovrascrivere il file **MfaSettings.xml** nella cartella del servizio MIM `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service`. 
+11. Salvare e sovrascrivere il file **MfaSettings.xml** nella cartella del servizio MIM ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service```.
 
 > [!NOTE]
 > Al termine del processo, verificare che il file **MfaSettings.xml**, o le relative copie, o il file con estensione zip non sia leggibile pubblicamente.
@@ -109,16 +110,15 @@ Innanzitutto, il comando `New-PAMUser` copia un attributo numero di telefono dal
 
 Successivamente, il comando `Set-PAMUser` aggiorna l'attributo del numero di telefono nel database del servizio MIM. Il seguente esempio sostituisce un numero di telefono dell'utente PAM esistente nel servizio MIM. La voce di directory rimane invariata.
 
-```
+```PowerShell
 Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 ```
-
 
 ## <a name="configure-pam-roles-for-azure-mfa"></a>Configurare i ruoli PAM per Azure MFA
 
 Quando i numeri di telefono di tutti gli utenti candidati per un ruolo PAM sono archiviati nel database del servizio MIM, il ruolo può essere configurato per Azure MFA. Questa operazione viene eseguita usando il comando `New-PAMRole` o `Set-PAMRole`. Ad esempio:
 
-```
+```PowerShell
 Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 ```
 
@@ -147,3 +147,8 @@ Per trovare altre informazioni sulle chiamate telefoniche con esito negativo (ev
 5.  Selezionare l'intervallo di tempo e la casella di controllo relativa al **nome** nella colonna report aggiuntiva. Fare clic su **Esporta in CSV**.
 
 6.  Quando il report è stato generato, è possibile visualizzarlo nel portale oppure se il report di MFA è dettagliato, è possibile scaricarlo in un file con estensione csv. I valori **SDK** nella colonna **TIPO DI AUTENTICAZIONE** indicano le righe rilevanti come richieste di attivazione PAM: ossia eventi provenienti da MIM o un altro software locale. Il campo **NOME UTENTE** è il GUID dell'oggetto utente nel database del servizio MIM. Se una chiamata ha esito negativo, il valore nella colonna **AUTENTICAZIONE** sarà **No** e il valore della colonna **RISULTATO CHIAMATA** conterrà i dettagli della causa dell'errore.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+- [Che cos'è Azure Multi-Factor Authentication?](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Crea subito il tuo account Azure gratuito](https://azure.microsoft.com/free/)
