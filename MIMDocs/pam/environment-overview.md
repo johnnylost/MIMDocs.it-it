@@ -2,21 +2,21 @@
 title: Panoramica sull'ambiente PAM | Documentazione Microsoft
 description: Individuare la configurazione e il numero necessario di macchine virtuali per una corretta distribuzione di Privileged Access Management
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 3be2e19673a863098739e830d9c83ce264abf412
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="environment-overview"></a>Panoramica sull'ambiente
 
@@ -24,9 +24,14 @@ Privileged Access Management usa quattro macchine virtuali (VM) con unità separ
 
 ![Server PAM: relazioni e piattaforme supportate - Diagramma](media/pam-test-lab-architecture.png)
 
-Sono necessarie almeno tre macchine virtuali.  Se non si dispone già di un dominio AD per PAM per la gestione, sarà necessaria un'ulteriore VM da usare come controller di dominio CORP.  Se si vuole configurare il software PRIV per la disponibilità elevata, saranno necessarie anche due VM aggiuntive.
+Sono necessarie almeno tre macchine virtuali.  Se non si dispone già di un dominio AD per PAM per la gestione, è necessaria una VM aggiuntiva da usare come controller di dominio CORP.  Se si vuole configurare il software PRIV per la disponibilità elevata, sono necessarie anche due VM aggiuntive.
 
-Le unità in cui archiviare le immagini disco di macchina virtuale deve avere almeno 120 GB di spazio libero su disco per contenere tutte le VM.  Se si intende distribuire la disponibilità elevata, assicurarsi che il sottosistema del disco soddisfi i requisiti per l'archiviazione condivisa di SQL.  L'archiviazione condivisa può essere sotto forma di dischi cluster di Windows Server Failover Clustering, dischi in una rete di archiviazione (SAN) o condivisioni di file in un server SMB. Si noti che questi elementi devono essere specifici dell'ambiente bastion. L'archiviazione condivisa con altri carichi di lavoro esterni all'ambiente bastion non è consigliabile perché potrebbe compromettere l'integrità dell'ambiente bastion.
+Le unità in cui archiviare le immagini disco di VM devono avere almeno 120 GB di spazio libero su disco.  Se si intende distribuire la disponibilità elevata, assicurarsi che il sottosistema del disco soddisfi i requisiti per l'archiviazione condivisa di SQL.  L'archiviazione condivisa può essere sotto forma di dischi cluster Windows Server Failover Clustering, dischi in una rete SAN (Storage Area Network) o condivisioni di file in un server SMB.
 
-> [!NOTE]
-> La versione CTP corrente non è compatibile con il contenuto della directory o del database della versione CTP precedente. Se è stato precedentemente valutato MIM per PAM o altri scenari, eseguire il backup e archiviare le macchine virtuali utilizzate per il test e avviare la distribuzione con nuove immagini di macchina virtuale che non siano state precedentemente utilizzate per scenari MIM.
+>[!IMPORTANT]
+L'archiviazione deve essere dedicata all'ambiente bastion. L'archiviazione condivisa all'esterno dell'ambiente bastion non è consigliata perché potrebbe compromettere l'integrità dell'ambiente bastion stesso.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+- [Privileged Access Management per Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md) offre una panoramica di PAM e del suo funzionamento.
+- [Informazioni sui componenti di PAM](principles-of-operation.md) offre una panoramica sui vari componenti di PAM.
