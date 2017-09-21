@@ -2,21 +2,21 @@
 title: Pianificazione di un ambiente bastion | Documentazione Microsoft
 description: 
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/16/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
-ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
+ms.openlocfilehash: 16ad83ab9a0fbe2b93428cf318b5ef138e2f3783
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="planning-a-bastion-environment"></a>Pianificazione di un ambiente bastion
 
@@ -166,7 +166,7 @@ Esistono sette requisiti per l'abilitazione della gestione per un dominio esiste
 
 È necessario un gruppo nel dominio esistente, il cui nome è il nome di dominio NetBIOS seguito da tre simboli del dollaro, ad esempio *CONTOSO$$$*. L'ambito del gruppo deve essere *locale di dominio* e il tipo di gruppo deve essere *Sicurezza*. Questo è necessario per creare i gruppi nella foresta amministrativa dedicata con lo stesso ID di sicurezza dei gruppi nel dominio. Creare questo gruppo tramite il comando di PowerShell seguente, eseguito da un amministratore del dominio esistente in una workstation aggiunta al dominio esistente:
 
-```
+```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
@@ -194,7 +194,7 @@ Le impostazioni di Criteri di gruppo nel controller di dominio per il controllo 
 
 7. Chiudere la finestra Editor Gestione Criteri di gruppo e la finestra Gestione Criteri di gruppo. Applicare le impostazioni di controllo avviando una finestra di PowerShell e digitando:
 
-    ```
+    ```cmd
     gpupdate /force /target:computer
     ```
 
@@ -204,7 +204,7 @@ Il messaggio "Aggiornamento dei criteri computer completato." dovrebbe essere vi
 
 I controller di dominio devono consentire il traffico RPC su connessioni TCP/IP per l'autorità di sicurezza locale dall'ambiente bastion. Nelle versioni precedenti di Windows Server, il supporto per TCP/IP in LSA deve essere abilitato nel Registro di sistema:
 
-```
+```PowerShell
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
@@ -212,7 +212,7 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 Il cmdlet `New-PAMDomainConfiguration` deve essere eseguito sul computer del servizio MIM nel dominio amministrativo. I parametri per questo comando sono il nome di dominio del dominio esistente e le credenziali di un amministratore del dominio.
 
-```
+```PowerShell
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
