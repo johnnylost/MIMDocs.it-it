@@ -2,28 +2,27 @@
 title: 'Distribuire PAM, passaggio 5: Collegamento di foreste | Documentazione Microsoft'
 description: Stabilire una relazione di trust tra le foreste PRIV e CORP in modo che gli utenti con privilegi nella foresta PRIV possano accedere alle risorse CORP.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 6d57b09508d4c0834619be0281fb373d9d3d361e
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Passaggio 5: stabilire una relazione di trust tra le foreste PRIV e CORP
 
 >[!div class="step-by-step"]
 [« Passaggio 4](step-4-install-mim-components-on-pam-server.md)
 [Passaggio 6 »](step-6-transition-group-to-pam.md)
-
 
 Per ogni dominio CORP, ad esempio contoso.local, i controller di dominio PRIV e CONTOSO devono essere associati da un trust. In questo modo, gli utenti del dominio PRIV possono accedere alle risorse nel dominio CORP.
 
@@ -36,7 +35,7 @@ Prima di stabilire una relazione di trust, ogni controller di dominio deve esser
 
 2.  Verificare che ogni controller di dominio CORP esistente sia in grado di instradare i nomi alla foresta PRIV. In ogni controller di dominio esterno alla foresta PRIV, ad esempio CORPDC, avviare PowerShell e digitare il comando seguente:
 
-    ```
+    ```cmd
     nslookup -qt=ns priv.contoso.local.
     ```
     Verificare che l'output indichi un record server dei nomi per il dominio PRIV con l'indirizzo IP corretto.
@@ -55,14 +54,14 @@ In PAMSRV stabilire una relazione di trust unidirezionale con CORPDC, in modo ch
 
 3.  Digitare i comandi di PowerShell seguenti per ogni foresta esistente. Quando richiesto, immettere le credenziali per l'amministratore del dominio CORP (CONTOSO\Administrator).
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
 4.  Digitare i comandi di PowerShell seguenti per ogni dominio nelle foreste esistenti. Quando richiesto, immettere le credenziali per l'amministratore del dominio CORP (CONTOSO\Administrator).
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
@@ -80,9 +79,9 @@ Per ogni foresta esistente, abilitare l'accesso in lettura ad Active Directory d
 7.  Nell'elenco delle attività comuni selezionare **Legge tutte le informazioni utente**, quindi fare clic su **Avanti** e su **Fine**.  
 8.  Chiudere Utenti e computer di Active Directory.
 
-9.  Aprire una finestra di PowerShell.  
-10.  Usare `netdom` per garantire che la cronologia SID sia abilitata e che il filtro SID sia disabilitato. Digitare il comando seguente:  
-    ```
+9.  Aprire una finestra di PowerShell.
+10.  Usare `netdom` per garantire che la cronologia SID sia abilitata e che il filtro SID sia disabilitato. Digitare il comando seguente:
+    ```cmd
     netdom trust contoso.local /quarantine /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
@@ -98,7 +97,7 @@ Per ogni foresta esistente, abilitare l'accesso in lettura ad Active Directory d
 
 3.  Digitare i comandi di PowerShell seguenti.
 
-    ```
+    ```cmd
     net start "PAM Component service"
     net start "PAM Monitoring service"
     ```

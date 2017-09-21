@@ -2,21 +2,21 @@
 title: Informazioni sui componenti di PAM | Documentazione Microsoft
 description: Privileged Access Management condivide alcuni componenti con MIM e ha alcuni componenti propri. Informazioni sul funzionamento della combinazione di questi componenti.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: a129088989bb977c191e9dc372fed07044314403
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="understand-the-components-of-pam"></a>Informazioni sui componenti di PAM
 
@@ -27,7 +27,7 @@ Privileged Access Management mantiene separati l'accesso amministrativo dall'acc
 
 La soluzione MIM come configurata per PAM include i componenti seguenti:  
 
-- **Servizio MIM**: implementa la logica di business per le attività di gestione delle identità e degli accessi, tra cui la gestione degli account con privilegi e delle richieste di elevazione dei privilegi.   
+- **Servizio MIM**: implementa la logica di business per le attività di gestione delle identità e degli accessi, tra cui la gestione degli account con privilegi e delle richieste di elevazione dei privilegi.
 - **Portale MIM**: portale di SharePoint, ospitato da SharePoint 2013, che fornisce l'interfaccia utente per la gestione e la configurazione degli amministratori.
 - **Database del servizio MIM**: archiviato in SQL Server 2012 o 2014 con i dati e i metadati sull'identità necessari per il servizio MIM.
 - **Servizio di monitoraggio PAM** e **Servizio componenti PAM**: due servizi che gestiscono il ciclo di vita degli account con privilegi e supportano AD di PRIV nella gestione del ciclo di vita dell'appartenenza ai gruppi.
