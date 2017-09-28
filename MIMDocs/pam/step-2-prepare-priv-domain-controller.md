@@ -2,21 +2,21 @@
 title: 'Distribuire PAM, passaggio 2: controller di dominio PRIV | Documentazione Microsoft'
 description: "Preparare il controller di dominio PRIV, che fornirà l'ambiente bastion in cui Privileged Access Management è isolato."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/14/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: edc15b41d4248887f4a93217f68d8125f6500585
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: de3392648f187ce6007bba332c0f191d32980c94
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Step 2: preparare il primo controller di dominio PRIV
 
@@ -31,6 +31,7 @@ In questo passaggio si creerà un nuovo dominio che fornisce all'ambiente bastio
 In questa sezione si imposterà una macchina virtuale come controller di dominio per una nuova foresta.
 
 ### <a name="install-windows-server-2012-r2"></a>Installare Windows Server 2012 R2
+
 In un'altra macchina virtuale nuova in cui non è installato alcun software, installare Windows Server 2012 R2 per creare un computer "PRIVDC".
 
 1. Selezionare questa opzione per eseguire un'installazione personalizzata (non un aggiornamento) di Windows Server. Durante l'installazione, specificare **Windows Server 2012 R2 Standard (server con GUI) x64**; _non selezionare_ **Data Center né Server Core**.
@@ -44,13 +45,14 @@ In un'altra macchina virtuale nuova in cui non è installato alcun software, ins
 5. Dopo aver riavviato il server, accedere come amministratore. Utilizzando il Pannello di controllo, configurare il computer per verificare la necessità di installare eventuali aggiornamenti. Potrebbe essere necessario il riavvio del server.
 
 ### <a name="add-roles"></a>Aggiungere ruoli
+
 Selezionare i ruoli di Servizi di dominio Active Directory(AD DS) e Server DNS.
 
 1. Avviare PowerShell come amministratore.
 
 2. Digitare i comandi seguenti per preparare un'installazione di Windows Server Active Directory.
 
-  ```
+  ```PowerShell
   import-module ServerManager
 
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -60,7 +62,7 @@ Selezionare i ruoli di Servizi di dominio Active Directory(AD DS) e Server DNS.
 
 Avviare PowerShell e digitare i comandi seguenti per configurare il dominio di origine per consentire la chiamata RPC (Remote Procedure Call) al database Gestione account di sicurezza (SAM).
 
-```
+```PowerShell
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
@@ -74,9 +76,8 @@ In questo documento, il nome priv.contoso.local viene usato come nome di dominio
 
 1. In una finestra di PowerShell digitare i comandi seguenti per creare un nuovo dominio.  Verrà inoltre creata una delega DNS in un dominio di livello superiore (contoso.local) creato nel passaggio precedente.  Se si prevede di configurare DNS in un secondo momento, omettere i parametri `CreateDNSDelegation -DNSDelegationCredential $ca`.
 
-  ```
+  ```PowerShell
   $ca= get-credential
-
   Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
   ```
 
@@ -87,13 +88,14 @@ In questo documento, il nome priv.contoso.local viene usato come nome di dominio
 Una volta completata la creazione della foresta, il server verrà riavviato automaticamente.
 
 ### <a name="create-user-and-service-accounts"></a>Creare account utente e del servizio
+
 Creare gli account utente e del servizio per l'installazione del servizio e del portale MIM. Questi account verranno inseriti nel contenitore Users del dominio priv.contoso.local.
 
 1. Dopo aver riavviato il server, accedere a PRIVDC come amministratore di dominio (PRIV\\Administrator).
 
 2. Avviare PowerShell e digitare i comandi seguenti. La password 'Pass@word1' è solo un esempio, per gli account è possibile usare una password diversa.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
@@ -159,7 +161,7 @@ Creare gli account utente e del servizio per l'installazione del servizio e del 
 
 ### <a name="configure-auditing-and-logon-rights"></a>Configurare i diritti di accesso e di controllo.
 
-È necessario configurare il controllo per stabilire la configurazione PAM tra foreste.  
+È necessario configurare il controllo per stabilire la configurazione PAM tra foreste.
 
 1. Assicurarsi di essere connessi come amministratore di dominio (PRIV\\Administrator).
 
@@ -199,7 +201,7 @@ Creare gli account utente e del servizio per l'installazione del servizio e del 
 
 19. Avviare una finestra di PowerShell come amministratore e digitare il comando seguente per aggiornare il controller di dominio in base alle impostazioni dei criteri di gruppo.
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -216,7 +218,7 @@ Tramite PowerShell in PRIVDC, configurare l'inoltro del nome DNS affinché il do
 
   Se nel passaggio precedente è stato creato un dominio contoso.local, specificare *10.1.1.31* per l'indirizzo IP della rete virtuale del computer CORPDC.
 
-  ```
+  ```PowerShell
   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
   ```
 
@@ -227,7 +229,7 @@ Tramite PowerShell in PRIVDC, configurare l'inoltro del nome DNS affinché il do
 
 1. Tramite PowerShell, aggiungere i nomi dell'entità servizio in modo che SharePoint, l'API REST di PAM e il servizio MIM possano usare l'autenticazione Kerberos.
 
-  ```
+  ```cmd
   setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
   setspn -S http/pamsrv PRIV\SharePoint
   setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
@@ -241,25 +243,24 @@ Tramite PowerShell in PRIVDC, configurare l'inoltro del nome DNS affinché il do
 
 Seguire questa procedura in PRIVDC come amministratore di dominio.
 
-1. Avviare **Utenti e computer di Active Directory**.  
-2. Fare clic con il pulsante destro del mouse sul dominio **priv.contoso.local** e selezionare **Delega controllo**.  
-3. Nella scheda Gruppi e utenti selezionati fare clic su **Aggiungi**.  
-4. Nella finestra Seleziona utenti computer o gruppi digitare *mimcomponent; mimmonitor; mimservice* e fare clic su **Controlla nomi**. Dopo aver sottolineato i nomi fare clic su **OK** e quindi su **Avanti**.  
+1. Avviare **Utenti e computer di Active Directory**.
+2. Fare clic con il pulsante destro del mouse sul dominio **priv.contoso.local** e selezionare **Delega controllo**.
+3. Nella scheda Gruppi e utenti selezionati fare clic su **Aggiungi**.
+4. Nella finestra Seleziona utenti computer o gruppi digitare *mimcomponent; mimmonitor; mimservice* e fare clic su **Controlla nomi**. Dopo aver sottolineato i nomi fare clic su **OK** e quindi su **Avanti**.
 5. Nell'elenco delle attività comuni selezionare **Crea, elimina e gestisce gli account utente** e **Modifica appartenenza di un gruppo** e quindi fare clic su **Avanti** e **Fine**.
 
-6. Fare nuovamente clic con il pulsante destro del mouse sul dominio **priv.contoso.local** e selezionare **Delega controllo**.  
+6. Fare nuovamente clic con il pulsante destro del mouse sul dominio **priv.contoso.local** e selezionare **Delega controllo**.
 7. Nella scheda Gruppi e utenti selezionati fare clic su **Aggiungi**.  
-8. Nella finestra Seleziona utenti, computer o gruppi digitare *MIMAdmin* e fare clic su **Controlla nomi**. Dopo aver sottolineato i nomi fare clic su **OK** e quindi su **Avanti**.  
-9. Selezionare **Personalizza attività**, applicare a **Questa cartella**, con **Autorizzazioni generali**.    
-10. Nell'elenco delle autorizzazioni selezionare gli elementi seguenti:  
-  - **Leggi**  
-  - **Scrivi**  
-  - **Crea tutti gli oggetti figlio**  
-  - **Elimina tutti gli oggetti figlio**  
-  - **Leggi tutte le proprietà**  
-  - **Scrivi tutte le proprietà**  
-  - **Esegui migrazione cronologia**  
-  Fare clic su **Avanti** quindi **Fine**.
+8. Nella finestra Seleziona utenti, computer o gruppi digitare *MIMAdmin* e fare clic su **Controlla nomi**. Dopo aver sottolineato i nomi fare clic su **OK** e quindi su **Avanti**.
+9. Selezionare **Personalizza attività**, applicare a **Questa cartella**, con **Autorizzazioni generali**.
+10. Nell'elenco delle autorizzazioni selezionare gli elementi seguenti:
+  - **Leggi**
+  - **Scrivi**
+  - **Crea tutti gli oggetti figlio**
+  - **Elimina tutti gli oggetti figlio**
+  - **Leggi tutte le proprietà**
+  - **Scrivi tutte le proprietà**
+  - **Esegui migrazione cronologia SID** fare clic su **Avanti** e quindi su **Fine**.
 
 11. Fare nuovamente clic con il pulsante destro del mouse sul dominio **priv.contoso.local** e selezionare **Delega controllo**.  
 12. Nella scheda Gruppi e utenti selezionati fare clic su **Aggiungi**.  
@@ -269,15 +270,17 @@ Seguire questa procedura in PRIVDC come amministratore di dominio.
 16. Chiudere Utenti e computer di Active Directory.
 
 17. Aprire un prompt dei comandi.  
-18. Esaminare l'elenco di controllo di accesso relativo all'oggetto Admin SD Holder nei domini PRIV. Ad esempio, se il dominio è "priv.contoso.local", digitare il comando  
-  ```
+18. Esaminare l'elenco di controllo di accesso relativo all'oggetto Admin SD Holder nei domini PRIV. Ad esempio, se il dominio è "priv.contoso.local", digitare il comando
+  ```cmd
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
   ```
-19. Aggiornare l'elenco di controllo di accesso in base alle esigenze per garantire che il servizio MIM e il servizio del componente MIM possano aggiornare l'appartenenza dei gruppi protetti in base a questo elenco di controllo.  Digitare il comando:  
-  ```
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
-  ```
+19. Aggiornare l'elenco di controllo di accesso in base alle esigenze per garantire che il servizio MIM e il servizio del componente MIM possano aggiornare l'appartenenza dei gruppi protetti in base a questo elenco di controllo.  Digitare il comando:
+
+```cmd
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"
+dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
+```
+
 20. Riavviare il server PRIVDC in modo che le modifiche avranno effetto.
 
 ## <a name="prepare-a-priv-workstation"></a>Preparare una workstation PRIV
