@@ -4,19 +4,19 @@ description: "I report attività di controllo ibridi in Azure Active Directory c
 keywords: 
 author: fimguy
 ms.author: fimguy
-manager: femila
-ms.date: 04/28/2017
+manager: bhu
+ms.date: 09/28/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
-ms.reviewer: mwahl
+ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: 678626e7c32659570de88d8178c16821cceaf7ee
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 151fbd26011ca76901d181131a88ded8a718a27a
+ms.sourcegitcommit: 0f99de31fe6b52ec692b3886073909f549a451d6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Report di controllo di gestione delle identità ibride in Azure Active Directory - Anteprima pubblica (Aggiornamento)
 Con i report attività di controllo di Azure Active Directory (AD) è possibile visualizzare un singolo report per monitorare le attività di gestione delle identità locali o nel cloud. Questa funzionalità consente di gestire tutti i dati di identità e accesso in un'unica posizione, risparmiando tempo e riducendo i costi totali.
@@ -41,6 +41,9 @@ Il processo di creazione di report ibridi prevede i passaggi seguenti:
 4. In Azure i dati dell'attività rimangono memorizzati per un mese.
 5. Il portale di Azure recupera i dati dei report di controllo e ne esegue il rendering nel pannello dei report di controllo di Azure.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="next-steps"></a>Passaggi successivi
 - Altre informazioni su [Working with Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md) (Uso del servizio di creazione report ibridi di Identity Manager)
 - Altre informazioni su [Report delle attività di controllo nel portale di Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- Altre informazioni sui [criteri di conservazione dei report](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-retention)
+- Altre informazioni sull'[integrazione dei log di Microsoft Azure (SIEM)](https://docs.microsoft.com/en-us/azure/security/security-azure-log-integration-overview)
+- Altre informazioni sull'[API di creazione report di Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-api-getting-started)
