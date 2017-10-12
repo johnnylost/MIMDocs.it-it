@@ -10,11 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 21a2fb4459f46fe0dea89ff016aa77358f940c24
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 0e039c0b05cc9088a6934c07ead09fb5250f8a81
+ms.sourcegitcommit: 81ad3ede52c3a4308b806c0c8a3fd42b5f5965b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Come si esegue il provisioning di utenti in Servizi di dominio Active Directory
 
@@ -294,7 +294,7 @@ Le tabelle seguenti illustrano la configurazione della regola di sincronizzazion
 
 
  >[!NOTE]
- Importante. Verificare di aver selezionato il flusso iniziale solo per il flusso di attributi che ha DN come destinazione.                                                                          
+Verificare di aver selezionato il flusso iniziale solo per il flusso di attributi che ha DN come destinazione.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Passaggio 7: Creare il flusso di lavoro
 
