@@ -63,7 +63,7 @@ Quando si configura un agente di gestione MIM, è necessario specificare un acco
 
     -   Nome utente: mimma
 
-    -   Password: Pass@word
+    -   Password: Pass@word 
 
     -   Dominio: contoso
 
