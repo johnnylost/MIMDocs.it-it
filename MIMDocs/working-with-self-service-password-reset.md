@@ -12,12 +12,15 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c6786ea653f178b25ea3da4fbd3b01d21b79c622
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 90c773c30b0ab23ad29ca1a215745bf59b188764
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/14/2017
 ---
+>[!IMPORTANT]
+In seguito all'annuncio della deprecazione di Azure Multi-Factor Authentication Software Development Kit. Azure MFA SDK sarà supportato per i clienti esistenti fino alla data di ritiro, ovvero 01 ottobre 2018. I nuovi clienti e i clienti attuali non saranno in grado di scaricare più l'SDK tramite il portale di Azure classico. Per scaricarlo sarà necessario rivolgersi al supporto tecnico clienti di Azure per ricevere il pacchetto di credenziali del servizio MFA generato. <br> Il team di sviluppo Microsoft sta pianificando modifiche per MFA tramite l'integrazione di MFA Server SDK. Tali modifiche verranno incluse in un prossimo hotfix agli inizi del 2018.
+
 # <a name="working-with-self-service-password-reset"></a>Uso della reimpostazione della password self-service
 Microsoft Identity Manager 2016 fornisce funzionalità aggiuntive alla funzionalità di reimpostazione della password self service. Questa funzionalità è stata migliorata con alcune importanti funzionalità:
 
@@ -68,7 +71,7 @@ Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure 
 
 3.  Fare clic su **Servizi app &gt; Active Directory &gt; Provider di Autenticazione a più fattori &gt; Creazione rapida**.
 
-![Immagine della creazione rapida di MFA nel portale di Azure](media/MIM-SSPR-Azureportal.png)
+![Immagine della creazione rapida di MFA nei portali di Azure](media/MIM-SSPR-Azureportal.png)
 
 4.  Nel campo **Nome** immettere **SSPRMFA**, quindi fare clic su **Crea**.
 
@@ -82,7 +85,7 @@ Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure 
 
 7.  Nel riquadro sinistro della nuova finestra, sotto **Configura**, fare clic su **Impostazioni**.
 
-8.  In **Avviso di illecito**deselezionare l'opzione **Blocca utente se viene segnalato illecito** . In tal modo si evita il blocco dell'intero servizio.
+8.  In **Avviso di illecito** deselezionare l'opzione **Blocca utente se viene segnalato illecito. In tal modo si evita il blocco dell'intero servizio.
 
 9. Nella finestra **Autenticazione a più fattori di Azure** visualizzata, fare clic su **SDK** in **Download** nel menu a sinistra.
 
@@ -136,7 +139,7 @@ Gli utenti dell'organizzazione possono ora registrarsi per la reimpostazione del
 
 #### <a name="register-users-for-password-reset"></a>Registrare gli utenti per la reimpostazione della password
 
-1.  Un utente avvierà un Web browser per passare al portale di registrazione per la reimpostazione della password MIM.  In genere, questo portale è configurato con l'autenticazione di Windows.  All'interno del portale gli utenti forniranno di nuovo nome utente e password per confermare la propria identità.
+1.  Un utente avvierà un Web browser e passerà al portale di registrazione per la reimpostazione della password MIM.  In genere, questo portale è configurato con l'autenticazione di Windows.  All'interno del portale gli utenti forniranno di nuovo nome utente e password per confermare la propria identità.
 
     Gli utenti devono accedere al portale di registrazione password ed effettuare l’autenticazione con nome utente e password.
 
@@ -182,7 +185,7 @@ Installando Componenti aggiuntivi ed estensioni MIM in un computer aggiunto al d
 
 1.  Gli utenti possono aprire un Web browser, passare al **portale per la reimpostazione della password** , immettere il proprio nome utente e fare clic su **Avanti** .
 
-    Se è stata configurata l'autenticazione a più fattori, l'utente riceverà una telefonata. In background, l’autenticazione a più fattori di Azure effettua una chiamata al numero fornito dall’utente in fase di iscrizione al servizio.
+    Se è stata configurata l'autenticazione a più fattori, l'utente riceverà una telefonata. In background, Azure MFA effettua una chiamata al numero fornito dall'utente in fase di iscrizione al servizio.
 
     Quando un utente risponde al telefono, gli viene chiesto di premere il tasto cancelletto (#) sul telefono. Quindi l'utente fa clic su **Avanti** nel portale.
 
