@@ -5,15 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/06/2017
+ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 0db8c2ebaee204c929dc7345ac6858fff6b0993b
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 0d814dd27fe53ee7cfc46eac24ec577b05f78e52
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Guida ai concetti di Microsoft BHOLD Suite
 
@@ -47,7 +47,7 @@ Un vantaggio aggiuntivo del controllo degli accessi in base al ruolo è la capac
 Con BHOLD Suite è possibile specificare e strutturare i ruoli nell'organizzazione, eseguire il mapping di utenti a determinati ruoli ed eseguire il mapping delle autorizzazioni appropriate a ogni ruolo. Questa struttura, detta modello a ruoli, contiene e connette tra loro cinque tipi di oggetti: 
 
 - Unità organizzative
-- Utenti
+- Users
 - Ruoli
 - Autorizzazioni
 - Applicazioni
@@ -73,7 +73,7 @@ In questo esempio ogni venditore appartiene a due unità organizzative: una che 
 
 È possibile creare le unità organizzative in BHOLD Suite con il portale Web BHOLD Core o usando BHOLD Model Generator.
 
-#### <a name="users"></a>Utenti
+#### <a name="users"></a>Users
 
 Come indicato in precedenza, ogni utente deve appartenere ad almeno un'unità organizzativa. Dato che le unità organizzative sono il meccanismo principale per associare un utente ai ruoli desiderati, nella maggior parte delle organizzazioni un determinato utente appartiene a più unità organizzative, in modo da facilitare l'associazione di ruoli a tale utente. In alcuni casi però può essere necessario associare un ruolo a un utente indipendentemente dalle unità organizzative alle quali appartiene l'utente stesso. Di conseguenza un utente può essere assegnato direttamente a un ruolo ma allo stesso tempo ottenere ruoli dalle unità organizzative a cui appartiene.
 
@@ -213,7 +213,7 @@ Il portale BHOLD Analytics consente di creare set di regole con una o più regol
 
 Una regola può sottoporre a test uno dei set di elementi che seguono:
 
-- Utenti
+- Users
 - Unità organizzative
 - Ruoli
 - Autorizzazioni
@@ -341,3 +341,7 @@ Una funzionalità importante ed efficace di Forefront Identity Manager 2010 e Fo
 È importante osservare che le estensioni BHOLD al portale MIM supportano la gestione self-service di ruoli e flussi di lavoro e la creazione di report. Le altre funzioni di amministrazione di BHOLD e l'attestazione sono rese disponibili dai portali Web dei moduli BHOLD, ospitati separatamente dal portale MIM.
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+- [Guida all'installazione di BHOLD](bhold-installation-guide.md)
+- [Riferimento per gli sviluppatori BHOLD](../reference/mim2016-bhold-developer-reference.md)
+- [Cronologia delle versioni BHOLD](../reference/version-bhold-history.md)

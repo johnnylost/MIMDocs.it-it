@@ -11,11 +11,11 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 694ec1e0d6577c4335fd75ab0984aed9a0e4f220
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: fe361c3f6dd85a478d655a910f0f3ec9802128b0
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Procedure consigliate per Microsoft Identity Manager 2016
 
@@ -189,8 +189,7 @@ MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
-È importante comprendere i requisiti relativi al disco per il modello di recupero del server SQL. A seconda della pianificazione del backup, per limitare l'utilizzo di spazio su disco prendere in considerazione la possibilità di usare la modalità di recupero con registrazione minima durante il caricamento iniziale del sistema. È tuttavia necessario comprendere le implicazioni di questa scelta dal punto di vista del rischio di perdita di dati.
-Se si usa la modalità di recupero con registrazione completa, è necessario gestire l'utilizzo del disco tramite backup. Per evitare un utilizzo elevato dello spazio su disco sono necessari backup frequenti del log delle transazioni.
+È importante comprendere i requisiti relativi al disco per il modello di recupero del server SQL. A seconda della pianificazione del backup, per limitare l'utilizzo di spazio su disco prendere in considerazione la possibilità di usare la modalità di recupero con registrazione minima durante il caricamento iniziale del sistema. È tuttavia necessario comprendere le implicazioni di questa scelta dal punto di vista del rischio di perdita di dati. Se si usa la modalità di recupero con registrazione completa, è necessario gestire l'utilizzo del disco tramite backup. Per evitare un utilizzo elevato dello spazio su disco sono necessari backup frequenti del log delle transazioni.
 
 >[!IMPORTANT]
 La mancata implementazione di queste procedure causa un utilizzo molto elevato dello spazio su disco, che potrebbe esaurirsi. Altri dettagli su questo argomento sono disponibili in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370) (Panoramica dei modelli di recupero). [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Guida al backup e al ripristino di FIM) contiene informazioni aggiuntive.
@@ -200,7 +199,6 @@ La mancata implementazione di queste procedure causa un utilizzo molto elevato d
 Durante il processo di caricamento iniziale, è consigliabile applicare a FIM solo la configurazione minima necessaria per le regole di criteri di gestione e per le definizioni di set. Al termine del caricamento dei dati, creare i set aggiuntivi necessari per la distribuzione. Usare l'impostazione Esegui in base all'aggiornamento criteri per i flussi di lavoro azione per applicare tali criteri in modo retroattivo ai dati caricati.
 
 ### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Passaggio 3: Configurare e popolare il servizio FIM con dati di identità esterni
-
 
 A questo punto è necessario seguire la procedure descritte nella guida How Do I Synchronize Users from Active Directory
 
@@ -224,13 +222,11 @@ Per ogni agente di gestione di origine compreso nel ciclo di inizializzazione es
 
 ### <a name="step-4-apply-your-full-mim-configuration"></a>Passaggio 4: Applicare la configurazione MIM completa
 
-
 Al termine del caricamento iniziale dei dati, è consigliabile applicare la configurazione MIM completa per la distribuzione.
 
 A seconda dello scenario, può essere necessaria la creazione di set, regole di criteri di gestione e flussi di lavoro aggiuntivi. Per tutti i criteri da applicare in modo retroattivo a tutti gli oggetti esistenti nel sistema, usare l'impostazione Esegui in base all'aggiornamento criteri per i flussi di lavoro azione per applicare tali criteri in modo retroattivo ai dati caricati.
 
 ### <a name="step-5-reconfigure-sql-to-previous-settings"></a>Passaggio 5: Ripristinare le impostazioni precedenti di SQL
-
 
 Ricordarsi di ripristinare le impostazioni di SQL normali. Sono inclusi:
 
@@ -267,8 +263,7 @@ ActivityInformationConfiguration richiedono il numero di versione per fare rifer
 
 ### <a name="avoid-cyclic-references"></a>Evitare riferimenti ciclici
 
-In una configurazione MIM i riferimenti ciclici non sono in genere consigliati.
-Possono tuttavia verificarsi cicli se il set A fa riferimento al set B e quest'ultimo a sua volta fa riferimento al set A. Per evitare problemi dovuti ai riferimenti ciclici, modificare la definizione del set A o del set B in modo nessuno dei due faccia riferimento all'altro. Riavviare quindi il processo di migrazione. Se sono presenti riferimenti ciclici e il cmdlet Compare-FIMConfig genera un errore, è necessario interrompere il ciclo manualmente. Poiché il cmdlet Compare-FIMConfig restituisce un elenco di modifiche in ordine di precedenza, è necessario che non esistano cicli tra i riferimenti degli oggetti di configurazione.
+In una configurazione MIM i riferimenti ciclici non sono in genere consigliati. Possono tuttavia verificarsi cicli se il set A fa riferimento al set B e quest'ultimo a sua volta fa riferimento al set A. Per evitare problemi dovuti ai riferimenti ciclici, modificare la definizione del set A o del set B in modo nessuno dei due faccia riferimento all'altro. Riavviare quindi il processo di migrazione. Se sono presenti riferimenti ciclici e il cmdlet Compare-FIMConfig genera un errore, è necessario interrompere il ciclo manualmente. Poiché il cmdlet Compare-FIMConfig restituisce un elenco di modifiche in ordine di precedenza, è necessario che non esistano cicli tra i riferimenti degli oggetti di configurazione.
 
 ## <a name="security"></a>Sicurezza
 
@@ -394,17 +389,16 @@ Per impostazione predefinita, MIM 2016 ripulisce ogni 30 giorni gli oggetti di s
 
 In MIM sono disponibili due tipi di regole di criteri di gestione, il tipo Richiesta e il tipo Set di transizione:
 
--   Richiesta
+-  Richiesta
 
- - Tipo usato per definire i criteri di controllo di accesso (autenticazione, autorizzazione e azione) per le operazioni di creazione, lettura, aggiornamento o eliminazione (CRUD) sulle risorse.
- - Applicato quando viene eseguita un'operazione CRUD su una risorsa di destinazione in FIM.
-   - Ambito stabilito dai criteri di corrispondenza definiti nella regola, ovvero le richieste CRUD a cui si applica la regola stessa.
+  - Tipo usato per definire i criteri di controllo di accesso (autenticazione, autorizzazione e azione) per le operazioni di creazione, lettura, aggiornamento o eliminazione (CRUD) sulle risorse.
+  - Applicato quando viene eseguita un'operazione CRUD su una risorsa di destinazione in FIM.
+  - Ambito stabilito dai criteri di corrispondenza definiti nella regola, ovvero le richieste CRUD a cui si applica la regola stessa.
 
-
--   Set di transizione
- - Tipo usato per definire i criteri indipendentemente dal modo in cui l'oggetto è passato allo stato corrente rappresentato dal set di transizione. Usare una regola Set di transizione per modellare criteri di diritto.
- - Questo tipo viene applicato quando una risorsa entra o esce da un set associato.
- - Ambito corrispondente ai membri del set.
+- Set di transizione
+  - Tipo usato per definire i criteri indipendentemente dal modo in cui l'oggetto è passato allo stato corrente rappresentato dal set di transizione. Usare una regola Set di transizione per modellare criteri di diritto.
+  - Questo tipo viene applicato quando una risorsa entra o esce da un set associato.
+  - Ambito corrispondente ai membri del set.
 
 >[NOTA] Per altri dettagli, vedere [Designing Business Policy Rules](http://go.microsoft.com/fwlink/?LinkID=183691) (Progettazione di regole di criteri di business).
 
@@ -413,18 +407,14 @@ In MIM sono disponibili due tipi di regole di criteri di gestione, il tipo Richi
 Quando si applica una configurazione, basarsi sul principio del privilegio minimo. Le regole di criteri di gestione controllano i criteri di accesso per la distribuzione FIM. Abilitare solo le funzionalità usate dalla maggior parte degli utenti. Non tutti gli utenti, ad esempio, usano FIM per la gestione di gruppi. Pertanto è consigliabile disabilitare le regole di criteri di gestione di gruppi associate. Per impostazione predefinita, in FIM la maggior parte delle autorizzazioni non amministrative sono disabilitate.
 
 #### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>Duplicare le regole di criteri di gestione predefinite anziché modificarle direttamente
-
 Se è necessario modificare le regole di criteri di gestione predefinite, è consigliabile creare una nuova regola con la configurazione necessaria e disattivare la regola predefinita corrispondente. Ciò consente di evitare che eventuali modifiche future alle regole predefinite, introdotte tramite il processo di aggiornamento, compromettano la configurazione del sistema.
 
 #### <a name="end-user-permissions-should-use-explicit-attribute-lists-scoped-to-users-business-needs"></a>Le autorizzazioni degli utenti finali devono usare elenchi di attributi espliciti con ambito limitato alle esigenze aziendali degli utenti stessi
-
-L'uso di elenchi di attributi espliciti consente di evitare che vengano accidentalmente concesse autorizzazioni a utenti senza privilegi quando si aggiungono attributi agli oggetti.
-È preferibile che gli amministratori debbano concedere l'accesso a nuovi attributi in modo esplicito, anziché rimuovere tale accesso.
+L'uso di elenchi di attributi espliciti consente di evitare che vengano accidentalmente concesse autorizzazioni a utenti senza privilegi quando si aggiungono attributi agli oggetti. È preferibile che gli amministratori debbano concedere l'accesso a nuovi attributi in modo esplicito, anziché rimuovere tale accesso.
 
 È consigliabile limitare l'accesso ai dati all'ambito definito dalle esigenze aziendali degli utenti. I membri di un gruppo, ad esempio, non devono avere accesso all'attributo di filtro del gruppo a cui appartengono. Il filtro può rivelare inavvertitamente dati aziendali a cui l'utente non avrebbe normalmente accesso.
 
 #### <a name="mprs-should-reflect-effective-permissions-in-the-system"></a>Le regole di criteri di gestione devono riflettere le autorizzazioni effettivamente utilizzabili nel sistema
-
 Evitare di concedere autorizzazioni ad attributi che gli utenti non possono mai usare. Ad esempio, non concedere l'autorizzazione per la modifica di attributi di risorse core, ad esempio objectType. Nonostante la regola di criteri di gestione, qualsiasi tentativo di modificare il tipo di una risorsa dopo averla creata viene negato dal sistema.
 
 #### <a name="read-permissions-should-be-separate-from-modify-and-create-permissions-when-using-explicit-attributes-in-mprs"></a>Se nelle regole di criteri di gestione si usano attributi espliciti, separare le autorizzazioni di lettura da quelle di modifica e creazione
@@ -443,12 +433,9 @@ Per una maggiore efficienza, gli attributi con gli stessi requisiti di accesso p
 
 In FIM le autorizzazioni sono definite come asserzioni positive. FIM non supporta la negazione di autorizzazioni. Di conseguenza, se si concede accesso senza restrizioni a una risorsa, la successiva esclusione di autorizzazioni per tale risorsa è un'operazione complessa. Come procedura consigliata, concedere solo le autorizzazioni necessarie.
 
->[!NOTE]
-Di seguito è riportata la sezione dei diritti. Mi chiedo come unirle in modo da evitare la creazione di intestazioni di livello 5
 #### <a name="use-tmprs-to-define-custom-entitlements"></a>Definire diritti personalizzati tramite regole di criteri di gestione di tipo Set di transizione
 
-Per definire diritti personalizzati, usare regole di criteri di gestione di tipo Set di transizione anziché di tipo Richiesta.
-Le regole di criteri di gestione di tipo Set di transizione rappresentano un modello basato sugli stati per assegnare o rimuovere diritti in base all'appartenenza ai set di transizione, o ruoli, definiti, e alle attività del flusso di lavoro associato. Queste regole devono essere sempre definite in coppia, una per le risorse in fase di transizione in entrata e una per le risorse in fase di transizione in uscita. Ogni regola di criteri di gestione di transizione, poi, deve contenere flussi di lavoro separati per le attività di provisioning e deprovisioning.
+Per definire diritti personalizzati, usare regole di criteri di gestione di tipo Set di transizione anziché di tipo Richiesta. Le regole di criteri di gestione di tipo Set di transizione rappresentano un modello basato sugli stati per assegnare o rimuovere diritti in base all'appartenenza ai set di transizione, o ruoli, definiti, e alle attività del flusso di lavoro associato. Queste regole devono essere sempre definite in coppia, una per le risorse in fase di transizione in entrata e una per le risorse in fase di transizione in uscita. Ogni regola di criteri di gestione di transizione, poi, deve contenere flussi di lavoro separati per le attività di provisioning e deprovisioning.
 
 >[!NOTE]
 Per tutti i flussi di lavoro di deprovisioning assicurarsi che l'attributo Esegui in base all'aggiornamento criteri sia impostato su true.
@@ -461,8 +448,7 @@ Quando si crea una coppia di regole di tipo Set di transizione, attivare la rego
 
 I flussi di lavoro di provisioning devono prima di tutto verificare se per la risorsa di destinazione è già stato eseguito il provisioning in conformità al diritto. In caso affermativo, non deve essere eseguita alcuna operazione.
 
-I flussi di lavoro di deprovisioning devono prima di tutto verificare se per la risorsa di destinazione è stato eseguito il provisioning. In caso affermativo, è necessario eseguire il deprovisioning per la risorsa di destinazione.
-In caso contrario, non deve essere eseguita alcuna operazione.
+I flussi di lavoro di deprovisioning devono prima di tutto verificare se per la risorsa di destinazione è stato eseguito il provisioning. In caso affermativo, è necessario eseguire il deprovisioning per la risorsa di destinazione. In caso contrario, non deve essere eseguita alcuna operazione.
 
 #### <a name="select-run-on-policy-update-for-tmprs"></a>Selezionare Esegui in base all'aggiornamento criteri per le regole di criteri di gestione di tipo Set di transizione
 
@@ -494,19 +480,17 @@ Per rimuovere un diritto ma lasciare indisturbati i membri correnti (ad esempio,
 
 ### <a name="sets"></a>Operazioni set
 
-Quando si applicano le procedure consigliate per le operazioni set, è necessario prendere in considerazione l'impatto delle ottimizzazioni sulla gestibilità e sulla facilità di amministrazione future.
-Prima di applicare questi consigli, è necessario eseguire test appropriati nella scala di produzione prevista per individuare il giusto equilibrio tra prestazioni e gestibilità.
+Quando si applicano le procedure consigliate per le operazioni set, è necessario prendere in considerazione l'impatto delle ottimizzazioni sulla gestibilità e sulla facilità di amministrazione future. Prima di applicare questi consigli, è necessario eseguire test appropriati nella scala di produzione prevista per individuare il giusto equilibrio tra prestazioni e gestibilità.
 
 >[!NOTE]
-Tutte le linee guida seguenti si applicano ai set dinamici e ai gruppi dinamici.
+> Tutte le linee guida seguenti si applicano ai set dinamici e ai gruppi dinamici.
 
 
 #### <a name="minimize-the-use-of-dynamic-nesting"></a>Ridurre al minimo l'uso dell'annidamento dinamico
 
 Questo consiglio si riferisce al filtro di un set che fa riferimento all'attributo ComputedMember di un altro set. Un motivo frequente per l'annidamento di set è la necessità di evitare la duplicazione di una condizione di appartenenza in molti set. Questo approccio dà come risultato una migliore gestibilità dei set, ma la contropartita è un peggioramento delle prestazioni. È possibile ottimizzare le prestazioni duplicando le condizioni di appartenenza di un set annidato anziché annidando il set stesso.
 
-In alcuni casi, per soddisfare un requisito funzionale l'annidamento di set è inevitabile. Ecco le situazioni principali in cui è necessario ricorrere a set annidati. Ad esempio, per definire il set di tutti i gruppi senza proprietari Full Time Employee, l'annidamento di set deve essere usato come segue: `/Group[not(Owner =
-/Set[ObjectID = ‘X’]/ComputedMember]`, dove "X" corrisponde all'ObjectID del set di tutti i dipendenti a tempo pieno.
+In alcuni casi, per soddisfare un requisito funzionale l'annidamento di set è inevitabile. Ecco le situazioni principali in cui è necessario ricorrere a set annidati. Ad esempio, per definire il set di tutti i gruppi senza proprietari Full Time Employee, l'annidamento di set deve essere usato come segue: `/Group[not(Owner = /Set[ObjectID = ‘X’]/ComputedMember]`, dove "X" corrisponde all'ObjectID del set di tutti i dipendenti a tempo pieno.
 
 #### <a name="minimize-the-use-of-negative-conditions"></a>Ridurre al minimo l'uso di condizioni negative
 
@@ -540,8 +524,7 @@ Communication Foundation (WCF). Questa opzione non è attivata per impostazione 
 
 #### <a name="do-not-map-an-authorization-workflow-to-the-password-reset-process"></a>Non eseguire il mapping di un flusso di lavoro di autorizzazione al processo di reimpostazione della password
 
-Non associare un flusso di lavoro di autorizzazione a un'operazione di reimpostazione della password.
-La reimpostazione della password richiede una risposta sincrona, mentre i flussi di lavoro di autorizzazione che contengono attività quali l'approvazione sono asincroni.
+Non associare un flusso di lavoro di autorizzazione a un'operazione di reimpostazione della password. La reimpostazione della password richiede una risposta sincrona, mentre i flussi di lavoro di autorizzazione che contengono attività quali l'approvazione sono asincroni.
 
 #### <a name="do-not-map-multiple-action-activities-to-password-reset"></a>Non eseguire il mapping di più attività di azione a un'operazione di reimpostazione della password
 
