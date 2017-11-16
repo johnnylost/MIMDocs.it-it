@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 33fbe63528d5d7c543ae286f934654538782b4d5
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-core-installation"></a>Installazione di BHOLD Core
 
@@ -107,7 +107,7 @@ Prima di iniziare l'installazione del modulo BHOLD Core, procurarsi le informazi
 
 | **Elemento**                                       | **Descrizione**                                                                                                                                                                                                                                                           | **Valore**                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Use integrated Security** (Usa sicurezza integrata)                    | Specifica che per accedere al database viene usata l'autenticazione di Windows.                                                                                                                                                                                                     | Selezionare la casella di controllo se viene usa l'autenticazione di Windows per connettersi a SQL Server. Deselezionare la casella di controllo se viene usata l'autenticazione di SQL Server. Se si usa l'autenticazione di SQL Server è creare il database prima di eseguire l'installazione di BHOLD Core. **Nota:** se viene usata l'autenticazione di Windows, è necessario eseguire l'accesso con un account con il ruolo del server sysadmin nel server di database. |
+| **Use integrated Security** (Usa sicurezza integrata)                    | Specifica che per accedere al database viene usata l'autenticazione di Windows.                                                                                                                                                                                                     | Selezionare la casella di controllo se viene usata l'autenticazione di Windows per connettersi a SQL Server. Deselezionare la casella di controllo se viene usata l'autenticazione di SQL Server. Se si usa l'autenticazione di SQL Server è necessario creare il database prima di eseguire l'installazione di BHOLD Core. **Nota:** se viene usata l'autenticazione di Windows, è necessario eseguire l'accesso con un account con il ruolo del server sysadmin nel server di database. |
 | **Utente database** e **Password database** | Specifica il nome utente e la password di un utente con ruolo del server sysadmin nel server di database. Questi valori vengono specificati solo quando si usa l'autenticazione di SQL Server.                                                                                               | Scrivere qui il nome utente di SQL Server:  scrivere qui la password utente di SQL Server: **nota:** assicurarsi di conservare questa password in una posizione protetta nascosta.                                                                                                                                                                                                                                                  |
 | **Server database** e **Nome server**   | Specifica il nome NetBIOS del server di database e il nome del database (nome predefinito: b1) che l'installazione di BHOLD Core creerà. Se non si usa l'istanza del server di database predefinita, specificare l'istanza del server di database nel formato *\<server\>*\\*\<istanza\>*. | Scrivere qui il nome del server (server o istanza): scrivere qui il nome del database:                                                                                                                                                                                                                                                                                                                   |
 | **Make restrictions for the database user** (Crea limitazioni per l'utente del database)    | Obsoleta.                                                                                                                                                                                                                                                                 | Non modificare il valore predefinito                                                                                                                                                                                                                                                                                                                                                                       |
@@ -179,9 +179,9 @@ L'appartenenza a **Domain Admins**, o equivalente è il requisito minimo necessa
 
 2.  Al prompt dei comandi, digitare il comando seguente e premere INVIO: setspn –S HTTP/ *\<aliasrete\> \<dominio\>* \\ *\<nomeaccount\>* dove:
 
-    -   *\<aliasrete\> * è l'indirizzo usato dai client per contattare il sito Web di BHOLD
+    -   *\<aliasrete\>*  è l'indirizzo usato dai client per contattare il sito Web di BHOLD
 
-    -   *\<dominio\>*\\*\<nomeaccount\> * è il dominio e il nome utente dell'account del servizio di BHOLD Core creato durante l'installazione di BHOLD Core.
+    -   *\<dominio\>*\\*\<nomeaccount\>*  è il dominio e il nome utente dell'account del servizio di BHOLD Core creato durante l'installazione di BHOLD Core.
 
 3.  Ripetere il passaggio precedente per tutti gli altri nomi usati dai client per contattare il sito Web di BHOLD, ad esempio, alias CNAME, nomi che includono un nome di dominio completo (FQDN ) o nomi che includono un nome di dominio NetBIOS (breve).
 
@@ -205,7 +205,7 @@ Per eseguire questa procedura, è necessario accedere come membro del gruppo Dom
 
 1.  Fare clic sul pulsante **Avvia**, scegliere **Programmi** e fare clic su **Internet Explorer**.
 
-2.  Nella casella dell'indirizzo digitare, dove * \<server\> * è il nome del server del sito Web di BHOLD e * \<porta\> * è il numero di porta associato al sito Web.
+2.  Nella casella dell'indirizzo digitare, dove  *\<server\>*  è il nome del server del sito Web di BHOLD e  *\<porta\>*  è il numero di porta associato al sito Web.
 
 3.  Fare clic su **Home**, selezionare **Valori** e fare clic su **Modifica**.
 
