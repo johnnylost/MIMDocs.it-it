@@ -12,14 +12,14 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 90c773c30b0ab23ad29ca1a215745bf59b188764
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 0463a91275f3e181a66eb460c167bb9a2008f444
+ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 >[!IMPORTANT]
-In seguito all'annuncio della deprecazione di Azure Multi-Factor Authentication Software Development Kit. Azure MFA SDK sarà supportato per i clienti esistenti fino alla data di ritiro, ovvero 01 ottobre 2018. I nuovi clienti e i clienti attuali non saranno in grado di scaricare più l'SDK tramite il portale di Azure classico. Per scaricarlo sarà necessario rivolgersi al supporto tecnico clienti di Azure per ricevere il pacchetto di credenziali del servizio MFA generato. <br> Il team di sviluppo Microsoft sta pianificando modifiche per MFA tramite l'integrazione di MFA Server SDK. Tali modifiche verranno incluse in un prossimo hotfix agli inizi del 2018.
+In seguito all'annuncio della deprecazione di Azure Multi-Factor Authentication Software Development Kit. Azure MFA SDK sarà supportato per i clienti esistenti fino alla data di ritiro, ovvero 14 novembre 2018. I nuovi clienti e i clienti attuali non saranno in grado di scaricare più l'SDK tramite il portale di Azure classico. Per scaricarlo sarà necessario rivolgersi al supporto tecnico clienti di Azure per ricevere il pacchetto di credenziali del servizio MFA generato. <br> Il team di sviluppo Microsoft sta pianificando modifiche per MFA tramite l'integrazione di MFA Server SDK. Tali modifiche verranno incluse in un prossimo hotfix agli inizi del 2018.
 
 # <a name="working-with-self-service-password-reset"></a>Uso della reimpostazione della password self-service
 Microsoft Identity Manager 2016 fornisce funzionalità aggiuntive alla funzionalità di reimpostazione della password self service. Questa funzionalità è stata migliorata con alcune importanti funzionalità:
