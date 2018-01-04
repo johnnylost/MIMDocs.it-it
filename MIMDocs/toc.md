@@ -93,6 +93,7 @@
 #### [Guida del flusso di lavoro del connettore per servizi Web per REST di esempio](./reference/microsoft-identity-manager-2016-ma-ws-restgeneric.md)
 #### [Servizio app REST di esempio del connettore per servizi Web](./reference/microsoft-identity-manager-2016-ma-ws-restsample.md)
 #### [Opzioni di configurazione del connettore per servizi Web](./reference/microsoft-identity-manager-2016-ma-ws-maconfig.md)
+#### [Importazione del connettore per servizi Web](./reference/microsoft-identity-manager-2016-ma-ws-import.md)
 ### BHOLD
 #### [Riferimento per gli sviluppatori BHOLD](./reference/mim2016-bhold-developer-reference.md) 
 ### [Riferimento all'API REST per la gestione dei certificati](./reference/certificate-management-rest-api-reference.md)
