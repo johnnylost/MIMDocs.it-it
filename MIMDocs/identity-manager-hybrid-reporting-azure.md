@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: 151fbd26011ca76901d181131a88ded8a718a27a
-ms.sourcegitcommit: 0f99de31fe6b52ec692b3886073909f549a451d6
+ms.openlocfilehash: ffe372c273aae55278f9b18b45b65425734aa6f7
+ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Report di controllo di gestione delle identità ibride in Azure Active Directory - Anteprima pubblica (Aggiornamento)
 Con i report attività di controllo di Azure Active Directory (AD) è possibile visualizzare un singolo report per monitorare le attività di gestione delle identità locali o nel cloud. Questa funzionalità consente di gestire tutti i dati di identità e accesso in un'unica posizione, risparmiando tempo e riducendo i costi totali.
@@ -32,7 +32,7 @@ I report di controllo ibridi consentono ai professionisti IT di risolvere alcuni
 
 ## <a name="how-does-it-work"></a>Come funziona BitLocker?
 
-Per raccogliere i dati in locale, è innanzitutto necessario installare un agente per la creazione di report nel server Identity Manager 2016. È possibile scaricare l'agente per la creazione di report dalla pagina di download Microsoft disponibile [qui](https://www.microsoft.com/en-us/download/details.aspx?id=55112).
+Per raccogliere i dati in locale, è innanzitutto necessario installare un agente per la creazione di report nel server Identity Manager 2016. È possibile scaricare l'agente per la creazione di report dalla pagina di download Microsoft disponibile [qui](https://www.microsoft.com/download/details.aspx?id=55112).
 
 Il processo di creazione di report ibridi prevede i passaggi seguenti:
 1. Dopo aver installato l'agente per la creazione di report, i dati dell'attività di Identity Manager vengono inviati al Registro eventi di Windows.
@@ -43,7 +43,7 @@ Il processo di creazione di report ibridi prevede i passaggi seguenti:
 
 ## <a name="next-steps"></a>Passaggi successivi
 - Altre informazioni su [Working with Identity Manager Hybrid Reporting](working-with-identity-manager-hybrid-reporting.md) (Uso del servizio di creazione report ibridi di Identity Manager)
-- Altre informazioni su [Report delle attività di controllo nel portale di Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-activity-audit-logs)
-- Altre informazioni sui [criteri di conservazione dei report](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-retention)
-- Altre informazioni sull'[integrazione dei log di Microsoft Azure (SIEM)](https://docs.microsoft.com/en-us/azure/security/security-azure-log-integration-overview)
-- Altre informazioni sull'[API di creazione report di Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-reporting-api-getting-started)
+- Altre informazioni su [Report delle attività di controllo nel portale di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- Altre informazioni sui [criteri di conservazione dei report](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
+- Altre informazioni sull'[integrazione dei log di Microsoft Azure (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
+- Altre informazioni sull'[API di creazione report di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)

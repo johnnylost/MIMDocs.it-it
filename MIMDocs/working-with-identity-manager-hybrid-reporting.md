@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cf8395583dcfcc2a84237bad80b6a4ca40ce166c
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 17745bfdba831364d32bc2786cc2a38191fe6cc7
+ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Utilizzo del servizio di creazione report ibridi di Identity Manager - Anteprima pubblica (Aggiornamento)
 
@@ -50,11 +50,11 @@ Nella tabella seguente è riportato un elenco di requisiti per l'uso del servizi
 
 | Requisito | Descrizione |
 | --- | --- |
-| Azure AD Premium | Il servizio di creazione report ibridi è una funzionalità di Azure AD Premium e richiede Azure AD Premium. </br></br>Per altre informazioni, vedere [Introduzione ad Azure Active Directory Premium](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-get-started-premium) </br>Per avviare una versione di valutazione gratuita di 30 giorni, vedere [Attiva la versione di valutazione](https://azure.microsoft.com/trial/get-started-active-directory/). |
-| Per iniziare è necessario essere un amministratore globale di Azure AD |Per impostazione predefinita, solo gli amministratori globali possono installare e configurare gli agenti in grado di avviare il servizio, accedere al portale ed eseguire qualsiasi operazione all'interno di Azure. </br></br>**Importante:** l'account usato per installare gli agenti deve essere un account aziendale o dell'istituto di istruzione. Non è possibile usare un account Microsoft. Per altre informazioni, vedere [Iscrizione ad Azure come organizzazione](https://docs.microsoft.com/en-us/azure/active-directory/sign-up-organization) |
+| Azure AD Premium | Il servizio di creazione report ibridi è una funzionalità di Azure AD Premium e richiede Azure AD Premium. </br></br>Per altre informazioni, vedere [Introduzione ad Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) </br>Per avviare una versione di valutazione gratuita di 30 giorni, vedere [Attiva la versione di valutazione](https://azure.microsoft.com/trial/get-started-active-directory/). |
+| Per iniziare è necessario essere un amministratore globale di Azure AD |Per impostazione predefinita, solo gli amministratori globali possono installare e configurare gli agenti in grado di avviare il servizio, accedere al portale ed eseguire qualsiasi operazione all'interno di Azure. </br></br>**Importante:** l'account usato per installare gli agenti deve essere un account aziendale o dell'istituto di istruzione. Non è possibile usare un account Microsoft. Per altre informazioni, vedere [Iscrizione ad Azure come organizzazione](https://docs.microsoft.com/azure/active-directory/sign-up-organization) |
 | L'agente ibrido di Microsoft Identity Manager è installato in ogni server del servizio MIM di destinazione | Per la creazione di report ibridi è necessario che gli agenti siano installati e configurati nei server di destinazione per ricevere i dati e offrire le funzionalità di monitoraggio e analisi </br>|
 | Connettività in uscita agli endpoint del servizio di Azure | Durante l'installazione e il runtime l'agente richiede la connettività agli endpoint del servizio Azure. Se la connettività in uscita è bloccata tramite firewall, assicurarsi che gli endpoint seguenti vengano aggiunti all'elenco degli elementi consentiti: </br></br><li>&#42;.blob.core.windows.net </li><li>&#42;.servicebus.windows.net - Porta: 5671 </li><li>&#42;.adhybridhealth.azure.com/</li><li>https://management.azure.com </li><li>https://policykeyservice.dc.ad.msft.net/</li><li>https://login.windows.net</li><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li> |
-|Connettività in uscita in base agli indirizzi IP | Per l'applicazione di filtri in base agli indirizzi IP nei firewall, vedere [Azure IP Ranges](https://www.microsoft.com/en-us/download/details.aspx?id=41653) (Intervalli di indirizzi IP Azure).|
+|Connettività in uscita in base agli indirizzi IP | Per l'applicazione di filtri in base agli indirizzi IP nei firewall, vedere [Azure IP Ranges](https://www.microsoft.com/download/details.aspx?id=41653) (Intervalli di indirizzi IP Azure).|
 | L'ispezione SSL per il traffico in uscita è filtrata o disabilitata | La procedura di registrazione dell'agente o le operazioni di caricamento dei dati potrebbero non riuscire se è presente l'ispezione SSL o la chiusura per il traffico in uscita a livello di rete. |
 | Porte del firewall nel server che esegue l'agente. |L'agente richiede che le porte del firewall seguenti siano aperte affinché l'agente comunichi con gli endpoint di servizio di Azure.</br></br><li>Porta TCP 443</li><li>Porta TCP 5671</li> |
 | Consentire i siti Web seguenti se è abilitata la funzionalità Protezione avanzata di Internet Explorer |Se la funzionalità Protezione avanzata di Internet Explorer è abilitata, i siti Web seguenti devono essere consentiti nel server in cui verrà installato l'agente.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Server federativo per l'organizzazione ritenuto attendibile da Azure Active Directory. Ad esempio: https://sts.contoso.com</li> |
