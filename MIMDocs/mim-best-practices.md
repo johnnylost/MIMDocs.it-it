@@ -5,17 +5,17 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/15/2017
+ms.date: 01/05/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 7f56882bf005de6c888997c1bf6a9e2feaea410c
-ms.sourcegitcommit: 42253562ac2f9ed689e9db9d0c470213b7926883
+ms.openlocfilehash: bb967bfb43218384044e324c270d3d6b35d33afe
+ms.sourcegitcommit: b4513f0f72ac6efd5c2610863f4e3e8c8e65c860
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Procedure consigliate per Microsoft Identity Manager 2016
 
@@ -371,7 +371,7 @@ Per una configurazione che garantisca prestazioni ottimali:
 
 -   Disattivare l'indicizzazione di SharePoint nel sito del portale di MIM. Per altre informazioni, vedere la sezione Disabilitare l'indicizzazione di SharePoint in questo documento.
 
-## <a name="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3"></a>Procedure consigliate per funzionalità specifiche (rimuovere questo paragrafo, comprimere la sezione e mettere le funzionalità specifiche a livello di intestazione 2 anziché 3)
+## <a name="feature-specific-best-practices"></a>Procedure consigliate specifiche per la funzionalità 
 
 
 ### <a name="request-management"></a>Gestione richieste
