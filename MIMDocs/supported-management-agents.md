@@ -5,18 +5,18 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: bhu
-ms.date: 09/26/2017
+ms.date: 1/24/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 99e98f3f9cb5e68fde0e3018856bf613c082325d
-ms.sourcegitcommit: ba4cd133f7b49752c5470c9fc46e7e302cc99b49
+ms.openlocfilehash: 1e100a686f009d1a2290d7965fe36eea819148be
+ms.sourcegitcommit: fab9f21eea15d2024f11a59fc9e43db15bd215c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="connect-to-your-directories"></a>Connettersi alle directory
 
@@ -28,7 +28,7 @@ In questo articolo sono illustrati i connettori inclusi e supportati in MIM. Il 
 
 ## <a name="supported-connectors-in-mim-2016-sp1"></a>Connettori supportati in MIM 2016 SP1
 
-| Nome | Versioni supportate dell'origine dati connessa |
+| Name | Versioni supportate dell'origine dati connessa e collegamenti tecnici |
 | ---- | ----------------------------------------------- |
 | Servizi di dominio di Active Directory | Active Directory 2012, 2016 |
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
@@ -43,10 +43,11 @@ In questo articolo sono illustrati i connettori inclusi e supportati in MIM. Il 
 | Server di directory Oracle (precedentemente Sun e Netscape) | Server di directory Sun 6.x, 7.x e Oracle 11 |
 | [Connettore di Windows PowerShell per FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn640417.aspx) | Windows PowerShell 2.0 o versioni successive |
 | [Connettore di Microsoft Azure Active Directory per FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn511001.aspx) | Microsoft Azure Active Directory |
-| [Connettore LDAP generico per FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | Server LDAP v3 (compatibile con RFC 4510) |
+| [Connettore LDAP generico per FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [Server LDAP v3 (compatibile con RFC 4510)](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
+| [Connettore SQL generico per FIM 2010 R2 / MIM](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [Il connettore è supportato con tutti i driver ODBC a 64 bit](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
 | [Connettore per Lotus Domino](https://msdn.microsoft.com/en-us/library/hh859750.aspx) | Lotus Notes versione v8.5.x |
 | [Connettore di SharePoint Services con Applicazione servizio profili utente ](https://msdn.microsoft.com/en-us/library/dn511003.aspx) | SharePoint Server 2013 o 2016 con Applicazione servizio profili utente |
-| [Connettore per servizi Web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | SAP ECC 5.0 o 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 |
+| [Connettore per servizi Web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 o 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
 | [File di testo per coppia valore-attributo](https://technet.microsoft.com/en-us/library/cc708644(v=ws.10).aspx) | File di testo per coppia valore-attributo |
 | [File di testo delimitato](https://technet.microsoft.com/en-us/library/cc720612(v=ws.10).aspx) | File di testo delimitati |
 | [Directory Services Mark-up Language (DSML)](https://technet.microsoft.com/en-us/library/cc720660(v=ws.10).aspx) | Directory Services Markup Language (DSML) 2.0 |
