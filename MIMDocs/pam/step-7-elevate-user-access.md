@@ -1,22 +1,19 @@
 ---
 title: 'Distribuire PAM, passaggio 7: Accesso utente | Documentazione Microsoft'
 description: Nel passaggio finale concedere un accesso temporaneo a un utente con privilegi per dimostrare la riuscita della distribuzione di Privileged Access Management.
-keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="step-7--elevate-a-users-access"></a>Passaggio 7: elevare l'accesso dell'utente
 
@@ -38,7 +35,12 @@ Senza privilegi elevati, Jen non può accedere alla risorsa privilegiata nella f
 
 ## <a name="request-privileged-access-from-mim"></a>Richiedere l'accesso con privilegi da MIM
 
-1. In CORPWKSTN, ancora come CONTOSO\Jen, digitare il comando seguente.
+> [!NOTE]
+> È consigliabile che la workstation sia una workstation con accesso con privilegi.  Per altre informazioni, vedere [Privileged Access Workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) (Workstation con accesso con privilegi).
+
+1. In PRIVWKSTN effettuare l'accesso come PRIV\priv.jen.
+2. Fare clic su **Start**, **Esegui** e immettere **PowerShell.exe**.
+3. Digitare il comando seguente.
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
