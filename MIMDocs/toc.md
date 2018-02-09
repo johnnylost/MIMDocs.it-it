@@ -11,6 +11,7 @@
 ## [Topologia di distribuzione](topology-considerations.md)
 ## [Pianificare la distribuzione di PAM](./pam/environment-overview.md)
 # [Distribuire e usare](microsoft-identity-manager-deploy.md)
+## [Funzionalità deprecate](microsoft-identity-manager-2016-deprecated-features.md)
 ## [Prima distribuzione](microsoft-identity-manager-deploy.md)
 ### [Configurazione del dominio](preparing-domain.md)
 ### [Installazione del server: Windows Server](prepare-server-ws2012r2.md)
