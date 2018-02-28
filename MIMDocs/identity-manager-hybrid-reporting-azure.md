@@ -2,29 +2,28 @@
 title: Cosa sono i report ibridi in Azure AD? | Microsoft Docs
 description: "I report delle attività di controllo ibridi in Azure Active Directory consentono di visualizzare gli eventi controllati sia nel cloud che in locale."
 keywords: 
-author: fimguy
-ms.author: fimguy
+author: davidste
+ms.author: davidste
 manager: bhu
-ms.date: 09/28/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
-ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: e2391be3d05f61335c134c104673a31ad7fc3830
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: eb9725df484fb5ac2ee44bd9a0423bdb4fbe7e86
+ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory-public-preview-refresh"></a>Creazione di report di controllo di gestione delle identità ibridi in Azure Active Directory - Aggiornamento dell'anteprima pubblica
+# <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Creazione di report di controllo di gestione delle identità ibridi in Azure Active Directory
 Con i report delle attività di controllo di Azure Active Directory (Azure AD) è possibile monitorare le attività di gestione delle identità sia in locale che nel cloud. La gestione di tutti i dati sulle identità e l'accesso in un singolo report consente di risparmiare tempo e ridurre i costi complessivi.
 
 ## <a name="what-is-azure-active-directory-hybrid-reporting"></a>Che cos'è il servizio di creazione di report ibridi di Azure Active Directory
 I report di controllo ibridi consentono ai professionisti IT di soddisfare alcune esigenze comuni relative alla gestione delle identità, ad esempio:
 
-* **Raccolta delle le attività di gestione delle identità da diversi sistemi**. I report ibridi visualizzano le attività di gestione delle identità di Azure AD e Identity Manager.
+* **Raccolta delle le attività di gestione delle identità da diversi sistemi**. i report ibridi visualizzano le attività di gestione delle identità di Azure AD e Identity Manager.
 
 * **Esportazione dei dati dei report e creazione di report personalizzati**. Oltre a visualizzare i report nel portale di Azure, è possibile esportare i dati per generare visualizzazioni personalizzate.
 

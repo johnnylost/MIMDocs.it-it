@@ -3,26 +3,25 @@ title: Utilizzare il servizio per la creazione report ibridi in Azure tramite Id
 description: Informazioni su come combinare i dati cloud locali in report ibridi in Azure e come gestire e visualizzare questi report.
 keywords: 
 author: fimguy
-ms.author: barclayn
+ms.author: davidste
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 2/20/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a96d79d6773a72c813d0cd76de26ea40d28769e1
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: e135cc5066220765d97568b3a1e1b984a876b2a2
+ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="work-with-hybrid-reporting-in-identity-manager-public-preview-refresh"></a>Utilizzare il servizio per la creazione report ibridi in Identity Manager - Aggiornamento dell'anteprima pubblica
+# <a name="work-with-hybrid-reporting-in-identity-manager"></a>Usare il servizio per la creazione di report ibridi in Identity Manager
 
 Questo articolo illustra come combinare i dati del cloud e locali in report ibridi in Azure e come gestire e visualizzare questi report.
 
-## <a name="available-hybrid-reports"></a>Report ibridi disponibili
+## <a name="available-hybrid-reports"></a>Report ibridi
 I primi tre report di Microsoft Identity Manager disponibili in Azure Active Directory (Azure AD) sono i seguenti:
 
 - **Attività di reimpostazione password**: visualizza ogni istanza in cui un utente ha eseguito una reimpostazione della password tramite la reimpostazione della password self-service e fornisce i controlli o i metodi usati per l'autenticazione.
@@ -42,7 +41,7 @@ I primi tre report di Microsoft Identity Manager disponibili in Azure Active Dir
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* Il servizio Identity Manager 2016 RTM o Identity Manager SP1.
+* Il servizio Identity Manager 2016 o Identity Manager SP1, build consigliata [4.4.1749.0](https://support.microsoft.com/en-us/help/4050936/hotfix-rollup-package-build-4-4-1749-0-for-microsoft-identity-manager).
 
 * Un tenant di Azure AD Premium con un amministratore dotato di licenza nella directory.
 
