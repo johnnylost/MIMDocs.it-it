@@ -83,7 +83,7 @@ Configurare i criteri di sicurezza del server per consentire agli account appena
 
 13. Aprire il Pannello di controllo e passare a **Account utente**.
 14. Fare clic su **Concedi ad altri utenti l'accesso al computer**.
-15. Fare clic su **Aggiungi**, immettere il nome utente *MIMADMIN* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator ** (Aggiungi utente come amministratore).  
+15. Fare clic su **Aggiungi**, immettere il nome utente *MIMADMIN* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator** (Aggiungi utente come amministratore).  
 16. Fare clic su **Aggiungi**, immettere il nome utente *SharePoint* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator** (Aggiungi utente come amministratore).  
 17. Chiudere il Pannello di controllo.
 
