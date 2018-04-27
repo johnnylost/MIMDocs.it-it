@@ -1,7 +1,7 @@
 ---
 title: Configurare Windows Server 2012 R2 per MIM 2016 | Documentazione Microsoft
 description: Ottenere i passaggi e i requisiti minimi per preparare Windows Server 2012 RS all'uso con MIM 2016.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,10 @@ ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 76a59292da97583887020c89025add77c7a64c80
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Configurare un server di gestione delle identità: Windows Server 2012 R2
 
