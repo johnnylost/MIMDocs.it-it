@@ -1,7 +1,7 @@
 ---
 title: Usare la sincronizzazione di Microsoft Identity Manager con AD | Documentazione Microsoft
 description: Usare gli agenti di gestione e il servizio Sincronizzazione MIM per sincronizzare i database di Active Directory e MIM.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 31cc9a61bbcb309dae4ee4d09654432d08bf1e28
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Installare MIM 2016: sincronizzare Active Directory e il servizio MIM
 
@@ -43,7 +43,7 @@ Quando si configura un agente di gestione MIM, è necessario specificare un acco
 
 1.  Aprire Synchronization Service Manager.
 
-2.  Per aprire la procedura guidata per la creazione dell'agente di gestione, accedere alla pagina **Azioni di gestione** e quindi, dal menu **Azioni**, selezionare **Crea**.
+2.  Per aprire la procedura guidata per la creazione dell'agente di gestione, accedere alla pagina **Management Agents** (Agenti di gestione) e quindi dal menu **Azioni** scegliere **Crea**.
 
 3.  Nella pagina **Crea agente di gestione** specificare le impostazioni seguenti e fare clic su **Avanti**.
 
@@ -117,7 +117,7 @@ Quando si configura un agente di gestione MIM, è necessario specificare un acco
     | Dominio | Export | dominio |
     | Posta elettronica | Export | mail |
     | ID dipendente | Export | employeeID |
-    | EmployeeTipo | Export | employeeTipo |
+    | EmployeeTipo | Export | employeeType |
     | Nome | Export | firstName |
     | Cognome | Export | lastName |
     | ObjectSID | Export | objectSid |
@@ -231,7 +231,7 @@ Creare profili di esecuzione per i connettori ADMA e MIMMA.
 
 Questa tabella mostra i cinque profili di esecuzione che verranno creati per il connettore ADMA:
 
-| Nome | Tipo |
+| Name | Tipo |
 | ---- | ---- |
 | Profilo 1 | Importazione completa (solo temporanea) |
 | Profilo 2 | Sincronizzazione completa |
@@ -263,7 +263,7 @@ Per creare profili di esecuzione per il connettore ADMA:
 
 Questa tabella mostra i cinque profili di esecuzione corrispondenti per il connettore MIMMA:
 
-| Nome | Tipo |
+| Name | Tipo |
 | -------- | -------- |
 | Profilo 1 | Importazione completa (solo temporanea) |
 | Profilo 2 | Sincronizzazione completa |
@@ -326,7 +326,7 @@ Per creare la regola di sincronizzazione in entrata per gli utenti di Active Dir
     |-|-|-|
     |Regola 1|samAccountName|accountName|
     |Regola 2|displayName|displayName|
-    |Regola 3|EmployeeTipo|employeeTipo|
+    |Regola 3|EmployeeTipo|employeeType|
     |Regola 4|givenName|firstName|
     |Regola 5|sn|lastName|
     |Regola 6|Manager|manager|
