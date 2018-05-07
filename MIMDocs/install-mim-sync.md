@@ -1,22 +1,22 @@
 ---
 title: Installare il servizio di sincronizzazione di Microsoft Identity Manager | Documentazione Microsoft
 description: Per iniziare a usare i componenti di MIM 2016, installare e configurare il servizio di sincronizzazione.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 836279ecc7fce65912df4a1a34a9d48daf9d1151
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f5204d0396e2b485c9e8c210906703c467a67994
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Installare il servizio di sincronizzazione di MIM 2016: servizio di sincronizzazione MIM
 
@@ -26,17 +26,20 @@ ms.lasthandoff: 10/12/2017
 
 > [!NOTE]
 > Questa procedura dettagliata usa nomi e valori di esempio della società Contoso. Sostituirli con i propri nomi e valori. Ad esempio:
-> - Nome del controller di dominio: **mimservername**
+> - Nome del controller di dominio: **corpdc**
 > - Nome del dominio: **contoso**
+> - Nome del server del servizio MIM: **corpservice**
+> - Nome del server di sincronizzazione MIM: **corpservice**
+> - Nome SQL Server: **corpsql**
 > - Password: **Pass@word1**
 
 Per installare Microsoft Identity Manager 2016, configurare innanzitutto il pacchetto di installazione.
 
-1. Accedere come *contoso\Administrator* al server usato per la gestione delle identità.
+1. Accedere come *contoso\miminstall* al server in uso come server di sincronizzazione per la gestione delle identità **corpsync**.
 
 2. Decomprimere il pacchetto di installazione MIM o montare il DVD dell'immagine MIM.
 
-## <a name="install-mim-2016-synchronization-service"></a>Installare il servizio di sincronizzazione di MIM 2016
+## <a name="install-mim-2016-sp1-synchronization-service"></a>Installare il servizio di sincronizzazione di MIM 2016 SP1
 
 1. Nella cartella di installazione di MIM decompressa, passare alla cartella **Servizio di sincronizzazione** .
 
