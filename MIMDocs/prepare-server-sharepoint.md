@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: eceb1ed31b0212970d5cf0eae0bc8d96aa087ff5
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configurare un server di gestione delle identità: SharePoint
 
@@ -68,14 +68,15 @@ Seguire i passaggi descritti in **Configurazione guidata Prodotti SharePoint** p
 1. Nella scheda **Connessione a una server farm** , modificare per creare una nuova server farm.
 
 2. Specificare questo server come server di database **corpsql** per il database di configurazione e *Contoso\SharePoint* come account di accesso del database che verrà usato da SharePoint.
-    a. Nella configurazione guidata è consigliabile selezionare il tipo [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) per **Front-end**
 3. Creare una password per la passphrase di sicurezza della farm.
 
-4. Al termine della configurazione guidata dell’attività 10 di 10, fare clic su Fine. Si aprirà un Web browser.
+4. Nella configurazione guidata è consigliabile selezionare il tipo [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) per **Front-end**
 
-5. Nella finestra popup di Internet Explorer eseguire l'autenticazione come *Contoso\miminstall* (o con l'account amministratore equivalente) per continuare.
+5. Quando la configurazione guidata completa l'attività 10 di 10, fare clic su Fine e verrà visualizzato un Web browser.
 
-6. Nella procedura guidata Web (all'interno dell'app Web) fare clic su **Annulla/Ignora**.
+6. Se richiesto nella finestra popup di Internet Explorer eseguire l'autenticazione come *Contoso\miminstall* (o con l'account amministratore equivalente) per continuare.
+
+7. Nella procedura guidata Web (all'interno dell'app Web) fare clic su **Annulla/Ignora**.
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Preparare SharePoint per ospitare il portale MIM
@@ -94,14 +95,13 @@ Seguire i passaggi descritti in **Configurazione guidata Prodotti SharePoint** p
     > [!NOTE]
     > Verrà visualizzato un messaggio di avviso in cui si comunica che viene usato il metodo di autenticazione classico di Windows e che la restituzione del comando finale potrebbe richiedere alcuni minuti. Al termine, l'output indicherà l'URL del nuovo portale. Mantenere la finestra **SharePoint 2016 Management Shell** aperta per un secondo momento.
 
-2. Avviare SharePoint 2013 Management Shell ed eseguire il seguente script di PowerShell per creare una **Raccolta siti di SharePoint** associata all'applicazione Web.
+2. Avviare SharePoint 2016 Management Shell ed eseguire il seguente script di PowerShell per creare una **Raccolta siti di SharePoint** associata all'applicazione Web.
 
   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
-    $s.AllowSelfServiceUpgrade = $false
     $s.CompatibilityLevel
   ```
 
@@ -119,7 +119,7 @@ Seguire i passaggi descritti in **Configurazione guidata Prodotti SharePoint** p
 
 4. Nel server di gestione delle identità aprire una nuova scheda del Web browser, passare a http://mim.contoso.com/ e accedere come *contoso\miminstall*.  Verrà visualizzato un sito SharePoint denominato *Portale MIM* .
 
-    ![Immagine del portale MIM all'indirizzo http://mim.contoso.com/](media/MIM-DeploySP1.png)
+    ![Immagine del portale MIM all'indirizzo http://mim.contoso.com/](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Copiare l'URL, quindi in Internet Explorer aprire **Opzioni Internet**, passare alla scheda **Sicurezza**, selezionare **Intranet locale** e fare clic su **Siti**.
 

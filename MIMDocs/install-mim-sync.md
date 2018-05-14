@@ -2,21 +2,21 @@
 title: Installare il servizio di sincronizzazione di Microsoft Identity Manager | Documentazione Microsoft
 description: Per iniziare a usare i componenti di MIM 2016, installare e configurare il servizio di sincronizzazione.
 keywords: ''
-author: billmath
+author: fimguy
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f5204d0396e2b485c9e8c210906703c467a67994
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: d2f8c000205aacafaeb4e159ef692e9666b4b965
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Installare il servizio di sincronizzazione di MIM 2016: servizio di sincronizzazione MIM
 
@@ -47,21 +47,21 @@ Per installare Microsoft Identity Manager 2016, configurare innanzitutto il pacc
 
 3. Nella schermata di benvenuto, fare clic su **Avanti**.
 
-    ![Immagine iniziale del programma di installazione guidata di MIM](media/MIM-Install1.png)
+    ![Immagine iniziale del programma di installazione guidata di MIM](media/install-mim-sync/MIM_Install1.png)
 
 4. Leggere le condizioni di licenza e fare clic su **Avanti** per accettarle.
 
 5. Nella schermata **Installazione personalizzata** fare clic su **Avanti**.
 
-    ![Immagine dell'installazione personalizzata](media/MIM-Install2.png)
+    ![Immagine dell'installazione personalizzata](media/install-mim-sync/MIM_Install2.png)
 
 6.  Nella schermata di configurazione del database del servizio di sincronizzazione, selezionare:
 
-    1.  SQL Server si trova in: **Questo computer**.
+    1.  SQL Server si trova in: **un computer remoto** denominato **corpsql.contoso.com**.
 
     2.  L’istanza SQL Server è: **Istanza predefinita**
 
-    ![Immagine della connessione di database](media/MIM-Install3.png)
+    ![Immagine della connessione di database](media/install-mim-sync/MIM_Install3.png)
 
 7.  Configurare l’account del servizio di sincronizzazione in base all'account creato in precedenza:
 
@@ -71,7 +71,7 @@ Per installare Microsoft Identity Manager 2016, configurare innanzitutto il pacc
 
     3.  Dominio dell'account del servizio o nome del computer locale: *contoso*
 
-    ![Immagine dell'account del servizio](media/MIM-Install4.png)
+    ![Immagine dell'account del servizio](media/install-mim-sync/MIM_Install4.png)
 
 8.  Fornire al programma di installazione del servizio di sincronizzazione MIM i gruppi di sicurezza pertinenti:
 
@@ -85,7 +85,7 @@ Per installare Microsoft Identity Manager 2016, configurare innanzitutto il pacc
 
     5. Gestione password WMI = *contoso\MIMSyncPasswordReset*
 
-    ![Immagine dei gruppi di sicurezza](media/MIM-Install5.png)
+    ![Immagine dei gruppi di sicurezza](media/install-mim-sync/MIM_Install5.png)
 
 9. Nella schermata delle impostazioni di protezione, selezionare **Abilita regole firewall per le comunicazioni RPC in ingresso** e fare clic su **Avanti**.
 

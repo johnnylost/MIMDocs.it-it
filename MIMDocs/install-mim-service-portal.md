@@ -5,18 +5,18 @@ keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldiwn
-ms.date: 10/12/2017
+ms.date: 04/30/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 204aa33cb21ed3998d9085fc56f0c7bea7afec58
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: fcc137527d8326c82bf3b201039926699bd4e342
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Installare MIM 2016: servizio e portale MIM
 
@@ -48,23 +48,23 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 6. Nella pagina **Configure the MIM database connection** (Configurare la connessione di database MIM) specificare **Create a new database** (Crea un nuovo database).
 
-    ![Immagine relativa alla connessione di database MIM](media/MIM-Install10.png)
+    ![Immagine relativa alla connessione di database MIM](media/install-mim-service-portal/MIM_Install10.png)
 
-7. In **Configura la connessione del server della posta** immettere il nome del server Exchange come **Server della posta**. In alternativa, è possibile usare la cassetta postale O365. Se non è disponibile un server della posta configurato, specificare **localhost** come nome del server della posta e deselezionare le prime due caselle di controllo. Fare clic su **Avanti**.
+7. In **Configura la connessione del server della posta** immettere il nome del server Exchange come **Server della posta**. In alternativa, è possibile usare la **cassetta postale O365**. Se non è disponibile un server della posta configurato, specificare **localhost** come nome del server della posta e deselezionare le prime due caselle di controllo. Fare clic su **Avanti**.
 
-    ![Immagine relativa alla configurazione della connessione al server della posta](media/MIM-Install11.png)
+    ![Immagine relativa alla configurazione della connessione al server della posta](media/install-mim-service-portal/MIM_Install11.png)
 
 8. Specificare che si desidera generare un nuovo certificato autofirmato oppure selezionare il certificato rilevante.
 
 9. Specificare il nome dell'account del servizio da usare, ad esempio *MIMService*, e la password dell'account del servizio, ad esempio *Pass@word1*, il dominio account del servizio, ad esempio *contoso*, e l'account di posta elettronica del servizio, ad esempio *contoso*.
 
-    ![Immagine relativa alla configurazione dell'account del servizio MIM](media/MIM-Install12.png)
+    ![Immagine relativa alla configurazione dell'account del servizio MIM](media/install-mim-service-portal/MIM_Install12.png)
 
 10. Si noti che potrebbe essere visualizzato un avviso in cui si afferma che l'account del servizio non è protetto nella configurazione corrente.
 
 11. Accettare le impostazioni predefinite per il percorso del server di sincronizzazione e specificare l'account dell'agente di gestione MIM *contoso\MIMMA*.
 
-    ![Immagine relativa alla configurazione del servizio e del portale MIM](media/MIM-Install13.png)
+    ![Immagine relativa alla configurazione del servizio e del portale MIM](media/install-mim-service-portal/MIM_Install13.png)
 
 12. Specificare *CorpIDM* (nome del computer) come indirizzo del server del servizio MIM per il portale MIM.
 
@@ -82,7 +82,7 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 2.  Specificare *passwordregistration.contoso.com* come nome host per la registrazione della password MIM e impostare la porta su **80**. Abilitare l'opzione **Apri porta nel firewall**.
 
-    ![Immagine relativa all'immissione delle informazioni di configurazione usate da IIS](media/MIM-Install14.png)
+    ![Immagine relativa all'immissione delle informazioni di configurazione usate da IIS](media/install-mim-service-portal/MIM_Install14.png)
 
 3.  Verrà visualizzato un messaggio di avviso: leggerlo e fare clic su **Avanti**.
 
@@ -94,7 +94,7 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 2.  Specificare *passwordreset.contoso.com* come nome host per il portale di reimpostazione della password MIM, quindi impostare la porta su **80**. Abilitare l'opzione **Apri porta nel firewall**.
 
-    ![Immagine relativa all'immissione delle informazioni di configurazione usate da IIS](media/MIM-Install15.png)
+    ![Immagine relativa all'immissione delle informazioni di configurazione usate da IIS](media/install-mim-service-portal/MIM_Install15.png)
 
 3.  Verrà visualizzato un messaggio di avviso: leggerlo e fare clic su **Avanti**.
 
