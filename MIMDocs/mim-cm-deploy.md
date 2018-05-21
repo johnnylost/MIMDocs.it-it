@@ -10,19 +10,15 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 3c2246ec21ad73cf025daec5c56295ec57838bb2
-ms.sourcegitcommit: 3502d636687e442f7d436ee56218b9b95f5056cf
+ms.openlocfilehash: 241ad68d3f4a692c87d0d2a0069781ad042453c7
+ms.sourcegitcommit: 39f34a38967baa9c0da6ae5b57734b222f5771a5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Distribuzione di Gestione certificati Microsoft Identity Manager 2016 (Gestione certificati MIM)
 
-L'installazione di Gestione certificati Microsoft Identity Manager 2016 (Gestione certificati MIM) prevede diversi passaggi. Per semplificare il processo, i passaggi sono suddivisi in fasi. I passaggi preliminari devono essere eseguiti prima dei passaggi effettivi di Gestione certificati MIM. Se le operazioni preliminari non vengono eseguite è probabile che l'installazione abbia esito negativo. 
-
-1. Panoramica sulla distribuzione
-2. Passaggi pre-distribuzione
-3. Altre informazioni
+L'installazione di Gestione certificati Microsoft Identity Manager 2016 (Gestione certificati MIM) prevede diversi passaggi. Per semplificare il processo, i passaggi sono suddivisi in fasi. I passaggi preliminari devono essere eseguiti prima dei passaggi effettivi di Gestione certificati MIM. Se le operazioni preliminari non vengono eseguite è probabile che l'installazione abbia esito negativo.
 
 La figura seguente illustra un esempio del tipo di ambiente che è possibile usare. I sistemi con i numeri sono inclusi nell'elenco sottostante l'immagine e sono necessari per l'esecuzione dei passaggi descritti in questo articolo. Infine, vengono usati i server Windows 2016 Datacenter Server:
 
@@ -38,65 +34,75 @@ La figura seguente illustra un esempio del tipo di ambiente che è possibile usa
 ## <a name="deployment-overview"></a>Cenni preliminari sulla distribuzione
 
 - Installazione del sistema operativo di base
-  - Il lab è costituito da server Windows 2016 Datacenter Server.
-       >[!NOTE]
-Per altre informazioni sulle piattaforme supportate per MIM 2016, vedere l'articolo [Piattaforme supportate per MIM 2016](/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms.md)
-- Passaggi pre-distribuzione
-  - [Estensione dello schema](https://msdn.microsoft.com/library/ms676929(v=vs.85).aspx)
-  - Creazione degli account di servizio
-  - [Creazione dei modelli di certificato](https://technet.microsoft.com/library/cc753370(v=ws.11).aspx)
-  - IIS
-  - Configurazione di Kerberos
-  - Passaggi correlati al database
-    - Requisiti di configurazione SQL
-    - Autorizzazioni database
-- Distribuzione
+
+    Il lab è costituito da server Windows 2016 Datacenter Server.
+
+    >[!NOTE]
+    >Per altre informazioni sulle piattaforme supportate per MIM 2016, vedere l'articolo [Piattaforme supportate per MIM 2016](/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms.md)
+
+1. Passaggi pre-distribuzione
+
+    - [Estensione dello schema](https://msdn.microsoft.com/library/ms676929(v=vs.85).aspx)
+
+    - Creazione degli account di servizio
+
+    - [Creazione dei modelli di certificato](https://technet.microsoft.com/library/cc753370(v=ws.11).aspx)
+
+    - IIS
+
+    - Configurazione di Kerberos
+
+    - Passaggi correlati al database
+
+        - Requisiti di configurazione SQL
+
+        - Autorizzazioni database
+
+2. Distribuzione
 
 ## <a name="pre-deployment-steps"></a>Passaggi pre-distribuzione
 
-La procedura guidata di configurazione di Gestione certificati MIM richiede l'immissione di informazioni durante l'esecuzione per poter essere completata correttamente. 
-![](media/mim-cm-deploy/image003.png)
+La procedura guidata di configurazione di Gestione certificati MIM richiede l'immissione di informazioni durante l'esecuzione per poter essere completata correttamente.
+
+![diagramma](media/mim-cm-deploy/image003.png)
 
 ### <a name="extending-the-schema"></a>Estensione dello schema
 
 Il processo di estensione dello schema è semplice ma deve essere eseguito con attenzione poiché è irreversibile.
 
 >[!NOTE]
-Per eseguire questo passaggio è necessario che l'account usato abbia i diritti di amministratore per lo schema.
+>Per eseguire questo passaggio è necessario che l'account usato abbia i diritti di amministratore per lo schema.
 
-- Cercare il percorso dei supporti MIM e passare alla cartella \\Certificate Management\\x64.
+1. Cercare il percorso dei supporti MIM e passare alla cartella \\Certificate Management\\x64.
 
-- Copiare la cartella Schema in CORPDC quindi passare alla cartella.
+2. Copiare la cartella Schema in CORPDC quindi passare alla cartella.
 
-    ![](media/mim-cm-deploy/image005.png)
+    ![diagramma](media/mim-cm-deploy/image005.png)
 
-- Eseguire lo script resourceForestModifySchema.vbs per lo scenario con foresta singola
+3. Eseguire lo script resourceForestModifySchema.vbs per lo scenario con foresta singola. Per lo scenario con foresta di risorse eseguire gli script:
+    - DomainA - Percorso selezionato dagli utenti (userForestModifySchema.vbs)
+    - ResourceForestB - Percorso di installazione di Gestione certificati (resourceForestModifySchema.vbs).
 
-- Per lo scenario con foresta di risorse eseguire gli script:
-  - DomainA - Percorso selezionato dagli utenti (userForestModifySchema.vbs)
-  - ResourceForestB – Percorso di installazione di Gestione certificati (resourceForestModifySchema.vbs)
+    >[!NOTE]
+    >Poiché le modifiche allo schema sono un'operazione irreversibile che richiede un ripristino della foresta per eseguire il rollback, assicurarsi di aver eseguito i backup necessari. Per informazioni dettagliate sulle modifiche apportate allo schema eseguendo questa operazione. leggere l'articolo [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx) (Modifiche dello schema di Gestione certificati di Forefront Identity Manager 2010)
 
->[!NOTE]
-Poiché le modifiche allo schema sono un'operazione irreversibile che richiede un ripristino della foresta per eseguire il rollback, assicurarsi di aver eseguito i backup necessari. Per informazioni dettagliate sulle modifiche apportate allo schema eseguendo questa operazione. leggere l'articolo [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx) (Modifiche dello schema di Gestione certificati di Forefront Identity Manager 2010)
+    ![diagramma](media/mim-cm-deploy/image007.png)
 
-![](media/mim-cm-deploy/image007.png)
+4. Eseguire lo script. Al completamento dello script, viene inviato un messaggio di operazione riuscita.
 
-Eseguire lo script. Al completamento dello script, viene inviato un messaggio di operazione riuscita.
-
-![Messaggio di operazione riuscita](media/mim-cm-deploy/image009.png)
+    ![Messaggio di operazione riuscita](media/mim-cm-deploy/image009.png)
 
 Lo schema in Active Directory è ora esteso per il supporto di Gestione certificati MIM.
 
 ### <a name="creating-service-accounts-and-groups"></a>Creazione di account di servizio e gruppi
 
-Nella tabella seguente sono elencati gli account e le autorizzazioni necessarie per Gestione certificati MIM.
-È possibile consentire a Gestione certificati MIM di creare automaticamente gli account seguenti oppure è possibile crearli prima dell'installazione. I nomi di account effettivi possono essere modificati. Se si creano gli account manualmente, può essere utile assegnare agli account un nome che consenta di associare il nome dell'account utente alla relativa funzione.
+Nella tabella seguente sono elencati gli account e le autorizzazioni necessarie per Gestione certificati MIM. È possibile consentire a Gestione certificati MIM di creare automaticamente gli account seguenti oppure è possibile crearli prima dell'installazione. I nomi di account effettivi possono essere modificati. Se si creano gli account manualmente, può essere utile assegnare agli account un nome che faciliti l'associazione del nome dell'account utente alla relativa funzione.
 
 Utenti:
 
-![](media/mim-cm-deploy/image010.png)
+![Diagramma](media/mim-cm-deploy/image010.png)
 
-![](media/mim-cm-deploy/image012.png)
+![Diagramma](media/mim-cm-deploy/image012.png)
 
 | **Ruolo**                   | **Nome di accesso utente** |
 |----------------------------|---------------------|
@@ -120,9 +126,9 @@ Groups:
 | CM Manager Members     | MIMCM-Managers    |
 | CM Subscribers Members | MIMCM-Subscribers |
 
-Powershell: account agente
+Powershell: account agente:
 
-```
+```powershell
 import-module activedirectory
 ## Agent accounts used during setup
 $cmagents = @{
@@ -203,15 +209,19 @@ Tutti e tre i certificati indicati avranno diritti elevati all'interno dell'orga
 #### <a name="create-the-mim-cm-signing-certificate-template"></a>Creare il modello di certificato di firma di Gestione certificati MIM
 
 1. Da **Strumenti di amministrazione** aprire **Autorità di certificazione**.
+
 2. Nell'albero della console **Autorità di certificazione** espandere **Contoso-CorpCA** e quindi fare clic su **Modelli di certificato**.
+
 3. Fare clic con il pulsante destro del mouse su **Modelli di certificato**e quindi scegliere **Gestici**.
+
 4. Nella **Console dei modelli di certificato** nel riquadro dei **dettagli** selezionare e fare clic con il pulsante destro del mouse su **Utente** e quindi su **Duplica modello**.
+
 5. Nella finestra di dialogo **Duplica modello** selezionare **Windows Server 2003 Enterprise** e quindi fare clic su **OK**.
 
-![Visualizzare le modifiche risultanti](media/mim-cm-deploy/image014.png)
+    ![Visualizzare le modifiche risultanti](media/mim-cm-deploy/image014.png)
 
     >[!NOTE]
-    MIM CM does not work with certificates based on version 3 certificate templates. You must create a Windows Server® 2003 Enterprise (version 2)certificate template. See the following link for V3 details https://blogs.msdn.microsoft.com/ms-identity-support/2016/07/14/faq-for-fim-2010-to-support-sha2-kspcng-and-v3-certificate-templates-for-issuing-user-and-agent-certificates-and-mim-2016-upgrade
+    >Gestione certificati MIM non funziona con i certificati basati su modelli di certificato versione 3. È necessario creare un modello di certificato di Windows Server® 2003 Enterprise (versione 2). Per altre informazioni, vedere [V3 details](https://blogs.msdn.microsoft.com/ms-identity-support/2016/07/14/faq-for-fim-2010-to-support-sha2-kspcng-and-v3-certificate-templates-for-issuing-user-and-agent-certificates-and-mim-2016-upgrade) (Dettagli per la versione 3).
 
 6. Nella finestra di dialogo **Proprietà nuovo modello** nella scheda **Generale** nella casella **Nome visualizzato modello** digitare **MIM CM Signing**. Modificare il **Periodo di validità** impostandolo su **2 anni** e quindi deselezionare la casella di controllo **Pubblica certificato in Active Directory**.
 
@@ -219,57 +229,57 @@ Tutti e tre i certificati indicati avranno diritti elevati all'interno dell'orga
 
 8. Nella finestra di dialogo **Crittografia** disabilitare **Microsoft Enhanced Cryptographic Provider v1.0**, abilitare **Microsoft Enhanced RSA and AES Cryptographic Provider** e quindi fare clic su **OK**.
 
-Nella scheda **Nome soggetto** deselezionare le caselle di controllo **Includi nome posta elettronica nel nome soggetto** e **Nome posta elettronica**.
+9. Nella scheda **Nome soggetto** deselezionare le caselle di controllo **Includi nome posta elettronica nel nome soggetto** e **Nome posta elettronica**.
 
-Nella scheda **Estensioni** nell'elenco **Estensioni incluse nel modello** verificare che l'opzione **Criteri di applicazione** sia selezionata e quindi fare clic su **Modifica**.
+10. Nella scheda **Estensioni** nell'elenco **Estensioni incluse nel modello** verificare che l'opzione **Criteri di applicazione** sia selezionata e quindi fare clic su **Modifica**.
 
-Nella finestra di dialogo **Modifica estensione criteri di applicazione** selezionare i criteri di applicazione **Crittografia file system** e **Posta elettronica protetta**. Fare clic su **Rimuovi**e quindi su **OK**.
+11. Nella finestra di dialogo **Modifica estensione criteri di applicazione** selezionare i criteri di applicazione **Crittografia file system** e **Posta elettronica protetta**. Fare clic su **Rimuovi**e quindi su **OK**.
 
-Nella scheda **Security** seguire questa procedura:
+12. Nella scheda **Security** seguire questa procedura:
 
-- Rimuovere **Administrator**.
+    - Rimuovere **Administrator**.
 
-- Rimuovere **Domain Admins**.
+    - Rimuovere **Domain Admins**.
 
-- Rimuovere **Domain Users**.
+    - Rimuovere **Domain Users**.
 
-- Assegnare solo le autorizzazioni **Lettura** e **Scrittura** a **Enterprise Admins**.
+    - Assegnare solo le autorizzazioni **Lettura** e **Scrittura** a **Enterprise Admins**.
 
-- Aggiungere **MIMCMAgent**.
+    - Aggiungere **MIMCMAgent**.
 
-- Assegnare le autorizzazioni **Lettura** e **Registrazione** a **MIMCMAgent**.
+    - Assegnare le autorizzazioni **Lettura** e **Registrazione** a **MIMCMAgent**.
 
-Nella finestra di dialogo **Proprietà nuovo modello** fare clic su **OK**.
+13. Nella finestra di dialogo **Proprietà nuovo modello** fare clic su **OK**.
 
-Lasciare aperta la **Console dei modelli di certificato**.
+14. Lasciare aperta la **Console dei modelli di certificato**.
 
 #### <a name="create-the-mim-cm-enrollment-agent-certificate-template"></a>Creare il modello di certificato di Enrollment Agent di Gestione certificati MIM
 
--   Nella **Console dei modelli di certificato** nel riquadro dei **dettagli** selezionare e fare clic con il pulsante destro del mouse su **Agente di registrazione** e quindi fare clic su **Duplica modello**.
+1. Nella **Console dei modelli di certificato** nel riquadro dei **dettagli** selezionare e fare clic con il pulsante destro del mouse su **Agente di registrazione** e quindi fare clic su **Duplica modello**.
 
-Nella finestra di dialogo **Duplica modello** selezionare **Windows Server 2003 Enterprise** e quindi fare clic su **OK**.
+2. Nella finestra di dialogo **Duplica modello** selezionare **Windows Server 2003 Enterprise** e quindi fare clic su **OK**.
 
-Nella finestra di dialogo **Proprietà nuovo modello** nella scheda **Generale** nella casella **Nome visualizzato modello** digitare **MIM CM Enrollment Agent**. Assicurarsi che **Periodo di validità** sia impostato su **2 anni**.
+3. Nella finestra di dialogo **Proprietà nuovo modello** nella scheda **Generale** nella casella **Nome visualizzato modello** digitare **MIM CM Enrollment Agent**. Assicurarsi che **Periodo di validità** sia impostato su **2 anni**.
 
-Nella scheda **Gestione richiesta** abilitare **Rendi la chiave privata esportabile** e quindi fare clic su **CSP o sulla scheda Crittografia**.
+4. Nella scheda **Gestione richiesta** abilitare **Rendi la chiave privata esportabile** e quindi fare clic su **CSP o sulla scheda Crittografia**.
 
-Nella finestra di dialogo **Selezione CSP** disabilitare **Microsoft Base Cryptographic Provider v1.0**, disabilitare **Microsoft Enhanced Cryptographic Provider v1.0**, abilitare **Microsoft Enhanced RSA and AES Cryptographic Provider** e quindi fare clic su **OK**.
+5. Nella finestra di dialogo **Selezione CSP** disabilitare **Microsoft Base Cryptographic Provider v1.0**, disabilitare **Microsoft Enhanced Cryptographic Provider v1.0**, abilitare **Microsoft Enhanced RSA and AES Cryptographic Provider** e quindi fare clic su **OK**.
 
-Nella scheda **Security** seguire la procedura seguente:
+6. Nella scheda **Security** seguire la procedura seguente:
 
-- Rimuovere **Administrator**.
+    - Rimuovere **Administrator**.
 
-- Rimuovere **Domain Admins**.
+    - Rimuovere **Domain Admins**.
 
-- Assegnare solo le autorizzazioni **Lettura** e **Scrittura** a **Enterprise Admins**.
+    - Assegnare solo le autorizzazioni **Lettura** e **Scrittura** a **Enterprise Admins**.
 
-- Aggiungere **MIMCMEnrollAgent**.
+    - Aggiungere **MIMCMEnrollAgent**.
 
-- Assegnare le autorizzazioni **Lettura** e **Registrazione** a **MIMCMEnrollAgent**.
+    - Assegnare le autorizzazioni **Lettura** e **Registrazione** a **MIMCMEnrollAgent**.
 
-Nella finestra di dialogo **Proprietà nuovo modello** fare clic su **OK**.
+7. Nella finestra di dialogo **Proprietà nuovo modello** fare clic su **OK**.
 
-Lasciare aperta la **Console dei modelli di certificato**.
+8. Lasciare aperta la **Console dei modelli di certificato**.
 
 #### <a name="create-the-mim-cm-key-recovery-agent-certificate-template"></a>Creare il modello di certificato di Key Recovery Agent di Gestione certificati MIM
 
@@ -304,37 +314,42 @@ Lasciare aperta la **Console dei modelli di certificato**.
 1. Ripristinare la console **Autorità di certificazione**.
 
 2. Nell'albero della console **Autorità di certificazione** fare clic con il pulsante destro del mouse su **Modelli di certificato**, selezionare **Nuovo** e quindi fare clic su **Modello di certificato da rilasciare**.
+
 3. Nella finestra di dialogo **Attivazione modelli di certificato** selezionare **MIM CM Enrollment Agent**, **MIM CM Key Recovery Agent** e **MIM CM Signing**. Fare clic su **OK**.
+
 4. Nell'albero della console fare clic su **Modelli di certificato**.
+
 5. Verificare che i tre nuovi modelli siano visualizzati nel riquadro dei **dettagli** e quindi chiudere **Autorità di certificazione**.
+
     ![MIM CM Signing](media/mim-cm-deploy/image016.png)
+
 6. Chiudere tutte le finestre aperte e disconnettersi.
 
-### <a name="iis-configuration"></a>Configurazione di IIS 
+### <a name="iis-configuration"></a>Configurazione di IIS
 
-Per ospitare il sito Web per la gestione dei certificati, installare e configurare IIS
+Per ospitare il sito Web per la gestione dei certificati, installare e configurare IIS.
 
 #### <a name="install-and-configure-iis"></a>Installare e configurare IIS
 
-1. Accedere a **CORLog con l'account **MIMINSTALL**
+1. Accedere a **CORLog** con l'account **MIMINSTALL**
 
->[!IMPORTANT]
-L'account di installazione MIM deve essere un amministratore locale
+    >[!IMPORTANT]
+    >L'account di installazione MIM deve essere un amministratore locale
 
 2. Aprire PowerShell ed eseguire il comando seguente
 
-   - ```Install-WindowsFeature –ConfigurationFilePath```
+    `Install-WindowsFeature –ConfigurationFilePath`
 
 >[!NOTE]
- Un sito denominato Sito Web predefinito viene installato per impostazione predefinita con IIS 7. Se il sito è stato rinominato o rimosso, per poter installare Gestione certificati MIM è necessario che sia disponibile un sito denominato Sito Web predefinito.
+>Un sito denominato Sito Web predefinito viene installato per impostazione predefinita con IIS 7. Se il sito è stato rinominato o rimosso, per poter installare Gestione certificati MIM è necessario che sia disponibile un sito denominato Sito Web predefinito.
 
 #### <a name="configuring-kerberos"></a>Configurazione di Kerberos
 
 L'account MIMCMWebAgent esegue il portale di Gestione certificati MIM. Per impostazione predefinita in IIS viene usata l'autenticazione in modalità kernel. Viene disabilitata l'autenticazione in modalità kernel di Kerberos e vengono configurati SPN nell'account MIMCMWebAgent. Alcuni comandi richiedono autorizzazioni elevate in Active Directory e nel server CORPCM.
 
-![](media/mim-cm-deploy/image020.png)
+![Diagramma](media/mim-cm-deploy/image020.png)
 
-```
+```powershell
 #Kerberos settings
 #SPN
 SETSPN -S http/cm.contoso.com contoso\MIMCMWebAgent
@@ -343,12 +358,11 @@ Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo
 
 ```
 
-**Aggiornamento di IIS in **CORPCM**
+**Aggiornamento di IIS in CORPCM**
 
+![diagramma](media/mim-cm-deploy/image022.png)
 
-![](media/mim-cm-deploy/image022.png)
-
-```
+```powershell
 add-pssnapin WebAdministration
 
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name enabled -Value $true
@@ -357,9 +371,8 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
 
 ```
 
-
 >[!NOTE]
-È necessario aggiungere un DNS, un record per "cm.contoso.com" e puntare all'IP di CORPCM
+>È necessario aggiungere un DNS, un record per "cm.contoso.com" e puntare all'IP di CORPCM
 
 #### <a name="requiring-ssl-on-the-mim-cm-portal"></a>Richiedere SSL nel portale di Gestione certificati MIM
 
@@ -379,18 +392,18 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
 
 1. Assicurarsi di essere connessi al server CORPSQL01.
 
-2. Assicurarsi di avere eseguito l'accesso come DBA SQL
+2. Assicurarsi di avere eseguito l'accesso come DBA SQL.
 
 3. Eseguire lo script T-SQL seguente per consentire all'account CONTOSO\\MIMINSTALL di creare il database durante il passaggio di configurazione
 
->[!NOTE]
-Quando si è pronti per uscire e per il modulo dei criteri è necessario tornare a SQL
+    >[!NOTE]
+    >Quando si è pronti per uscire e per il modulo dei criteri è necessario tornare a SQL
 
-```
-create login [CONTOSO\\MIMINSTALL] from windows;
-exec sp_addsrvrolemember 'CONTOSO\\MIMINSTALL', 'dbcreator';
-exec sp_addsrvrolemember 'CONTOSO\\MIMINSTALL', 'securityadmin';  
-```
+    ```sql
+    create login [CONTOSO\\MIMINSTALL] from windows;
+    exec sp_addsrvrolemember 'CONTOSO\\MIMINSTALL', 'dbcreator';
+    exec sp_addsrvrolemember 'CONTOSO\\MIMINSTALL', 'securityadmin';  
+    ```
 
 ![Messaggio di errore della procedura guidata di configurazione di Gestione certificati MIM](media/mim-cm-deploy/image024.png)
 
@@ -412,7 +425,7 @@ exec sp_addsrvrolemember 'CONTOSO\\MIMINSTALL', 'securityadmin';
 
 8. Nella pagina Installazione personalizzata assicurarsi che il **Portale di Gestione certificati MIM** e i **componenti del Servizio di aggiornamento di Gestione certificati MIM** siano selezionati per l'installazione e quindi fare clic su **Avanti**.
 
-9. Nella pagina Cartella Web virtuale assicurarsi che il nome della cartella virtuale sia **CertificateManagement e quindi fare clic su **Avanti**.
+9. Nella pagina Cartella Web virtuale assicurarsi che il nome della cartella virtuale sia **CertificateManagement** e quindi **fare clic su Avanti**.
 
 10. Nella pagina di installazione di Gestione certificati di Microsoft Identity Manager fare clic su **Installa**.
 
@@ -422,14 +435,18 @@ exec sp_addsrvrolemember 'CONTOSO\\MIMINSTALL', 'securityadmin';
 
 ### <a name="configuration-wizard-of-microsoft-identity-manager-2016-certificate-management"></a>Configurazione guidata di Gestione certificati di Microsoft Identity Manager 2016
 
-Prima di eseguire l'accesso a CORPCM, aggiungere MIMINSTALL ai gruppi **Domain Admins, Schema Admins e al gruppo Administrators** locale per la configurazione guidata. È possibile rimuoverlo in un secondo momento dopo aver completato la configurazione.      
-    
+Prima di eseguire l'accesso a CORPCM, aggiungere MIMINSTALL ai gruppi **Domain Admins, Schema Admins e al gruppo Administrators** locale per la configurazione guidata. È possibile rimuoverlo in un secondo momento dopo aver completato la configurazione.
+
 ![Messaggio di errore](media/mim-cm-deploy/image028.png)
 
 1. Fare clic sul pulsante **Start**, scegliere **Configurazione guidata di Certificate Management**. Scegliere **Esegui come amministratore**
+
 2. Nella pagina **Configurazione guidata** fare clic su **Avanti**.
+
 3. Nella pagina **Configurazione CA** verificare che l'autorità di certificazione selezionata sia **Contoso-CORPCA-CA**, che il server selezionato sia **CORPCA.CONTOSO.COM** e quindi fare clic su **Avanti**.
+
 4. Nella pagina **Configurazione database di SQL Server®** nella casella **Nome istanza di SQL Server** digitare **CORPSQL1**, selezionare la casella di controllo **Usa credenziali dell'utente corrente per creare il database** e quindi fare clic su **Avanti**.
+
 5. Nella pagina **Impostazioni database** accettare il nome di database predefinito **FIMCertificateManagement**, assicurarsi che l'opzione **Autenticazione integrata SQL** sia selezionata e quindi fare clic su **Avanti**.
 
 6. Nella pagina **Configurazione Active Directory** accettare il nome predefinito specificato per il punto di connessione del servizio e quindi fare clic su **Avanti**.
@@ -439,35 +456,48 @@ Prima di eseguire l'accesso a CORPCM, aggiungere MIMINSTALL ai gruppi **Domain A
 8. Nella pagina **Agenti - FIM CM** deselezionare la casella di controllo **Usa impostazioni predefinite di FIM CM** e quindi fare clic su **Account personalizzati**.
 
 9. Nella finestra di dialogo a più schede **Agenti - FIM CM** digitare le informazioni seguenti in ogni scheda:
-   - Nome utente: **Update** 
-   - Password: **Pass\@word1**
-   - Conferma password: **Pass\@word1**
-   - Usa un utente esistente: **Enabled**
->[!NOTE]
-Questi account sono stati creati in precedenza. Assicurarsi che la procedura descritta nel passaggio 8 venga ripetuta per tutte le sei schede degli account agente.
 
-![Account Gestione certificati MIM](media/mim-cm-deploy/image030.png)
+   - Nome utente: **Update**
+
+   - Password: **Pass\@word1**
+
+   - Conferma password: **Pass\@word1**
+
+   - Usa un utente esistente: **Enabled**
+
+    >[!NOTE]
+    >Questi account sono stati creati in precedenza. Assicurarsi che la procedura descritta nel passaggio 8 venga ripetuta per tutte le sei schede degli account agente.
+
+    ![Account Gestione certificati MIM](media/mim-cm-deploy/image030.png)
 
 10. Dopo aver immesso tutte le informazioni degli account agente, fare clic su **OK**.
 
 11. Nella pagina **Agenti - FIM CM** fare clic su **Avanti**.
 
 12. Nella pagina **Configurazione certificati server** abilitare i modelli di certificato seguenti:
+
     - Modello di certificato da usare per il certificato di Key Recovery Agent dell'agente di recupero dati: **MIMCMKeyRecoveryAgent**.
+
     - Modello di certificato da usare per il certificato di FIM CM Agent: **MIMCMSigning**.
-    - Modello di certificato da usare per il certificato di Enrollment Agent: **MIMCMSigning**.
+
+    - Modello di certificato da usare per il certificato di Enrollment Agent: **FIMCMEnrollmentAgent**.
+
 13. Nella pagina **Configurazione certificati server** fare clic su **Avanti**.
+
 14. Nella pagina **Configurazione server di posta elettronica e stampa documenti** selezionare la casella **Specificare il nome del server SMTP da utilizzare per l'invio delle notifiche di registrazione tramite posta elettronica** e quindi fare clic su **Avanti**.
+
 15. Nella pagina **Pronto per la configurazione** fare clic su **Configura**.
+
 16. nella finestra di dialogo di avviso **Configurazione guidata - Microsoft Forefront Identity Manager 2010 R2** fare clic su **OK** per confermare che SSL non è abilitato nella directory virtuale IIS.
 
     ![media/image17.png](media/mim-cm-deploy/image032.png)
 
     >[!NOTE] 
-    Non fare clic sul pulsante Fine fino quando l'esecuzione della configurazione guidata non è completata. L'accesso alla procedura guidata è disponibile qui:**%programfiles%\\Microsoft Forefront Identity Management\\2010\\Certificate Management\\config.log**
+    >Non fare clic sul pulsante Fine fino quando l'esecuzione della configurazione guidata non è completata. L'accesso alla procedura guidata è disponibile nel percorso seguente: **%programfiles%\\Microsoft Forefront Identity Management\\2010\\Certificate Management\\config.log**
+
 17. Fare clic su **Fine**.
 
-![Procedura guidata di Gestione certificati MIM completata](media/mim-cm-deploy/image033.png)
+    ![Procedura guidata di Gestione certificati MIM completata](media/mim-cm-deploy/image033.png)
 
 18. Chiudere tutte le finestre aperte.
 
@@ -475,7 +505,7 @@ Questi account sono stati creati in precedenza. Assicurarsi che la procedura des
 
 20. Visitare il sito dal server CORPCM https://cm.contoso.com/certificatemanagement  
 
-    ![](media/mim-cm-deploy/image035.png)
+    ![diagramma](media/mim-cm-deploy/image035.png)
 
 ### <a name="verify-the-cng-key-isolation-service"></a>Verificare il servizio Isolamento chiavi CNG
 
@@ -500,7 +530,7 @@ In questo passaggio vengono installati e configurati i moduli CA FIM CM nell'aut
 3. Nella finestra **Web** fare clic con il pulsante destro del mouse su **Web.config** e quindi fare clic su **Apri**.
 
     >[!Note]
-    Il file Web.config viene aperto in Blocco note
+    >Il file Web.config viene aperto in Blocco note
 
 4. Quando il file viene aperto, premere CTRL+F.
 
@@ -549,7 +579,7 @@ In questo passaggio vengono installati e configurati i moduli CA FIM CM nell'aut
 6. Nella pagina **Installazione personalizzata** selezionare **Servizio di aggiornamento di Gestione certificati MIM** e quindi fare clic su **La funzionalità specificata non sarà disponibile**.
 
     >[!Note]
-    In questo modo la funzionalità File CA di Gestione certificati MIM sarà l'unica funzionalità abilitata per l'installazione.
+    >In questo modo la funzionalità File CA di Gestione certificati MIM sarà l'unica funzionalità abilitata per l'installazione.
 
 7. Nella pagina **Installazione personalizzata** fare clic su **Avanti**.
 
@@ -585,7 +615,7 @@ In questo passaggio vengono installati e configurati i moduli CA FIM CM nell'aut
 12. Nell'elenco di eventi verificare che gli ultimi eventi dall'ultimo riavvio di Servizi certificati *non* includano eventi **Avviso** o **Errore**.
 
     >[!NOTE] 
-    L'ultimo evento dovrebbe indicare che il modulo di post-elaborazione è stato caricato usando le impostazioni di ```SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\ContosoRootCA\ExitModules\Clm.Exit```
+    >L'ultimo evento dovrebbe indicare che il modulo di post-elaborazione è stato caricato usando le impostazioni di `SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\ContosoRootCA\ExitModules\Clm.Exit`
 
 13. Ridurre a icona il **Visualizzatore eventi**.
 
@@ -602,7 +632,7 @@ In questo passaggio vengono installati e configurati i moduli CA FIM CM nell'aut
 5. Selezionare l'identificazione personale e quindi premere CTRL+C.
 
     >[!NOTE]
-    **Non** includere lo spazio iniziale nell'elenco dei caratteri dell'identificazione personale.
+    >**Non** includere lo spazio iniziale nell'elenco dei caratteri dell'identificazione personale.
 
 6. Nella finestra di dialogo **Certificato** fare clic su **OK**.
 
@@ -615,8 +645,8 @@ In questo passaggio vengono installati e configurati i moduli CA FIM CM nell'aut
 10. Nella casella **Trova** digitare uno spazio e quindi fare clic su **Sostituisci tutto**.
 
     >[!Note]
-    Vengono rimossi tutti gli spazi tra i caratteri nell'identificazione personale.
-    
+    >Vengono rimossi tutti gli spazi tra i caratteri nell'identificazione personale.
+
 11. Nella finestra di dialogo **Sostituisci** fare clic su **Annulla**.
 
 12. Selezionare *thumbprintstring* e quindi premere CTRL+C.
@@ -629,143 +659,239 @@ In questo passaggio vengono installati e configurati i moduli CA FIM CM nell'aut
 
 2. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA** e quindi fare clic su **Proprietà**.
 
-3.  Nella finestra di dialogo **Proprietà contoso-CORPCA-CA** nella scheda **Modulo criteri** fare clic su **Proprietà**.
+3. Nella finestra di dialogo **Proprietà contoso-CORPCA-CA** nella scheda **Modulo criteri** fare clic su **Proprietà**.
 
-- Nella scheda **Generale** assicurarsi che l'opzione **Passa richieste non FIM CM al modulo criteri predefinito per l'elaborazione** sia selezionata.
-- Nella scheda **Certificati di firma** fare clic su **Aggiungi**.
-- Nella finestra di dialogo Certificato fare clic con il pulsante destro del mouse sulla casella **Specificare l'hash del certificato con codifica esadecimale** e quindi fare clic su **Incolla**.
-- Nella finestra di dialogo **Certificato** fare clic su **OK**.
-    >[!Note]
-    Se il pulsante **OK** non è abilitato significa che è stato immesso per errore un carattere nascosto nella stringa dell'identificazione personale quando l'identificazione personale è stata copiata dal certificato clmAgent. Ripetere tutti i passaggi a partire dall'attività 4 **Copiare l'identificazione personale del certificato MIMCMAgent negli Appunti di Windows** di questo esercizio.
+    - Nella scheda **Generale** assicurarsi che l'opzione **Passa richieste non FIM CM al modulo criteri predefinito per l'elaborazione** sia selezionata.
 
-- Nella finestra di dialogo **Proprietà di configurazione** assicurarsi che l'identificazione personale sia inclusa nell'elenco **Certificati di firma validi** e quindi fare clic su **OK**.
+    - Nella scheda **Certificati di firma** fare clic su **Aggiungi**.
 
-- Nella finestra di messaggio **Gestione certificati FIM** fare clic su **OK**.
+    - Nella finestra di dialogo Certificato fare clic con il pulsante destro del mouse sulla casella **Specificare l'hash del certificato con codifica esadecimale** e quindi fare clic su **Incolla**.
 
-- Nella finestra di dialogo **Proprietà contoso-CORPCA-CA** fare clic su **OK**.
+    - Nella finestra di dialogo **Certificato** fare clic su **OK**.
+    
+        >[!Note]
+        >Se il pulsante **OK** non è abilitato significa che è stato immesso per errore un carattere nascosto nella stringa dell'identificazione personale quando l'identificazione personale è stata copiata dal certificato clmAgent. Ripetere tutti i passaggi a partire dall'attività 4 **Copiare l'identificazione personale del certificato MIMCMAgent negli Appunti di Windows** di questo esercizio.
 
-- Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA****, scegliere **Tutte le attività** e quindi fare clic su **Arresta servizio**.
+4. Nella finestra di dialogo **Proprietà di configurazione** assicurarsi che l'identificazione personale sia inclusa nell'elenco **Certificati di firma validi** e quindi fare clic su **OK**.
 
-- Attendere che i Servizi certificati Active Directory vengano arrestati.
+5. Nella finestra di messaggio **Gestione certificati FIM** fare clic su **OK**.
 
-- Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA****, scegliere **Tutte le attività** e quindi fare clic su **Avvia servizio**.
+6. Nella finestra di dialogo **Proprietà contoso-CORPCA-CA** fare clic su **OK**.
 
-- Chiudere la console **Autorità di certificazione**.
+7. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA****, scegliere **Tutte le attività** e quindi fare clic su **Arresta servizio**.
 
-- Chiudere tutte le finestre aperte e disconnettersi.
+8. Attendere che i Servizi certificati Active Directory vengano arrestati.
 
-- L'**ultimo passaggio della distribuzione** consiste nell'assicurarsi che CONTOSO\\MIMCM-Managers possa essere distribuito, creare modelli e configurare il sistema senza essere amministratori dello schema e di dominio. Lo script successivo visualizza le autorizzazioni dell'ACL nei modelli di certificato usando dsacls. Eseguire lo script con un account con autorizzazione completa per la modifica delle autorizzazioni di sicurezza Lettura e Scrittura in ogni modello di certificato esistente nella foresta.
+9. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA****, scegliere **Tutte le attività** e quindi fare clic su **Avvia servizio**.
 
-- Primi passaggi: **Configurazione del punto di connessione del servizio e delle autorizzazioni del gruppo di destinazione e Delega della gestione dei modelli di profilo**
-  - Configurare le autorizzazioni nel punto di connessione del servizio (SCP).
+10. Chiudere la console **Autorità di certificazione**.
 
-  - Configurare la gestione dei modelli di profilo delegata.
+11. Chiudere tutte le finestre aperte e disconnettersi.
 
-  - Configurare le autorizzazioni nel punto di connessione del servizio (SCP). **\<no script\>**
+L'**ultimo passaggio della distribuzione** consiste nell'assicurarsi che CONTOSO\\MIMCM-Managers possa essere distribuito, creare modelli e configurare il sistema senza essere amministratori dello schema e di dominio. Lo script successivo visualizza le autorizzazioni dell'ACL nei modelli di certificato usando dsacls. Eseguire lo script con un account con autorizzazione completa per la modifica delle autorizzazioni di sicurezza Lettura e Scrittura in ogni modello di certificato esistente nella foresta.
 
-     -   Assicurarsi di essere connessi al server virtuale **CORPDC**.
+Primi passaggi: **Configurazione del punto di connessione del servizio e delle autorizzazioni del gruppo di destinazione e Delega della gestione dei modelli di profilo**
 
-     -   Accedere come **contoso\\corpadmin**
+1. Configurare le autorizzazioni nel punto di connessione del servizio (SCP).
 
-     -   Da **Strumenti di amministrazione** aprire **Utenti e computer di Active Directory**.
+2. Configurare la gestione dei modelli di profilo delegata.
 
-     -   In **Utenti e computer di Active Directory** nel menu **Visualizza** verificare che **Funzionalità avanzate** sia abilitata.
+3. Configurare le autorizzazioni nel punto di connessione del servizio (SCP). **\<no script\>**
 
-     -   Nell'albero della console espandere **Contoso.com** \| **System** \| **Microsoft** \| **Certificate Lifecycle Manager** e quindi fare clic su **CORPCM**.
+4.   Assicurarsi di essere connessi al server virtuale **CORPDC**.
 
-     -   Fare clic con il pulsante destro del mouse su **CORPCM** e quindi scegliere **Proprietà**.
+5. Accedere come **contoso\\corpadmin**
 
-     -   Nella finestra di dialogo **Proprietà CORPCM** nella scheda **Sicurezza** aggiungere i gruppi seguenti con le autorizzazioni corrispondenti:
+6. Da **Strumenti di amministrazione** aprire **Utenti e computer di Active Directory**.
 
-    | Group          | Autorizzazioni                                                                                                                                                         |
-    |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+7. In **Utenti e computer di Active Directory** nel menu **Visualizza** verificare che **Funzionalità avanzate** sia abilitata.
+
+8. Nell'albero della console espandere **Contoso.com** \| **System** \| **Microsoft** \| **Certificate Lifecycle Manager** e quindi fare clic su **CORPCM**.
+
+9. Fare clic con il pulsante destro del mouse su **CORPCM** e quindi scegliere **Proprietà**.
+
+10. Nella finestra di dialogo **Proprietà CORPCM** nella scheda **Sicurezza** aggiungere i gruppi seguenti con le autorizzazioni corrispondenti:
+
+    | Group          | Autorizzazioni      |
+    |----------------|------------------|
     | mimcm-Managers | Lettura </br> FIM CM Audit</br> FIM CM Enrollment Agent</br> FIM CM Request Enroll</br> FIM CM Request Recover</br> FIM CM Request Renew</br> FIM CM Request Revoke </br> FIM CM Request Unblock Smart Card |
-    | mimcm-HelpDesk | Lettura</br> FIM CM Enrollment Agent</br> FIM CM Request Revoke</br> FIM CM Request Unblock Smart Card                                                                                |
-- Nella finestra di dialogo **Proprietà CORPDC** fare clic su **OK**.
+    | mimcm-HelpDesk | Lettura</br> FIM CM Enrollment Agent</br> FIM CM Request Revoke</br> FIM CM Request Unblock Smart Card |
 
-- Lasciare aperta **Utenti e computer di Active Directory**.
+11. Nella finestra di dialogo **Proprietà CORPDC** fare clic su **OK**.
 
-- **Configurare le autorizzazioni negli oggetti utente discendenti**
-    - Assicurarsi di essere nella console **Utenti e computer di Active Directory**.
-    - Nell'albero della console fare clic con il pulsante destro del mouse su **Contoso.com** e scegliere **Proprietà**.
-    - Nella scheda **Sicurezza** fare clic su **Avanzate**.
-    - Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **Aggiungi**.
-    - Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-Managers** e quindi fare clic su **OK**.
-    - Nella finestra di dialogo **Voci di autorizzazione per Contoso** nell'elenco **Applica a** selezionare **Descendant User objects** (Oggetti Utente discendente) e quindi selezionare la casella di controllo **Consenti** per le **Autorizzazioni** seguenti:
-        - **Leggi tutte le proprietà**
-        - **Autorizzazioni di lettura**
-        - **FIM CM Audit**
-        - **FIM CM Enrollment Agent**
-        - **FIM CM Request Enroll**
-        - **FIM CM Request Recover**
-        - **FIM CM Request Renew**
-        - **FIM CM Request Revoke**
-        - **FIM CM Request Unblock Smart Card**
-    - Nella finestra di dialogo **Voci di autorizzazione per Contoso** fare clic su **OK**.
-    - Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **Aggiungi**.
-    - Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-HelpDesk** e quindi fare clic su **OK**.
-    - Nella finestra di dialogo **Voci di autorizzazione per Contoso** nell'elenco **Applica a** selezionare **Descendant User objects** (Oggetti Utente discendente) e quindi selezionare la casella di controllo **Consenti** per le **Autorizzazioni** seguenti:       - **Leggi tutte le proprietà** - **Autorizzazioni di lettura** - **FIM CM Enrollment Agent** - **FIM CM Request Revoke** - **FIM CM Request Unblock Smart Card**
-    - Nella finestra di dialogo **Voci di autorizzazione per Contoso** fare clic su **OK**.
-    Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **OK**.
-    - Nella finestra di dialogo **Proprietà contoso.com** fare clic su **OK**.
-    - Lasciare aperta **Utenti e computer di Active Directory**.
+12. Lasciare aperta **Utenti e computer di Active Directory**.
 
-    - **Configurare le autorizzazioni negli oggetti utente discendente \<no script\>**
-        - Assicurarsi di essere nella console **Utenti e computer di Active Directory**.
-        - Nell'albero della console fare clic con il pulsante destro del mouse su **Contoso.com** e scegliere **Proprietà**.
-        - Nella scheda **Sicurezza** fare clic su **Avanzate**.
-        - Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **Aggiungi**.
-        - Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-Managers** e quindi fare clic su **OK**.
-        - Nella finestra di dialogo **Voci di autorizzazione per CONTOSO** nell'elenco **Applica a** selezionare **Descendant User objects** (Oggetti Utente discendente) e quindi selezionare la casella di controllo **Consenti** per le **Autorizzazioni** seguenti:
-            - **Leggi tutte le proprietà**
-            - **Autorizzazioni di lettura**
-            - **FIM CM Audit**
-            - **FIM CM Enrollment Agent**
-            - **FIM CM Request Enroll**
-            - **FIM CM Request Recover**
-            - **FIM CM Request Renew**
-            - **FIM CM Request Revoke**
-            - **FIM CM Request Unblock Smart Card**
-    - Nella finestra di dialogo **Voci di autorizzazione per CONTOSO** fare clic su **OK**.
-    - Nella finestra di dialogo **Impostazioni avanzate di sicurezza per CONTOSO** fare clic su **Aggiungi**.
-    - Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-HelpDesk** e quindi fare clic su **OK**.
-    - Nella finestra di dialogo **Voci di autorizzazione per CONTOSO** nell'elenco **Applica a** selezionare **Descendant User objects** (Oggetti Utente discendente) e quindi selezionare la casella di controllo **Consenti** per le **Autorizzazioni** seguenti:       - **Leggi tutte le proprietà** - **Autorizzazioni di lettura** - **FIM CM Enrollment Agent** - **FIM CM Request Revoke** - **FIM CM Request Unblock Smart Card**
-    - Nella finestra di dialogo **Voci di autorizzazione per contoso** fare clic su **OK**.
-    - Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **OK**.
-    - Nella finestra di dialogo **Proprietà contoso.com** fare clic su **OK**.
-    - Lasciare aperta **Utenti e computer di Active Directory**.
-- Passaggi successivi: **Delega delle autorizzazioni di gestione dei modelli di certificato \<script\>**
-    - Delega delle autorizzazioni nel contenitore Modelli di certificato.
-    - Delega delle autorizzazioni nel contenitore ID oggetto.
-    - Delega delle autorizzazioni nei modelli di certificato esistenti.
-- Definire le autorizzazioni nel contenitore Modelli di certificato
-     1. Ripristinare la console **Siti e servizi di Active Directory**.
-     2. Nell'albero della console espandere **Servizi**, espandere **Servizi chiave pubblica** e quindi fare clic su **Modelli di certificato**.
-     3. Nell'albero della console fare clic con il pulsante destro del mouse su **Modelli di certificato** e quindi fare clic su **Delega controllo**.
-     4. In **Delega guidata del controllo** fare clic su **Avanti**.
-     5. Nella pagina **Utenti o gruppi** fare clic su **Aggiungi**.
-     6. Nella finestra di dialogo **Seleziona utenti, Computer o Gruppi** nella casella **Immettere i nomi degli oggetti da selezionare** digitare **mimcm-Managers** e quindi fare clic su **OK**.
-     7. Nella pagina **Utenti o gruppi** fare clic su **Avanti**.
-     8. Nella pagina **Attività da delegare** fare clic su **Crea un'attività personalizzata per eseguire la delega** e quindi fare clic su **Avanti**.
-     9.  Nella pagina **Tipo di oggetti Active Directory** verificare che l'opzione **Questa cartella, gli oggetti che contiene e la creazione di  nuovi oggetti in essa** sia selezionata e quindi fare clic su **Avanti**.
-     10. Nella pagina **Autorizzazioni** nell'elenco **Autorizzazioni** selezionare la casella di controllo **Controllo completo** e quindi fare clic su **Avanti**.
-     11. Nella pagina **Completamento della Delega guidata del controllo** fare clic su **Fine**.
+**Configurare le autorizzazioni negli oggetti utente discendenti**
 
-- Definire le autorizzazioni nel contenitore ID oggetto
-     1. Nell'albero della console fare clic con il pulsante destro del mouse su **ID oggetto** e quindi scegliere **Proprietà**.
-     2. Nella finestra di dialogo **Proprietà ID oggetto** nella scheda **Sicurezza** fare clic su **Avanzate**.
-     3. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per ID oggetto** fare clic su **Aggiungi**.
-     4. Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-Managers** e quindi fare clic su **OK**.
-     5. Nella finestra di dialogo **Voci di autorizzazione per ID oggetto** verificare che le autorizzazioni si applichino a **Questo oggetto e tutti i discendenti**, fare clic su **Controllo completo** e quindi su **OK**.
-     6. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per ID oggetto** fare clic su **OK**.
-     7. Nella finestra di dialogo **Proprietà ID oggetto** fare clic su **OK**.
-     8. Chiudere **Siti e servizi di Active Directory**.
+1. Assicurarsi di essere nella console **Utenti e computer di Active Directory**.
+
+2. Nell'albero della console fare clic con il pulsante destro del mouse su **Contoso.com** e scegliere **Proprietà**.
+
+3. Nella scheda **Sicurezza** fare clic su **Avanzate**.
+
+4. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **Aggiungi**.
+
+5. Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-Managers** e quindi fare clic su **OK**.
+
+6. Nella finestra di dialogo **Voci di autorizzazione per Contoso** nell'elenco **Applica a** selezionare **Descendant User objects** (Oggetti Utente discendente) e quindi selezionare la casella di controllo **Consenti** per le **Autorizzazioni** seguenti:
+
+    - **Leggi tutte le proprietà**
+    
+    - **Autorizzazioni di lettura**
+
+    - **FIM CM Audit**
+
+    - **FIM CM Enrollment Agent**
+
+    - **FIM CM Request Enroll**
+
+    - **FIM CM Request Recover**
+
+    - **FIM CM Request Renew**
+
+    - **FIM CM Request Revoke**
+
+    - **FIM CM Request Unblock Smart Card**
+
+7. Nella finestra di dialogo **Voci di autorizzazione per Contoso** fare clic su **OK**.
+
+8. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **Aggiungi**.
+
+9. Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-HelpDesk** e quindi fare clic su **OK**.
+
+10. Nella finestra di dialogo **Voci di autorizzazione per Contoso** nell'elenco **Applica a** selezionare **Descendant User objects** (Oggetti Utente discendente) e quindi selezionare la casella di controllo **Consenti** per le **Autorizzazioni** seguenti:
+
+    - **Leggi tutte le proprietà**
+
+    - **Autorizzazioni di lettura**
+
+    - **FIM CM Enrollment Agent**
+
+    - **FIM CM Request Revoke**
+
+    - **FIM CM Request Unblock Smart Card**
+
+11. Nella finestra di dialogo **Voci di autorizzazione per Contoso** fare clic su **OK**.
+
+12. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **OK**.
+
+13. Nella finestra di dialogo **Proprietà contoso.com** fare clic su **OK**.
+
+14. Lasciare aperta **Utenti e computer di Active Directory**.
+
+**Configurare le autorizzazioni negli oggetti utente discendente \<no script\>**
+
+1. Assicurarsi di essere nella console **Utenti e computer di Active Directory**.
+
+2. Nell'albero della console fare clic con il pulsante destro del mouse su **Contoso.com** e scegliere **Proprietà**.
+
+3. Nella scheda **Sicurezza** fare clic su **Avanzate**.
+
+4. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **Aggiungi**.
+
+5. Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-Managers** e quindi fare clic su **OK**.
+
+6. Nella finestra di dialogo **Voci di autorizzazione per CONTOSO** nell'elenco **Applica a** selezionare **Descendant User objects** (Oggetti Utente discendente) e quindi selezionare la casella di controllo **Consenti** per le **Autorizzazioni** seguenti:
+
+    - **Leggi tutte le proprietà**
+
+    - **Autorizzazioni di lettura**
+
+    - **FIM CM Audit**
+
+    - **FIM CM Enrollment Agent**
+
+    - **FIM CM Request Enroll**
+
+    - **FIM CM Request Recover**
+
+    - **FIM CM Request Renew**
+
+    - **FIM CM Request Revoke**
+
+    - **FIM CM Request Unblock Smart Card**
+
+7. Nella finestra di dialogo **Voci di autorizzazione per CONTOSO** fare clic su **OK**.
+
+8. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per CONTOSO** fare clic su **Aggiungi**.
+
+9. Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-HelpDesk** e quindi fare clic su **OK**.
+
+10. Nella finestra di dialogo **Voci di autorizzazione per CONTOSO** nell'elenco **Applica a** selezionare **Descendant User objects** (Oggetti Utente discendente) e quindi selezionare la casella di controllo **Consenti** per le **Autorizzazioni** seguenti:
+
+    - **Leggi tutte le proprietà**
+
+    - **Autorizzazioni di lettura**
+
+    - **FIM CM Enrollment Agent**
+
+    - **FIM CM Request Revoke**
+
+    - **FIM CM Request Unblock Smart Card**
+
+11. Nella finestra di dialogo **Voci di autorizzazione per contoso** fare clic su **OK**.
+
+12. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per Contoso** fare clic su **OK**.
+
+13. Nella finestra di dialogo **Proprietà contoso.com** fare clic su **OK**.
+
+14. Lasciare aperta **Utenti e computer di Active Directory**.
+
+Passaggi successivi: **Delega delle autorizzazioni di gestione dei modelli di certificato \<script\>**
+
+- Delega delle autorizzazioni nel contenitore Modelli di certificato.
+
+- Delega delle autorizzazioni nel contenitore ID oggetto.
+
+- Delega delle autorizzazioni nei modelli di certificato esistenti.
+
+Definire le autorizzazioni nel contenitore Modelli di certificato:
+
+1. Ripristinare la console **Siti e servizi di Active Directory**.
+
+2. Nell'albero della console espandere **Servizi**, espandere **Servizi chiave pubblica** e quindi fare clic su **Modelli di certificato**.
+
+3. Nell'albero della console fare clic con il pulsante destro del mouse su **Modelli di certificato** e quindi fare clic su **Delega controllo**.
+
+4. In **Delega guidata del controllo** fare clic su **Avanti**.
+
+5. Nella pagina **Utenti o gruppi** fare clic su **Aggiungi**.
+
+6. Nella finestra di dialogo **Seleziona utenti, computer o gruppi** nella casella **Immettere i nomi degli oggetti da selezionare** digitare **mimcm-Managers** e quindi fare clic su **OK**.
+
+7. Nella pagina **Utenti o gruppi** fare clic su **Avanti**.
+
+8. Nella pagina **Attività da delegare** fare clic su **Crea un'attività personalizzata per eseguire la delega** e quindi fare clic su **Avanti**.
+
+9.  Nella pagina **Tipo di oggetti Active Directory** verificare che l'opzione **Questa cartella, gli oggetti che contiene e la creazione di nuovi oggetti in essa** sia selezionata e quindi fare clic su **Avanti**.
+
+10. Nella pagina **Autorizzazioni** nell'elenco **Autorizzazioni** selezionare la casella di controllo **Controllo completo** e quindi fare clic su **Avanti**.
+
+11. Nella pagina **Completamento della Delega guidata del controllo** fare clic su **Fine**.
+
+Definire le autorizzazioni nel contenitore OID:
+
+1. Nell'albero della console fare clic con il pulsante destro del mouse su **ID oggetto** e quindi scegliere **Proprietà**.
+
+2. Nella finestra di dialogo **Proprietà ID oggetto** nella scheda **Sicurezza** fare clic su **Avanzate**.
+
+3. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per ID oggetto** fare clic su **Aggiungi**.
+
+4. Nella finestra di dialogo **Seleziona utente, Computer, Account servizio o Gruppo** nella casella **Immettere il nome dell'oggetto da selezionare** digitare **mimcm-Managers** e quindi fare clic su **OK**.
+
+5. Nella finestra di dialogo **Voci di autorizzazione per ID oggetto** verificare che le autorizzazioni si applichino a **Questo oggetto e tutti i discendenti**, fare clic su **Controllo completo** e quindi su **OK**.
+
+6. Nella finestra di dialogo **Impostazioni avanzate di sicurezza per ID oggetto** fare clic su **OK**.
+
+7. Nella finestra di dialogo **Proprietà ID oggetto** fare clic su **OK**.
+
+8. Chiudere **Siti e servizi di Active Directory**.
 
 **Script: Autorizzazioni per ID oggetto, modello di profilo e contenitore Modelli di certificato**
 
-![](media/mim-cm-deploy/image021.png)
+![diagramma](media/mim-cm-deploy/image021.png)
 
-```
+```powershell
 import-module activedirectory
 $adace = @{
 "OID" = "AD:\\CN=OID,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com";
@@ -789,76 +915,150 @@ $acl.AddAccessRule($ace)
 
 **Script: Delega delle autorizzazioni nei modelli di certificato esistenti.**  
 
-![](media/mim-cm-deploy/image039.png)  
+![diagramma](media/mim-cm-deploy/image039.png)
 
-dsacls "CN=Administrator,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+```shell
+dsacls "CN=Administrator,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CA,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CA,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CAExchange,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CAExchange,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CEPEncryption,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CEPEncryption,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=ClientAuth,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=ClientAuth,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CodeSigning,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CodeSigning,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CrossCA,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CrossCA,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=CTLSigning,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=CTLSigning,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=DirectoryEmailReplication,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=DirectoryEmailReplication,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=DomainController,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=DomainController,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=DomainControllerAuthentication,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=DomainControllerAuthentication,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=EFS,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=EFS,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=EFSRecovery,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=EFSRecovery,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=EnrollmentAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=EnrollmentAgent,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=EnrollmentAgentOffline,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=EnrollmentAgentOffline,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=ExchangeUser,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=ExchangeUser,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=ExchangeUserSignature,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=ExchangeUserSignature,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=FIMCMSigning,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=FIMCMSigning,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=FIMCMEnrollmentAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=FIMCMEnrollmentAgent,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=FIMCMKeyRecoveryAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=FIMCMKeyRecoveryAgent,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=IPSecIntermediateOffline,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=IPSecIntermediateOffline,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=IPSecIntermediateOnline,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=IPSecIntermediateOnline,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=KerberosAuthentication,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=KerberosAuthentication,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=KeyRecoveryAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=KeyRecoveryAgent,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=Machine,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=Machine,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=MachineEnrollmentAgent,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=MachineEnrollmentAgent,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=OCSPResponseSigning,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=OCSPResponseSigning,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=OfflineRouter,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=OfflineRouter,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=RASAndIASServer,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=RASAndIASServer,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=SmartCardLogon,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=SmartCardLogon,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=SmartCardUser,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=SmartCardUser,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=SubCA,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=SubCA,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=User,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=User,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=UserSignature,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=UserSignature,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=WebServer,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=WebServer,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
 
-dsacls "CN=Workstation,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+dsacls "CN=Workstation,CN=Certificate Templates,CN=Public Key
+Services,CN=Services,CN=Configuration,DC=Contoso,DC=com" /G
+Contoso\\MIMCM-Managers:SDDTRCWDWOLCWPRPCCDCWSLO
+```
