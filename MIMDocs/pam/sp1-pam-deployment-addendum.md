@@ -1,7 +1,7 @@
 ---
 title: Appendice
-description: "Questa è l'Appendice ai documenti riguardanti la distribuzione con script di PAM. Viene illustrata la configurazione di domini PRIV e CORP, nonché l'impostazione di un client per eseguire la convalida e le informazioni su come richiedere assistenza."
-keywords: 
+description: Questa è l'Appendice ai documenti riguardanti la distribuzione con script di PAM. Viene illustrata la configurazione di domini PRIV e CORP, nonché l'impostazione di un client per eseguire la convalida e le informazioni su come richiedere assistenza.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,13 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 010fcac1d512775ed5c84031a42a4c5836cff34f
 ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/19/2017
+ms.locfileid: "20896955"
 ---
 # <a name="pam-deployment-scripts-addendum"></a>Appendice agli script di distribuzione di PAM:
 

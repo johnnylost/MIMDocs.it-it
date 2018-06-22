@@ -1,7 +1,7 @@
 ---
 title: Informazioni sui componenti di PAM | Documentazione Microsoft
 description: Privileged Access Management condivide alcuni componenti con MIM e ha alcuni componenti propri. Informazioni sul funzionamento della combinazione di questi componenti.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052366"
 ---
 # <a name="understand-the-components-of-pam"></a>Informazioni sui componenti di PAM
 

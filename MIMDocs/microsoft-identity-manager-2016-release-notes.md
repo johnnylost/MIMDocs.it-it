@@ -1,7 +1,7 @@
 ---
 title: Note di rilascio per Microsoft Identity Manager 2016 | Documentazione Microsoft
 description: Trovare informazioni sulle versioni recenti di MIM.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -18,6 +18,7 @@ ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/12/2017
+ms.locfileid: "23137575"
 ---
 # <a name="release-notes-for-mim-2016"></a>Note sulla versione di MIM 2016
 Al momento non sono presenti note sulla versione.

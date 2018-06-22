@@ -1,7 +1,7 @@
 ---
 title: Ripristino di emergenza di PAM | Documentazione Microsoft
-description: "Informazioni su come configurare Privileged Access Management per la disponibilità elevata e il ripristino di emergenza."
-keywords: 
+description: Informazioni su come configurare Privileged Access Management per la disponibilità elevata e il ripristino di emergenza.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052315"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Considerazioni su disponibilità elevata e ripristino di emergenza nell'ambiente bastion
 

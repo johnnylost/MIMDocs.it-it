@@ -1,7 +1,7 @@
 ---
 title: Modello a livelli dell'ambiente PAM | Documentazione Microsoft
-description: "Informazioni sul modello a livelli che mantiene separate le diverse parti del sistema in base alla vulnerabilità al rischio."
-keywords: 
+description: Informazioni sul modello a livelli che mantiene separate le diverse parti del sistema in base alla vulnerabilità al rischio.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/31/2017
+ms.locfileid: "21942732"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Modello di livello per il partizionamento dei privilegi amministrativi
 

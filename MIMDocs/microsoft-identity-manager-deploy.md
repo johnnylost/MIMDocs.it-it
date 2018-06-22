@@ -17,6 +17,7 @@ ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33079007"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Distribuire Microsoft Identity Manager 2016 SP1
 Gli articoli di questa sezione forniscono istruzioni dettagliate per la distribuzione di Microsoft Identity Manager (MIM) 2016 per scenari self-service dell'utente finale in un server aggiornato in cui FIM o MIM non sia stato distribuito in precedenza.

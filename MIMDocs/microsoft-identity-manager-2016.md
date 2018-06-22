@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 | Documentazione Microsoft
-description: "MIM include le funzionalità di gestione dell'accesso di FIM 2010 e consente di gestire gli utenti, le credenziali, i criteri e l'accesso all'interno dell'organizzazione."
-keywords: 
+description: MIM include le funzionalità di gestione dell'accesso di FIM 2010 e consente di gestire gli utenti, le credenziali, i criteri e l'accesso all'interno dell'organizzazione.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/17/2017
+ms.locfileid: "23451158"
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 

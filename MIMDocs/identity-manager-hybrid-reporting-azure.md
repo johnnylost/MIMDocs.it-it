@@ -1,7 +1,7 @@
 ---
 title: Cosa sono i report ibridi in Azure AD? | Microsoft Docs
-description: "I report delle attività di controllo ibridi in Azure Active Directory consentono di visualizzare gli eventi controllati sia nel cloud che in locale."
-keywords: 
+description: I report delle attività di controllo ibridi in Azure Active Directory consentono di visualizzare gli eventi controllati sia nel cloud che in locale.
+keywords: ''
 author: davidste
 ms.author: davidste
 manager: bhu
@@ -16,6 +16,7 @@ ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/20/2018
+ms.locfileid: "29370379"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Creazione di report di controllo di gestione delle identità ibridi in Azure Active Directory
 Con i report delle attività di controllo di Azure Active Directory (Azure AD) è possibile monitorare le attività di gestione delle identità sia in locale che nel cloud. La gestione di tutti i dati sulle identità e l'accesso in un singolo report consente di risparmiare tempo e ridurre i costi complessivi.

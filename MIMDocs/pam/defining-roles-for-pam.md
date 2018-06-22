@@ -1,7 +1,7 @@
 ---
 title: Definire i ruoli con privilegi per PAM | Documentazione Microsoft
 description: Decidere quali ruoli con privilegi devono essere gestiti e definire i criteri di gestione per ognuno.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/01/2017
+ms.locfileid: "21943758"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definire ruoli per Privileged Access Management
 
