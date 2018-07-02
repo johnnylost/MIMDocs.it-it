@@ -12,22 +12,23 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
-ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
+ms.openlocfilehash: 119dca043ec478e68317c14103204da2482eb001
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290153"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Installare MIM 2016: sincronizzare Active Directory e il servizio MIM
 
->[!div class="step-by-step"]
-[« Servizio e portale MIM](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« Servizio e portale MIM](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > Questa procedura dettagliata usa nomi e valori di esempio della società Contoso. Sostituirli con i propri nomi e valori. Ad esempio:
 > - Nome del controller di dominio: **mimservername**
 > - Nome del dominio: **contoso**
-> - Password: **Pass@word1**
+> - Password: <strong>Pass@word1</strong>
 
 Per impostazione predefinita, non sono presenti connettori configurati per il servizio di sincronizzazione MIM (Sincronizzazione).  Il primo passaggio prevede in genere l'uso di Sincronizzazione MIM per popolare il database del servizio MIM con gli account di Active Directory esistenti. A tale scopo, si utilizzerà l'applicazione Servizio di sincronizzazione MIM.
 
@@ -39,7 +40,7 @@ Quando si configura un agente di gestione MIM, è necessario specificare un acco
 > [!NOTE]
 > L'account utilizzato per l'agente di gestione MIM deve essere lo stesso account specificato durante l'installazione del servizio MIM.
 
-###<a name="to-create-the-mim-ma"></a>Per creare l’agente di gestione MIM
+### <a name="to-create-the-mim-ma"></a>Per creare l’agente di gestione MIM
 
 1.  Aprire Synchronization Service Manager.
 
@@ -429,5 +430,5 @@ Seguire questa procedura per eseguire ognuno dei tre profili di esecuzione.
     - Nell'elenco **Run profiles** (Esegui profili) selezionare il profilo di esecuzione da configurare.
     - Per avviare il profilo di esecuzione, fare clic su **OK**.
 
->[!div class="step-by-step"]
-[« Servizio e portale MIM](install-mim-service-portal.md)
+> [!div class="step-by-step"]
+> [« Servizio e portale MIM](install-mim-service-portal.md)

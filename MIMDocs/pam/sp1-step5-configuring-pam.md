@@ -1,7 +1,7 @@
 ---
 title: 'Passaggio 5: Installazione e configurazione di PAM'
 description: Si tratta del passaggio 5 del processo di configurazione di Privileged Identity Manager tramite script e illustra i passaggi di distribuzione nel server PAM.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 414851f8550f6419db7e268e982b88065730ab4e
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 839cb4fa69aefa8024d38aeff0ebae96599aefb3
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288844"
 ---
 # <a name="step-5-installingconfiguring-pam"></a>Passaggio 5: Installazione e configurazione di PAM
 
->[!div class="step-by-step"]
-[« Passaggio 4](sp1-step4-configuring-sharepoint.md)
-[Passaggio 6 »](sp1-step6-setup-pam-trust.md)
+> [!div class="step-by-step"]
+> [« Passaggio 4](sp1-step4-configuring-sharepoint.md)
+> [Passaggio 6 »](sp1-step6-setup-pam-trust.md)
 
 Per PAMServer aggiunto al dominio, accedere come MIMAdmin. In caso contrario, accedere come amministratore locale.
 1. Eseguire PowerShell come amministratore
@@ -40,9 +41,9 @@ Dopo il riavvio di PAMServer, accedere nuovamente al computer con l'account MIMA
 3. .\PAMDeployment.ps1
 4. Selezionare l'opzione di menu 5 (installazione di PAM per MIM)
 
-  Quando richiesto, immettere la password dell'account di monitoraggio MIM, del componente MIM, di MA MIM, del servizio MIM, dell'amministratore MIM e di SharePoint.
-  Al termine dell'installazione, il computer verrà riavviato.
+   Quando richiesto, immettere la password dell'account di monitoraggio MIM, del componente MIM, di MA MIM, del servizio MIM, dell'amministratore MIM e di SharePoint.
+   Al termine dell'installazione, il computer verrà riavviato.
 
->[!div class="step-by-step"]
-[« Passaggio 4](sp1-step4-configuring-sharepoint.md)
-[Passaggio 6 »](sp1-step6-setup-pam-trust.md)
+> [!div class="step-by-step"]
+> [« Passaggio 4](sp1-step4-configuring-sharepoint.md)
+> [Passaggio 6 »](sp1-step6-setup-pam-trust.md)

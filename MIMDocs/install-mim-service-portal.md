@@ -12,23 +12,24 @@ ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fcc137527d8326c82bf3b201039926699bd4e342
-ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
+ms.openlocfilehash: 562ca6a977509cad7c3423ef42d4b6f6705494d3
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289517"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Installare MIM 2016: servizio e portale MIM
 
->[!div class="step-by-step"]
-[« Servizio di sincronizzazione MIM](install-mim-sync.md)
-[Sincronizzare i database »](install-mim-sync-ad-service.md)
-
+> [!div class="step-by-step"]
+> [« Servizio di sincronizzazione MIM](install-mim-sync.md)
+> [Sincronizzare i database »](install-mim-sync-ad-service.md)
+> 
 > [!NOTE]
 > Questa procedura dettagliata usa nomi e valori di esempio della società Contoso. Sostituirli con i propri nomi e valori. Ad esempio:
 > - Nome del controller di dominio: **mimservername**
 > - Nome del dominio: **contoso**
-> - Password: **Pass@word1**
+> - Password: <strong>Pass@word1</strong>
 > - Nome account del servizio: **MIMService**
 
 Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passaggio, tornare indietro e installare i componenti di Microsoft Identity Manager 2016 prima di procedere.
@@ -56,7 +57,7 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 8. Specificare che si desidera generare un nuovo certificato autofirmato oppure selezionare il certificato rilevante.
 
-9. Specificare il nome dell'account del servizio da usare, ad esempio *MIMService*, e la password dell'account del servizio, ad esempio *Pass@word1*, il dominio account del servizio, ad esempio *contoso*, e l'account di posta elettronica del servizio, ad esempio *contoso*.
+9. Specificare il nome dell'account del servizio da usare, ad esempio *MIMService*, e la password dell'account del servizio, ad esempio <em>Pass@word1</em>, il dominio account del servizio, ad esempio *contoso*, e l'account di posta elettronica del servizio, ad esempio *contoso*.
 
     ![Immagine relativa alla configurazione dell'account del servizio MIM](media/install-mim-service-portal/MIM_Install12.png)
 
@@ -78,25 +79,25 @@ Se non è stato configurato il pacchetto di installazione MIM nell'ultimo passag
 
 ## <a name="configure-mim-password-registration-portal"></a>Configurare il portale di registrazione della password MIM
 
-1.  Impostare il nome dell'account del servizio per la registrazione SSPR su *contoso\MIMSSPR* e la relativa password su *Pass@word1*.
+1. Impostare il nome dell'account del servizio per la registrazione SSPR su *contoso\MIMSSPR* e la relativa password su <em>Pass@word1</em>.
 
-2.  Specificare *passwordregistration.contoso.com* come nome host per la registrazione della password MIM e impostare la porta su **80**. Abilitare l'opzione **Apri porta nel firewall**.
+2. Specificare *passwordregistration.contoso.com* come nome host per la registrazione della password MIM e impostare la porta su **80**. Abilitare l'opzione **Apri porta nel firewall**.
 
-    ![Immagine relativa all'immissione delle informazioni di configurazione usate da IIS](media/install-mim-service-portal/MIM_Install14.png)
+   ![Immagine relativa all'immissione delle informazioni di configurazione usate da IIS](media/install-mim-service-portal/MIM_Install14.png)
 
-3.  Verrà visualizzato un messaggio di avviso: leggerlo e fare clic su **Avanti**.
+3. Verrà visualizzato un messaggio di avviso: leggerlo e fare clic su **Avanti**.
 
 4. Nella schermata successiva di configurazione del portale di registrazione della password MIM specificare *mim.contoso.com* come indirizzo del server del servizio MIM per il portale di registrazione della password.
 
 ## <a name="configure-mim-password-reset-portal"></a>Configurare il portale di reimpostazione della password MIM
 
-1.  Impostare il nome dell'account del servizio per la registrazione SSPR su *Contoso\MIMSSPR* e la relativa password su *Pass@word1*.
+1. Impostare il nome dell'account del servizio per la registrazione SSPR su *Contoso\MIMSSPR* e la relativa password su <em>Pass@word1</em>.
 
-2.  Specificare *passwordreset.contoso.com* come nome host per il portale di reimpostazione della password MIM, quindi impostare la porta su **80**. Abilitare l'opzione **Apri porta nel firewall**.
+2. Specificare *passwordreset.contoso.com* come nome host per il portale di reimpostazione della password MIM, quindi impostare la porta su **80**. Abilitare l'opzione **Apri porta nel firewall**.
 
-    ![Immagine relativa all'immissione delle informazioni di configurazione usate da IIS](media/install-mim-service-portal/MIM_Install15.png)
+   ![Immagine relativa all'immissione delle informazioni di configurazione usate da IIS](media/install-mim-service-portal/MIM_Install15.png)
 
-3.  Verrà visualizzato un messaggio di avviso: leggerlo e fare clic su **Avanti**.
+3. Verrà visualizzato un messaggio di avviso: leggerlo e fare clic su **Avanti**.
 
 4. Nella schermata successiva di configurazione del portale di registrazione della password MIM specificare *mim.contoso.com* come indirizzo del server del servizio MIM per il portale di reimpostazione della password.
 
@@ -144,7 +145,7 @@ Al termine dell'installazione, verificare che il portale MIM sia attivo.
 
 > [!NOTE]
 > Facoltativo: a questo punto è possibile installare i componenti aggiuntivi e le estensioni di MIM.
-
->[!div class="step-by-step"]  
-[« Servizio di sincronizzazione MIM](install-mim-sync.md)
-[Sincronizzare i database »](install-mim-sync-ad-service.md)
+> 
+> [!div class="step-by-step"]  
+> [« Servizio di sincronizzazione MIM](install-mim-sync.md)
+> [Sincronizzare i database »](install-mim-sync-ad-service.md)

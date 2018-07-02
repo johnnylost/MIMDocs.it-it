@@ -1,7 +1,7 @@
 ---
 title: Guida alla topologia per la distribuzione | Documentazione Microsoft
 description: Comprendere i componenti di MIM 2016 e ottenere suggerimenti su come distribuirli nell'ambiente in uso.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e257a2e64225a4bc545d8a9384167819412e939b
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f67068709cf9910fa04110fce75623fd2f94ca4a
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289813"
 ---
 # <a name="topology-considerations"></a>Considerazioni relative alla topologia
 È possibile distribuire i componenti di Microsoft Identity Manager (MIM) nello stesso server o tra più server in più configurazioni. La topologia selezionata per la distribuzione influisce sulle prestazioni che è possibile ottenere da MIM. Questo articolo presenta più topologie di distribuzione che si potrebbe considerare di implementare.
 
 
->[!NOTE]
-Per la gestione delle identità, queste opzioni si applicano alle distribuzioni esclusivamente tramite la sincronizzazione MIM, il servizio MIM e il portale MIM.  Le distribuzioni tramite Gestione certificati MIM, MIM BHOLD Suite o per la gestione dell'accesso con privilegi hanno opzioni diverse.
+> [!NOTE]
+> Per la gestione delle identità, queste opzioni si applicano alle distribuzioni esclusivamente tramite la sincronizzazione MIM, il servizio MIM e il portale MIM.  Le distribuzioni tramite Gestione certificati MIM, MIM BHOLD Suite o per la gestione dell'accesso con privilegi hanno opzioni diverse.
 
 
 ## <a name="mim-components"></a>Componenti MIM
@@ -39,10 +40,10 @@ Le tabelle seguenti illustrano le opzioni per l'hosting di ciascuno dei componen
 
 | | Portale MIM | Servizio MIM | Servizio Sincronizzazione MIM | SQL Server |
 | --- | --- | --- | --- | --- |
-| Stesso computer | sì | Sì | Sì | sì |
-| Server separato | sì | Sì | Sì | sì |
-| Cluster di Bilanciamento carico di rete | sì | sì | | |
-| Cluster di server | | | | sì |
+| Stesso computer | Sì | Sì | Sì | Sì |
+| Server separato | Sì | Sì | Sì | Sì |
+| Cluster di Bilanciamento carico di rete | Sì | Sì | | |
+| Cluster di server | | | | Sì |
 
 
 ## <a name="multitier-topology"></a>Topologia a più livelli

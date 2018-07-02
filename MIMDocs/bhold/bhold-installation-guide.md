@@ -1,7 +1,7 @@
 ---
 title: Installazione di BHOLD SP1 | Microsoft Docs
 description: Documentazione di installazione di BHOLD SP1
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: c36a9d02e90101b98ade913224e573ed21dc3d5c
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 11cde4e3b2779f9c32d9849a47713acf5f120b3c
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289697"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Guida all'installazione di Microsoft BHOLD Suite SP1 (6.0)
 
@@ -29,8 +30,8 @@ Microsoft® BHOLD Suite Service Pack 1 (SP1) è una raccolta di applicazioni che
 - BHOLD Attestation
 
 
->[!NOTE]
-**Si applica a**: Microsoft Identity Manager 2016 SP1
+> [!NOTE]
+> **Si applica a**: Microsoft Identity Manager 2016 SP1
 
 ## <a name="what-this-document-covers"></a>Contenuto del documento
 
@@ -70,8 +71,8 @@ L'installazione di BHOLD Core e FIM su server separati offre migliori prestazion
 
 ![Architettura a server doppio](media/bhold-installation-guide/dual.png)
 
->[!IMPORTANT]
-La funzionalità di creazione di report del modulo di integrazione di BHOLD FIM richiede che i database BHOLD e FIM siano installati nella stessa istanza di SQL Server e che l'account del servizio BHOLD possieda i diritti di accesso al database del servizio FIM.
+> [!IMPORTANT]
+> La funzionalità di creazione di report del modulo di integrazione di BHOLD FIM richiede che i database BHOLD e FIM siano installati nella stessa istanza di SQL Server e che l'account del servizio BHOLD possieda i diritti di accesso al database del servizio FIM.
 
 ### <a name="two-tier-architecture"></a>Architettura a due livelli
 
@@ -109,7 +110,7 @@ Dopo la modifica e il salvataggio del file, eseguire il comando iisreset per rip
 
 ## <a name="upgrading-bhold-suite"></a>Aggiornamento di BHOLD Suite
 
-Non è possibile aggiornare un'installazione esistente di BHOLD Suite. È invece necessario disinstallare un'installazione esistente di BHOLD Suite prima di aggiornare i moduli BHOLD. Se si possiede un modello di ruolo BHOLD esistente, è possibile aggiornare il database BHOLD e usarlo quando si installa il modulo BHOLD Core aggiornato. Per altre informazioni, vedere [Replacing BHOLD Suite with BHOLD Suite SP1](https://technet.microsoft.com/en-us/library/jj874043(v=ws.10).aspx) (Sostituzione di BHOLD Suite con BHOLD Suite SP1).
+Non è possibile aggiornare un'installazione esistente di BHOLD Suite. È invece necessario disinstallare un'installazione esistente di BHOLD Suite prima di aggiornare i moduli BHOLD. Se si possiede un modello di ruolo BHOLD esistente, è possibile aggiornare il database BHOLD e usarlo quando si installa il modulo BHOLD Core aggiornato. Per altre informazioni, vedere [Replacing BHOLD Suite with BHOLD Suite SP1](https://technet.microsoft.com/library/jj874043(v=ws.10).aspx) (Sostituzione di BHOLD Suite con BHOLD Suite SP1).
 
 
 ## <a name="next-steps"></a>Passaggi successivi

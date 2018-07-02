@@ -1,7 +1,7 @@
 ---
 title: Gestione delle password di Microsoft Identity Manager 2016 | Microsoft Docs
-description: 
-keywords: 
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,12 +10,13 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 156551f4083c71ee7059e817213751393db5833e
-ms.sourcegitcommit: 5ba5d916c0ca1e5aa501592af0cef714bfdc8afe
+ms.assetid: ''
+ms.openlocfilehash: 86b8b9bdf5c6441d0708cd874742fa48b65177fa
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289364"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Gestione delle password di Microsoft Identity Manager 2016
 
@@ -61,8 +62,8 @@ La DLL di estensione password .NET viene chiamata ogni volta in cui, per uno di 
 
 La sincronizzazione password usa il servizio di notifica della modifica della password (PCNS) in un dominio di Active Directory e consente di propagare automaticamente in altre origini dati connesse le modifiche alle password apportate in Active Directory. In questo caso MIM viene eseguito come server RPC che riceve la notifica della modifica della password da un controller di dominio di Active Directory. Dopo aver ricevuto e autenticato la richiesta di modifica della password, MIM la elabora e la propaga agli agenti di gestione appropriati.
 
->[!IMPORTANT]
-La sincronizzazione password bidirezionale non è supportata da MIM. Se viene configurata la sincronizzazione password bidirezionale, si può creare un ciclo, che userà le risorse del server e avrà un effetto potenzialmente negativo su Active Directory e MIM.
+> [!IMPORTANT]
+> La sincronizzazione password bidirezionale non è supportata da MIM. Se viene configurata la sincronizzazione password bidirezionale, si può creare un ciclo, che userà le risorse del server e avrà un effetto potenzialmente negativo su Active Directory e MIM.
 
 PCNS viene eseguito in ogni controller di dominio di Active Directory. I sistemi che ricevano le notifiche della password sono detti destinazioni. Prima di inviare le notifiche della password, è necessario configurare il server MIM come destinazione di PCNS in Active Directory. Durante la configurazione di PCNS è necessario definire un gruppo di inclusione e, facoltativamente, un gruppo di esclusione. Questi gruppi vengono usati per limitare il flusso di password sensibili dal dominio. Ad esempio, per inviare le password per tutti gli utenti, ma non inviare le password amministrative, è possibile scegliere di usare gli utenti del dominio come gruppo di inclusione e gli amministratori del dominio come gruppo di esclusione. Per altre informazioni sulla configurazione del servizio di notifica della modifica della password, vedere [Using Password Synchronization](https://technet.microsoft.com/library/jj590288(v=ws.10).aspx) (Uso della sincronizzazione password)
 

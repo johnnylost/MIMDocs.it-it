@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 Service Pack 1 | Documentazione Microsoft
-description: "Comprendere il funzionamento di MIM 2016 per creare un'esperienza di gestione delle identità più pratica e sicura nel cloud e in locale."
-keywords: 
+description: Comprendere il funzionamento di MIM 2016 per creare un'esperienza di gestione delle identità più pratica e sicura nel cloud e in locale.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 98d21076801bbe60b7a2d2d5b7e1c41d4bce1b4a
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 9b12f8bebf44847d76e94fe083266b1b32b608a9
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290289"
 ---
 # <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Novità di Microsoft Identity Manager 2016 Service Pack 1 #
 
@@ -42,8 +43,8 @@ Il feedback degli utenti è fondamentale. Per lasciare commenti e suggerimenti o
 
 - **Supporto della foresta "PRIV" (bastion) di PAM per il livello di funzionalità di Windows Server 2016:** il servizio PAM di MIM può essere configurato in un ambiente con controller di dominio in esecuzione al livello di funzionalità della foresta Active Directory Domain Services di Windows Server 2016. Dopo la configurazione, un ticket Kerberos dell'utente verrà limitato per il tempo rimanente della propria attivazione del ruolo.
 
-    >[!Note]
-    Se si sceglie di mantenere il livello di funzionalità della foresta di Windows Server 2012 R2 nel dominio CORP, è consigliabile installare [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) e [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) sul controller di dominio CORP.
+  > [!Note]
+  >   Se si sceglie di mantenere il livello di funzionalità della foresta di Windows Server 2012 R2 nel dominio CORP, è consigliabile installare [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) e [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) sul controller di dominio CORP.
 
 - **Elevazione degli account con privilegi in gruppi esclusivi della foresta "PRIV" (bastion):** gli amministratori possono ora informare il servizio MIM della presenza di gruppi e utenti esclusivi della foresta "PRIV". In questo modo, si consente l'inclusione di gruppi e utenti nei ruoli PAM.  I gruppi e gli utenti possono essere attivati per un ruolo e può essere loro assegnata l'appartenenza ai gruppi nella foresta "PRIV".
 
@@ -51,8 +52,8 @@ Il feedback degli utenti è fondamentale. Per lasciare commenti e suggerimenti o
 
 - **Cmdlet PAM per la configurazione di silo di criteri di autenticazione:** il Service Pack 1 introduce nuovi cmdlet per rafforzare la sicurezza della foresta bastion. Questi cmdlet creano automaticamente un silo di criteri di autenticazione, associato a un modello di criteri di autenticazione.
 
-    >[!Note]
-    Questi cmdlet vengono eseguiti automaticamente come parte degli script di distribuzione.
+  > [!Note]
+  >   Questi cmdlet vengono eseguiti automaticamente come parte degli script di distribuzione.
 
 
 ## <a name="platform-support"></a>Supporto della piattaforma
@@ -77,8 +78,8 @@ Prima di iniziare
 Prima di aggiornare il servizio e il portale MIM, è necessario aggiornare il motore di sincronizzazione MIM.
 È necessario eseguire il backup dei database di sincronizzazione MIM e del servizio MIM.
 
-  1. Disinstallare il componente Microsoft Identity Manager di cui si esegue l'aggiornamento
-  2. Al termine della disinstallazione, aprire la pagina iniziale di benvenuto disponibile nel supporto di installazione "FIMSplash.htm"
-  3. Selezionare il componente MIM per eseguire l'aggiornamento
-  4. Procedere con l'installazione seguendo le istruzioni
-    * Installazione del portale e del servizio MIM: quando si sceglie Exchange Online come account di posta elettronica, immettere l'indirizzo di posta elettronica e le credenziali dell'account di Exchange Online nella schermata successiva.
+1. Disinstallare il componente Microsoft Identity Manager di cui si esegue l'aggiornamento
+2. Al termine della disinstallazione, aprire la pagina iniziale di benvenuto disponibile nel supporto di installazione "FIMSplash.htm"
+3. Selezionare il componente MIM per eseguire l'aggiornamento
+4. Procedere con l'installazione seguendo le istruzioni
+   * Installazione del portale e del servizio MIM: quando si sceglie Exchange Online come account di posta elettronica, immettere l'indirizzo di posta elettronica e le credenziali dell'account di Exchange Online nella schermata successiva.

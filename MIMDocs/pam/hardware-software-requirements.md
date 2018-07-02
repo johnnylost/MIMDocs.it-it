@@ -1,7 +1,7 @@
 ---
 title: Requisiti software di PAM | Documentazione Microsoft
 description: Individuare i requisiti hardware e software per una corretta distribuzione di Privileged Access Management
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2ff6fd997dc5bc7e4a4949520e978ae2d8283d4b
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: c53d8cc815f792d1a1246a7434350f1cfb087844
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288963"
 ---
 # <a name="hardware-and-software-requirements"></a>Requisiti hardware e software
 
 Per Privileged Access Management non esistono requisiti hardware oltre a quelli delle piattaforme software sottostanti. Assicurarsi che la memoria e lo spazio su disco siano sufficienti e che la connettività di rete sia attiva.
 
->[!IMPORTANT]
-Questo articolo descrive i requisiti minimi per una distribuzione di base. Non ha l'obiettivo di descrivere le prestazioni, la scalabilità o la disponibilità elevata. Non rappresenta una topologia di distribuzione consigliata per aziende o ambienti di produzione di grandi dimensioni.
+> [!IMPORTANT]
+> Questo articolo descrive i requisiti minimi per una distribuzione di base. Non ha l'obiettivo di descrivere le prestazioni, la scalabilità o la disponibilità elevata. Non rappresenta una topologia di distribuzione consigliata per aziende o ambienti di produzione di grandi dimensioni.
 
 ## <a name="installing-from-software-packages"></a>Installazione da pacchetti software
 
@@ -39,7 +40,7 @@ Il software seguente può essere scaricato da GitHub:
 
 ## <a name="required-software"></a>Software richiesto
 
-- Windows Server 2012 R2
+- R2 per Windows Server 2012
 - Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1 o SQL Server 2014
 
@@ -76,4 +77,4 @@ Per PRIVDC:
 Per PAMSRV:
 
 - [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
-- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) o [SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms143506(v=sql.120).aspx)
+- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) o [SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)

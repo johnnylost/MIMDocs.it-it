@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: a0e2e280c3678867efc2ae8afa46c04ed38a1e11
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: a66d424e8388005855ac8e64623f5a00f89682e9
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34479367"
 ---
 <a name="the-microsoft-identity-manager-management-agent-for-microsoft-graph-public-preview"></a>Agente di gestione di Microsoft Identity Manager per Microsoft Graph (anteprima pubblica)
 =======================================================================================
@@ -32,7 +33,7 @@ L'[agente di gestione di Microsoft Identity Manager per Microsoft Graph (antepri
 <a name="b2b-account-lifecycle-management"></a>Gestione del ciclo di vita di un account B2B
 --------------------------------
 
-Lo scenario iniziale in anteprima per l'agente di gestione di Microsoft Identity Manager per Microsoft Graph (anteprima) è la gestione del ciclo di vita degli account AD degli utenti esterni. In questo scenario un'organizzazione ha invitato alcuni guest nella directory di Azure AD e vuole concedere a tali guest l'accesso alle applicazioni locali basate su Kerberos o sull'autenticazione integrata di Windows, tramite il proxy di [applicazione Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) o altri meccanismi gateway. Il proxy di applicazione Azure AD richiede che ogni utente abbia il proprio account Active Directory Domain Services, per scopi di identificazione e delega
+Lo scenario iniziale in anteprima per l'agente di gestione di Microsoft Identity Manager per Microsoft Graph (anteprima) è la gestione del ciclo di vita degli account AD degli utenti esterni. In questo scenario un'organizzazione ha invitato alcuni guest nella directory di Azure AD e vuole concedere a tali guest l'accesso alle applicazioni locali basate su Kerberos o sull'autenticazione integrata di Windows, tramite il proxy di [applicazione Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) o altri meccanismi gateway. Il proxy di applicazione Azure AD richiede che ogni utente abbia il proprio account Active Directory Domain Services, per scopi di identificazione e delega
 
 In futuro potrebbero essere aggiunti altri scenari che verranno [documentati qui](./microsoft-identity-manager-2016-graph-b2b-scenario.md)
 
@@ -186,7 +187,7 @@ Il connettore potrebbe restituire l'errore HTTP 401: accesso non autorizzato, co
 
 Immagine 7. "Access token has expired" (Il token di accesso è scaduto) Errore
 
-La causa di questo problema potrebbe dipendere dalla configurazione della durata del token di accesso sul lato Azure. Per impostazione predefinita, il token di accesso scade dopo 1 ora. Per spostare l'ora di scadenza, vedere [questo articolo](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-configurable-token-lifetimes).
+La causa di questo problema potrebbe dipendere dalla configurazione della durata del token di accesso sul lato Azure. Per impostazione predefinita, il token di accesso scade dopo 1 ora. Per spostare l'ora di scadenza, vedere [questo articolo](https://docs.microsoft.com/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 Esempio dell'uso della [versione di anteprima pubblica del modulo Azure AD PowerShell](https://www.powershellgallery.com/packages/AzureADPreview)
 

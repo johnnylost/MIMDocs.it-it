@@ -1,7 +1,7 @@
 ---
 title: 'Distribuire PAM, passaggio 5: Collegamento di foreste | Documentazione Microsoft'
 description: Stabilire una relazione di trust tra le foreste PRIV e CORP in modo che gli utenti con privilegi nella foresta PRIV possano accedere alle risorse CORP.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ba4b94c1f0f0879436e370a7f2f041c720bd1f60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.openlocfilehash: df4294ca6dbc98ec684e690d3ce66765d27cc359
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289092"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Passaggio 5: stabilire una relazione di trust tra le foreste PRIV e CORP
 
->[!div class="step-by-step"]
-[« Passaggio 4](step-4-install-mim-components-on-pam-server.md)
-[Passaggio 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Passaggio 4](step-4-install-mim-components-on-pam-server.md)
+> [Passaggio 6 »](step-6-transition-group-to-pam.md)
 
 Per ogni dominio CORP, ad esempio contoso.local, i controller di dominio PRIV e CONTOSO devono essere associati da un trust. In questo modo, gli utenti del dominio PRIV possono accedere alle risorse nel dominio CORP.
 
@@ -70,17 +71,17 @@ In PAMSRV stabilire una relazione di trust unidirezionale con CORPDC, in modo ch
 
 Per ogni foresta esistente, abilitare l'accesso in lettura ad Active Directory da parte degli amministratori PRIV e del servizio di monitoraggio.
 
-1.  Accedere al controller di dominio della foresta CORP esistente, (CORPDC), come amministratore di dominio per il dominio di primo livello in tale foresta (Contoso\Administrator).  
-2.  Avviare **Utenti e computer di Active Directory**.  
-3.  Fare clic con il pulsante destro del mouse sul dominio **contoso.local** e selezionare **Delega controllo**.  
-4.  Nella scheda Gruppi e utenti selezionati fare clic su **Aggiungi**.  
-5.  Nella finestra Seleziona utenti, computer o gruppi fare clic su **Percorsi** e cambiare il percorso in *priv.contoso.local*.  Nel nome dell'oggetto digitare *Domain Admins* e fare clic su **Controlla nomi**. Quando viene visualizzata una finestra popup, immettere il nome utente *priv\administrator* e la relativa password.  
-6.  Dopo Domain Admins, aggiungere "*; MIMMonitor*". Quando i nomi **Domain Admins** e **MIMMonitor** risultano sottolineati, fare clic su **OK** e quindi su **Avanti**.  
-7.  Nell'elenco delle attività comuni selezionare **Legge tutte le informazioni utente**, quindi fare clic su **Avanti** e su **Fine**.  
-8.  Chiudere Utenti e computer di Active Directory.
+1. Accedere al controller di dominio della foresta CORP esistente, (CORPDC), come amministratore di dominio per il dominio di primo livello in tale foresta (Contoso\Administrator).  
+2. Avviare **Utenti e computer di Active Directory**.  
+3. Fare clic con il pulsante destro del mouse sul dominio **contoso.local** e selezionare **Delega controllo**.  
+4. Nella scheda Gruppi e utenti selezionati fare clic su **Aggiungi**.  
+5. Nella finestra Seleziona utenti, computer o gruppi fare clic su **Percorsi** e cambiare il percorso in *priv.contoso.local*.  Nel nome dell'oggetto digitare *Domain Admins* e fare clic su **Controlla nomi**. Quando viene visualizzata una finestra popup, immettere il nome utente *priv\administrator* e la relativa password.  
+6. Dopo Domain Admins, aggiungere "*; MIMMonitor*". Quando i nomi **Domain Admins** e **MIMMonitor** risultano sottolineati, fare clic su **OK** e quindi su **Avanti**.  
+7. Nell'elenco delle attività comuni selezionare **Legge tutte le informazioni utente**, quindi fare clic su **Avanti** e su **Fine**.  
+8. Chiudere Utenti e computer di Active Directory.
 
-9.  Aprire una finestra di PowerShell.
-10.  Usare `netdom` per garantire che la cronologia SID sia abilitata e che il filtro SID sia disabilitato. Digitare il comando seguente:
+9. Aprire una finestra di PowerShell.
+10. Usare `netdom` per garantire che la cronologia SID sia abilitata e che il filtro SID sia disabilitato. Digitare il comando seguente:
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
@@ -104,6 +105,6 @@ Per ogni foresta esistente, abilitare l'accesso in lettura ad Active Directory d
 
 Nel passaggio successivo, un gruppo verrà spostato in PAM.
 
->[!div class="step-by-step"]
-[« Passaggio 4](step-4-install-mim-components-on-pam-server.md)
-[Passaggio 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Passaggio 4](step-4-install-mim-components-on-pam-server.md)
+> [Passaggio 6 »](step-6-transition-group-to-pam.md)

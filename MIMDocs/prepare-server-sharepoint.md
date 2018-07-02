@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
-ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
+ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289534"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configurare un server di gestione delle identità: SharePoint
 
->[!div class="step-by-step"]
-[« SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server »](prepare-server-exchange.md)
-
+> [!div class="step-by-step"]
+> [« SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server »](prepare-server-exchange.md)
+> 
 > [!NOTE]
 > Questa procedura dettagliata usa nomi e valori di esempio della società Contoso. Sostituirli con i propri nomi e valori. Ad esempio:
 > - Nome del controller di dominio: **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 > - Nome del server del servizio MIM: **corpservice**
 > - Nome del server di sincronizzazione MIM: **corpservice**
 > - Nome SQL Server: **corpsql**
-> - Password: **Pass@word1**
+> - Password: <strong>Pass@word1</strong>
 
 
 ## <a name="install-sharepoint-2016"></a>Installare **SharePoint 2016**
@@ -97,25 +98,25 @@ Seguire i passaggi descritti in **Configurazione guidata Prodotti SharePoint** p
 
 2. Avviare SharePoint 2016 Management Shell ed eseguire il seguente script di PowerShell per creare una **Raccolta siti di SharePoint** associata all'applicazione Web.
 
-  ```
+   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
-  ```
+   ```
 
-  > [!NOTE]
-  > Verificare che il risultato della variabile *CompatibilityLevel* sia "15". Se il risultato è diverso da "15", la raccolta siti non è stata creata per la versione corretta. Eliminare la raccolta siti e ricrearla.
+   > [!NOTE]
+   > Verificare che il risultato della variabile *CompatibilityLevel* sia "15". Se il risultato è diverso da "15", la raccolta siti non è stata creata per la versione corretta. Eliminare la raccolta siti e ricrearla.
 
 3. Disabilitare **SharePoint Server-Side Viewstate** e l'attività di SharePoint "Processo di analisi integrità (Ogni ora, Timer di Microsoft SharePoint Foundation, Tutti i server)" eseguendo i comandi PowerShell seguenti in **Shell di gestione SharePoint 2016**:
 
-  ```
-  $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-  $contentService.ViewStateOnServer = $false;
-  $contentService.Update();
-  Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
-  ```
+   ```
+   $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
+   $contentService.ViewStateOnServer = $false;
+   $contentService.Update();
+   Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+   ```
 
 4. Nel server di gestione delle identità aprire una nuova scheda del Web browser, passare a http://mim.contoso.com/ e accedere come *contoso\miminstall*.  Verrà visualizzato un sito SharePoint denominato *Portale MIM* .
 
@@ -129,6 +130,6 @@ Seguire i passaggi descritti in **Configurazione guidata Prodotti SharePoint** p
 
 7. Aprire **Strumenti di amministrazione**, passare a **Servizi**, trovare il servizio di amministrazione di SharePoint e avviarlo, se non è già in esecuzione.
 
->[!div class="step-by-step"]  
-[« SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server »](prepare-server-exchange.md)
+> [!div class="step-by-step"]  
+> [« SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server »](prepare-server-exchange.md)

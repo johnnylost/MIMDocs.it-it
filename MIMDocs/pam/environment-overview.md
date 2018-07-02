@@ -1,7 +1,7 @@
 ---
 title: Panoramica sull'ambiente PAM | Documentazione Microsoft
 description: Individuare la configurazione e il numero necessario di macchine virtuali per una corretta distribuzione di Privileged Access Management
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3be2e19673a863098739e830d9c83ce264abf412
-ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
+ms.openlocfilehash: e83c326d32645ce80541d5c415cd9c0e9d1dae54
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288793"
 ---
 # <a name="environment-overview"></a>Panoramica sull'ambiente
 
@@ -28,8 +29,8 @@ Sono necessarie almeno tre macchine virtuali.  Se non si dispone già di un domi
 
 Le unità in cui archiviare le immagini disco di VM devono avere almeno 120 GB di spazio libero su disco.  Se si intende distribuire la disponibilità elevata, assicurarsi che il sottosistema del disco soddisfi i requisiti per l'archiviazione condivisa di SQL.  L'archiviazione condivisa può essere sotto forma di dischi cluster Windows Server Failover Clustering, dischi in una rete SAN (Storage Area Network) o condivisioni di file in un server SMB.
 
->[!IMPORTANT]
-L'archiviazione deve essere dedicata all'ambiente bastion. L'archiviazione condivisa all'esterno dell'ambiente bastion non è consigliata perché potrebbe compromettere l'integrità dell'ambiente bastion stesso.
+> [!IMPORTANT]
+> L'archiviazione deve essere dedicata all'ambiente bastion. L'archiviazione condivisa all'esterno dell'ambiente bastion non è consigliata perché potrebbe compromettere l'integrità dell'ambiente bastion stesso.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

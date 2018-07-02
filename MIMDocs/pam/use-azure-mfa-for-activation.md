@@ -1,7 +1,7 @@
 ---
 title: Usare Azure MFA per l'attivazione di PAM | Documentazione Microsoft
 description: Configurare Azure MFA come secondo livello di sicurezza quando gli utenti attivano ruoli in Privileged Access Management.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: fimguy
 manager: mbaldwin
@@ -12,15 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1fb012034685257d35ba4f8a79468145187ae5b6
-ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
+ms.openlocfilehash: 30e683a0bd13d911f73eca19c847a2c9cd10f36d
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289830"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Uso di Azure MFA per l'attivazione
->[!IMPORTANT]
-In seguito all'annuncio della deprecazione di Azure Multi-Factor Authentication Software Development Kit. Azure MFA SDK sarà supportato per i clienti esistenti fino alla data di ritiro, ovvero 14 novembre 2018. I nuovi clienti e i clienti attuali non potranno più scaricare l'SDK tramite il portale di Azure classico. Per scaricarlo sarà necessario rivolgersi al supporto tecnico clienti di Azure per ricevere il pacchetto di credenziali del servizio MFA generato. <br> Il team di sviluppo Microsoft sta pianificando modifiche per MFA tramite l'integrazione di MFA Server SDK. Tali modifiche verranno incluse in un prossimo hotfix agli inizi del 2018.
+> [!IMPORTANT]
+> In seguito all'annuncio della deprecazione di Azure Multi-Factor Authentication Software Development Kit. Azure MFA SDK sarà supportato per i clienti esistenti fino alla data di ritiro, ovvero 14 novembre 2018. I nuovi clienti e i clienti attuali non potranno più scaricare l'SDK tramite il portale di Azure classico. Per scaricarlo sarà necessario rivolgersi al supporto tecnico clienti di Azure per ricevere il pacchetto di credenziali del servizio MFA generato. <br> Il team di sviluppo Microsoft sta pianificando modifiche per MFA tramite l'integrazione di MFA Server SDK. Tali modifiche verranno incluse in un prossimo hotfix agli inizi del 2018.
 
 
 

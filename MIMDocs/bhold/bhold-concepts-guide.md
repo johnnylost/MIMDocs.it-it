@@ -1,19 +1,20 @@
 ---
 title: Guida ai concetti di Microsoft BHOLD Suite | Microsoft Docs
 description: Per iniziare a usare i componenti di MIM 2016, installare e configurare il servizio di sincronizzazione.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 0d814dd27fe53ee7cfc46eac24ec577b05f78e52
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 521025de3dc16a9bda02aed8287faeb3449192c1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290068"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Guida ai concetti di Microsoft BHOLD Suite
 
@@ -56,8 +57,8 @@ Con BHOLD Suite è possibile specificare e strutturare i ruoli nell'organizzazio
 
 Le unità organizzative sono lo strumento principale di organizzazione degli utenti nel modello a ruoli BHOLD. Ogni utente deve appartenere ad almeno un'unità organizzativa. Quando un utente viene rimosso dall'ultima unità organizzativa in BHOLD, il record dei dati dell'utente viene eliminato dal database BHOLD.
 
->[!Important]
-Le unità organizzative nel modello a ruoli BHOLD non vanno confuse con le unità organizzative in Active Directory Domain Services (AD DS). In genere la struttura dell'unità organizzativa in BHOLD dipende dall'organizzazione e dai criteri dell'azienda e non dai requisiti dell'infrastruttura di rete.
+> [!Important]
+> Le unità organizzative nel modello a ruoli BHOLD non vanno confuse con le unità organizzative in Active Directory Domain Services (AD DS). In genere la struttura dell'unità organizzativa in BHOLD dipende dall'organizzazione e dai criteri dell'azienda e non dai requisiti dell'infrastruttura di rete.
 
 Anche se non è obbligatorio, nella maggior parte dei casi le unità organizzative in BHOLD sono definite in modo da rappresentare la struttura gerarchica dell'organizzazione, simile a quella illustrata di seguito:
 
@@ -127,8 +128,8 @@ La prima operazione per l'uso di BHOLD Model Generator è l'importazione di ques
 - Ruoli proposti, che sono collegati a un'unità organizzativa ma devono essere attivati per utenti specifici
 - Ruoli di proprietà, che concedono a un utente il controllo delle unità organizzative e dei ruoli per i quali non è specificato un proprietario nei file importati
 
->[!Important]
-Durante il caricamento di file, selezionare la casella di controllo **Retain Existing Model** (Mantieni modello esistente) solo negli ambienti di test. Negli ambienti di produzione è necessario usare Model Generator per creare il modello a ruoli iniziale. Non è possibile usarlo per modificare un modello a ruoli esistente nel database BHOLD.
+> [!Important]
+> Durante il caricamento di file, selezionare la casella di controllo **Retain Existing Model** (Mantieni modello esistente) solo negli ambienti di test. Negli ambienti di produzione è necessario usare Model Generator per creare il modello a ruoli iniziale. Non è possibile usarlo per modificare un modello a ruoli esistente nel database BHOLD.
 
 Dopo che Model Generator ha creato questi ruoli nel modello a ruoli, è possibile esportare il modello a ruoli nel database BHOLD come file con estensione XML.
 
@@ -252,8 +253,8 @@ I filtri di regole possono essere di tre tipi e usare operatori specifici del ti
   - **Can only have any (Può avere solo uno) e Can only have all (Può avere solo tutti)**
   - **Exclusively have any (Esclusivamente provvisti di uno) ed Exclusively have all (Esclusivamente provvisti di tutti)**
 
->[!Note]
-I filtri restrittivi possono usare gli operatori specificati per il test di una chiave rispetto a un set di più valori.
+> [!Note]
+> I filtri restrittivi possono usare gli operatori specificati per il test di una chiave rispetto a un set di più valori.
 
 Ad esempio, per sottoporre a test l'implementazione di criteri di separazione dei compiti (SoD) in base ai quali un utente che ha l'autorizzazione Request Payment (Richiedi pagamento) non può avere anche l'autorizzazione Approve Payment (Approva pagamento), è possibile costruire una regola simile alla seguente:
 

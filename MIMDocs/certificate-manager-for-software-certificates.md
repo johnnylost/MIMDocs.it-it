@@ -1,7 +1,7 @@
 ---
 title: Richiedere i certificati in Gestione certificati usando modelli | Documentazione Microsoft
 description: Informazioni su come usare Gestione certificati per creare e rinnovare certificati software con i modelli di profilo.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: aebf5af709f4f775ce13be49d8f9075a94e864a2
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290323"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Creare certificati software con Gestione certificati
 Per registrare e rinnovare i certificati software non è necessario essere un amministratore e non occorre una smart card virtuale. Vale la pena notare che a un certo punto verrà richiesto di consentire un'operazione di certificato, e questo è normale.

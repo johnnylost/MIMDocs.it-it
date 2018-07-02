@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7c77ed0ceb541b9b00ebb9954ce65a53f0f44442
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: bfc79d27f015ee3d57c33c26ecae0f5b8ff38370
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289490"
 ---
 # <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Configurare i server di gestione delle identità: Windows Server 2016
 
->[!div class="step-by-step"]
-[« Preparazione di un dominio](preparing-domain.md)
-[SQL Server 2016 »](prepare-server-sql2016.md)
-
+> [!div class="step-by-step"]
+> [« Preparazione di un dominio](preparing-domain.md)
+> [SQL Server 2016 »](prepare-server-sql2016.md)
+> 
 > [!NOTE]
 > Questa procedura dettagliata usa nomi e valori di esempio della società Contoso. Sostituirli con i propri nomi e valori. Ad esempio:
 > - Nome del controller di dominio: **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/27/2018
 > - Nome del server del servizio MIM: **corpservice**
 > - Nome del server di sincronizzazione MIM: **corpservice**
 > - Nome SQL Server: **corpsql**
-> - Password: **Pass@word1**
+> - Password: <strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Aggiungere Windows Server 2016 al dominio
 
@@ -112,6 +113,6 @@ Configurare i criteri di sicurezza del server per consentire l'esecuzione come s
     iisreset /START
     ```
 
->[!div class="step-by-step"]  
-[« Preparazione di un dominio](preparing-domain.md)
-[SQL Server 2016 »](prepare-server-sql2016.md)
+> [!div class="step-by-step"]  
+> [« Preparazione di un dominio](preparing-domain.md)
+> [SQL Server 2016 »](prepare-server-sql2016.md)

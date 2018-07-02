@@ -1,7 +1,7 @@
 ---
 title: 'Distribuire PAM, passaggio 6: Spostare un gruppo | Documentazione Microsoft'
 description: Eseguire la migrazione di un gruppo nella foresta PRIV in modo che possa essere gestito con Privileged Access Management.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 550ad1e68ed8464dc7361e7a35ef35ee97753a9a
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 3a7359c664e1c4aeacbc571242c2b348be186a89
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289585"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Passaggio 6: transizione di un gruppo a Privileged Access Management
 
->[!div class="step-by-step"]
-[« Passaggio 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Passaggio 7 »](step-7-elevate-user-access.md)
+> [!div class="step-by-step"]
+> [« Passaggio 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+> [Passaggio 7 »](step-7-elevate-user-access.md)
 
 La creazione di account con privilegi nella foresta PRIV avviene usando i cmdlet di PowerShell. Per installare i cmdlet, eseguire le operazioni seguenti:
 
@@ -42,26 +43,26 @@ I cmdlet devono essere eseguiti una volta per ogni gruppo e una volta per ogni m
    Import-Module ActiveDirectory
 ```
 
-3.  Creare un account utente corrispondente in PRIV per un account utente in una foresta esistente, a scopo dimostrativo.
+3. Creare un account utente corrispondente in PRIV per un account utente in una foresta esistente, a scopo dimostrativo.
 
-    In PowerShell digitare i comandi seguenti.  Se non è stato usato il nome *Jen* per creare l'utente in contoso.local in precedenza, modificare i parametri del comando in modo appropriato. La password 'Pass@word1' è solo un esempio e deve essere modificata in un valore di password univoca.
+   In PowerShell digitare i comandi seguenti.  Se non è stato usato il nome *Jen* per creare l'utente in contoso.local in precedenza, modificare i parametri del comando in modo appropriato. La password 'Pass@word1' è solo un esempio e deve essere modificata in un valore di password univoca.
 
- ```PowerShell
-        $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
-        $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-        Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
-        Set-ADUser –identity priv.Jen –Enabled 1
-  ```
+   ```PowerShell
+       $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
+       $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+       Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
+       Set-ADUser –identity priv.Jen –Enabled 1
+   ```
 
 4. Copiare un gruppo e il relativo membro, Jen, dal dominio CONTOSO al dominio PRIV, a scopo dimostrativo.
 
     Eseguire i comandi seguenti, specificando, quando richiesto, la password dell'amministratore di dominio CORP (CONTOSO\Administrator):
 
- ```PowerShell
+   ```PowerShell
         $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
         $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca
         $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
- ```
+   ```
 
     Per riferimento, il comando **New-PAMGroup** accetta i parametri seguenti:
 
@@ -70,19 +71,19 @@ I cmdlet devono essere eseguiti una volta per ogni gruppo e una volta per ogni m
      -   Il nome NetBIOS del controller di dominio della foresta CORP  
      -   Le credenziali di un utente amministratore di dominio nella foresta CORP  
 
-5.  (Facoltativo) In CORPDC rimuovere l'account di Jen dal gruppo **CONTOSO CorpAdmins**, se è ancora presente.  Questo è necessario solo a scopo dimostrativo, per illustrare come è possibile associare le autorizzazioni agli account creati nella foresta PRIV.
+5. (Facoltativo) In CORPDC rimuovere l'account di Jen dal gruppo **CONTOSO CorpAdmins**, se è ancora presente.  Questo è necessario solo a scopo dimostrativo, per illustrare come è possibile associare le autorizzazioni agli account creati nella foresta PRIV.
 
-    1.  Accedere a CORPDC come *CONTOSO\Administrator*.
+   1.  Accedere a CORPDC come *CONTOSO\Administrator*.
 
-    2.  Avviare PowerShell, eseguire il comando seguente e confermare la modifica.
+   2.  Avviare PowerShell, eseguire il comando seguente e confermare la modifica.
 
-        ```PowerShell
-        Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
-        ```
+       ```PowerShell
+       Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
+       ```
 
 
 Se si vuole dimostrare che i diritti di accesso tra foreste sono efficaci per l'account dell'utente amministratore, continuare al passaggio successivo.
 
->[!div class="step-by-step"]
-[« Passaggio 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Passaggio 7 »](step-7-elevate-user-access.md)
+> [!div class="step-by-step"]
+> [« Passaggio 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+> [Passaggio 7 »](step-7-elevate-user-access.md)

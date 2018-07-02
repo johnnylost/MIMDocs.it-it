@@ -11,19 +11,20 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 50f7b135ce0d5a46ea08068a7658b229759d2b50
-ms.sourcegitcommit: 24bb3e82f55971696bdefa6c240f1a27f856e110
+ms.openlocfilehash: a4239f1d69d8a43d70dd38af16e9ef8be62bd33c
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288912"
 ---
 # <a name="deprecated-features"></a>Funzionalità deprecate
 
 Questo articolo descrive le funzionalità deprecate di Microsoft Identity Manager 2016 SP1. Se la funzionalità è ancora presente in Microsoft Identity Manager, è ancora supportata. L'uso delle funzionalità deprecate non è consigliato per le nuove distribuzioni, perché potrebbero essere rimosse in una versione futura.  Per gli sviluppatori, è consigliabile non usare le funzionalità deprecate in applicazioni o soluzioni nuove.
 
->[!NOTE]
-Le caratteristiche e funzionalità rimosse in Microsoft Identity Manager SP1 sono identificate con **. <br>
-Altre informazioni sul [ciclo di vita del supporto per Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
+> [!NOTE]
+> Le caratteristiche e funzionalità rimosse in Microsoft Identity Manager SP1 sono identificate con **. <br>
+> Altre informazioni sul [ciclo di vita del supporto per Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
 
 
 ## <a name="bhold"></a>BHOLD 
@@ -31,6 +32,7 @@ Altre informazioni sul [ciclo di vita del supporto per Microsoft Identity Manage
 Microsoft non consiglia ai clienti di avviare nuove distribuzioni dei componenti di Microsoft BHOLD Suite. Le distribuzioni esistenti di BHOLD continueranno a essere supportate. Azure AD fornisce [verifiche di accesso](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview) che sostituiscono alcune delle funzionalità delle campagne di attestazione BHOLD.
 
 ## <a name="certificate-management"></a>Gestione dei certificati 
+
 | **Categoria**                | **Funzionalità deprecata**              | **Sostituzione e commento**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Agenti di gestione | **Gestione dei certificati FIM | L'agente di gestione dei certificati FIM è stato rimosso in MIM 2016.                                                             |
@@ -53,8 +55,8 @@ Microsoft non consiglia ai clienti di avviare nuove distribuzioni dei componenti
 | Agenti di gestione           | Configurare il nome visualizzato della partizione    | Questa funzionalità non verrà sostituita. Questa opzione veniva usata solo per fornire un nome alternativo per una partizione nelle interfacce WMI.                                                                                                                                                                       |
 | Profili di esecuzione                | Profili combinati                   | Le funzionalità di importazione/sincronizzazione delta, importazione completa/sincronizzazione delta e importazione/sincronizzazione completa per i profili combinati verranno rimosse. È invece consigliabile usare profili di esecuzione con due passaggi. 
 
->[!NOTE]
-È consigliabile mantenere i profili di esecuzione combinati solo in ambienti in cui le prestazioni potrebbero risentire di un numero elevato di oggetti non connettore esistenti.
+> [!NOTE]
+> È consigliabile mantenere i profili di esecuzione combinati solo in ambienti in cui le prestazioni potrebbero risentire di un numero elevato di oggetti non connettore esistenti.
 
 
 | **Categoria**                | **Funzionalità deprecata**              | **Sostituzione e commento**           |

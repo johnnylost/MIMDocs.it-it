@@ -1,7 +1,7 @@
 ---
 title: 'Passaggio 4: Configurazione di SharePoint'
 description: Si tratta del passaggio 4 del processo di configurazione di PAM tramite script. In questo passaggio viene configurato SharePoint in modo che possa essere usato come parte della distribuzione di PAM.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: f8d033bec440c6efed26dd959acc713638258dd3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e46b7cf75eb60930441e309448773353668ed454
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289629"
 ---
 # <a name="step-4-configuring-sharepoint"></a>Passaggio 4: Configurazione di SharePoint
 
->[!div class="step-by-step"]
-[ «Passaggio 3](sp1-step3-installing-configuring-sql.md)
-[Passaggio 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [ «Passaggio 3](sp1-step3-installing-configuring-sql.md)
+> [Passaggio 5 »](sp1-step5-configuring-pam.md)
 
 La versione di SharePoint deve essere SharePoint Foundation 2013 con SP1.
 
@@ -51,6 +52,6 @@ Dopo l'installazione, la GUI di configurazione di SharePoint verrà aperta e sar
 
 È possibile trovare informazioni dettagliate nella sezione **Configure SharePoint** (Configurare SharePoint) in [Passaggio 3: Preparare un server PAM](/microsoft-identity-manager/pam/step-3-prepare-pam-server). Al termine, eseguire nuovamente lo script ".PAMDeployment.ps1", selezionare l'opzione 4 (installazione di SharePoint) per completare questo passaggio.
 
->[!div class="step-by-step"]
-[ «Passaggio 3](sp1-step3-installing-configuring-sql.md)
-[Passaggio 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [ «Passaggio 3](sp1-step3-installing-configuring-sql.md)
+> [Passaggio 5 »](sp1-step5-configuring-pam.md)
