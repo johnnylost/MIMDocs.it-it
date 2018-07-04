@@ -10,20 +10,21 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 77d322f447546897ad18f0981e5faad12efafef1
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: ac11a4dfb23944d50dbbcf0b0d70c915f186c159
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34479163"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy-public-preview"></a>Collaborazione Business to Business (B2B) di Azure AD con Microsoft Identity Manager(MIM) 2016 SP1 con il proxy di applicazione Azure (anteprima pubblica)
 ============================================================================================================================
 
-Lo scenario iniziale in anteprima è la gestione del ciclo di vita degli account AD degli utenti esterni.   In questo scenario un'organizzazione ha invitato alcuni guest nella directory di Azure AD e vuole concedere a tali guest l'accesso alle applicazioni locali basate su Kerberos o sull'autenticazione integrata di Windows, tramite il proxy di [applicazione Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) o altri meccanismi gateway. Il proxy di applicazione Azure AD richiede che ogni utente abbia il proprio account Active Directory Domain Services, per scopi di identificazione e delega
+Lo scenario iniziale in anteprima è la gestione del ciclo di vita degli account AD degli utenti esterni.   In questo scenario un'organizzazione ha invitato alcuni guest nella directory di Azure AD e vuole concedere a tali guest l'accesso alle applicazioni locali basate su Kerberos o sull'autenticazione integrata di Windows, tramite il proxy di [applicazione Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) o altri meccanismi gateway. Il proxy di applicazione Azure AD richiede che ogni utente abbia il proprio account Active Directory Domain Services, per scopi di identificazione e delega
 
 ## <a name="scenario-specific-supported-guidance"></a>Linee guida supportate specifiche dello scenario
 
-In questo scenario un'organizzazione ha invitato alcuni guest nella directory di Azure AD e vuole concedere a tali guest l'accesso alle applicazioni locali basate su Kerberos o sull'autenticazione integrata di Windows, tramite il proxy di [applicazione Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) o altri meccanismi gateway. Il proxy di applicazione Azure AD richiede che ogni utente abbia il proprio account Active Directory Domain Services, per scopi di identificazione e delega
+In questo scenario un'organizzazione ha invitato alcuni guest nella directory di Azure AD e vuole concedere a tali guest l'accesso alle applicazioni locali basate su Kerberos o sull'autenticazione integrata di Windows, tramite il proxy di [applicazione Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) o altri meccanismi gateway. Il proxy di applicazione Azure AD richiede che ogni utente abbia il proprio account Active Directory Domain Services, per scopi di identificazione e delega
 
 Alcuni presupposti della configurazione di B2B con MIM e il proxy di applicazione Azure
 
@@ -33,14 +34,14 @@ Alcuni presupposti della configurazione di B2B con MIM e il proxy di applicazion
 
     -   Gruppi di Office che controllano l'accesso all'applicazione con [Azure AD Connect](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
 
--   I connettori e i gruppi di connettori del proxy di applicazione sono già stati configurati. In caso contrario, è possibile vedere [qui](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) per installarli e configurarli
+-   I connettori e i gruppi di connettori del proxy di applicazione sono già stati configurati. In caso contrario, è possibile vedere [qui](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) per installarli e configurarli
 
 -   È stata pubblicata una o più applicazioni, basate sull'Autenticazione integrata di Windows o su singoli account AD tramite il proxy di app Azure
 
--   È stato invitato o si invita uno o più guest, creati in Azure AD <https://docs.microsoft.com/en-us/azure/active-directory/active-directory-b2b-self-service-portal>
+-   È stato invitato o si invita uno o più guest, creati in Azure AD <https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>
 
 -   Microsoft Identity Manager è installato e si usa la configurazione di base del servizio, del portale e dell'agente di gestione di Active Directory.
-    <https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-deploy>
+    <https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-deploy>
 
 ## <a name="b2b-end-to-end-deployment"></a>Distribuzione end-to-end B2B
 
@@ -188,7 +189,7 @@ Indicizzato = **True**
 
 I passaggi successivi richiederanno la configurazione minima dell'agente di gestione del servizio FIM e dell'agente di gestione di Active Directory Domain Services.
 
-Per altre informazioni sulla configurazione, vedere How Do I Provision Users to AD DS (Come effettuare il provisioning degli utenti in Active Directory Domain Services) all'indirizzo <https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx>
+Per altre informazioni sulla configurazione, vedere How Do I Provision Users to AD DS (Come effettuare il provisioning degli utenti in Active Directory Domain Services) all'indirizzo <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx>
 
 ### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Regola di sincronizzazione: importare un utente guest nel servizio di sincronizzazione metaverse da Azure Active Directory<br>
 
@@ -292,10 +293,10 @@ L'utente B2B può infine eseguire l'accesso e visualizzare l'applicazione
 <a name="next-steps"></a>Passaggi successivi
 ----------
 
-[Come si effettua il provisioning di utenti ai servizi di dominio di Active Directory](https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx)
+[Come si effettua il provisioning di utenti ai servizi di dominio di Active Directory](https://technet.microsoft.com/library/ff686263(v=ws.10).aspx)
 
-[Riferimento alle funzioni per FIM 2010](https://technet.microsoft.com/en-us/library/ff800820(v=ws.10).aspx)
+[Riferimento alle funzioni per FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[Come fornire l'accesso remoto sicuro alle applicazioni locali](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-get-started)
+[Come fornire l'accesso remoto sicuro alle applicazioni locali](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
 [Scaricare l'agente di gestione di Microsoft Identity Manager per Microsoft Graph (anteprima)](http://go.microsoft.com/fwlink/?LinkId=717495)
