@@ -1,7 +1,7 @@
 ---
 title: Procedure consigliate per Microsoft Identity Manager 2016 | Microsoft Docs
-description: 
-keywords: 
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,20 +10,21 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: bb967bfb43218384044e324c270d3d6b35d33afe
-ms.sourcegitcommit: b4513f0f72ac6efd5c2610863f4e3e8c8e65c860
+ms.assetid: ''
+ms.openlocfilehash: 9ef96b88942fd33107d9021ddddb90d0d80dbed1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290119"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Procedure consigliate per Microsoft Identity Manager 2016
 
 Questo argomento descrive le procedure consigliate per la distribuzione e il funzionamento di Microsoft Identity Manager 2016 (MIM)
 
 ## <a name="sql-setup"></a>Configurazione di SQL
->[!NOTE]
-I consigli seguenti per la configurazione di un server che esegue SQL presumono la presenza di un'istanza SQL dedicata al database del servizio FIMService e di un'istanza SQL dedicata al database del servizio FIMSynchronizationService. Se si esegue FIMService in un ambiente consolidato, è necessario apportare modifiche adeguate per la configurazione in uso.
+> [!NOTE]
+> I consigli seguenti per la configurazione di un server che esegue SQL presumono la presenza di un'istanza SQL dedicata al database del servizio FIMService e di un'istanza SQL dedicata al database del servizio FIMSynchronizationService. Se si esegue FIMService in un ambiente consolidato, è necessario apportare modifiche adeguate per la configurazione in uso.
 
 La configurazione del server SQL (Structured Query Language) è fondamentale per ottenere le prestazioni ottimali del sistema. La possibilità di ottenere prestazioni ottimali da un'implementazione MIM su larga scala dipende dall'applicazione delle procedure consigliate per i server che eseguono SQL. Per altre informazioni, vedere gli argomenti seguenti sulle procedure consigliate per SQL:
 
@@ -71,40 +72,40 @@ Per ottenere prestazioni ottimali, è consigliabile creare un file di dati per c
 
 A seconda della quantità di memoria disponibile nel server SQL e della condivisione o meno di questo con altri servizi (ad esempio MIM 2016 e il relativo servizio di sincronizzazione), è necessario limitare il consumo di memoria da parte di SQL. Questa operazione è possibile tramite la procedura seguente.
 
-1.  Avviare SQL Server Enterprise Manager.
+1. Avviare SQL Server Enterprise Manager.
 
-2.  Selezionare Nuova query.
+2. Selezionare Nuova query.
 
-3.  Eseguire la query seguente:
+3. Eseguire la query seguente:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'show advanced options', 1
+   EXEC sp_configure 'show advanced options', 1
 
-  RECONFIGURE WITH OVERRIDE
+   RECONFIGURE WITH OVERRIDE
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
-  WITH OVERRIDE
-  ```
+   EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
+   WITH OVERRIDE
+   ```
 
-  Questo esempio riconfigura il server SQL in modo che usi non più di 12 GB di memoria.
+   Questo esempio riconfigura il server SQL in modo che usi non più di 12 GB di memoria.
 
-4.  Verificare l'impostazione tramite la query seguente:
+4. Verificare l'impostazione tramite la query seguente:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)'--- verify the setting
+   EXEC sp_configure 'max server memory (MB)'--- verify the setting
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'show advanced options', 0
+   EXEC sp_configure 'show advanced options', 0
 
-  RECONFIGURE WITH OVERRIDE
-  ```
+   RECONFIGURE WITH OVERRIDE
+   ```
 
 ### <a name="backup-and-recovery-configuration"></a>Configurazione di backup e ripristino
 
@@ -169,11 +170,11 @@ Per altre informazioni, vedere [Configurazione di restrizioni di recapito messag
 
 Questa sezione elenca una serie di passaggi che consentono di migliorare le prestazioni del caricamento iniziale dei dati dal sistema esterno a MIM. È importante comprendere che alcuni di questi passaggi vengono eseguiti solo durante il popolamento iniziale del sistema. Devono quindi essere reimpostati a caricamento completato. Questa operazione viene eseguita una sola volta e non è una sincronizzazione continua.
 
->[!NOTE]
-Per altre informazioni sulla sincronizzazione degli utenti tra MIM e Active Directory Domain Services (AD DS), vedere [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) (Come posso eseguire la sincronizzazione degli utenti tra Active Directory e FIM) nella documentazione di FIM.
-
->[!IMPORTANT]
-Assicurarsi di aver applicato le procedure consigliate descritte nella sezione Configurazione di SQL di questa guida. 
+> [!NOTE]
+> Per altre informazioni sulla sincronizzazione degli utenti tra MIM e Active Directory Domain Services (AD DS), vedere [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) (Come posso eseguire la sincronizzazione degli utenti tra Active Directory e FIM) nella documentazione di FIM.
+> 
+> [!IMPORTANT]
+> Assicurarsi di aver applicato le procedure consigliate descritte nella sezione Configurazione di SQL di questa guida. 
 
 ### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Passaggio 1: Configurare il server SQL per il caricamento iniziale dei dati
 Il caricamento iniziale dei dati può essere un processo lungo. Quando si intende caricare inizialmente una grande quantità di dati, è possibile ridurre il tempo necessario a popolare il database disattivando temporaneamente la ricerca full-text e attivandola nuovamente dopo il completamento dell'esportazione nell'agente di gestione MIM 2016 (FIM MA).
@@ -191,8 +192,8 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
->[!IMPORTANT]
-La mancata implementazione di queste procedure causa un utilizzo molto elevato dello spazio su disco, che potrebbe esaurirsi. Altri dettagli su questo argomento sono disponibili in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370) (Panoramica dei modelli di recupero). [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Guida al backup e al ripristino di FIM) contiene informazioni aggiuntive.
+> [!IMPORTANT]
+> La mancata implementazione di queste procedure causa un utilizzo molto elevato dello spazio su disco, che potrebbe esaurirsi. Altri dettagli su questo argomento sono disponibili in [Recovery Model Overview](http://go.microsoft.com/fwlink/?LinkID=185370) (Panoramica dei modelli di recupero). [FIM Backup and Restore Guide](http://go.microsoft.com/fwlink/?LinkID=165864) (Guida al backup e al ripristino di FIM) contiene informazioni aggiuntive.
 
 ### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Passaggio 2: Applicare la configurazione MIM minima necessaria durante il processo di caricamento
 
@@ -288,8 +289,8 @@ Gli account dei servizi non devono essere membri del gruppo Administrators local
 
 L'account del servizio di sincronizzazione FIM non deve essere un membro dei gruppi di sicurezza usati per controllare l'accesso al servizio stesso, ovvero di gruppi con nome che inizia con FIMSync, ad esempio FIMSyncAdmins.
 
->[!IMPORTANT]
- Se si selezionano le opzioni che consentono di usare lo stesso account per entrambi i servizi e si mantiene il servizio FIM separato dal servizio di sincronizzazione FIM, non è possibile impostare Nega accesso al computer dalla rete nel server del servizio di sincronizzazione MMS. Se l'accesso è negato, il servizio FIM non è in grado di contattare il servizio di sincronizzazione FIM per modificare la configurazione e gestire le password.
+> [!IMPORTANT]
+>  Se si selezionano le opzioni che consentono di usare lo stesso account per entrambi i servizi e si mantiene il servizio FIM separato dal servizio di sincronizzazione FIM, non è possibile impostare Nega accesso al computer dalla rete nel server del servizio di sincronizzazione MMS. Se l'accesso è negato, il servizio FIM non è in grado di contattare il servizio di sincronizzazione FIM per modificare la configurazione e gestire le password.
 
 ### <a name="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile"></a>Una reimpostazione della password distribuita a computer di tipo chiosco multimediale deve impostare la sicurezza locale per la cancellazione del file di paging della memoria virtuale
 
@@ -315,7 +316,7 @@ Per implementare il protocollo SSL:
 
 7.  Salvare il file in una posizione qualsiasi. Nei passaggi successivi sarà necessario accedere a questa posizione.
 
-8.  Passare a https://nomeserver/certsrv. Sostituire nomeserver con il nome del server che rilascia certificati.
+8.  Passare a https://servername/certsrv. Sostituire nomeserver con il nome del server che rilascia certificati.
 
 9.  Fare clic su Richiedi nuovo certificato.
 
@@ -357,9 +358,9 @@ Per implementare il protocollo SSL:
 
 28. Fare clic su Operazioni e quindi su Mapping di accesso alternativo.
 
-29. Fare clic su http://nomeserver.
+29. Fare clic su http://servername.
 
-30. Modificare http://nomeserver in https://nomeserver e quindi fare clic su OK.
+30. Cambiare http://servername in https://servername e quindi fare clic su OK.
 
 31. Fare clic sul pulsante Start, scegliere Esegui, digitare iisreset e quindi fare clic su OK.
 
@@ -384,7 +385,7 @@ Per impostazione predefinita, MIM 2016 ripulisce ogni 30 giorni gli oggetti di s
 
 In MIM sono disponibili due tipi di regole di criteri di gestione, il tipo Richiesta e il tipo Set di transizione:
 
--  Richiesta
+- Richiesta
 
   - Tipo usato per definire i criteri di controllo di accesso (autenticazione, autorizzazione e azione) per le operazioni di creazione, lettura, aggiornamento o eliminazione (CRUD) sulle risorse.
   - Applicato quando viene eseguita un'operazione CRUD su una risorsa di destinazione in MIM.
@@ -432,8 +433,8 @@ In MIM le autorizzazioni sono definite come asserzioni positive. MIM non support
 
 Per definire diritti personalizzati, usare regole di criteri di gestione di tipo Set di transizione anziché di tipo Richiesta. Le regole di criteri di gestione di tipo Set di transizione rappresentano un modello basato sugli stati per assegnare o rimuovere diritti in base all'appartenenza ai set di transizione, o ruoli, definiti, e alle attività del flusso di lavoro associato. Queste regole devono essere sempre definite in coppia, una per le risorse in fase di transizione in entrata e una per le risorse in fase di transizione in uscita. Ogni regola di criteri di gestione di transizione, poi, deve contenere flussi di lavoro separati per le attività di provisioning e deprovisioning.
 
->[!NOTE]
-Per tutti i flussi di lavoro di deprovisioning assicurarsi che l'attributo Esegui in base all'aggiornamento criteri sia impostato su true.
+> [!NOTE]
+> Per tutti i flussi di lavoro di deprovisioning assicurarsi che l'attributo Esegui in base all'aggiornamento criteri sia impostato su true.
 
 #### <a name="enable-the-set-transition-in-mpr-last"></a>Abilitare per ultima la regola di criteri di gestione di tipo Set di transizione in entrata
 

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 | Documentazione Microsoft
 description: Viene illustrato il processo di creazione degli utenti in Servizi di dominio Active Directory tramite Microsoft Identity Manager 2016
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 171aa1a2e19ea9f78f9fadbc7368404702095d71
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: a12a8436d70b3ae866df0f615e10a3d76f791168
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290102"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Come si esegue il provisioning di utenti in Servizi di dominio Active Directory
 
@@ -87,8 +88,8 @@ Nella figura seguente viene descritto l'ambiente obbligatorio.
 
 È possibile eseguire tutti i componenti in un solo computer.
 
->[!NOTE]
-Per altre informazioni sulla configurazione di MIM, vedere [Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845) (Guida all'installazione).
+> [!NOTE]
+> Per altre informazioni sulla configurazione di MIM, vedere [Installation Guide](http://go.microsoft.com/FWLink/p/?LinkId=165845) (Guida all'installazione).
 
 ## <a name="scenario-components-list"></a>Elenco dei componenti dello scenario
 
@@ -97,9 +98,9 @@ Nella tabella seguente sono elencati i componenti che fanno parte dello scenario
 
 | ![Unità organizzativa](media/how-provision-users-adds/image005.jpg)   | Unità organizzativa                | Oggetti MIM: unità organizzativa (OU) che viene usata come destinazione per gli utenti con provisioning.                                                       |
 |----------------------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![Account utente](media/how-provision-users-adds/image006.jpg)   | Account utente                      | &#183; **ADMA**: account utente di Active Directory con diritti sufficienti per connettersi a Servizi di dominio Active Directory.<br/> &#183; **FIMMA**: account utente di Active Directory con diritti sufficienti per connettersi a MIM.
+| ![Account utente](media/how-provision-users-adds/image006.jpg)   | Account utente                      | & #183; **ADMA**: account utente di Active Directory con diritti sufficienti per connettersi a Servizi di dominio Active Directory.<br/> & #183; **FIMMA**: account utente di Active Directory con diritti sufficienti per connettersi a MIM.
                                                                  |
-| ![Agenti di gestione e profili di esecuzione](media/how-provision-users-adds/image007.jpg)  | Agenti di gestione e profili di esecuzione | &#183; **Fabrikam ADMA**: agente di gestione che consente di scambiare dati con Servizi di dominio Active Directory. <br/> &#183; Fabrikam FIMMA: agente di gestione che consente di scambiare dati con MIM.                                                                                 |
+| ![Agenti di gestione e profili di esecuzione](media/how-provision-users-adds/image007.jpg)  | Agenti di gestione e profili di esecuzione | & #183; **Fabrikam ADMA**: agente di gestione che consente di scambiare dati con Servizi di dominio Active Directory. <br/> & #183; Fabrikam FIMMA: agente di gestione che consente di scambiare dati con MIM.                                                                                 |
 | ![Regole di sincronizzazione](media/how-provision-users-adds/image008.jpg)  | Regole di sincronizzazione              | Regola di sincronizzazione in uscita gruppo Fabrikam: regola di sincronizzazione in uscita che esegue il provisioning degli utenti in Servizi di dominio Active Directory.                                     |
 | ![Operazioni set](media/how-provision-users-adds/image009.jpg)   | Operazioni set                               | Tutti i terzisti: set con appartenenza dinamica per tutti gli oggetti con un valore dell'attributo EmployeeType impostato su Terzista.                                |
 | ![Flussi di lavoro](media/how-provision-users-adds/image010.jpg)  | Flussi di lavoro                          | Flusso di lavoro del provisioning di Active Directory: flusso di lavoro per portare l'utente MIM nell'ambito della regola di sincronizzazione in uscita di Active Directory.                                |
@@ -160,8 +161,8 @@ Per creare un utente in Servizi di dominio Active Directory, è necessario trasf
 
 In Servizi di dominio Active Directory molto spesso gli utenti usano ancora l'attributo sAMAccountName per accedere al servizio directory. Se non si specifica un valore per questo attributo, il servizio directory genera un valore casuale. Tuttavia, questi valori casuali non sono semplici da usare, motivo per cui solitamente l'esportazione in Servizi di dominio Active Directory include una versione dell'attributo più semplice da usare. Per consentire agli utenti di accedere a Servizi di dominio Active Directory, è necessario anche includere una password creata mediante l'attributo unicodePwd nella logica di esportazione.
 
->[!Note]                                
-Verificare che il valore specificato come unicodePwd sia conforme ai criteri password dell'account di Servizi di dominio Active Directory di destinazione.
+> [!Note]
+> Verificare che il valore specificato come unicodePwd sia conforme ai criteri password dell'account di Servizi di dominio Active Directory di destinazione.
 
 Quando si imposta una password per gli account di Servizi di dominio Active Directory, è necessario anche creare un account come account abilitato. A tale scopo, impostare l'attributo userAccountControl. Per altre informazioni sull'attributo userAccountControl, vedere [Using FIM to Enable or Disable Accounts in Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189658) (Uso di FIM per abilitare o disabilitare gli account in Active Directory).
 
@@ -180,8 +181,8 @@ Per altre informazioni, vedere gli argomenti seguenti nella Guida:
 - Uso dell'agente di gestione per Active Directory
 - Configurazione delle partizioni di directory
 
->[!Note]
-Assicurarsi di avere una regola del flusso di attributi di importazione configurata per l'attributo ExpectedRulesList.
+> [!Note]
+> Assicurarsi di avere una regola del flusso di attributi di importazione configurata per l'attributo ExpectedRulesList.
 
 ### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Passaggio 4: Creare l'agente di gestione Fabrikam FIMMA
 
@@ -194,7 +195,7 @@ Nella tabella seguente sono elencate le impostazioni specifiche per lo scenario 
 | Pagina di progettazione dell'agente di gestione | Configurazione |
 |------------|------------------------------------|
 | Creazione dell'agente di gestione | 1. **Agente di gestione per:** agente di gestione del servizio FIM <br/> 2. **Nome:** Fabrikam FIMMA |
-| Connessione al database     | Usare le seguenti impostazioni: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> &#183; **indirizzo di base servizio FIM:** http://localhost:5725 <br/> <br/> Specificare le informazioni relative all'account creato per l'agente di gestione |
+| Connessione al database     | Usare le seguenti impostazioni: <br/> &#183; **Server:** localhost <br/> &#183; **Database:** FIMService <br/> &#183; **Indirizzo di base del servizio FIM:**  http://localhost:5725 <br/> <br/> Specificare le informazioni relative all'account creato per l'agente di gestione |
 | Selezione tipi di oggetti                                     | Oltre ai tipi di oggetto già selezionati, selezionare **Persona**.   |
 | Configurare i mapping dei tipi di oggetto                          | Oltre ai mapping dei tipi di oggetto già esistenti, aggiungere un mapping per il **Tipo di oggetto origine dati** Persona alla persona con tipo oggetto **Metaverse**. |
 | Configurare il flusso di attributi                                | Oltre ai mapping del flusso di attributi già esistenti, aggiungere i mapping del flusso di attributi seguenti: <br/><br/> ![Flusso di attributi](media/how-provision-users-adds/image018.jpg) |
@@ -211,8 +212,8 @@ Per altre informazioni, vedere gli argomenti seguenti nella Guida:
 
 -   Configurazione delle partizioni di directory
 
->[!NOTE]
- Assicurarsi di avere una regola del flusso di attributi di importazione configurata per l'attributo ExpectedRulesList.
+> [!NOTE]
+>  Assicurarsi di avere una regola del flusso di attributi di importazione configurata per l'attributo ExpectedRulesList.
 
 ### <a name="step-5-create-the-run-profiles"></a>Passaggio 5: Creare profili di esecuzione
 
@@ -226,12 +227,12 @@ Nella tabella seguente vengono elencati i profili di esecuzione che è necessari
 Creare profili di esecuzione per ogni agente di gestione in base alla tabella precedente.
 
 
->[!Note]
-Per altre informazioni, vedere la creazione del profilo di esecuzione dell'agente di gestione nella Guida di MIM.                                                                                                                  
-
-
->[!Important]
- Verificare che il provisioning sia abilitato nell'ambiente in uso. È possibile fare ciò eseguendo lo script contenuto in Using Windows PowerShell to Enable Provisioning (Uso di Windows PowerShell per abilitare il provisioning) all'indirizzo http://go.microsoft.com/FWLink/p/?LinkId=189660.
+> [!Note]
+> Per altre informazioni, vedere la creazione del profilo di esecuzione dell'agente di gestione nella Guida di MIM.                                                                                                                  
+> 
+> 
+> [!Important]
+>  Verificare che il provisioning sia abilitato nell'ambiente in uso. È possibile fare ciò eseguendo lo script contenuto in Using Windows PowerShell to Enable Provisioning (Uso di Windows PowerShell per abilitare il provisioning) all'indirizzo http://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
 ## <a name="configuring-the-fim-service"></a>Configurazione del servizio FIM
@@ -243,7 +244,7 @@ Per lo scenario in questa guida, è necessario configurare un criterio di provis
 
 L'obiettivo di questo criterio di provisioning consiste nel portare i gruppi nell'ambito della regola di sincronizzazione in uscita di Active Directory. Portando la risorsa nell'ambito della regola di sincronizzazione, si consente al motore di sincronizzazione di eseguire il provisioning della risorsa in Servizi di dominio Active Directory in base alla configurazione.
 
-Per configurare il servizio FIM, passare a http://localhost/identitymanagement in Internet Explorer®. Nella pagina del portale MIM per creare i criteri di provisioning, accedere alle pagine relative nella sezione dell'amministrazione. Per verificare la configurazione, è necessario eseguire lo script contenuto in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Uso di Windows PowerShell per documentare la configurazione dei criteri di provisioning).
+Per configurare il servizio FIM, passare a http://localhost/identitymanagement in Windows Internet Explorer®. Nella pagina del portale MIM per creare i criteri di provisioning, accedere alle pagine relative nella sezione dell'amministrazione. Per verificare la configurazione, è necessario eseguire lo script contenuto in [Using Windows PowerShell to document your provisioning policy configuration](http://go.microsoft.com/FWLink/p/?LinkId=189661) (Uso di Windows PowerShell per documentare la configurazione dei criteri di provisioning).
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Passaggio 6: Creare la regola di sincronizzazione
 
@@ -251,7 +252,7 @@ Le tabelle seguenti illustrano la configurazione della regola di sincronizzazion
 
 | Configurazione della regola di sincronizzazione                                                                         |                                                                             |                                                           
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------|
-| Nome                                                                                                       | Regola di sincronizzazione in uscita utente di Active Directory                         |                                                          
+| Name                                                                                                       | Regola di sincronizzazione in uscita utente di Active Directory                         |                                                          
 | Descrizione                                                                                               |                                                                             |                                                           
 | Precedenza                                                                                                | 2                                                                           |                                                           
 | Direzione del flusso di dati   | In uscita             |       
@@ -293,8 +294,8 @@ Le tabelle seguenti illustrano la configurazione della regola di sincronizzazion
 
 
 
- >[!NOTE]
- Importante. Verificare di aver selezionato il flusso iniziale solo per il flusso di attributi che ha DN come destinazione.                                                                          
+> [!NOTE]
+>  Importante. Verificare di aver selezionato il flusso iniziale solo per il flusso di attributi che ha DN come destinazione.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Passaggio 7: Creare il flusso di lavoro
 
@@ -302,14 +303,14 @@ L'obiettivo del flusso di lavoro del provisioning di Active Directory consiste n
 
 | Configurazioni del flusso di lavoro               |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Nome                                 | Flusso di lavoro del provisioning utente di Active Directory                     |
+| Name                                 | Flusso di lavoro del provisioning utente di Active Directory                     |
 | Descrizione                          |                                                                 |
 | Tipo flusso di lavoro                        | Azione                                                          |
 | Esecuzione in aggiornamento criteri                 | False                                                           |
 
 | Regola di sincronizzazione                 |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Nome                                 | Regola di sincronizzazione in uscita utente di Active Directory             |
+| Name                                 | Regola di sincronizzazione in uscita utente di Active Directory             |
 | Azione                               | Aggiunta                                                             |
 
 
@@ -321,7 +322,7 @@ La Regola di criteri di gestione richiesta è di tipo Transizione del set e si a
 
 | Configurazione Regola di criteri di gestione richiesta                    |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Nome                                 | Regola dei criteri di gestione del provisioning utente di Active Directory                 |
+| Name                                 | Regola dei criteri di gestione del provisioning utente di Active Directory                 |
 | Descrizione                          |                                                             |
 | Tipo                                 | Transizione del set                                              |
 | Concede autorizzazioni                   | False                                                       |
@@ -365,8 +366,8 @@ Nella tabella seguente vengono elencati i profili di esecuzione che fanno parte 
 
 
 
->[!NOTE]
-È necessario verificare che la regola di sincronizzazione in uscita sia stata proiettata nel metaverse.
+> [!NOTE]
+> È necessario verificare che la regola di sincronizzazione in uscita sia stata proiettata nel metaverse.
 
 ## <a name="testing-the-configuration"></a>Test della configurazione
 
@@ -490,8 +491,8 @@ In FIM tutte le esecuzioni di esportazione richiedono un'importazione delta succ
 
 Eseguire i profili di esecuzione seguendo le istruzioni contenute in questa sezione.
 
->[!IMPORTANT]
-Ogni esecuzione del profilo di esecuzione deve essere completata senza errori.
+> [!IMPORTANT]
+> Ogni esecuzione del profilo di esecuzione deve essere completata senza errori.
 
 ### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Passaggio 14: Verificare l'utente con provisioning in Servizi di dominio Active Directory
 

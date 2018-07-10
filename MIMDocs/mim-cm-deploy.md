@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 241ad68d3f4a692c87d0d2a0069781ad042453c7
-ms.sourcegitcommit: 39f34a38967baa9c0da6ae5b57734b222f5771a5
+ms.openlocfilehash: 25a511dc590b02019c65a688c9b2c8dc821fff50
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290085"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Distribuzione di Gestione certificati Microsoft Identity Manager 2016 (Gestione certificati MIM)
 
@@ -80,13 +81,13 @@ Il processo di estensione dello schema è semplice ma deve essere eseguito con a
     ![diagramma](media/mim-cm-deploy/image005.png)
 
 3. Eseguire lo script resourceForestModifySchema.vbs per lo scenario con foresta singola. Per lo scenario con foresta di risorse eseguire gli script:
-    - DomainA - Percorso selezionato dagli utenti (userForestModifySchema.vbs)
-    - ResourceForestB - Percorso di installazione di Gestione certificati (resourceForestModifySchema.vbs).
+   - DomainA - Percorso selezionato dagli utenti (userForestModifySchema.vbs)
+   - ResourceForestB - Percorso di installazione di Gestione certificati (resourceForestModifySchema.vbs).
 
-    >[!NOTE]
-    >Poiché le modifiche allo schema sono un'operazione irreversibile che richiede un ripristino della foresta per eseguire il rollback, assicurarsi di aver eseguito i backup necessari. Per informazioni dettagliate sulle modifiche apportate allo schema eseguendo questa operazione. leggere l'articolo [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx) (Modifiche dello schema di Gestione certificati di Forefront Identity Manager 2010)
+     >[!NOTE]
+     >Poiché le modifiche allo schema sono un'operazione irreversibile che richiede un ripristino della foresta per eseguire il rollback, assicurarsi di aver eseguito i backup necessari. Per informazioni dettagliate sulle modifiche apportate allo schema eseguendo questa operazione. leggere l'articolo [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx) (Modifiche dello schema di Gestione certificati di Forefront Identity Manager 2010)
 
-    ![diagramma](media/mim-cm-deploy/image007.png)
+     ![diagramma](media/mim-cm-deploy/image007.png)
 
 4. Eseguire lo script. Al completamento dello script, viene inviato un messaggio di operazione riuscita.
 
@@ -355,7 +356,6 @@ L'account MIMCMWebAgent esegue il portale di Gestione certificati MIM. Per impos
 SETSPN -S http/cm.contoso.com contoso\MIMCMWebAgent
 #Delegation for certificate authority
 Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo"="rpcss/CORPCA","rpcss/CORPCA.contoso.com"}
-
 ```
 
 **Aggiornamento di IIS in CORPCM**
@@ -368,7 +368,6 @@ add-pssnapin WebAdministration
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name enabled -Value $true
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useKernelMode -Value $false
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useAppPoolCredentials -Value $true
-
 ```
 
 >[!NOTE]
@@ -465,10 +464,10 @@ Prima di eseguire l'accesso a CORPCM, aggiungere MIMINSTALL ai gruppi **Domain A
 
    - Usa un utente esistente: **Enabled**
 
-    >[!NOTE]
-    >Questi account sono stati creati in precedenza. Assicurarsi che la procedura descritta nel passaggio 8 venga ripetuta per tutte le sei schede degli account agente.
+     >[!NOTE]
+     >Questi account sono stati creati in precedenza. Assicurarsi che la procedura descritta nel passaggio 8 venga ripetuta per tutte le sei schede degli account agente.
 
-    ![Account Gestione certificati MIM](media/mim-cm-deploy/image030.png)
+     ![Account Gestione certificati MIM](media/mim-cm-deploy/image030.png)
 
 10. Dopo aver immesso tutte le informazioni degli account agente, fare clic su **OK**.
 
@@ -602,9 +601,9 @@ In questo passaggio vengono installati e configurati i moduli CA FIM CM nell'aut
 
 6. Nella finestra di dialogo **Proprietà contoso-CORPCA-CA** fare clic su **OK**.
 
-7. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA****, scegliere **Tutte le attività** e quindi fare clic su **Arresta servizio**. Attendere che i Servizi certificati Active Directory vengano arrestati.
+7. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA** *,*  scegliere **Tutte le attività** e quindi fare clic su **Arresta servizio**. Attendere che i Servizi certificati Active Directory vengano arrestati.
 
-8. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA****, scegliere **Tutte le attività** e quindi fare clic su **Avvia servizio**.
+8. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA** *,*  scegliere **Tutte le attività** e quindi fare clic su **Avvia servizio**.
 
 9. Ridurre a icona la console **Autorità di certificazione**.
 
@@ -668,7 +667,7 @@ In questo passaggio vengono installati e configurati i moduli CA FIM CM nell'aut
     - Nella finestra di dialogo Certificato fare clic con il pulsante destro del mouse sulla casella **Specificare l'hash del certificato con codifica esadecimale** e quindi fare clic su **Incolla**.
 
     - Nella finestra di dialogo **Certificato** fare clic su **OK**.
-    
+
         >[!Note]
         >Se il pulsante **OK** non è abilitato significa che è stato immesso per errore un carattere nascosto nella stringa dell'identificazione personale quando l'identificazione personale è stata copiata dal certificato clmAgent. Ripetere tutti i passaggi a partire dall'attività 4 **Copiare l'identificazione personale del certificato MIMCMAgent negli Appunti di Windows** di questo esercizio.
 
@@ -678,11 +677,11 @@ In questo passaggio vengono installati e configurati i moduli CA FIM CM nell'aut
 
 6. Nella finestra di dialogo **Proprietà contoso-CORPCA-CA** fare clic su **OK**.
 
-7. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA****, scegliere **Tutte le attività** e quindi fare clic su **Arresta servizio**.
+7. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA** *,*  scegliere **Tutte le attività** e quindi fare clic su **Arresta servizio**.
 
 8. Attendere che i Servizi certificati Active Directory vengano arrestati.
 
-9. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA****, scegliere **Tutte le attività** e quindi fare clic su **Avvia servizio**.
+9. Fare clic con il pulsante destro del mouse su **contoso-CORPCA-CA** *,*  scegliere **Tutte le attività** e quindi fare clic su **Avvia servizio**.
 
 10. Chiudere la console **Autorità di certificazione**.
 
@@ -736,7 +735,7 @@ Primi passaggi: **Configurazione del punto di connessione del servizio e delle a
 6. Nella finestra di dialogo **Voci di autorizzazione per Contoso** nell'elenco **Applica a** selezionare **Descendant User objects** (Oggetti Utente discendente) e quindi selezionare la casella di controllo **Consenti** per le **Autorizzazioni** seguenti:
 
     - **Leggi tutte le proprietà**
-    
+
     - **Autorizzazioni di lettura**
 
     - **FIM CM Audit**
@@ -904,7 +903,7 @@ $adace.GetEnumerator() | **Foreach-Object** {
 $acl = **Get-Acl** *-Path* $_.Value
 $sid=(**Get-ADGroup** "MIMCM-Managers").SID
 $p = **New-Object** System.Security.Principal.SecurityIdentifier($sid)
-##https://msdn.microsoft.com/en-us/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
+##https://msdn.microsoft.com/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
 $ace = **New-Object** System.DirectoryServices.ActiveDirectoryAccessRule
 ($p,[System.DirectoryServices.ActiveDirectoryRights]"GenericAll",[System.Security.AccessControl.AccessControlType]::Allow,
 [DirectoryServices.ActiveDirectorySecurityInheritance]::All)

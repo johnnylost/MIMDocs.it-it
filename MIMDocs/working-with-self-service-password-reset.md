@@ -3,32 +3,33 @@ title: Utilizzo del portale per la reimpostazione self-service della password | 
 description: Vedere le novità relative alla reimpostazione della password self-service in MIM 2016, tra cui il funzionamento di SSPR con l'autenticazione a più fattori.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
-ms.date: 10/12/2017
+ms.author: billmath
+manager: mtillman
+ms.reviewer: davidste
+ms.date: 06/26/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: 18c3e4ea623b4b092bbd9236c5fa1b2a63af0486
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: b1b30b744a5f735512f31d98184a561ce3f9b047
+ms.sourcegitcommit: 03617b441135a55b664e0d81cce4d17541bee93b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36963376"
 ---
->[!IMPORTANT]
-In seguito all'annuncio della deprecazione di Azure Multi-Factor Authentication Software Development Kit. Azure MFA SDK sarà supportato per i clienti esistenti fino alla data di ritiro, ovvero 14 novembre 2018. I nuovi clienti e i clienti attuali non saranno in grado di scaricare più l'SDK tramite il portale di Azure classico. Per scaricarlo sarà necessario rivolgersi al supporto tecnico clienti di Azure per ricevere il pacchetto di credenziali del servizio MFA generato. <br> Il team di sviluppo Microsoft sta pianificando modifiche per MFA tramite l'integrazione di MFA Server SDK. Tali modifiche verranno incluse in un prossimo hotfix agli inizi del 2018.
-
 # <a name="working-with-self-service-password-reset"></a>Uso della reimpostazione della password self-service
+
+> [!IMPORTANT]
+> In seguito all'annuncio della deprecazione di Azure Multi-Factor Authentication Software Development Kit. Azure MFA SDK sarà supportato per i clienti esistenti fino alla data di ritiro, ovvero 14 novembre 2018. I nuovi clienti e i clienti attuali non saranno in grado di scaricare più l'SDK tramite il portale di Azure classico. Per scaricarlo sarà necessario rivolgersi al supporto tecnico clienti di Azure per ricevere il pacchetto di credenziali del servizio MFA generato. <br> Il team di sviluppo Microsoft sta lavorando a modifiche per MFA tramite l'integrazione con MFA Server SDK.  Queste modifiche verranno incluse in un prossimo hotfix. Vedere la [cronologia delle versioni](/reference/version-history.md) per gli annunci.
+
 Microsoft Identity Manager 2016 fornisce funzionalità aggiuntive alla funzionalità di reimpostazione della password self service. Questa funzionalità è stata migliorata con alcune importanti funzionalità:
 
--   Il portale di reimpostazione della password self-service e la schermata di accesso di Windows ora consentono agli utenti di sbloccare i propri account senza modificare le password o richiedere il supporto degli amministratori. Gli account degli utenti vengono bloccati per diversi motivi legittimi, ad esempio perché immettono una vecchia password, usano computer bilingue con la tastiera impostata su una lingua non corretta o provano ad accedere a una workstation condivisa già aperta per l'account di un altro utente.
+-   Il portale di reimpostazione della password self-service e la schermata di accesso di Windows consentono ora agli utenti di sbloccare i propri account senza modificare le password o richiedere il supporto degli amministratori. Gli account degli utenti vengono bloccati per diversi motivi legittimi, ad esempio perché immettono una vecchia password, usano computer bilingue con la tastiera impostata su una lingua non corretta o provano ad accedere a una workstation condivisa già aperta per l'account di un altro utente.
 
--   È stato aggiunto un nuovo controllo di autenticazione, il controllo tramite telefono, che consente di effettuare l'autenticazione utente tramite chiamata telefonica.
+-   È stato aggiunto un nuovo controllo di autenticazione, il controllo tramite telefono, che consente di effettuare l'autenticazione utente tramite una chiamata telefonica.
 
--   È stato aggiunto il supporto per il servizio di autenticazione a più fattori di Microsoft Azure. Può essere usato per il controllo password monouso con SMS e per il nuovo controllo del telefono.
+-   È stato aggiunto il supporto per il servizio Microsoft Azure Multi-Factor Authentication (MFA). Questo servizio può essere usato per il controllo password monouso con SMS e per il nuovo controllo tramite telefono.
 
 ## <a name="azure-for-multi-factor-authentication"></a>Azure per Multi-Factor Authentication
 Microsoft Azure Multi-Factor Authentication è un servizio di autenticazione che richiede agli utenti di verificare i tentativi di accesso con un'app per dispositivi mobili, una chiamata telefonica o un SMS. È disponibile per l'uso con Microsoft Azure Active Directory e come servizio per le applicazioni aziendali cloud e locali.
@@ -61,11 +62,11 @@ In questa sezione si presuppone di aver scaricato e completato la distribuzione 
 ## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Preparare MIM all'uso dell'autenticazione a più fattori
 Configurare la sincronizzazione MIM per supportare la funzionalità di reimpostazione della password e sblocco dell’account. Per altre informazioni, vedere [Installazione dei componenti aggiuntivi e delle estensioni di FIM](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [installazione di FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [Controlli di autenticazione SSPR](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) e [Guida al lab di test SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
-Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure Active Directory. Come parte di questa operazione, verrà generato un file che include il materiale di autenticazione richiesto da MFA per contattare Azure MFA.  Per continuare, è necessaria una sottoscrizione di Azure.
+Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure Active Directory. Verrà generato un file che include il materiale di autenticazione richiesto da MFA per contattare Azure MFA.  Per continuare, è necessaria una sottoscrizione di Azure.
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registrare il provider di autenticazione a più fattori in Azure
 
-1.  Creare un [provider MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Creare un [provider MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Aprire un caso di supporto e richiedere l'SDK diretto per ASP.Net 2.0 C#. L'SDK verrà fornito solo agli utenti correnti di MIM con MFA perché l'SDK diretto è deprecato. I nuovi clienti devono adottare la versione successiva di MIM che si integrerà con il server MFA.
 
@@ -85,7 +86,7 @@ Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure 
 
 7.  Nel riquadro sinistro della nuova finestra, sotto **Configura**, fare clic su **Impostazioni**.
 
-8.  In **Avviso di illecito** deselezionare l'opzione **Blocca utente se viene segnalato illecito. In tal modo si evita il blocco dell'intero servizio.
+8.  In **Avviso di illecito** deselezionare l'opzione **Blocca utente se viene segnalato illecito. Con la deselezione di questa opzione si evita il blocco dell'intero servizio.
 
 9. Nella finestra **Autenticazione a più fattori di Azure** visualizzata, fare clic su **SDK** in **Download** nel menu a sinistra.
 
@@ -117,13 +118,13 @@ Nella sezione successiva si imposterà il provider Azure MFA in Microsoft Azure 
 
 9. Nell’elemento `<username>` immettere un nome utente qualsiasi.
 
-10. Nell’elemento `<DefaultCountryCode>` immettere il codice paese predefinito. Nel caso in cui i numeri di telefono siano registrati per gli utenti senza un codice paese, questo è il codice paese che verrà visualizzato. Se un utente dispone di un codice di paese internazionale, deve essere incluso nel numero di telefono registrato.
+10. Nell’elemento `<DefaultCountryCode>` immettere il codice paese predefinito. Nel caso in cui i numeri di telefono siano registrati per gli utenti senza un codice paese, gli utenti otterranno questo codice. Se un utente ha un codice paese internazionale, deve essere incluso nel numero di telefono registrato.
 
 11. Salvare il file MfaSettings.xml con lo stesso nome, nello stesso percorso.
 
 #### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Configurare il controllo del telefono o il controllo della password monouso tramite SMS
 
-1.  Avviare Internet Explorer, accedere al portale MIM eseguendo l'autenticazione come amministratore MIM e quindi fare clic su  **Flussi di lavoro** nella barra di spostamento a sinistra.
+1.  Avviare Internet Explorer, accedere al portale MIM eseguendo l'autenticazione come amministratore MIM e quindi fare clic su **Flussi di lavoro** nella barra di spostamento a sinistra.
 
     ![Immagine di navigazione del portale MIM](media/MIM-SSPR-workflow.jpg)
 

@@ -9,16 +9,17 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: 9515d17767a75b349b0d3150fb90c136c478baa2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289847"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Passaggio 7: elevare l'accesso dell'utente
 
->[!div class="step-by-step"]
-[« Passaggio 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Passaggio 6 ](step-6-transition-group-to-pam.md)
 
 
 Questo passaggio illustra come un utente possa richiedere l'accesso a un ruolo tramite MIM.
@@ -90,7 +91,7 @@ Attivare richiedendo l'accesso con privilegi elevati tramite il portale di esemp
     ```
 
 3. Quando richiesto, digitare la password per l'account PRIV.Jen. Verrà visualizzata una nuova finestra del browser Web.
-4. Passare a http://pamsrv.priv.contoso.local:8090 e assicurarsi che una pagina Web dal portale di esempio sia visibile.
+4. Passare a http://pamsrv.priv.contoso.local:8090 e assicurarsi che sia visibile una pagina Web dal portale di esempio.
 5. In Internet Explorer selezionare **Strumenti** > **Opzioni Internet** e fare clic sulla scheda **Sicurezza**.
 6. Fare clic su **Area Intranet locale** > **Siti** > **Avanzate** e aggiungere il sito Web all'area.
 7. Chiudere le finestre di dialogo **Opzioni Internet** .
@@ -103,5 +104,5 @@ Attivare richiedendo l'accesso con privilegi elevati tramite il portale di esemp
 
 Dopo aver completato i passaggi descritti in questa Guida, sarà stato dimostrato uno scenario di Privileged Access Management, in cui i privilegi dell'utente vengono elevati per un periodo di tempo limitato, consentendo all'utente di accedere alle risorse protette con un account privilegiato separato. Non appena la sessione di elevazione dei privilegi scade, l'account con privilegi non potrà più accedere alla risorsa protetta. La decisione in merito a quali gruppi di sicurezza rappresentano i ruoli con privilegi è coordinata dall'amministratore PAM. Dopo che i diritti di accesso sono stati migrati al sistema Privileged Access Management, l'accesso reso possibile in passato con l'account utente originale ora è invece reso possibile solo mediante l'accesso con un account con privilegi speciali e su richiesta. Di conseguenza, le appartenenze ai gruppi con privilegi elevati sono valide per un periodo di tempo limitato.
 
->[!div class="step-by-step"]
-[« Passaggio 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Passaggio 6 ](step-6-transition-group-to-pam.md)

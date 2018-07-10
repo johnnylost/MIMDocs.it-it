@@ -1,7 +1,7 @@
 ---
 title: 'Passaggio 8: Verifica della distribuzione PAM'
 description: La distribuzione con script di PAM include gli scipt di verifica che possono eseguire uno scenario PAM per convalidare che la distribuzione PAM funzioni come previsto.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 28fcbe10366df749796be76f83f608561b5f39d3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: b01980c020b1027c3b40eaf49b4431631ee041be
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289473"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Passaggio 8: Verifica della distribuzione PAM
 
->[!div class="step-by-step"]
-[« Passaggio 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Appendice »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Passaggio 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Appendice »](sp1-pam-deployment-addendum.md)
 
 Il pacchetto di distribuzione viene fornito con gli script di verifica che possono eseguire uno scenario PAM per convalidare che la distribuzione PAM funzioni come previsto.
 Per uszare la verifica della distribuzione, modificare la sezione denominata PAMDeploymentConfig.xml <PamValidation/>.
@@ -76,6 +77,6 @@ Nella finestra di PowerShell, digitare:
   Inizialmente l'utente non avrà accesso alla risorsa. Dopo che l'utente viene aggiunto al ruolo JIT, gli viene concesso l'accesso. Allo scadere della richiesta, l'utente non disporrà ancora dell'accesso.
   Lo script usa il valore predefinito (11 minuti) per la scadenza della richiesta.
 
->[!div class="step-by-step"]
-[« Passaggio 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Appendice »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Passaggio 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Appendice »](sp1-pam-deployment-addendum.md)

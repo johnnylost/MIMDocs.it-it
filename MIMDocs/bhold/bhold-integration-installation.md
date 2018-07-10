@@ -1,7 +1,7 @@
 ---
 title: Installazione dell'integrazione BHOLD per FIM/MIM | Microsoft Docs
 description: Il modulo di integrazione BHOLD aggiunge la gestione dei ruoli self-service a FIM e MIM
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 09/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: ef68de19bd0eabd6d9203469ecc991d496f05846
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 08a0aaa60891727482e80c8998cc075eacf042cf
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290170"
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Installazione dell'integrazione BHOLD per FIM/MIM
 
@@ -30,10 +31,10 @@ Di seguito sono indicati i componenti software che devono essere presenti nel co
 - Internet Information Services e ASP.NET
 - Microsoft Silverlight Tools
 
-Inoltre, i moduli Core e Access Management Connector di BHOLD devono già essere distribuiti in un server dell'ambiente e FIM deve essere configurato con uno o più agenti di gestione BHOLD. Per informazioni sull'installazione e la configurazione del modulo BHOLD Core, vedere [BHOLD Core Installation](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx) (Installazione di BHOLD Core). Per informazioni sull'installazione e l'uso del modulo Access Management Connector, vedere [Access Management Connector Installation](https://technet.microsoft.com/en-us/library/jj874042(v=ws.10).aspx) (Installazione di Access Management Connector) e [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx) (Guida del lab di sviluppo/test: BHOLD Access Management Connector).
+Inoltre, i moduli Core e Access Management Connector di BHOLD devono già essere distribuiti in un server dell'ambiente e FIM deve essere configurato con uno o più agenti di gestione BHOLD. Per informazioni sull'installazione e la configurazione del modulo BHOLD Core, vedere [BHOLD Core Installation](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx) (Installazione di BHOLD Core). Per informazioni sull'installazione e l'uso del modulo Access Management Connector, vedere [Access Management Connector Installation](https://technet.microsoft.com/library/jj874042(v=ws.10).aspx) (Installazione di Access Management Connector) e [Test Lab Guide: BHOLD Access Management Connector](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx) (Guida del lab di sviluppo/test: BHOLD Access Management Connector).
 
->[!IMPORTANT]
-Il nome del database del servizio FIM deve essere FIMService. L'installazione di BHOLD FIM Integration avrà esito negativo se FIM non è stato installato con il nome di database predefinito del servizio FIM.
+> [!IMPORTANT]
+> Il nome del database del servizio FIM deve essere FIMService. L'installazione di BHOLD FIM Integration avrà esito negativo se FIM non è stato installato con il nome di database predefinito del servizio FIM.
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
@@ -46,16 +47,16 @@ Inoltre, è necessario essere pronti a inserire le informazioni richieste dall'i
 | **Elemento**                            | **Descrizione**                                                                                                                                                                                                               | **Valore**                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Use Security Provider on Domain** (Usa provider di sicurezza per il dominio) | Se selezionata, questa opzione indica che la protezione di Active Directory Domain Services controllerà l'accesso a BHOLD Core.                                                                                                                    | Selezionare la casella di controllo. **Importante:** l'installazione avrà esito negativo se questa casella di controllo non è selezionata.                                                                                                                                                                                                                   |
-| **Dominio**                          | Specifica il dominio che contiene l'**account del servizio** creato durante l'installazione di BHOLD Core. Per altre informazioni, vedere [BHOLD Core Installation](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx) (Installazione di BHOLD Core). | Il nome di dominio viene inserito automaticamente dalla procedura guidata. Modificare il nome solo se non è corretto. **Importante:** specificare il nome di dominio usando il nome NetBIOS (breve), non il nome di dominio completo (FQDN). Se, ad esempio, il nome FQDN del dominio è fabrikam.com, specificare il nome di dominio come FABRIKAM. |
+| **Dominio**                          | Specifica il dominio che contiene l'**account del servizio** creato durante l'installazione di BHOLD Core. Per altre informazioni, vedere [Installazione di BHOLD Core](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Il nome di dominio viene inserito automaticamente dalla procedura guidata. Modificare il nome solo se non è corretto. **Importante:** specificare il nome di dominio usando il nome NetBIOS (breve), non il nome di dominio completo (FQDN). Se, ad esempio, il nome FQDN del dominio è fabrikam.com, specificare il nome di dominio come FABRIKAM. |
 | **Nome utente**                        | Specifica il nome di accesso dell'account utente del servizio BHOLD Core.                                                                                                                                                              | Scrivere qui il nome dell'account utente:                                                                                                                                                                                                                                                                                    |
-| **Password**                        | Specifica la password dell'account utente del servizio.                                                                                                                                                                           | Scrivere la password qui: **Importante:** assicurarsi di conservare questa password in una posizione protetta nascosta.                                                                                                                                                                                                                  |
+| **Password**                        | Specifica la password dell'account utente del servizio.                                                                                                                                                                           | Scrivere qui la password: **importante:** assicurarsi di conservare questa password in una posizione protetta nascosta.                                                                                                                                                                                                                  |
 
 ### <a name="fim-service-settings"></a>Impostazioni del servizio FIM
 
 | **Elemento**            | **Descrizione**                                                                                                                                                                                                                               | **Valore**                                                                                           |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| **Utente**            | Specifica il nome di accesso di un account con privilegi di amministratore per FIM. Microsoft consiglia vivamente di non usare l'account associato all'utente radice in BHOLD Core, che per impostazione predefinita è l'account usato per installare BHOLD Core. | Scrivere qui il nome dell'account utente:                                                                   |
-| **Password**        | Specifica la password dell'account utente dell'amministratore di FIM.                                                                                                                                                                                 | Scrivere la password qui: **Importante:** assicurarsi di conservare questa password in una posizione protetta nascosta. |
+| **User**            | Specifica il nome di accesso di un account con privilegi di amministratore per FIM. Microsoft consiglia vivamente di non usare l'account associato all'utente radice in BHOLD Core, che per impostazione predefinita è l'account usato per installare BHOLD Core. | Scrivere qui il nome dell'account utente:                                                                   |
+| **Password**        | Specifica la password dell'account utente dell'amministratore di FIM.                                                                                                                                                                                 | Scrivere qui la password: **importante:** assicurarsi di conservare questa password in una posizione protetta nascosta. |
 | **FIM Database**    | Specifica il nome del database del servizio FIM.                                                                                                                                                                                               | FIMService                                                                                          |
 | **Website IP/Port** (Indirizzo IP/porta sito Web) | Specifica il nome o l'indirizzo IP del server del portale di FIM e la porta del sito Web.                                                                                                                                                               | Scrivere il nome del server o l'indirizzo e la porta qui:                                                     |
 
@@ -64,8 +65,8 @@ Inoltre, è necessario essere pronti a inserire le informazioni richieste dall'i
 | **Elemento**               | **Descrizione**                                                                                                                                                                                                                                                                                                                                                                               | **Valore**                                                                                           |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Dominio**             | Specifica il nome del dominio dell'account indicato sotto come **utente**. Specificare il dominio in formato NetBIOS (breve).                                                                                                                                                                                                                                                                   | Scrivere il nome del dominio dell'account utente qui:                                                            |
-| **Utente**               | Specifica il nome di accesso dell'account di un **utente BHOLD che è supervisore** di tutti gli utenti e i ruoli ed è autorizzato a collegare e scollegare i ruoli utente. Microsoft consiglia vivamente di non usare l'account associato all'utente radice in BHOLD Core, che per impostazione predefinita è l'account usato per installare BHOLD Core. Questo account può essere lo stesso account usato per connettersi a FIM | Scrivere qui il nome dell'account utente:                                                                   |
-| **Password**           | Specifica la password dell'account utente specificato in **User** (Utente).                                                                                                                                                                                                                                                                                                                             | Scrivere la password qui: **Importante:** assicurarsi di conservare questa password in una posizione protetta nascosta. |
+| **User**               | Specifica il nome di accesso dell'account di un **utente BHOLD che è supervisore** di tutti gli utenti e i ruoli ed è autorizzato a collegare e scollegare i ruoli utente. Microsoft consiglia vivamente di non usare l'account associato all'utente radice in BHOLD Core, che per impostazione predefinita è l'account usato per installare BHOLD Core. Questo account può essere lo stesso account usato per connettersi a FIM | Scrivere qui il nome dell'account utente:                                                                   |
+| **Password**           | Specifica la password dell'account utente specificato in **User** (Utente).                                                                                                                                                                                                                                                                                                                             | Scrivere qui la password: **importante:** assicurarsi di conservare questa password in una posizione protetta nascosta. |
 | **IP/Machine Address** (Indirizzo IP/computer) | Specifica l'indirizzo IP del server del sito Web di BHOLD Core. Non usare il nome del server.                                                                                                                                                                                                                                                                                                        | Scrivere l'indirizzo IP qui:                                                                          |
 | **Numero porta**        | Specifica il numero di porta del sito Web di BHOLD Core.                                                                                                                                                                                                                                                                                                                                          | Scrivere il numero di porta qui:                                                                         |
 
@@ -73,7 +74,7 @@ Inoltre, è necessario essere pronti a inserire le informazioni richieste dall'i
 
 Per installare il modulo BHOLD FIM Integration, accedere come membro del gruppo Domain Admins, scaricare il file seguente ed eseguirlo come amministratore nel server in cui si intende installare il modulo BHOLD FIM Integration:
 
-- BholdFIMIntegration*\<Versione\>*\_Release.msi
+- BholdFIMIntegration<em>\<Versione\></em>\_Release.msi
 
 Sostituire *\<Versione\>* con il numero della versione di BHOLD FIM Integration che si sta installando.
 
@@ -192,20 +193,20 @@ Se per una richiesta di ruolo self-service non viene specificato un responsabile
 19. Nella pagina **Modify organizational unit attributes/root** (Modifica attributi unità organizzativa/radice), in **Approver** (Responsabile approvazione), digitare il dominio e il nome utente dell'utente che approverà le richieste di assegnazione dei ruoli, nel formato *\<dominio\>*\\*\<utente\>*, dove *\<dominio\>* è il nome di dominio NetBIOS (breve) e *\<utente\>* è il nome di accesso dell'utente.
 20. Fare clic su **OK**.
 
->[!IMPORTANT]
-Il dominio e il nome utente devono corrispondere all'alias predefinito di un utente nel database di BHOLD Core.
+> [!IMPORTANT]
+> Il dominio e il nome utente devono corrispondere all'alias predefinito di un utente nel database di BHOLD Core.
 
 In alternativa alla definizione di un responsabile approvazione per le unità organizzative, è possibile specificare un responsabile approvazione per i ruoli proposti nel database di BHOLD Core. A tale scopo, creare l'attributo approver1, aggiungerlo a un attributo typeset associato al tipo di oggetto Role (Ruolo) e quindi modificare ogni ruolo proposto per specificare il responsabile approvazione.
 
 Per garantire una maggiore protezione del flusso di lavoro, oltre ai responsabili approvazione è necessario definire ulteriori modalità di approvazione e utenti creando e inserendo i seguenti attributi per le unità organizzative e i ruoli:
 
-- escalator*\<n\>*
+- escalator<em>\<n\></em>
 
-- owner*\<n\>*
+- owner<em>\<n\></em>
 
-- securityOfficer*\<n\>*
+- securityOfficer<em>\<n\></em>
 
-- notification*\<n\>*
+- notification<em>\<n\></em>
 
 dove *\<n\>* indica un suffisso numerico facoltativo per specificare più attributi dello stesso tipo.
 
@@ -213,8 +214,8 @@ dove *\<n\>* indica un suffisso numerico facoltativo per specificare più attrib
 
 L'installazione di BHOLD FIM Integration crea set, definizioni di flussi di lavoro e regole di criteri di gestione per il servizio FIM. Se la distribuzione di FIM è stata personalizzata in modo da modificare i set di amministratori o i set di utenti che possono eseguire richieste, è necessario verificare se le regole di criteri di gestione fanno riferimento ai set di utenti corretti.
 
->[!NOTE]
-Prima che gli utenti del portale di FIM usino le funzionalità self-service offerte da BHOLD, è necessario sincronizzare gli account degli utenti nel database di BHOLD dal servizio di sincronizzazione di FIM. In particolare, deve esistere un record utente nel database di BHOLD Core e nel database del servizio FIM per ogni utente che può effettuare una richiesta self-service o che è specificato come responsabile approvazione o responsabile riassegnazione per le richieste self-service.
+> [!NOTE]
+> Prima che gli utenti del portale di FIM usino le funzionalità self-service offerte da BHOLD, è necessario sincronizzare gli account degli utenti nel database di BHOLD dal servizio di sincronizzazione di FIM. In particolare, deve esistere un record utente nel database di BHOLD Core e nel database del servizio FIM per ogni utente che può effettuare una richiesta self-service o che è specificato come responsabile approvazione o responsabile riassegnazione per le richieste self-service.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -1,7 +1,7 @@
 ---
 title: 'Distribuire PAM, passaggio 3: Server PAM | Documentazione Microsoft'
 description: Preparare un server PAM in cui ospitare sia SQL che SharePoint per la distribuzione di Privileged Access Management.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -13,17 +13,18 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fd52a191a0592441131249451011c4e2f026ea48
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 3eb79847baed69ef53a27e09443ff9bf4647b347
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289915"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Passaggio 3: preparare un server PAM
 
->[!div class="step-by-step"]
-[« Passaggio 2](step-2-prepare-priv-domain-controller.md)
-[Passaggio 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Passaggio 2](step-2-prepare-priv-domain-controller.md)
+> [Passaggio 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Installare Windows Server 2012 R2
 
@@ -83,7 +84,7 @@ Configurare i criteri di sicurezza del server per consentire agli account appena
 
 13. Aprire il Pannello di controllo e passare a **Account utente**.
 14. Fare clic su **Concedi ad altri utenti l'accesso al computer**.
-15. Fare clic su **Aggiungi**, immettere il nome utente *MIMADMIN* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator** (Aggiungi utente come amministratore).  
+15. Fare clic su **Aggiungi**, immettere il nome utente *MIMADMIN* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator**  (Aggiungi utente come amministratore).  
 16. Fare clic su **Aggiungi**, immettere il nome utente *SharePoint* nel dominio *PRIV* e, nella schermata successiva della procedura guidata, fare clic su **Add this user as an Administrator** (Aggiungi utente come amministratore).  
 17. Chiudere il Pannello di controllo.
 
@@ -93,13 +94,13 @@ Per modificare la configurazione di IIS per consentire alle applicazioni di usar
 
 Se si vuole usare PowerShell:
 
-1.  Fare clic con il pulsante destro del mouse su PowerShell e scegliere **Esegui come amministratore**.
-2.  Arrestare IIS e sbloccare le impostazioni dell'applicazione host utilizzando i comandi
-    ```CMD
-    iisreset /STOP
-    C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
-    iisreset /START
-    ```
+1. Fare clic con il pulsante destro del mouse su PowerShell e scegliere **Esegui come amministratore**.
+2. Arrestare IIS e sbloccare le impostazioni dell'applicazione host utilizzando i comandi
+   ```CMD
+   iisreset /STOP
+   C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
+   iisreset /START
+   ```
 
 Se si vuole usare un editor di testo, ad esempio il Blocco note:
 
@@ -204,7 +205,7 @@ Successivamente, creare una Raccolta siti SharePoint associata all’applicazion
 ## <a name="set-the-website-as-the-local-intranet"></a>Impostare il sito Web come Intranet locale
 
 1. Avviare Internet Explorer e aprire una nuova scheda del Web browser.
-2. Passare a http://pamsrv.priv.contoso.local:82/ and sign in as PRIV\MIMAdmin.  Verrà visualizzato un sito SharePoint denominato "Portale MIM".  
+2. Passare a http://pamsrv.priv.contoso.local:82/ e accedere come PRIV\MIMAdmin.  Verrà visualizzato un sito SharePoint denominato "Portale MIM".  
 3. In Internet Explorer aprire **Opzioni Internet**, modificare la scheda **Sicurezza**, selezionare **Intranet locale** e aggiungere l'URL `http://pamsrv.priv.contoso.local:82/`.
 
 Se l'accesso ha esito negativo, è possibile che sia necessario aggiornare i nomi SPN Kerberos creati in precedenza nel [Passaggio 2](step-2-prepare-priv-domain-controller.md).
@@ -215,6 +216,6 @@ Usando **Servizi**, in Strumenti di amministrazione, avviare il servizio **Ammin
 
 Nel passaggio 4 sarà possibile iniziare l'installazione dei componenti MIM nel server PAM.
 
->[!div class="step-by-step"]
-[« Passaggio 2](step-2-prepare-priv-domain-controller.md)
-[Passaggio 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Passaggio 2](step-2-prepare-priv-domain-controller.md)
+> [Passaggio 4 »](step-4-install-mim-components-on-pam-server.md)
