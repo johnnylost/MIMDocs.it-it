@@ -11,12 +11,12 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: 6bcf9ab26ba38f3c6eefbdb315d4975320a597b9
-ms.sourcegitcommit: d82c05aa814015fc6bdab37133eafec3366bea3b
+ms.openlocfilehash: e7134e060647153b5d525e9785139eb8c38f8569
+ms.sourcegitcommit: 6b2c77788a69f751fc7f5c18e678aa1fabf23ebb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34449683"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952506"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Gestione dei dati di Microsoft Identity Manager 
 
@@ -59,22 +59,22 @@ Se è stato installato il portale, è possibile usare l'interfaccia utente per l
 
 Se è stato installato solo il server del servizio (senza interfaccia utente del portale), è possibile eseguire una sintassi di ricerca basata sull'esempio [FIMAutomation PSSnapin] disponibile [qui](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx).
 
-PAM può usare la stessa sintassi precedente oppure è possibile usare il [modulo MIMPAM](https://docs.microsoft.com/en-us/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), in particolare il cmdlet get-pamuser, per cercare l'utente nell'ambiente PAM.
+PAM può usare la stessa sintassi precedente oppure è possibile usare il [modulo MIMPAM](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), in particolare il cmdlet get-pamuser, per cercare l'utente nell'ambiente PAM.
 
 Altre opzioni di creazione di report per la ricerca nei dati disponibili si trovano nel servizio e nel portale.
-- [Servizio di creazione di report ibridi](https://docs.microsoft.com/en-us/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
-- [Reporting with SCSM](https://docs.microsoft.com/en-us/previous-versions/mim/jj133853%28v%3dws.10%29) (Creazione di reporting con SCSM)
+- [Servizio di creazione di report ibridi](https://docs.microsoft.com/microsoft-identity-manager/identity-manager-hybrid-reporting-azure)
+- [Reporting with SCSM](https://docs.microsoft.com/previous-versions/mim/jj133853%28v%3dws.10%29) (Creazione di reporting con SCSM)
 
 ### <a name="bhold"></a>BHOLD
 Il servizio Bhold Core ha un'interfaccia utente che consente di cercare un utente o gli attributi. 
 
 ![Ricerca di Bhold](media/mim-privacy-compliance/mim-privacy-compliance-bhold.PNG)
 
-Se si sincronizza BHOLD con [Access Management Connector](https://docs.microsoft.com/en-us/microsoft-identity-manager/bhold/bhold-access-management-connector-install) per il servizio di sincronizzazione, sarà possibile visualizzare gli oggetti utente connessi e gli attributi inviati a BHOLD Core.
+Se si sincronizza BHOLD con [Access Management Connector](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-access-management-connector-install) per il servizio di sincronizzazione, sarà possibile visualizzare gli oggetti utente connessi e gli attributi inviati a BHOLD Core.
 
 È anche possibile caricare il modulo BHOLD Reporting.
 
-- [BHOLD Reporting](https://docs.microsoft.com/en-us/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
+- [BHOLD Reporting](https://docs.microsoft.com/microsoft-identity-manager/bhold/bhold-concepts-guide#reporting)
 
 ### <a name="certificate-management"></a>Gestione dei certificati
 Il servizio Gestione certificati è integrato nell'interfaccia utente. L'amministratore eseguirà l'avvio e selezionerà "Trova utente per visualizzare o gestire le relative informazioni"  
@@ -89,9 +89,9 @@ I servizi di sincronizzazione per l'esportazione dei dati selezionano sempliceme
 
 
 ### <a name="service-and-portal--pam"></a>Servizio e portale/PAM
-Il servizio e il portale con PAM consentono di esportare questi dati e di eseguire una sintassi di ricerca basata su [FIMAutomation PSSnapin] (vedere [qui](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx) per l'esempio) e di inviarli tramite pipe al file [CSV](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-6).
+Il servizio e il portale con PAM consentono di esportare questi dati e di eseguire una sintassi di ricerca basata su [FIMAutomation PSSnapin] (vedere [qui](https://social.technet.microsoft.com/wiki/contents/articles/22713.fim-portals-use-powershell-to-find-all-users-without-a-manager.aspx) per l'esempio) e di inviarli tramite pipe al file [CSV](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-6).
 
-PAM può usare la stessa sintassi precedente oppure è possibile usare il [modulo MIMPAM](https://docs.microsoft.com/en-us/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), in particolare get-pamuser, per cercare l'utente nell'ambiente PAM e inviarlo tramite pipe a un file CSV.
+PAM può usare la stessa sintassi precedente oppure è possibile usare il [modulo MIMPAM](https://docs.microsoft.com/powershell/module/mimpam/get-pamuser?view=idm-ps-2016sp1), in particolare get-pamuser, per cercare l'utente nell'ambiente PAM e inviarlo tramite pipe a un file CSV.
 
 - [Example Querying The MIM Service Using PowerShell](https://gallery.technet.microsoft.com/Querying-The-FIMMIM-dcb82de3) (Query di esempio del servizio MIM con PowerShell)
 
@@ -107,14 +107,14 @@ I dati personali relativi a utenti o oggetti nelle soluzioni MIM sono in genere 
 
 ### <a name="synchronization-service"></a>Servizio di sincronizzazione
 
-Per eseguire operazioni di gestione, gli amministratori devono fare parte delle operazioni o degli amministratori della sincronizzazione definiti [qui](https://docs.microsoft.com/en-us/previous-versions/mim/jj590183(v%3dws.10)).
+Per eseguire operazioni di gestione, gli amministratori devono fare parte delle operazioni o degli amministratori della sincronizzazione definiti [qui](https://docs.microsoft.com/previous-versions/mim/jj590183(v%3dws.10)).
 
 L'aggiornamento dei dati viene eseguito definendo le regole dall'origine dell'autorità. La console di gestione consente di identificare l'origine dell'autorità per aggiornarla nell'origine. Un'altra opzione consiste nel creare la regola di sincronizzazione o l'estensione della regola per controllare l'aggiornamento dei dati se l'origine, ad esempio i dati delle risorse umane, deve essere conservati. Queste sono le opzioni supportate disponibili.
 
 Per altre informazioni su modi diversi di aggiornare l'attributo, vedere di seguito. 
 
-- [Using Rules Extensions](https://msdn.microsoft.com/en-us/library/windows/desktop/ms698810(v=vs.100).aspx) (Uso di estensioni delle regole)
-- [Informazioni sulla sincronizzazione dei dati con sistemi esterni](https://docs.microsoft.com/en-us/previous-versions/mim/jj133850(v%3dws.10))
+- [Using Rules Extensions](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx) (Uso di estensioni delle regole)
+- [Informazioni sulla sincronizzazione dei dati con sistemi esterni](https://docs.microsoft.com/previous-versions/mim/jj133850(v%3dws.10))
 
 ### <a name="service-and-portal--pam"></a>Servizio e portale/PAM
 
@@ -139,8 +139,8 @@ I dati in MIM vengono sincronizzati e aggiornati sempre dall'origine dati connes
 Il servizio di sincronizzazione consente di gestire o di eliminare i dati in più modi a seconda dei processi aziendali. Di seguito sono elencati alcuni articoli sulle opzioni di eliminazione e aggiornamento degli attributi: 
 
 - [Informazioni sul deprovisioning](https://social.technet.microsoft.com/wiki/contents/articles/1270.understanding-deprovisioning-in-fim.aspx)
-- [Using Rules Extensions](https://msdn.microsoft.com/en-us/library/windows/desktop/ms698810(v=vs.100).aspx) (Uso di estensioni delle regole)
-- [Procedure consigliate per MIM](https://docs.microsoft.com/en-us/microsoft-identity-manager/mim-best-practices)
+- [Using Rules Extensions](https://msdn.microsoft.com/library/windows/desktop/ms698810(v=vs.100).aspx) (Uso di estensioni delle regole)
+- [Procedure consigliate per MIM](https://docs.microsoft.com/microsoft-identity-manager/mim-best-practices)
 
 ### <a name="service-and-portal--pam"></a>Servizio e portale/PAM
 
@@ -177,6 +177,6 @@ Per disabilitare la raccolta dati nella versione precedente, eseguire la modalit
 ![mim-privacy-compliance-ceip2.PNG](media/mim-privacy-compliance/mim-privacy-compliance-ceip2.PNG)
 
 ## <a name="next-steps"></a>Passaggi successivi 
-- [Per indicazioni sulla privacy relative a SQL](https://docs.microsoft.com/en-us/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
+- [Per indicazioni sulla privacy relative a SQL](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
 - [Sezione GDPR di Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
 - [FIM 2010 Archive: Ramp Up - Implementing Forefront Identity Manager 2010 (Archivio di FIM 2010: incremento - Implementazione di Forefront Identity Manager 2010)](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)
