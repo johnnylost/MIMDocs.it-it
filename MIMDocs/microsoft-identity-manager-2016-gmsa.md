@@ -8,12 +8,12 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: 090e82cac6c734beb9767e2d2e6230320e44c26f
-ms.sourcegitcommit: c6cb2556bb9f2256b959a3c95db7ca5bbfc2b437
+ms.openlocfilehash: ca1dacdd32a025bc08c00bde6088d85d6444be99
+ms.sourcegitcommit: 8b2623f6247621098d386cbe84e10b5b5373abfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065143"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39149914"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversione di servizi specifici di MIM per gMSA
 
@@ -21,7 +21,7 @@ Questa guida descriverà i passaggi di base per configurare gMSA per i servizi s
 
 Hotfix richiesti: \<collegamento alla Knowledge Base più recente\>
 
-Servizi supportati:
+Tipi di dati supportati:
 
 -   Sincronizzazione del servizio MIM (FIMSynchronizationService)
 -   Servizio MIM (FIMService)
@@ -61,7 +61,7 @@ Primo passaggio nel controller di dominio Windows
 ## <a name="synchronization-service"></a>Servizio di sincronizzazione
 -----------------------
 
-1.  Nel primo passaggio viene creato un gruppo denominato "MIMSync_Servers" al quale vengono aggiunti tutti i server di sincronizzazione.
+1.  Creare un gruppo denominato "MIMSync_Servers" e aggiungere tutti i server di sincronizzazione a questo gruppo.
 
 ![](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
 
