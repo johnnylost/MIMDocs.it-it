@@ -10,12 +10,12 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: bb0287b894786d13398819b04bdb089f0f36b33e
+ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36288871"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694640"
 ---
 # <a name="supported-languages"></a>Lingue supportate
 
@@ -26,7 +26,7 @@ Questo articolo illustra le lingue supportate e il mapping degli aggiornamenti d
 Il Language Pack per il servizio e il portale di Microsoft MIM supporta le 33 lingue seguenti.  
 
 > [!NOTE]
-> Nella versione [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) una chiave del Registro di sistema denominata "OverrideDefaultUILocale" è stata aggiunta a Componenti aggiuntivi ed estensioni MIM. Il Language Pack proverà a eseguire il mapping di tutte le lingue simili a quella supportata. Se ad esempio la lingua di visualizzazione di Windows è ES-CL (Spagnolo - Cile) o ES-**, proverà a eseguire il mapping a ES-ES (Spagnolo - Spagna).
+> Nella versione [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) una chiave del Registro di sistema denominata "OverrideDefaultUILocale" è stata aggiunta a Componenti aggiuntivi ed estensioni MIM. Il Language Pack proverà a eseguire il mapping di tutte le lingue simili a quella supportata. Se ad esempio la lingua di visualizzazione di Windows è ES-CL (Spagnolo - Cile) o ES-\*, proverà a eseguire il mapping a ES-ES (Spagnolo - Spagna).
 
 > [!IMPORTANT]
 > Il testo nel componente aggiuntivo SSPR e nel portale verrà localizzato, a differenza delle domande che richiedono operazioni aggiuntive. Sarà necessario creare i flussi di lavoro AuthN (e i set e le regole di criteri di gestione associati per specificarli come destinazione) alle domande di destinazione in ogni lingua per la posizione di destinazione.
