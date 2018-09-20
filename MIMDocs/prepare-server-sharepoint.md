@@ -12,12 +12,12 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: a64ee79897ce73242d0f8510842fdcb6758fab2c
+ms.sourcegitcommit: 28834821cbddd6384613d8ba45424c35f4c39ce6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289534"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45538575"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configurare un server di gestione delle identità: SharePoint
 
@@ -71,7 +71,7 @@ Seguire i passaggi descritti in **Configurazione guidata Prodotti SharePoint** p
 2. Specificare questo server come server di database **corpsql** per il database di configurazione e *Contoso\SharePoint* come account di accesso del database che verrà usato da SharePoint.
 3. Creare una password per la passphrase di sicurezza della farm.
 
-4. Nella configurazione guidata è consigliabile selezionare il tipo [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) per **Front-end**
+4. Nella configurazione guidata è consigliabile selezionare il tipo [MinRole](https://docs.microsoft.com/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) per **Front-end**
 
 5. Quando la configurazione guidata completa l'attività 10 di 10, fare clic su Fine e verrà visualizzato un Web browser.
 

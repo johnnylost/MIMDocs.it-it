@@ -8,12 +8,12 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: ca1dacdd32a025bc08c00bde6088d85d6444be99
-ms.sourcegitcommit: 8b2623f6247621098d386cbe84e10b5b5373abfb
+ms.openlocfilehash: 61ff4a806f496396a6ab84e933268e59d58f6670
+ms.sourcegitcommit: 28834821cbddd6384613d8ba45424c35f4c39ce6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39149914"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45538592"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversione di servizi specifici di MIM per gMSA
 
@@ -44,9 +44,9 @@ Letture necessarie per completare l'installazione e ottenere una maggiore compre
 
 -   [Panoramica degli account del servizio gestiti del gruppo](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
 
--   <https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps>
+-   <https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps>
 
--   <https://technet.microsoft.com/en-us/library/jj128430(v=ws.11).aspx>
+-   <https://technet.microsoft.com/library/jj128430(v=ws.11).aspx>
 
 Primo passaggio nel controller di dominio Windows
 
@@ -110,7 +110,7 @@ Primo passaggio nel controller di dominio Windows
 ![](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
 
-5. Installare l'[hotfix 4.5.x.x](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/version-history) o versione successiva.
+5. Installare l'[hotfix 4.5.x.x](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history) o versione successiva.
 
 - Dopo aver applicato la patch arrestare il servizio di sincronizzazione FIM.
 - Pannello di controllo - Programmi e funzionalità di Microsoft Identity Manager
@@ -159,7 +159,7 @@ Primo passaggio nel controller di dominio Windows
 
     per avviare il servizio distribuzione chiavi Microsoft quando la rete è attiva (in genere all'inizio del ciclo di avvio).
 
-    Vedere la discussione su un problema simile: <https://social.technet.microsoft.com/Forums/en-US/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS>
+    Vedere la discussione su un problema simile: <https://social.technet.microsoft.com/Forums/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS>
 
 4.  Eseguire MSI con privilegi elevati del servizio MIM e selezionare Modifica.
 
