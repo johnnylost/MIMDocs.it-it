@@ -2,21 +2,19 @@
 title: Funzionalità deprecate di MIM e pianificazione per il futuro | Microsoft Docs
 description: Questo articolo documenta le funzionalità deprecate di Microsoft Identity Manager (MIM) 2016 SP1.
 keywords: ''
-author: barclayn
-ms.author: davidste
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 2/28/2018
 ms.topic: reference
-ms.prod: identity-manager-2016
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: a4239f1d69d8a43d70dd38af16e9ef8be62bd33c
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: fcf9ec8387761b6f154a95d6100ef54a12d4caf8
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36288912"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358437"
 ---
 # <a name="deprecated-features"></a>Funzionalità deprecate
 

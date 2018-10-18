@@ -2,23 +2,22 @@
 title: Piattaforme software supportate | Documentazione Microsoft
 description: Trovare i prodotti e le versioni compatibili con ciascuno dei componenti MIM 2016
 keywords: ''
-author: fimguy
-ms.author: davidste
-manager: davidste
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 04/11/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 1054d611ae0b230005a0f79be69f5c6c2bba7af2
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 0501dbeb279dc37655d1d9a5e99545b07eea0623
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34479299"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358687"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Piattaforme supportate per MIM 2016
 

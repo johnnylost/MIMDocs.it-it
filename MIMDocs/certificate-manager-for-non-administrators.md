@@ -3,21 +3,20 @@ title: Rinnovo self-service di smart card di Microsoft Identity Manager senza ac
 description: Informazioni su come registrare le smart card per gli utenti che non dispongono dei diritti di accesso con privilegi di amministratore ai propri computer per l'uso del Gestore di certificati.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 39becb555d2efe17e60789453dbaf448c90a8b60
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 4d66c566912f186bce175dde9f16346942afd72e
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289163"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358217"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Registrare smart card per utenti non amministratori
 Se un utente non è un amministratore locale del proprio computer, non sarà in grado di registrare una smart card nei propri computer per impostazione predefinita. La procedura seguente consente di ovviare a questa limitazione.

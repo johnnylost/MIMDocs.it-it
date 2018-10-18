@@ -1,5 +1,5 @@
 ---
-title: Che cos'è PAM per Servizi di dominio Active Directory? | Documentazione Microsoft
+title: Che cos'è PAM per Servizi di dominio Active Directory? | Microsoft Docs
 description: Privileged Access Management (PAM) consente alle organizzazioni di limitare l'accesso con privilegi in un ambiente Active Directory esistente.
 keywords: ''
 author: barclayn
@@ -7,17 +7,17 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 00bae1f1c202e4808e641068c13a40f50ffd479a
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: ce5d168c429928ec46b090dec038f1b5bbe61666
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2017
-ms.locfileid: "22052400"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49334415"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management per Servizi di dominio Active Directory
 

@@ -3,21 +3,20 @@ title: Distribuire l'applicazione di Windows Gestione certificati MIM | Document
 description: Informazioni su come distribuire l'app Gestione certificati per consentire agli utenti di gestire i propri diritti di accesso.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/16/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: bf655d451e86261ffd3043117a56f4daccb4b460
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 8ff9edce6da865418e300095ff0827853a35d4eb
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289874"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358347"
 ---
 # <a name="mim-certificate-manager-windows-store-application-deployment"></a>Distribuzione dell'applicazione Gestione certificati MIM di Windows Store
 
